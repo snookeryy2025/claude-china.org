@@ -1,0 +1,185 @@
+<svg lang="en" width="1403" height="663" viewBox="0 0 673.4 318.2" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Bar chart of 20 WideSearch problems ranked by cost: the top two carry 43% of spend and the cheapest half 10%">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/tail.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .italic { font-style: italic; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-6 { font-size: 10.6px; }
+    .size-12-9 { font-size: 12.9px; }
+    .size-8 { font-size: 8px; }
+    .size-9-5 { font-size: 9.5px; }
+    .size-9-6 { font-size: 9.6px; }
+    .size-9-8 { font-size: 9.8px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="673.4" height="318.2" />
+  <g aria-hidden="true">
+    <path class="tick" d="M73 254.9 V258.4" />
+    <path class="tick" d="M192.8 254.9 V258.4" />
+    <path class="tick" d="M342.6 254.9 V258.4" />
+    <path class="tick" d="M492.4 254.9 V258.4" />
+    <path class="tick" d="M642.2 254.9 V258.4" />
+    <text class="serif size-9-5 secondary middle" x="73" y="269.1">1</text>
+    <text class="serif size-9-5 secondary middle" x="192.8" y="269.1">5</text>
+    <text class="serif size-9-5 secondary middle" x="342.6" y="269.1">10</text>
+    <text class="serif size-9-5 secondary middle" x="492.4" y="269.1">15</text>
+    <text class="serif size-9-5 secondary middle" x="642.2" y="269.1">20</text>
+    <g class="backdrop">
+      <path class="grid" d="M49 254.9 H666.2" />
+      <path class="grid" d="M49 221.5 H666.2" />
+      <path class="grid" d="M49 188.1 H666.2" />
+      <path class="grid" d="M49 154.6 H666.2" />
+      <path class="grid" d="M49 121.2 H666.2" />
+      <path class="grid" d="M49 87.8 H666.2" />
+      <path class="grid" d="M49 54.4 H666.2" />
+    </g>
+    <path class="tick" d="M49 254.9 H45.5" />
+    <path class="tick" d="M49 221.5 H45.5" />
+    <path class="tick" d="M49 188.1 H45.5" />
+    <path class="tick" d="M49 154.6 H45.5" />
+    <path class="tick" d="M49 121.2 H45.5" />
+    <path class="tick" d="M49 87.8 H45.5" />
+    <path class="tick" d="M49 54.4 H45.5" />
+    <text class="serif size-9-5 secondary end" x="42" y="258.5">0</text>
+    <text class="serif size-9-5 secondary end" x="42" y="225.1">20</text>
+    <text class="serif size-9-5 secondary end" x="42" y="191.7">40</text>
+    <text class="serif size-9-5 secondary end" x="42" y="158.2">60</text>
+    <text class="serif size-9-5 secondary end" x="42" y="124.8">80</text>
+    <text class="serif size-9-5 secondary end" x="42" y="91.4">100</text>
+    <text class="serif size-9-5 secondary end" x="42" y="58">120</text>
+  </g>
+  <foreignObject x="43" y="0.9" width="622" height="22.8">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-12-9 text-clay lh-115">A few tail problems dominate what an evaluation really costs</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="51.6" y="269.9" width="612" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10-6 primary lh-115">problems, ranked by cost (20 WideSearch problems x 3 runs, Claude Fable 5)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 1 to 20" d="M49 254.9 H666.2" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(19.3 142.1)">
+        <text class="serif size-10-6 primary middle rotated" transform="rotate(-90)">cost (USD, summed over runs)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 0 to 120" d="M49 254.9 V29.3" />
+    </g>
+  </g>
+  <g role="list" aria-label="Problems, from the most expensive to the cheapest">
+    <g role="listitem">
+      <rect class="fill-clay" role="img" aria-label="Problem 1: about $127 USD" x="61.7" y="42" width="22.5" height="212.9" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-clay" role="img" aria-label="Problem 2: about $55 USD" x="91.7" y="162.3" width="22.5" height="92.6" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 3: about $40 USD" x="121.7" y="187.6" width="22.4" height="67.3" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 4: about $32 USD" x="151.6" y="202" width="22.5" height="52.9" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 5: about $29 USD" x="181.6" y="206.8" width="22.4" height="48.1" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 6: about $29 USD" x="211.5" y="207" width="22.5" height="47.9" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 7: about $22 USD" x="241.5" y="217.4" width="22.5" height="37.5" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 8: about $21 USD" x="271.5" y="219.1" width="22.4" height="35.8" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 9: about $12 USD" x="301.4" y="234.5" width="22.5" height="20.4" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 10: about $12 USD" x="331.4" y="234.7" width="22.5" height="20.2" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 11: about $9 USD" x="361.3" y="239.2" width="22.5" height="15.7" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 12: about $6 USD" x="391.3" y="245" width="22.5" height="9.9" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 13: about $6 USD" x="421.3" y="245.4" width="22.4" height="9.5" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 14: about $4 USD" x="451.2" y="248.6" width="22.5" height="6.3" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 15: about $3 USD" x="481.2" y="249.2" width="22.5" height="5.7" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 16: about $3 USD" x="511.2" y="249.4" width="22.4" height="5.5" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 17: about $3 USD" x="541.1" y="249.4" width="22.5" height="5.5" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 18: about $3 USD" x="571.1" y="249.8" width="22.4" height="5.1" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 19: about $2 USD" x="601" y="251.9" width="22.5" height="3" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="Problem 20: about $2 USD" x="631" y="252.3" width="22.5" height="2.6" />
+    </g>
+  </g>
+  <foreignObject x="126.9" y="42.6" width="252" height="63.2">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+      <span class="label serif size-9-6 primary lh-115">the 2 most expensive problems (10%)</span>
+      <span class="label serif size-9-6 primary lh-115">carry 43% of all spend;</span>
+      <span class="label serif size-9-6 primary lh-115">the top one alone carries 30%</span>
+    </div>
+  </foreignObject>
+  <foreignObject x="416.3" y="184.4" width="242" height="30.5">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-9-8 secondary italic lh-115">the cheapest half together: 10%</span>
+    </div>
+  </foreignObject>
+  <foreignObject x="1.2" y="287.9" width="667" height="26.4">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-8 secondary lh-115">from billing records · total $421 USD over 59 of 60 runs</span>
+    </div>
+  </foreignObject>
+</svg>

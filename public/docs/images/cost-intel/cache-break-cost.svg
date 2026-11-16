@@ -1,0 +1,270 @@
+<svg lang="en" width="1230" height="935" viewBox="0 0 590.4 449" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Bar chart: system prompt edit up to $1.26 USD, top-level effort change up to $1.02 USD, either in a message up to $0.026 USD">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/cache-break-cost.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .bold { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10 { font-size: 10px; }
+    .size-10-8 { font-size: 10.8px; }
+    .size-11-3 { font-size: 11.3px; }
+    .size-7-9 { font-size: 7.9px; }
+    .size-9 { font-size: 9px; }
+    .size-9-5 { font-size: 9.5px; }
+    .size-9-6 { font-size: 9.6px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="590.4" height="449" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M250 368 V77" />
+      <path class="grid" d="M292.3 368 V77" />
+      <path class="grid" d="M334.6 368 V77" />
+      <path class="grid" d="M376.9 368 V77" />
+      <path class="grid" d="M419.2 368 V77" />
+      <path class="grid" d="M461.5 368 V77" />
+    </g>
+    <path class="tick" d="M250 368 V371.5" />
+    <path class="tick" d="M292.3 368 V371.5" />
+    <path class="tick" d="M334.6 368 V371.5" />
+    <path class="tick" d="M376.9 368 V371.5" />
+    <path class="tick" d="M419.2 368 V371.5" />
+    <path class="tick" d="M461.5 368 V371.5" />
+    <text class="serif size-9-5 secondary middle" x="250" y="382.2">0.00</text>
+    <text class="serif size-9-5 secondary middle" x="292.3" y="382.2">0.25</text>
+    <text class="serif size-9-5 secondary middle" x="334.6" y="382.2">0.50</text>
+    <text class="serif size-9-5 secondary middle" x="376.9" y="382.2">0.75</text>
+    <text class="serif size-9-5 secondary middle" x="419.2" y="382.2">1.00</text>
+    <text class="serif size-9-5 secondary middle" x="461.5" y="382.2">1.25</text>
+  </g>
+  <foreignObject x="-0.1" y="8.5" width="584" height="34">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-11-3 text-clay lh-115">Editing the system prompt or top-level effort costs 20 to 50 times as much</span>
+      <span class="label serif size-11-3 text-clay lh-115">as sending the same change in a message</span>
+    </div>
+  </foreignObject>
+  <foreignObject x="-0.1" y="41.3" width="584" height="28.7">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-9 secondary lh-115">One request on a cached conversation of about 100,000 tokens that held the model's first reply with its thinking</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="164" y="382.9" width="392" height="19.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10 primary lh-115">prompt cost of the request (USD, list)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0.00 to 1.25" d="M250 368 H470" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <text class="serif size-10-8 primary bold" x="5.9" y="90" translate="no">Claude Fable 5.1</text>
+  </g>
+  <g role="list" aria-label="Claude Fable 5.1">
+    <g role="listitem">
+      <foreignObject x="-0.1" y="95.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Instructions: system prompt edited</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="462.3" y="95.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary bold lh-115">$1.26 USD (50x)</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="250" y="99.5" width="213.3" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="113.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Instructions: sent as a system message</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="253.3" y="113.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">$0.026 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="250" y="117.5" width="4.3" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="131.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Effort: changed at the top level</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="420.8" y="131.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary bold lh-115">$1.02 USD (40x)</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="250" y="135.5" width="171.8" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="149.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Effort: changed per message</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="253.3" y="149.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">$0.025 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="250" y="153.5" width="4.3" height="11" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <text class="serif size-10-8 primary bold" x="5.9" y="190" translate="no">Claude Opus 5.5</text>
+  </g>
+  <g role="list" aria-label="Claude Opus 5.5">
+    <g role="listitem">
+      <foreignObject x="-0.1" y="195.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Instructions: system prompt edited</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="334.4" y="195.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary bold lh-115">$0.50 USD (25x)</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="250" y="199.5" width="85.4" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="213.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Instructions: sent as a system message</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="252.4" y="213.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">$0.020 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="250" y="217.5" width="3.4" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="231.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Effort: changed at the top level</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="318.1" y="231.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary bold lh-115">$0.41 USD (20x)</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="250" y="235.5" width="69.1" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="249.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Effort: changed per message</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="252.4" y="249.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">$0.020 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="250" y="253.5" width="3.4" height="11" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <text class="serif size-10-8 primary bold" x="5.9" y="290" translate="no">Claude Sonnet 5.5</text>
+  </g>
+  <g role="list" aria-label="Claude Sonnet 5.5">
+    <g role="listitem">
+      <foreignObject x="-0.1" y="295.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Instructions: system prompt edited</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="291.7" y="295.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary bold lh-115">$0.25 USD (25x)</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="250" y="299.5" width="42.7" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="313.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Instructions: sent as a system message</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="250.7" y="313.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">$0.010 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="250" y="317.5" width="1.7" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="331.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Effort: changed at the top level</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="283.5" y="331.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary bold lh-115">$0.20 USD (20x)</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="250" y="335.5" width="34.5" height="11" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="349.1" width="244" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">Effort: changed per message</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="250.7" y="349.1" width="116" height="19">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9-6 primary lh-115">$0.010 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="250" y="353.5" width="1.7" height="11" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <path class="axis" d="M250 368 V77" />
+  </g>
+  <foreignObject x="-0.1" y="406.2" width="587" height="44.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-9 secondary lh-115">Prompt cost: input, cache writes, and cache reads of the request that makes the change, at list prices; output not counted. 5-minute cache, no tools; mean of 2 conversations per model.</span>
+      <span class="label serif size-7-9 secondary lh-115">In parentheses: how many times the cost of the same request with nothing changed ($0.025 USD, $0.020 USD, and $0.010 USD).</span>
+    </div>
+  </foreignObject>
+</svg>

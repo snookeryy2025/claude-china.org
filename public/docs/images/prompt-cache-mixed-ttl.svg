@@ -1,0 +1,257 @@
+<svg lang="en" width="1376" height="986" viewBox="0 0 1376 986" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Three requests with different cache hits and misses: A, B, and C mark where cache reads, 1-hour writes, and 5-minute writes end">
+  <style>
+    /* Type: the page's fonts when the page inlines this diagram; the listed fallbacks otherwise, for example in a code review */
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 24px; text-anchor: middle; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    /* The letters A, B and C of the page's text. Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .position { fill: var(--cds-text-success, #006300); font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    /* The tints are equally bright, so an outline keeps neighboring blocks apart without color */
+    .block { stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 2; }
+    .read { fill: var(--cds-bg-tint-orange-opaque, #f7d8cb); }
+    .write-1h { fill: var(--cds-bg-pro, #dfdbfd); }
+    .write-5m { fill: var(--cds-bg-accent, #cde2fb); }
+    .on-write-5m { fill: var(--cds-text-accent, #184f95); }
+    .rest { fill: var(--cds-alpha-2, #e4e4e3); }
+    .arrow { fill: var(--cds-text-secondary, #52514e); stroke: var(--cds-text-secondary, #52514e); stroke-linecap: round; stroke-linejoin: round; }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    /* Two labels under neighbouring arrows: the first is aligned to its right edge and the second to its left edge, so a longer translation extends away from the other label and the gap between them stays as wide as in English. Each label centers its own lines. */
+    .area.hug { text-align: center; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.position { color: var(--cds-text-success, #006300); }
+    .label.on-write-5m { color: var(--cds-text-accent, #184f95); }
+    /* Line height of the labels in the 5m blocks, which take two lines in most translations */
+    .lh-150 { line-height: 1.5; }
+  </style>
+  <defs>
+    <!-- An arrow that points up to 0 0 and stops just below it -->
+    <g id="arrow">
+      <path stroke-width="4" d="M0 18 V80"/>
+      <path stroke-width="3.1" d="M0 3.1 L8.9 18.5 H-8.9 Z"/>
+    </g>
+    <g id="short-arrow">
+      <path stroke-width="4" d="M0 18 V64"/>
+      <path stroke-width="3.1" d="M0 3.1 L8.9 18.5 H-8.9 Z"/>
+    </g>
+  </defs>
+  <rect class="canvas" width="1376" height="986" aria-hidden="true"/>
+  <!-- Screen readers get the texts, and from each arrow where in the request its breakpoint is -->
+  <g role="list" aria-label="Three example requests">
+    <g role="listitem">
+      <g role="list" aria-label="Input tokens of the first request, in order">
+        <g role="listitem">
+          <rect class="block read" x="8" y="16" width="514" height="120" rx="6"/>
+          <foreignObject x="8" y="16" width="514" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">Cache Read</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="block write-1h" x="522" y="16" width="366" height="120" rx="6"/>
+          <foreignObject x="522" y="16" width="366" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">1h Cache Write</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="block write-5m" x="888" y="16" width="212" height="120" rx="6"/>
+          <foreignObject x="888" y="16" width="212" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans lh-150 on-write-5m">5m Cache Write</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="block rest" x="1100" y="16" width="252" height="120" rx="6"/>
+          <foreignObject x="1100" y="16" width="252" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">Rest of the prompt</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+      <g role="list" aria-label="Cache breakpoints of the first request, in order">
+        <g role="listitem">
+          <foreignObject x="412.22" y="220" width="219.56" height="49.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label sans primary">1h hit</span>
+            </div>
+          </foreignObject>
+          <text class="sans position" x="521.4" y="289.2">(A)</text>
+          <use class="arrow" href="#arrow" x="522" y="136" role="img" aria-label="Breakpoint where Cache Read ends"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="616.8" y="230.7" width="104" height="105.3">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area end top hug">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <use class="arrow" href="#arrow" x="658" y="136" role="img" aria-label="Breakpoint inside 1h Cache Write"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="722.8" y="230.7" width="104" height="105.3">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start top hug">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <use class="arrow" href="#arrow" x="751" y="136" role="img" aria-label="Breakpoint inside 1h Cache Write"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="793.82" y="220" width="206.96" height="49.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <text class="sans position" x="897.3" y="289.2">(B)</text>
+          <use class="arrow" href="#arrow" x="893" y="136" role="img" aria-label="Breakpoint where 1h Cache Write ends"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="992.82" y="220" width="243.56" height="49.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label sans primary">5m miss</span>
+            </div>
+          </foreignObject>
+          <text class="sans position" x="1101.4" y="285.2">(C)</text>
+          <use class="arrow" href="#arrow" x="1096" y="136" role="img" aria-label="Breakpoint where 5m Cache Write ends"/>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <g role="list" aria-label="Input tokens of the second request, in order">
+        <g role="listitem">
+          <rect class="block write-1h" x="16" y="340" width="880" height="120" rx="6"/>
+          <foreignObject x="16" y="340" width="880" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">1h Cache Write</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="block write-5m" x="896" y="340" width="208" height="120" rx="6"/>
+          <foreignObject x="896" y="340" width="208" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans lh-150 on-write-5m">5m Cache Write</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="block rest" x="1104" y="340" width="256" height="120" rx="6"/>
+          <foreignObject x="1104" y="340" width="256" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">Rest of the prompt</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+      <foreignObject x="11" y="514" width="489.78" height="168">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans position">(A is zero)</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Cache breakpoints of the second request, in order">
+        <g role="listitem">
+          <foreignObject x="448.82" y="554.5" width="190.96" height="127.5">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <use class="arrow" href="#arrow" x="535" y="460" role="img" aria-label="Breakpoint inside 1h Cache Write"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="624.8" y="554.6" width="104" height="127.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area end top hug">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <use class="arrow" href="#arrow" x="666" y="460" role="img" aria-label="Breakpoint inside 1h Cache Write"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="730.8" y="554.6" width="104" height="127.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start top hug">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <use class="arrow" href="#arrow" x="759" y="460" role="img" aria-label="Breakpoint inside 1h Cache Write"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="796.82" y="544" width="218.96" height="49.7">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <text class="sans position" x="905.3" y="612.2">(B)</text>
+          <use class="arrow" href="#arrow" x="901" y="460" role="img" aria-label="Breakpoint where 1h Cache Write ends"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="1006.82" y="544" width="231.56" height="50.7">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label sans primary">5m miss</span>
+            </div>
+          </foreignObject>
+          <text class="sans position" x="1109.4" y="612.2">(C)</text>
+          <use class="arrow" href="#short-arrow" x="1104" y="460" role="img" aria-label="Breakpoint where 5m Cache Write ends"/>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <g role="list" aria-label="Input tokens of the third request, in order">
+        <g role="listitem">
+          <rect class="block read" x="8" y="686" width="1088" height="120" rx="6"/>
+          <foreignObject x="8" y="686" width="1088" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">Cache Read</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="block rest" x="1096" y="686" width="256" height="120" rx="6"/>
+          <foreignObject x="1096" y="686" width="256" height="120">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans primary">Rest of the prompt</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+      <g role="list" aria-label="Cache breakpoints of the third request, in order">
+        <g role="listitem">
+          <foreignObject x="726.76" y="900.6" width="226.04" height="81.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+              <span class="label sans primary">1h miss</span>
+            </div>
+          </foreignObject>
+          <use class="arrow" href="#arrow" x="890" y="806" role="img" aria-label="Breakpoint inside Cache Read"/>
+        </g>
+        <g role="listitem">
+          <foreignObject x="998.82" y="890" width="216.76" height="47.6">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label sans primary">5m hit</span>
+            </div>
+          </foreignObject>
+          <text class="sans position" x="1107" y="958.3">(A, B, C)</text>
+          <use class="arrow" href="#arrow" x="1096" y="804" role="img" aria-label="Breakpoint where Cache Read ends"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

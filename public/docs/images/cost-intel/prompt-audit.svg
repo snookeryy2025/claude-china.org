@@ -1,0 +1,197 @@
+<svg lang="en" width="1314" height="816" viewBox="0 0 630.9 391.5" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Scatter chart, support-desk evaluation: the old prompt costs more on the new model; audited, it is cheaper and as accurate">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/prompt-audit.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-surface-1, #fcfcfb); stroke-width: 0.8; stroke-linejoin: round; }
+    .fill-blue-2 { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-surface-1, #fcfcfb); stroke-width: 0.8; stroke-linejoin: round; }
+    .fill-clay-2 { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); stroke-linejoin: round; }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-surface-1, #fcfcfb); stroke-width: 0.8; stroke-linejoin: round; }
+    .fill-grey-2 { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-chart-reference, #898781); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 1.2; stroke-linejoin: round; stroke-dasharray: 4.4 1.9; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-11 { font-size: 11px; }
+    .size-13-5 { font-size: 13.5px; }
+    .size-8 { font-size: 8px; }
+    .size-8-8 { font-size: 8.8px; }
+    .size-9 { font-size: 9px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="630.9" height="391.5" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M50.6 325.1 V45.5" />
+      <path class="grid" d="M149.4 325.1 V45.5" />
+      <path class="grid" d="M248.2 325.1 V45.5" />
+      <path class="grid" d="M347 325.1 V45.5" />
+      <path class="grid" d="M445.8 325.1 V45.5" />
+      <path class="grid" d="M544.7 325.1 V45.5" />
+    </g>
+    <path class="tick" d="M50.6 325.1 V328.6" />
+    <path class="tick" d="M149.4 325.1 V328.6" />
+    <path class="tick" d="M248.2 325.1 V328.6" />
+    <path class="tick" d="M347 325.1 V328.6" />
+    <path class="tick" d="M445.8 325.1 V328.6" />
+    <path class="tick" d="M544.7 325.1 V328.6" />
+    <text class="serif size-9-5 secondary middle" x="50.6" y="339.3">1.0</text>
+    <text class="serif size-9-5 secondary middle" x="149.4" y="339.3">1.5</text>
+    <text class="serif size-9-5 secondary middle" x="248.2" y="339.3">2.0</text>
+    <text class="serif size-9-5 secondary middle" x="347" y="339.3">2.5</text>
+    <text class="serif size-9-5 secondary middle" x="445.8" y="339.3">3.0</text>
+    <text class="serif size-9-5 secondary middle" x="544.7" y="339.3">3.5</text>
+    <g class="backdrop">
+      <path class="grid" d="M50.6 278.5 H623.7" />
+      <path class="grid" d="M50.6 220.3 H623.7" />
+      <path class="grid" d="M50.6 162 H623.7" />
+      <path class="grid" d="M50.6 103.8 H623.7" />
+      <path class="grid" d="M50.6 45.5 H623.7" />
+    </g>
+    <path class="tick" d="M50.6 278.5 H47.1" />
+    <path class="tick" d="M50.6 220.3 H47.1" />
+    <path class="tick" d="M50.6 162 H47.1" />
+    <path class="tick" d="M50.6 103.8 H47.1" />
+    <path class="tick" d="M50.6 45.5 H47.1" />
+    <text class="serif size-9-5 secondary end" x="43.6" y="282.1">80</text>
+    <text class="serif size-9-5 secondary end" x="43.6" y="223.9">85</text>
+    <text class="serif size-9-5 secondary end" x="43.6" y="165.6">90</text>
+    <text class="serif size-9-5 secondary end" x="43.6" y="107.4">95</text>
+    <text class="serif size-9-5 secondary end" x="43.6" y="49.1">100</text>
+    <path class="line-grey" d="M351 169 L530.8 142.2 L432 80.4" />
+    <path class="line-grey" d="M192.9 265.7 L171.1 233.1 L125.7 213.3" />
+  </g>
+  <foreignObject x="44.6" y="1.2" width="588" height="39">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-13-5 text-clay lh-115">Swapping in the new model raised the bill; auditing the prompt paid it back and then some</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="61.2" y="339.7" width="552" height="20.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-11 primary lh-115">cost per ticket (US cents)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 1.0 to 3.5" d="M50.6 325.1 H623.7" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(20.7 185.3)">
+        <text class="serif size-11 primary middle rotated" transform="rotate(-90)">tickets resolved correctly (%)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 80 to 100" d="M50.6 325.1 V45.5" />
+    </g>
+  </g>
+  <g role="list" aria-label="Opus 4.8 to Opus 5, in order">
+    <g role="listitem">
+      <foreignObject x="275" y="177.1" width="152" height="38.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-8-8 primary lh-115">Opus 4.8, old prompt</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-grey" role="img" aria-label="2.52 US cents per ticket, 89.4% of tickets resolved correctly" cx="351" cy="169" r="5.5" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="454.8" y="150.3" width="152" height="38.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-8-8 primary lh-115">Opus 5, same prompt</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-clay" role="img" aria-label="3.43 US cents per ticket, 91.7% of tickets resolved correctly" cx="530.8" cy="142.2" r="5.5" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="356" y="35.5" width="152" height="38.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-8-8 primary lh-115">Opus 5, audited prompt</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="2.93 US cents per ticket, 97.0% of tickets resolved correctly" cx="432" cy="80.4" r="5.5" />
+    </g>
+  </g>
+  <g role="list" aria-label="Sonnet 4.6 to Sonnet 5, in order">
+    <g role="listitem">
+      <foreignObject x="116.9" y="273.8" width="152" height="38.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-8-8 primary lh-115">Sonnet 4.6, old prompt</span>
+        </div>
+      </foreignObject>
+      <path class="fill-grey" role="img" aria-label="1.72 US cents per ticket, 81.1% of tickets resolved correctly" d="M192.9 272.8 L200 265.7 L192.9 258.6 L185.8 265.7 Z" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="173.1" y="239.2" width="152" height="38.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-8-8 primary lh-115">Sonnet 5, same prompt</span>
+        </div>
+      </foreignObject>
+      <path class="fill-clay" role="img" aria-label="1.61 US cents per ticket, 83.9% of tickets resolved correctly" d="M171.1 240.1 L178.2 233.1 L171.1 226 L164.1 233.1 Z" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="49.7" y="168.3" width="152" height="38.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-8-8 primary lh-115">Sonnet 5, audited prompt</span>
+        </div>
+      </foreignObject>
+      <path class="fill-blue" role="img" aria-label="1.38 US cents per ticket, 85.6% of tickets resolved correctly" d="M125.7 220.3 L132.8 213.3 L125.7 206.2 L118.6 213.3 Z" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <foreignObject x="56.1" y="53.7" width="212" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label serif size-9 secondary lh-115">circles: Opus 4.8 to Opus 5</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="56.1" y="64" width="212" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label serif size-9 secondary lh-115">diamonds: Sonnet 4.6 to Sonnet 5</span>
+      </div>
+    </foreignObject>
+    <circle class="fill-grey-2" cx="413.8" cy="284.7" r="4.5" />
+    <foreignObject x="424" y="275.1" width="202" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9 primary lh-115">old model, old prompt</span>
+      </div>
+    </foreignObject>
+    <circle class="fill-clay-2" cx="413.8" cy="298.2" r="4.5" />
+    <foreignObject x="424" y="288.6" width="202" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9 primary lh-115">new model, same prompt</span>
+      </div>
+    </foreignObject>
+    <circle class="fill-blue-2" cx="413.8" cy="311.7" r="4.5" />
+    <foreignObject x="424" y="302.1" width="202" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9 primary lh-115">new model, audited prompt</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="1.2" y="361.5" width="624" height="26.4">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-8 secondary lh-115">Support-desk evaluation (reference 14): 44 tickets, six prompts written for the older models, deterministic grading; each point is the mean over prompts and tickets.</span>
+    </div>
+  </foreignObject>
+</svg>

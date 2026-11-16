@@ -1,0 +1,360 @@
+<svg lang="en" width="1725" height="847" viewBox="0 0 828 406.4" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Charts: on SWE-bench Pro, Opus 5.5 and Sonnet 5.5 cut cost per solved task most; on Terminal-Bench 3, Opus drops to $28 USD">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/upgrade-ladder-sonnet-5-5.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-surface-1, #fcfcfb); stroke-width: 1.5; stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-surface-1, #fcfcfb); stroke-width: 1.5; stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .italic { font-style: italic; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .label.text-green { color: var(--cds-text-success, #006300); }
+    .lh-108 { line-height: 1.08; }
+    .lh-115 { line-height: 1.15; }
+    .lh-131 { line-height: 1.31; }
+    .line-clay { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .line-green { fill: none; stroke: var(--cds-chart-categorical-3, #1baf7a); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 0.8; stroke-linecap: round; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-3 { font-size: 10.3px; }
+    .size-10-9 { font-size: 10.9px; }
+    .size-11-8 { font-size: 11.8px; }
+    .size-7-9 { font-size: 7.9px; }
+    .size-9 { font-size: 9px; }
+    .size-9-3 { font-size: 9.3px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="828" height="406.4" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M58 319.5 V76.3" />
+      <path class="grid" d="M155.2 319.5 V76.3" />
+      <path class="grid" d="M252.3 319.5 V76.3" />
+      <path class="grid" d="M349.5 319.5 V76.3" />
+      <path class="grid" d="M446.7 319.5 V76.3" />
+    </g>
+    <path class="tick" d="M58 319.5 V323" />
+    <path class="tick" d="M155.2 319.5 V323" />
+    <path class="tick" d="M252.3 319.5 V323" />
+    <path class="tick" d="M349.5 319.5 V323" />
+    <path class="tick" d="M446.7 319.5 V323" />
+    <text class="serif size-9-5 secondary middle" x="58" y="333.7">0.00</text>
+    <text class="serif size-9-5 secondary middle" x="155.2" y="333.7">0.50</text>
+    <text class="serif size-9-5 secondary middle" x="252.3" y="333.7">1.00</text>
+    <text class="serif size-9-5 secondary middle" x="349.5" y="333.7">1.50</text>
+    <text class="serif size-9-5 secondary middle" x="446.7" y="333.7">2.00</text>
+    <g class="backdrop">
+      <path class="grid" d="M58 303.3 H505" />
+      <path class="grid" d="M58 262.8 H505" />
+      <path class="grid" d="M58 222.2 H505" />
+      <path class="grid" d="M58 181.7 H505" />
+      <path class="grid" d="M58 141.2 H505" />
+      <path class="grid" d="M58 100.6 H505" />
+    </g>
+    <path class="tick" d="M58 303.3 H54.5" />
+    <path class="tick" d="M58 262.8 H54.5" />
+    <path class="tick" d="M58 222.2 H54.5" />
+    <path class="tick" d="M58 181.7 H54.5" />
+    <path class="tick" d="M58 141.2 H54.5" />
+    <path class="tick" d="M58 100.6 H54.5" />
+    <text class="serif size-9-5 secondary end" x="51" y="306.9">70</text>
+    <text class="serif size-9-5 secondary end" x="51" y="266.4">75</text>
+    <text class="serif size-9-5 secondary end" x="51" y="225.8">80</text>
+    <text class="serif size-9-5 secondary end" x="51" y="185.3">85</text>
+    <text class="serif size-9-5 secondary end" x="51" y="144.8">90</text>
+    <text class="serif size-9-5 secondary end" x="51" y="104.2">95</text>
+    <g class="backdrop">
+      <path class="grid" d="M590 319.5 V76.3" />
+      <path class="grid" d="M641.5 319.5 V76.3" />
+      <path class="grid" d="M692.9 319.5 V76.3" />
+      <path class="grid" d="M744.4 319.5 V76.3" />
+      <path class="grid" d="M795.9 319.5 V76.3" />
+    </g>
+    <path class="tick" d="M590 319.5 V323" />
+    <path class="tick" d="M641.5 319.5 V323" />
+    <path class="tick" d="M692.9 319.5 V323" />
+    <path class="tick" d="M744.4 319.5 V323" />
+    <path class="tick" d="M795.9 319.5 V323" />
+    <text class="serif size-9-5 secondary middle" x="590" y="333.7">0</text>
+    <text class="serif size-9-5 secondary middle" x="641.5" y="333.7">50</text>
+    <text class="serif size-9-5 secondary middle" x="692.9" y="333.7">100</text>
+    <text class="serif size-9-5 secondary middle" x="744.4" y="333.7">150</text>
+    <text class="serif size-9-5 secondary middle" x="795.9" y="333.7">200</text>
+    <g class="backdrop">
+      <path class="grid" d="M590 319.5 H811.3" />
+      <path class="grid" d="M590 270.9 H811.3" />
+      <path class="grid" d="M590 222.2 H811.3" />
+      <path class="grid" d="M590 173.6 H811.3" />
+      <path class="grid" d="M590 124.9 H811.3" />
+      <path class="grid" d="M590 76.3 H811.3" />
+    </g>
+    <path class="tick" d="M590 319.5 H586.5" />
+    <path class="tick" d="M590 270.9 H586.5" />
+    <path class="tick" d="M590 222.2 H586.5" />
+    <path class="tick" d="M590 173.6 H586.5" />
+    <path class="tick" d="M590 124.9 H586.5" />
+    <path class="tick" d="M590 76.3 H586.5" />
+    <text class="serif size-9-5 secondary end" x="583" y="323.1">0</text>
+    <text class="serif size-9-5 secondary end" x="583" y="274.5">10</text>
+    <text class="serif size-9-5 secondary end" x="583" y="225.8">20</text>
+    <text class="serif size-9-5 secondary end" x="583" y="177.2">30</text>
+    <text class="serif size-9-5 secondary end" x="583" y="128.6">40</text>
+    <text class="serif size-9-5 secondary end" x="583" y="79.9">50</text>
+  </g>
+  <foreignObject x="2.3" y="-0.7" width="824" height="35.1">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-11-8 text-clay lh-115">Where older models already solve most tasks, the cost of each attempt decides what an upgrade saves; where they mostly fail, the pass rate does</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Benchmarks">
+    <g role="listitem">
+      <foreignObject x="52" y="30.4" width="469" height="33.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label serif size-10-9 primary lh-115">SWE-bench Pro subset: every model solves most tasks</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Axes">
+        <g role="listitem">
+          <foreignObject x="60.5" y="334.4" width="442" height="19.8">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label serif size-10-3 primary lh-115">cost per solved task (USD)</span>
+            </div>
+          </foreignObject>
+          <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0.00 to 2.00" d="M58 319.5 H505" />
+        </g>
+        <g role="listitem">
+          <g transform="translate(33.2 197.9)">
+            <text class="serif size-10-3 primary middle rotated" transform="rotate(-90)">tasks solved (%)</text>
+          </g>
+          <path class="axis" role="img" aria-label="Vertical axis, labeled from 70 to 95" d="M58 319.5 V76.3" />
+        </g>
+      </g>
+      <g role="list" aria-label="SWE-bench Pro subset: Claude Sonnet models, older to newer">
+        <g role="listitem">
+          <foreignObject x="250.2" y="284.5" width="232" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+              <span class="label serif size-9-3 primary lh-108">Claude Sonnet 4.6</span>
+              <span class="label serif size-9-3 primary lh-108">$1.00 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-grey" role="img" aria-label="73% of tasks solved" cx="252.2" cy="280.6" r="7.7" />
+        </g>
+        <g role="listitem">
+          <g role="img" aria-label="From Claude Sonnet 4.6 to Claude Sonnet 5">
+            <path class="line-green" d="M246.6 273.5 L228.4 250" />
+            <path class="line-green" d="M229.3 254.2 L228.4 250 L232.3 251.9" />
+          </g>
+          <foreignObject x="237.1" y="237.4" width="152" height="39">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start">
+              <span class="label serif size-9 text-green italic lh-115">16% cheaper, +5 points</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <foreignObject x="57.8" y="242.4" width="162" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column end top">
+              <span class="label serif size-9-3 primary lh-108">Claude Sonnet 5</span>
+              <span class="label serif size-9-3 primary lh-108">$0.84 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-grey" role="img" aria-label="78% of tasks solved" cx="221.8" cy="241.5" r="7.7" />
+        </g>
+        <g role="listitem">
+          <g role="img" aria-label="From Claude Sonnet 5 to Claude Sonnet 5.5">
+            <path class="line-green" d="M214 237.1 L89.3 166.3" />
+            <path class="line-green" d="M91.7 169.9 L89.3 166.3 L93.6 166.6" />
+          </g>
+          <foreignObject x="199" y="194.3" width="212" height="39">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start">
+              <span class="label serif size-9 text-green italic lh-115">87% cheaper, +10 points</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <foreignObject x="90" y="145.9" width="232" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+              <span class="label serif size-9-3 primary lh-108">Claude Sonnet 5.5</span>
+              <span class="label serif size-9-3 primary lh-108">$0.11 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" role="img" aria-label="88% of tasks solved" cx="80" cy="161" r="7.7" />
+        </g>
+      </g>
+      <g role="list" aria-label="SWE-bench Pro subset: Claude Opus models, older to newer">
+        <g role="listitem">
+          <foreignObject x="76.7" y="61.1" width="182" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column end bottom">
+              <span class="label serif size-9-3 primary lh-108">Claude Opus 5</span>
+              <span class="label serif size-9-3 primary lh-108">$1.01 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <path class="line-grey" aria-hidden="true" d="M254.7 109.3 V115.6" />
+          <circle class="fill-grey" role="img" aria-label="92% of tasks solved" cx="254.7" cy="125.3" r="7.7" />
+        </g>
+        <g role="listitem">
+          <g role="img" aria-label="From Claude Opus 5 to Claude Opus 5.5">
+            <path class="line-clay" d="M245.7 125 L111.9 119.1" />
+            <path class="line-clay" d="M115.6 121.2 L111.9 119.1 L115.8 117.4" />
+          </g>
+          <foreignObject x="63.4" y="117.2" width="192" height="39">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center">
+              <span class="label serif size-9 text-clay italic lh-115">78% cheaper,</span>
+              <span class="label serif size-9 text-clay italic lh-115">about the same score</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <foreignObject x="75.1" y="39.8" width="212" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+              <span class="label serif size-9-3 primary lh-108">Claude Opus 5.5</span>
+              <span class="label serif size-9-3 primary lh-108">$0.22 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" role="img" aria-label="93% of tasks solved" cx="101.1" cy="118.6" r="7.7" />
+        </g>
+      </g>
+      <g role="list" aria-label="SWE-bench Pro subset: Claude Fable models, older to newer">
+        <g role="listitem">
+          <foreignObject x="303.1" y="137.8" width="162" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column end top">
+              <span class="label serif size-9-3 primary lh-108">Claude Fable 5</span>
+              <span class="label serif size-9-3 primary lh-108">$2.10 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-grey" role="img" aria-label="91% of tasks solved" cx="467.1" cy="136.9" r="7.7" />
+        </g>
+        <g role="listitem">
+          <g role="img" aria-label="From Claude Fable 5 to Claude Fable 5.1">
+            <path class="line-green" d="M458.1 136.2 L300 123.7" />
+            <path class="line-green" d="M303.7 125.9 L300 123.7 L304 122.1" />
+          </g>
+          <foreignObject x="309" y="88.6" width="197" height="39">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column end bottom">
+              <span class="label serif size-9 text-green italic lh-115">43% cheaper, about the same score</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <foreignObject x="260.3" y="53.6" width="127" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+              <span class="label serif size-9-3 primary lh-108">Claude Fable 5.1</span>
+              <span class="label serif size-9-3 primary lh-108">$1.19 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <path class="line-grey" aria-hidden="true" d="M289.3 101.8 V113.1" />
+          <circle class="fill-blue" role="img" aria-label="92% of tasks solved" cx="289.3" cy="122.8" r="7.7" />
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="584" y="30.4" width="243.3" height="33.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label serif size-10-9 primary lh-115">Terminal-Bench 3: older models mostly fail</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Axes">
+        <g role="listitem">
+          <foreignObject x="589.6" y="334.4" width="222" height="19.8">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label serif size-10-3 primary lh-115">cost per solved task (USD)</span>
+            </div>
+          </foreignObject>
+          <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0 to 200" d="M590 319.5 H811.3" />
+        </g>
+        <g role="listitem">
+          <g transform="translate(564.6 197.9)">
+            <text class="serif size-10-3 primary middle rotated" transform="rotate(-90)">tasks solved (%)</text>
+          </g>
+          <path class="axis" role="img" aria-label="Vertical axis, labeled from 0 to 50" d="M590 319.5 V76.3" />
+        </g>
+      </g>
+      <g role="list" aria-label="Terminal-Bench 3: Claude Opus models, older to newer">
+        <g role="listitem">
+          <foreignObject x="588.1" y="287.1" width="182" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column end top">
+              <span class="label serif size-9-3 primary lh-108">Claude Opus 4.7</span>
+              <span class="label serif size-9-3 primary lh-108">$183 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-grey" role="img" aria-label="7% of tasks solved" cx="778.1" cy="286.6" r="7.7" />
+        </g>
+        <g role="listitem">
+          <g role="img" aria-label="From Claude Opus 4.7 to Claude Opus 4.8">
+            <path class="line-clay" d="M769.5 283.9 L665.6 250.5" />
+            <path class="line-clay" d="M668.6 253.5 L665.6 250.5 L669.8 249.9" />
+          </g>
+          <foreignObject x="607.6" y="255.1" width="152" height="39">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column end bottom">
+              <span class="label serif size-9 text-clay italic lh-115">65% cheaper, +8 points</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <foreignObject x="663.3" y="203.4" width="162" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+              <span class="label serif size-9-3 primary lh-108">Claude Opus 4.8</span>
+              <span class="label serif size-9-3 primary lh-108">$63 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-grey" role="img" aria-label="15% of tasks solved" cx="655.3" cy="247.2" r="7.7" />
+        </g>
+        <g role="listitem">
+          <g role="img" aria-label="From Claude Opus 4.8 to Claude Opus 5">
+            <path class="line-clay" d="M652.9 238.6 L621.9 129.4" />
+            <path class="line-clay" d="M621.1 133.6 L621.9 129.4 L624.7 132.5" />
+          </g>
+          <foreignObject x="641.3" y="163.6" width="152" height="39">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start">
+              <span class="label serif size-9 text-clay italic lh-115">56% cheaper, +26 points</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <foreignObject x="626.9" y="103.9" width="162" height="48.2">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+              <span class="label serif size-9-3 primary lh-108">Claude Opus 5</span>
+              <span class="label serif size-9-3 primary lh-108">$28 USD per solved task</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-grey" role="img" aria-label="41% of tasks solved" cx="618.9" cy="119" r="7.7" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <foreignObject x="2.3" y="360.3" width="824" height="49.4">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-9 secondary lh-131">Each model at its shipped defaults; cost per solved task at list prices, priced as a customer is billed (5-minute cache expiry). Blue marks Opus 5.5, Sonnet 5.5, and Fable 5.1.</span>
+      <span class="label serif size-7-9 secondary lh-131">Left: 478-problem subset; two runs each for Opus 5, Opus 5.5, Sonnet 5, and Sonnet 5.5, three for Fable 5, and one each for Sonnet 4.6 and Fable 5.1.</span>
+      <span class="label serif size-7-9 secondary lh-131">Right: 74 tasks on Claude Managed Agents, two runs per model; the Fable and Sonnet models and Opus 5.5 were not run on Terminal-Bench 3.</span>
+    </div>
+  </foreignObject>
+</svg>

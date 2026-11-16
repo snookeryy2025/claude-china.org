@@ -1,0 +1,229 @@
+<svg lang="en" width="1403" height="822" viewBox="0 0 673.4 394.4" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Scatter chart, defect search: Opus 5.5 with Sonnet 5.5 subagents matches Opus 5.5 alone, at medium, for about a third less">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/corpus-pareto.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .bold { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); stroke-linejoin: round; }
+    .fill-green { fill: var(--cds-chart-categorical-3, #1baf7a); stroke: var(--cds-chart-categorical-3, #1baf7a); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-blue { color: var(--cds-text-accent, #184f95); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .label.text-green { color: var(--cds-text-success, #006300); }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; }
+    .line-clay { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; }
+    .line-clay-2 { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+    .line-clay-3 { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 1.5; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-5 { font-size: 10.5px; }
+    .size-11 { font-size: 11px; }
+    .size-13-5 { font-size: 13.5px; }
+    .size-8 { font-size: 8px; }
+    .size-8-5 { font-size: 8.5px; }
+    .size-9 { font-size: 9px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="673.4" height="394.4" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M73.8 318.6 V38.1" />
+      <path class="grid" d="M209 318.6 V38.1" />
+      <path class="grid" d="M344.2 318.6 V38.1" />
+      <path class="grid" d="M479.3 318.6 V38.1" />
+      <path class="grid" d="M614.5 318.6 V38.1" />
+    </g>
+    <path class="tick" d="M73.8 318.6 V322.1" />
+    <path class="tick" d="M209 318.6 V322.1" />
+    <path class="tick" d="M344.2 318.6 V322.1" />
+    <path class="tick" d="M479.3 318.6 V322.1" />
+    <path class="tick" d="M614.5 318.6 V322.1" />
+    <text class="serif size-9-5 secondary middle" x="73.8" y="332.8">50</text>
+    <text class="serif size-9-5 secondary middle" x="209" y="332.8">100</text>
+    <text class="serif size-9-5 secondary middle" x="344.2" y="332.8">200</text>
+    <text class="serif size-9-5 secondary middle" x="479.3" y="332.8">400</text>
+    <text class="serif size-9-5 secondary middle" x="614.5" y="332.8">800</text>
+    <g class="backdrop">
+      <path class="grid" d="M53.3 318.6 H658" />
+      <path class="grid" d="M53.3 271.8 H658" />
+      <path class="grid" d="M53.3 225.1 H658" />
+      <path class="grid" d="M53.3 178.4 H658" />
+      <path class="grid" d="M53.3 131.6 H658" />
+      <path class="grid" d="M53.3 84.9 H658" />
+      <path class="grid" d="M53.3 38.1 H658" />
+    </g>
+    <path class="tick" d="M53.3 318.6 H49.8" />
+    <path class="tick" d="M53.3 271.8 H49.8" />
+    <path class="tick" d="M53.3 225.1 H49.8" />
+    <path class="tick" d="M53.3 178.4 H49.8" />
+    <path class="tick" d="M53.3 131.6 H49.8" />
+    <path class="tick" d="M53.3 84.9 H49.8" />
+    <path class="tick" d="M53.3 38.1 H49.8" />
+    <text class="serif size-9-5 secondary end" x="46.3" y="322.2">0.60</text>
+    <text class="serif size-9-5 secondary end" x="46.3" y="275.5">0.65</text>
+    <text class="serif size-9-5 secondary end" x="46.3" y="228.7">0.70</text>
+    <text class="serif size-9-5 secondary end" x="46.3" y="182">0.75</text>
+    <text class="serif size-9-5 secondary end" x="46.3" y="135.2">0.80</text>
+    <text class="serif size-9-5 secondary end" x="46.3" y="88.5">0.85</text>
+    <text class="serif size-9-5 secondary end" x="46.3" y="41.7">0.90</text>
+    <path class="line-clay" d="M344.5 106.5 L376.1 84.9" />
+    <path class="line-blue" d="M533.3 104.2 L559.2 95.4 L592.8 87.4" />
+  </g>
+  <foreignObject x="47.3" y="-1.7" width="622" height="39">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-13-5 text-clay lh-115">Opus 5.5 with Sonnet 5.5 subagents matches Opus 5.5 alone at medium, for about a third less</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="149.7" y="333.2" width="412" height="20.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-11 primary lh-115">cost per run (USD, logarithmic scale)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 50 to 800, logarithmic" d="M53.3 318.6 H658" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(20.2 178.4)">
+        <text class="serif size-11 primary middle rotated" transform="rotate(-90)">planted defects found (F1 score)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 0.60 to 0.90" d="M53.3 318.6 V38.1" />
+    </g>
+  </g>
+  <path class="line-clay-2" aria-hidden="true" d="M340.7 101.8 Q315.6 73.4 284.8 93.6" />
+  <path class="line-clay-2" aria-hidden="true" d="M289.3 93 L284.8 93.6 L287.1 89.7" />
+  <g role="list" aria-label="Claude Sonnet 5.5">
+    <g role="listitem">
+      <foreignObject x="118.6" y="188.7" width="192" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-9-5 text-green lh-115">Sonnet 5.5 alone, high effort</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="118.6" y="177.1" width="192" height="18.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label serif size-9 secondary lh-115">$103 USD, F1 0.760</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-green" aria-hidden="true" cx="214.6" cy="169.4" r="4.8" />
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Opus 5.5">
+    <g role="listitem">
+      <foreignObject x="69.1" y="221.1" width="212" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label serif size-9-5 text-clay lh-115">Opus 5.5 with Haiku 5.5 subagents</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="69.1" y="243.9" width="212" height="18.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9 secondary lh-115">$47 USD, F1 0.677</span>
+        </div>
+      </foreignObject>
+      <path class="fill-clay" aria-hidden="true" d="M63.1 253 L69.8 246.3 L63.1 239.6 L56.4 246.3 Z" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="60" y="67.5" width="202" height="32.1">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end bottom">
+          <span class="label serif size-10-5 text-clay bold lh-115">Opus 5.5 with Sonnet 5.5 subagents</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="60" y="93.3" width="202" height="18.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-9 secondary lh-115">$139 USD, F1 0.831</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="75" y="104.9" width="187" height="40.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column end top">
+          <span class="label serif size-9-5 text-clay bold lh-115">Matches Opus 5.5 alone at medium,</span>
+          <span class="label serif size-9-5 text-clay bold lh-115">for 31% less</span>
+        </div>
+      </foreignObject>
+      <circle class="line-clay-3" aria-hidden="true" cx="273" cy="102.6" r="12" />
+      <path class="fill-clay" aria-hidden="true" d="M273 109.4 L279.7 102.6 L273 95.9 L266.3 102.6 Z" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="262.3" y="38.7" width="196" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-5 text-clay lh-115">Opus 5.5 alone, medium to high effort</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="262.3" y="61.6" width="196" height="18.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label serif size-9 secondary lh-115">$200–$236 USD, F1 0.827–0.850</span>
+        </div>
+      </foreignObject>
+      <text class="serif size-8-5 secondary" aria-hidden="true" x="350.5" y="112.7" translate="no">medium</text>
+      <circle class="fill-clay" role="img" aria-label="medium effort: $200 USD, F1 0.827" cx="344.5" cy="106.5" r="3.3" />
+      <text class="serif size-8-5 secondary" aria-hidden="true" x="382.1" y="91.1" translate="no">high</text>
+      <circle class="fill-clay" role="img" aria-label="high effort: $236 USD, F1 0.850" cx="376.1" cy="84.9" r="3.3" />
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Fable 5.1">
+    <g role="listitem">
+      <foreignObject x="303.9" y="127.9" width="212" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-5 text-blue lh-115">Fable 5.1 with Sonnet 5.5 subagents</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="303.9" y="116.3" width="212" height="18.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-9 secondary lh-115">$172 USD, F1 0.825</span>
+        </div>
+      </foreignObject>
+      <path class="fill-blue" aria-hidden="true" d="M314.9 115.3 L321.7 108.6 L314.9 101.9 L308.2 108.6 Z" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="465" y="41.2" width="196" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-5 text-blue lh-115">Fable 5.1 alone, low to high effort</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="465" y="64" width="196" height="18.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label serif size-9 secondary lh-115">$527–$716 USD, F1 0.829–0.847</span>
+        </div>
+      </foreignObject>
+      <text class="serif size-8-5 secondary middle" aria-hidden="true" x="533.3" y="117.4" translate="no">low</text>
+      <circle class="fill-blue" role="img" aria-label="low effort: $527 USD, F1 0.829" cx="533.3" cy="104.2" r="3.3" />
+      <text class="serif size-8-5 secondary middle" aria-hidden="true" x="559.2" y="108.6" translate="no">medium</text>
+      <circle class="fill-blue" role="img" aria-label="medium effort: $603 USD, F1 0.839" cx="559.2" cy="95.4" r="3.3" />
+      <text class="serif size-8-5 secondary middle" aria-hidden="true" x="592.8" y="100.6" translate="no">high</text>
+      <circle class="fill-blue" role="img" aria-label="high effort: $716 USD, F1 0.847" cx="592.8" cy="87.4" r="3.3" />
+    </g>
+  </g>
+  <foreignObject x="1.2" y="355.4" width="667" height="35.6">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-8 secondary lh-115">About 22M tokens of public Python source code in 201 parts; each point is the mean of 10 runs; costs at list prices; alone: one session per part; orchestrators ran at high effort, subagents at their models' defaults; not shown: Fable 5.1 with Haiku 5.5 subagents and, below 0.60, where the y-axis starts, Opus 5.5 alone at low effort and Haiku 5.5 alone</span>
+    </div>
+  </foreignObject>
+</svg>

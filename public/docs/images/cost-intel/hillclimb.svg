@@ -1,0 +1,239 @@
+<svg lang="en" width="1500" height="854" viewBox="0 0 720 410" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Scatter chart, tau2-bench retail: each search step from Claude Opus 5; Sonnet 5 at low is 61% cheaper within 2 points">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/hillclimb.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); }
+    .fill-clay-2 { fill: var(--cds-clay, #d97757); stroke: var(--cds-text-primary, #0b0b0b); stroke-width: 1.2; stroke-linejoin: round; }
+    .fill-green { fill: var(--cds-chart-categorical-3, #1baf7a); opacity: 0.12; }
+    .fill-primary { fill: var(--cds-text-primary, #0b0b0b); stroke: var(--cds-text-primary, #0b0b0b); }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .label.text-green { color: var(--cds-text-success, #006300); }
+    .lh-112 { line-height: 1.12; }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 1.1; stroke-linecap: round; stroke-dasharray: 0.1 3.2; }
+    .line-grey-2 { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 2.6; stroke-linecap: round; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .ring-clay { fill: var(--cds-surface-1, #fcfcfb); stroke: var(--cds-clay, #d97757); stroke-width: 2; }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10 { font-size: 10px; }
+    .size-11 { font-size: 11px; }
+    .size-11-5 { font-size: 11.5px; }
+    .size-13-5 { font-size: 13.5px; }
+    .size-8 { font-size: 8px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="720" height="410" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M57.6 336 V36" />
+      <path class="grid" d="M136.1 336 V36" />
+      <path class="grid" d="M214.7 336 V36" />
+      <path class="grid" d="M293.2 336 V36" />
+      <path class="grid" d="M371.8 336 V36" />
+      <path class="grid" d="M450.3 336 V36" />
+      <path class="grid" d="M528.9 336 V36" />
+      <path class="grid" d="M607.4 336 V36" />
+      <path class="grid" d="M686 336 V36" />
+    </g>
+    <path class="tick" d="M57.6 336 V339.5" />
+    <path class="tick" d="M136.1 336 V339.5" />
+    <path class="tick" d="M214.7 336 V339.5" />
+    <path class="tick" d="M293.2 336 V339.5" />
+    <path class="tick" d="M371.8 336 V339.5" />
+    <path class="tick" d="M450.3 336 V339.5" />
+    <path class="tick" d="M528.9 336 V339.5" />
+    <path class="tick" d="M607.4 336 V339.5" />
+    <path class="tick" d="M686 336 V339.5" />
+    <text class="serif size-9-5 secondary middle" x="57.6" y="350.2">0</text>
+    <text class="serif size-9-5 secondary middle" x="136.1" y="350.2">0.02</text>
+    <text class="serif size-9-5 secondary middle" x="214.7" y="350.2">0.04</text>
+    <text class="serif size-9-5 secondary middle" x="293.2" y="350.2">0.06</text>
+    <text class="serif size-9-5 secondary middle" x="371.8" y="350.2">0.08</text>
+    <text class="serif size-9-5 secondary middle" x="450.3" y="350.2">0.10</text>
+    <text class="serif size-9-5 secondary middle" x="528.9" y="350.2">0.12</text>
+    <text class="serif size-9-5 secondary middle" x="607.4" y="350.2">0.14</text>
+    <text class="serif size-9-5 secondary middle" x="686" y="350.2">0.16</text>
+    <g class="backdrop">
+      <path class="grid" d="M57.6 324.5 H705.6" />
+      <path class="grid" d="M57.6 278.3 H705.6" />
+      <path class="grid" d="M57.6 232.2 H705.6" />
+      <path class="grid" d="M57.6 186 H705.6" />
+      <path class="grid" d="M57.6 139.8 H705.6" />
+      <path class="grid" d="M57.6 93.7 H705.6" />
+      <path class="grid" d="M57.6 47.5 H705.6" />
+    </g>
+    <path class="tick" d="M57.6 324.5 H54.1" />
+    <path class="tick" d="M57.6 278.3 H54.1" />
+    <path class="tick" d="M57.6 232.2 H54.1" />
+    <path class="tick" d="M57.6 186 H54.1" />
+    <path class="tick" d="M57.6 139.8 H54.1" />
+    <path class="tick" d="M57.6 93.7 H54.1" />
+    <path class="tick" d="M57.6 47.5 H54.1" />
+    <text class="serif size-9-5 secondary end" x="50.6" y="328.1">70</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="281.9">72</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="235.8">74</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="189.6">76</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="143.5">78</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="97.3">80</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="51.2">82</text>
+    <rect class="fill-green" x="57.6" y="139.8" width="648" height="92.4" />
+    <path class="line-grey" d="M273.6 199.8 V98.3" />
+    <path class="line-grey" d="M273.6 199.8 L265.7 280.6" />
+    <path class="line-blue" d="M606.2 181.8 L535.7 149.4" />
+    <path class="line-blue" d="M538.5 152.9 L535.7 149.4 L540.1 149.2" />
+    <path class="line-blue" d="M515.2 146.6 L285.1 197.3" />
+    <path class="line-blue" d="M289.4 198.4 L285.1 197.3 L288.6 194.5" />
+    <path class="line-blue" d="M273.6 208.3 V214.9" />
+    <path class="line-blue" d="M275 212.1 L273.6 214.9 L272.2 212.1" />
+  </g>
+  <foreignObject x="51.6" y="7.7" width="662" height="23.5">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-13-5 text-clay lh-115">Every step of the search: two kept, one that did not hold, one rejected</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="125.6" y="350.6" width="512" height="21.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-11-5 primary lh-115">cost per task (USD, list prices)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0 to 0.16" d="M57.6 336 H705.6" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(24 186)">
+        <text class="serif size-11 primary middle rotated" transform="rotate(-90)">tasks passed (%)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 70 to 82" d="M57.6 336 V36" />
+    </g>
+  </g>
+  <foreignObject x="60.6" y="140.3" width="182" height="39.9">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+      <span class="label serif size-9-5 text-green lh-112">band set before the search:</span>
+      <span class="label serif size-9-5 text-green lh-112">within 2 points of the start</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="The search's steps, in order">
+    <g role="listitem">
+      <foreignObject x="509.3" y="192.5" width="212" height="41.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+          <span class="label serif size-10 primary lh-112">start: Claude Opus 5, default effort</span>
+          <span class="label serif size-10 primary lh-112">76.0% at $0.142 USD</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-primary" aria-hidden="true" cx="615.3" cy="186" r="6.3" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="420.9" y="94.6" width="208" height="41.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column center bottom">
+          <span class="label serif size-10 text-clay lh-112">1  effort to low</span>
+          <span class="label serif size-10 text-clay lh-112">77.8% at $0.119 USD, kept</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-clay" aria-hidden="true" cx="524.9" cy="144.5" r="6.3" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="74.6" y="175.2" width="192" height="41.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column end">
+          <span class="label serif size-10 text-clay lh-112">2  Claude Sonnet 5 at low</span>
+          <span class="label serif size-10 text-clay lh-112">75.4% at $0.055 USD, kept (2 runs)</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-clay" aria-hidden="true" cx="273.6" cy="199.8" r="6.3" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="280.6" y="71.6" width="312" height="41.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start">
+          <span class="label serif size-10 text-clay lh-112">3  prompt: look orders up after login</span>
+          <span class="label serif size-10 text-clay lh-112">79.8% on selection, did not hold at confirm</span>
+        </div>
+      </foreignObject>
+      <circle class="ring-clay" role="img" aria-label="kept on selection only: about $0.055 USD per task, 79.8% of tasks passed" cx="273.6" cy="98.3" r="5.5" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="272.7" y="262.9" width="262" height="41.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start">
+          <span class="label serif size-10 secondary lh-112">4  prompt: transfer only on request</span>
+          <span class="label serif size-10 secondary lh-112">71.9%, rejected and reverted</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="rejected: about $0.053 USD per task, 71.9% of tasks passed">
+        <path class="line-grey-2" d="M261.1 276 L270.3 285.2" />
+        <path class="line-grey-2" d="M261.1 285.2 L270.3 276" />
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="281.6" y="228.7" width="312" height="41.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-10 primary lh-112">confirm: 74.3% at $0.055 USD</span>
+          <span class="label serif size-10 primary lh-112">3 fresh runs, 61% cheaper than the start</span>
+        </div>
+      </foreignObject>
+      <path class="fill-clay-2" aria-hidden="true" d="M273.6 232.7 L281 225.2 L273.6 217.8 L266.2 225.2 Z" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <circle class="fill-clay" cx="523.6" cy="277.3" r="6.3" />
+    <foreignObject x="534.7" y="267.7" width="187.3" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">kept</span>
+      </div>
+    </foreignObject>
+    <circle class="ring-clay" cx="523.6" cy="291.5" r="5.5" />
+    <foreignObject x="534.7" y="281.9" width="187.3" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">kept on selection only</span>
+      </div>
+    </foreignObject>
+    <path class="line-grey-2" d="M519 301.2 L528.2 310.4" />
+    <path class="line-grey-2" d="M519 310.4 L528.2 301.2" />
+    <foreignObject x="534.7" y="296.2" width="187.3" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">rejected</span>
+      </div>
+    </foreignObject>
+    <path class="fill-clay-2" d="M523.6 327.5 L531 320 L523.6 312.6 L516.1 320 Z" />
+    <foreignObject x="534.7" y="310.4" width="187.3" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">confirmed final</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="1.2" y="373.6" width="712" height="34.9">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-8 secondary lh-112">tau2-bench retail, 57 held-out tasks. Start and confirm: means of 3 runs; step 1: 3-run confirm after the search; steps 2 and 3: 2 runs; step 4: 1 run; step 5 not run.</span>
+      <span class="label serif size-8 secondary lh-112">Costs at list prices, agent plus simulated user, judge excluded.</span>
+    </div>
+  </foreignObject>
+</svg>

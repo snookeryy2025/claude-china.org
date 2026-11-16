@@ -1,0 +1,148 @@
+<svg lang="en" width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Diagram of three tool_choice options: auto (a tool or a plain response), any (one of the tools), and tool (the named tool)">
+  <style>
+    /* Type: the page's fonts when the page inlines this diagram; the listed fallbacks otherwise, for example in a code review */
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); font-size: 68px; letter-spacing: 0.015em; word-spacing: 0.04em; }
+    /* Chinese, Japanese and Korean have no serif in the docs fonts, and browsers pick different serif fallbacks for them, so their serif labels use the sans fonts, like the page's sans text */
+    .serif:is(:lang(ja), :lang(ko), :lang(zh)) { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); }
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 18px; }
+    /* Tool names are spaced wider, as in the picture this diagram replaces */
+    .name { letter-spacing: 0.05em; }
+    .mono { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 19.2px; }
+    .mono-small { font-size: 17.9px; }
+    .middle { text-anchor: middle; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .panel { fill: var(--cds-alpha-2, #0b0b0b1a); }
+    .item { fill: var(--cds-alpha-3, #0b0b0b33); }
+    .respond { fill: var(--cds-surface-1, #fcfcfb); }
+    /* What Claude is not allowed to pick is faded */
+    .item-off { fill: var(--cds-alpha-1, #0b0b0b0d); }
+    .respond-off { fill: var(--cds-surface-1, #fcfcfb); fill-opacity: 0.35; }
+    /* The headers and the frames are clay in both themes, so the text on the headers is dark in both, at its drawn weight */
+    .header { fill: var(--cds-clay, #d97757); }
+    .on-clay { fill: var(--cds-gray-900, #0b0b0b); font-variation-settings: normal; }
+    .frame { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 4.8; }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.top { align-items: flex-start; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    /* A translated label with lines of about the same length; the English label keeps its own line breaks */
+    .label.balance-translation:not(:lang(en)) { text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    /* Line heights of labels whose lines were drawn closer or farther apart than 1.3 (lh-N is N/100) */
+    .lh-136 { line-height: 1.36; }
+  </style>
+  <rect class="canvas" width="960" height="540" aria-hidden="true"/>
+  <foreignObject x="37.3" y="5.8" width="885.4" height="111">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif secondary">Tool choice</span>
+    </div>
+  </foreignObject>
+  <!-- The frame in each column encloses what Claude may pick. Screen readers get that from the names of the lists -->
+  <g role="list" aria-label="tool_choice options">
+    <g role="listitem">
+      <rect class="header" x="44" y="120.8" width="240.6" height="59.2"/>
+      <text class="mono middle on-clay" x="163.9" y="156.5" translate="no">{"type": "auto"}</text>
+      <rect class="panel" x="44" y="201" width="240.6" height="309"/>
+      <rect class="frame" x="77.2" y="209.3" width="171.9" height="289.4" aria-hidden="true"/>
+      <g role="list" aria-label="Claude picks one of these">
+        <g role="listitem">
+          <rect class="item" x="86" y="218" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="164.5" y="247.3">get_order_info</text>
+        </g>
+        <g role="listitem">
+          <rect class="item" x="86" y="272.5" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="164.5" y="301.5">send_email</text>
+        </g>
+        <g role="listitem">
+          <rect class="item" x="86" y="326.5" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="164.5" y="355.5">create_invoice</text>
+        </g>
+        <g role="listitem">
+          <rect class="respond" x="86" y="394" width="156" height="97.5"/>
+          <foreignObject x="86" y="394" width="156" height="97.5">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans lh-136 primary balance-translation">respond without calling a tool</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <rect class="header" x="359.2" y="120.8" width="240.6" height="59.2"/>
+      <text class="mono middle on-clay" x="479" y="156.5" translate="no">{"type": "any"}</text>
+      <rect class="panel" x="359.2" y="201" width="240.6" height="309"/>
+      <rect class="frame" x="393.1" y="209.3" width="171.5" height="168.9" aria-hidden="true"/>
+      <g role="list" aria-label="Claude must call one of these tools">
+        <g role="listitem">
+          <rect class="item" x="401" y="218" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="479.5" y="247.3">get_order_info</text>
+        </g>
+        <g role="listitem">
+          <rect class="item" x="401" y="272.5" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="479.5" y="301.5">send_email</text>
+        </g>
+        <g role="listitem">
+          <rect class="item" x="401" y="326.5" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="479.5" y="355.5">create_invoice</text>
+        </g>
+      </g>
+      <g role="list" aria-label="Not allowed">
+        <g role="listitem">
+          <rect class="respond-off" x="401" y="394" width="156" height="97.5"/>
+          <foreignObject x="401" y="394" width="156" height="97.5">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans lh-136 secondary balance-translation">respond without calling a tool</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <rect class="header" x="674.4" y="120.8" width="240.6" height="59.2"/>
+      <text class="mono mono-small on-clay" translate="no"><tspan x="681.8" y="143">{"type": "tool",</tspan> <tspan x="681.8" y="168">"name": "send_email"}</tspan></text>
+      <rect class="panel" x="674.4" y="201" width="240.6" height="309"/>
+      <rect class="frame" x="708.9" y="266.6" width="168.9" height="55" aria-hidden="true"/>
+      <g role="list" aria-label="Claude must call this tool">
+        <g role="listitem">
+          <rect class="item" x="716" y="272.5" width="156" height="43.5"/>
+          <text class="sans name middle primary" x="794.5" y="301.5">send_email</text>
+        </g>
+      </g>
+      <g role="list" aria-label="Not allowed">
+        <g role="listitem">
+          <rect class="item-off" x="716" y="218" width="156" height="43.5"/>
+          <text class="sans name middle secondary" x="794.5" y="247.3">get_order_info</text>
+        </g>
+        <g role="listitem">
+          <rect class="item-off" x="716" y="326.5" width="156" height="43.5"/>
+          <text class="sans name middle secondary" x="794.5" y="355.5">create_invoice</text>
+        </g>
+        <g role="listitem">
+          <rect class="respond-off" x="716" y="394" width="156" height="97.5"/>
+          <foreignObject x="716" y="394" width="156" height="97.5">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans lh-136 secondary balance-translation">respond without calling a tool</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

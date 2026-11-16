@@ -1,0 +1,283 @@
+<svg lang="en" width="480" height="484.78" viewBox="0 0 402 406" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="One conversation of three turns and the next turn, drawn three times. If you add an update at the end, all thinking stays valid. If you change turn 2’s message, thinking 1 stays valid and thinking 2 and 3 are invalid. If you change system or tools, thinking 1, 2 and 3 are invalid. Thinking 4, produced afterward, is valid each time.">
+  <style>
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); }
+    .mono { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, monospace); }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .box { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    .box-shaded { fill: var(--cds-alpha-2, #e4e4e3); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    .box-changed { fill: var(--cds-bg-accent, #d7e7f9); stroke: var(--cds-text-accent, #1f5fa8); stroke-width: 1.75; }
+    .box-valid { fill: var(--cds-bg-success, #d3ecd3); stroke: var(--cds-text-success, #006300); stroke-width: 1.5; }
+    .box-invalid { fill: var(--cds-bg-danger, #fad6d6); stroke: var(--cds-text-danger, #8e2626); stroke-width: 1.5; stroke-dasharray: 3 2; }
+    .box-may { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-text-success, #006300); stroke-width: 1.75; }
+    .box-unread { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.5; stroke-dasharray: 3 2; }
+    .mark-valid { fill: none; stroke: var(--cds-text-success, #006300); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .mark-invalid { fill: none; stroke: var(--cds-text-danger, #8e2626); stroke-width: 2; stroke-linecap: round; }
+    .mark-unread { fill: none; stroke: var(--cds-text-secondary, #52514e); stroke-width: 2; stroke-linecap: round; }
+    .rule { stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1; stroke-dasharray: 2 3; }
+    .ink { fill: var(--cds-text-primary, #0b0b0b); }
+    .muted { fill: var(--cds-text-secondary, #52514e); }
+    .accent { fill: var(--cds-text-accent, #1f5fa8); }
+    .valid { fill: var(--cds-text-success, #006300); }
+    .invalid { fill: var(--cds-text-danger, #8e2626); }
+    .middle { text-anchor: middle; }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 2px 2px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.25; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    .label .mono, .label .code, .label code { hyphens: none; overflow-wrap: normal; }
+    .label code { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, monospace); font-size: 0.92em; line-height: inherit; color: inherit; background: none; border: 0; border-radius: 0; padding: 0; white-space: inherit; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    /* Sizes and weights. Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .title { font-size: 15px; font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .note { font-size: 13.5px; }
+    .small { font-size: 13px; }
+    .strong { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .label.ink { color: var(--cds-text-primary, #0b0b0b); }
+    .label.muted { color: var(--cds-text-secondary, #52514e); }
+    .label.accent { color: var(--cds-text-accent, #1f5fa8); }
+    .label.valid { color: var(--cds-text-success, #006300); }
+    .label.invalid { color: var(--cds-text-danger, #8e2626); }
+  </style>
+  <rect class="canvas" width="402" height="406" rx="6" aria-hidden="true"/>
+  <g aria-hidden="true">
+    <line class="rule backdrop" x1="313" y1="6" x2="313" y2="34"/>
+    <line class="rule backdrop" x1="313" y1="59" x2="313" y2="99"/>
+    <line class="rule backdrop" x1="313" y1="157" x2="313" y2="197"/>
+    <line class="rule backdrop" x1="313" y1="255" x2="313" y2="295"/>
+    <foreignObject x="76" y="2" width="79" height="36">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small muted">Turn 1</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="155" y="2" width="79" height="36">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small muted">Turn 2</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="234" y="2" width="79" height="36">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small muted">Turn 3</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="313" y="2" width="79" height="36">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small ink">Next turn</span>
+      </div>
+    </foreignObject>
+  </g>
+  <g role="list" aria-label="Three versions of the conversation">
+    <g role="listitem">
+      <foreignObject x="10" y="34" width="382" height="24">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans title ink">Add an update at the end</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Add an update at the end">
+        <g role="listitem">
+          <rect class="box-shaded" x="12" y="62" width="60" height="34" rx="5"/>
+          <text x="42" y="76.4" class="mono middle ink" font-size="12">system</text>
+          <text x="42" y="90" class="mono middle ink" font-size="12">tools</text>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="80" y="62" width="27" height="34" rx="5" role="img" aria-label="message 1"/>
+          <g role="img" aria-label="thinking 1, valid">
+            <rect class="box-valid" x="110" y="62" width="41" height="34" rx="5"/>
+            <text x="122.3" y="83.8" class="sans small strong middle valid" aria-hidden="true">1</text>
+            <path class="mark-valid" d="M134.2 79.3 L137.4 82.6 L143.3 75.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="159" y="62" width="27" height="34" rx="5" role="img" aria-label="message 2"/>
+          <g role="img" aria-label="thinking 2, valid">
+            <rect class="box-valid" x="189" y="62" width="41" height="34" rx="5"/>
+            <text x="201.3" y="83.8" class="sans small strong middle valid" aria-hidden="true">2</text>
+            <path class="mark-valid" d="M213.2 79.3 L216.4 82.6 L222.3 75.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="238" y="62" width="27" height="34" rx="5" role="img" aria-label="message 3"/>
+          <g role="img" aria-label="thinking 3, valid">
+            <rect class="box-valid" x="268" y="62" width="41" height="34" rx="5"/>
+            <text x="280.3" y="83.8" class="sans small strong middle valid" aria-hidden="true">3</text>
+            <path class="mark-valid" d="M292.2 79.3 L295.4 82.6 L301.3 75.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box-changed" x="317" y="62" width="27" height="34" rx="5" role="img" aria-label="message 4, added"/>
+          <text x="330.5" y="84.5" class="sans title middle accent" aria-hidden="true">+</text>
+          <g role="img" aria-label="thinking 4, valid">
+            <rect class="box-valid" x="347" y="62" width="41" height="34" rx="5"/>
+            <text x="359.3" y="83.8" class="sans small strong middle valid" aria-hidden="true">4</text>
+            <path class="mark-valid" d="M371.2 79.3 L374.4 82.6 L380.3 75.4"/>
+          </g>
+        </g>
+      </g>
+      <foreignObject x="267.5" y="97" width="126" height="20" aria-hidden="true">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans note strong accent">added</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="10" y="132" width="382" height="24">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans title ink">Change turn 2’s message</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Change turn 2’s message">
+        <g role="listitem">
+          <rect class="box-shaded" x="12" y="160" width="60" height="34" rx="5"/>
+          <text x="42" y="174.4" class="mono middle ink" font-size="12">system</text>
+          <text x="42" y="188" class="mono middle ink" font-size="12">tools</text>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="80" y="160" width="27" height="34" rx="5" role="img" aria-label="message 1"/>
+          <g role="img" aria-label="thinking 1, valid">
+            <rect class="box-valid" x="110" y="160" width="41" height="34" rx="5"/>
+            <text x="122.3" y="181.8" class="sans small strong middle valid" aria-hidden="true">1</text>
+            <path class="mark-valid" d="M134.2 177.3 L137.4 180.6 L143.3 173.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box-changed" x="159" y="160" width="27" height="34" rx="5" role="img" aria-label="message 2, changed"/>
+          <text x="172.5" y="182.5" class="sans title middle accent" aria-hidden="true">≠</text>
+          <g role="img" aria-label="thinking 2, invalid">
+            <rect class="box-invalid" x="189" y="160" width="41" height="34" rx="5"/>
+            <text x="201.3" y="181.8" class="sans small strong middle invalid" aria-hidden="true">2</text>
+            <path class="mark-invalid" d="M214.1 173.4 L221.3 180.6 M221.3 173.4 L214.1 180.6"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="238" y="160" width="27" height="34" rx="5" role="img" aria-label="message 3"/>
+          <g role="img" aria-label="thinking 3, invalid">
+            <rect class="box-invalid" x="268" y="160" width="41" height="34" rx="5"/>
+            <text x="280.3" y="181.8" class="sans small strong middle invalid" aria-hidden="true">3</text>
+            <path class="mark-invalid" d="M293.1 173.4 L300.3 180.6 M300.3 173.4 L293.1 180.6"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="317" y="160" width="27" height="34" rx="5" role="img" aria-label="message 4"/>
+          <g role="img" aria-label="thinking 4, valid">
+            <rect class="box-valid" x="347" y="160" width="41" height="34" rx="5"/>
+            <text x="359.3" y="181.8" class="sans small strong middle valid" aria-hidden="true">4</text>
+            <path class="mark-valid" d="M371.2 177.3 L374.4 180.6 L380.3 173.4"/>
+          </g>
+        </g>
+      </g>
+      <foreignObject x="109.5" y="195" width="126" height="20" aria-hidden="true">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans note strong accent">changed</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="10" y="230" width="382" height="24">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans title ink">Change <code>system</code> or <code>tools</code></span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Change system or tools">
+        <g role="listitem">
+          <rect class="box-changed" x="12" y="258" width="60" height="34" rx="5"/>
+          <text x="42" y="272.4" class="mono middle accent" font-size="12">system</text>
+          <text x="42" y="286" class="mono middle accent" font-size="12">tools</text>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="80" y="258" width="27" height="34" rx="5" role="img" aria-label="message 1"/>
+          <g role="img" aria-label="thinking 1, invalid">
+            <rect class="box-invalid" x="110" y="258" width="41" height="34" rx="5"/>
+            <text x="122.3" y="279.8" class="sans small strong middle invalid" aria-hidden="true">1</text>
+            <path class="mark-invalid" d="M135.1 271.4 L142.3 278.6 M142.3 271.4 L135.1 278.6"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="159" y="258" width="27" height="34" rx="5" role="img" aria-label="message 2"/>
+          <g role="img" aria-label="thinking 2, invalid">
+            <rect class="box-invalid" x="189" y="258" width="41" height="34" rx="5"/>
+            <text x="201.3" y="279.8" class="sans small strong middle invalid" aria-hidden="true">2</text>
+            <path class="mark-invalid" d="M214.1 271.4 L221.3 278.6 M221.3 271.4 L214.1 278.6"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="238" y="258" width="27" height="34" rx="5" role="img" aria-label="message 3"/>
+          <g role="img" aria-label="thinking 3, invalid">
+            <rect class="box-invalid" x="268" y="258" width="41" height="34" rx="5"/>
+            <text x="280.3" y="279.8" class="sans small strong middle invalid" aria-hidden="true">3</text>
+            <path class="mark-invalid" d="M293.1 271.4 L300.3 278.6 M300.3 271.4 L293.1 278.6"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="317" y="258" width="27" height="34" rx="5" role="img" aria-label="message 4"/>
+          <g role="img" aria-label="thinking 4, valid">
+            <rect class="box-valid" x="347" y="258" width="41" height="34" rx="5"/>
+            <text x="359.3" y="279.8" class="sans small strong middle valid" aria-hidden="true">4</text>
+            <path class="mark-valid" d="M371.2 275.3 L374.4 278.6 L380.3 271.4"/>
+          </g>
+        </g>
+      </g>
+      <foreignObject x="10" y="293" width="150" height="20" aria-hidden="true">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans note strong accent">changed</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <g role="list" aria-label="Key">
+    <g role="listitem">
+      <g aria-hidden="true">
+        <rect class="box" x="12" y="334" width="20" height="20" rx="4"/>
+      </g>
+      <foreignObject x="36" y="326" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">your message</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g aria-hidden="true">
+        <g role="img" aria-label="valid">
+          <rect class="box-valid" x="204" y="334" width="20" height="20" rx="5"/>
+          <path class="mark-valid" d="M209.5 344.3 L212.7 347.6 L218.6 340.4"/>
+        </g>
+      </g>
+      <foreignObject x="228" y="326" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">thinking, valid</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g aria-hidden="true">
+        <rect class="box-changed" x="12" y="371" width="20" height="20" rx="4"/>
+      </g>
+      <foreignObject x="36" y="363" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">changed or added</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g aria-hidden="true">
+        <g role="img" aria-label="invalid">
+          <rect class="box-invalid" x="204" y="371" width="20" height="20" rx="5"/>
+          <path class="mark-invalid" d="M210.4 377.4 L217.6 384.6 M217.6 377.4 L210.4 384.6"/>
+        </g>
+      </g>
+      <foreignObject x="228" y="363" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">thinking, invalid</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+</svg>

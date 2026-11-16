@@ -1,0 +1,138 @@
+<svg lang="en" width="1140" height="673" viewBox="0 0 547.2 322.8" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Scatter chart: file uploaded with code execution, 25 of 25 correct at $0.40 USD; pasted into the prompt, 7 of 25 at $5.01 USD">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/data-files.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-chart-reference, #898781); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10 { font-size: 10px; }
+    .size-10-3 { font-size: 10.3px; }
+    .size-11-5 { font-size: 11.5px; }
+    .size-7-9 { font-size: 7.9px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="547.2" height="322.8" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M54.7 259.7 V37.7" />
+      <path class="grid" d="M137.8 259.7 V37.7" />
+      <path class="grid" d="M220.8 259.7 V37.7" />
+      <path class="grid" d="M303.9 259.7 V37.7" />
+      <path class="grid" d="M386.9 259.7 V37.7" />
+      <path class="grid" d="M470 259.7 V37.7" />
+    </g>
+    <path class="tick" d="M54.7 259.7 V263.2" />
+    <path class="tick" d="M137.8 259.7 V263.2" />
+    <path class="tick" d="M220.8 259.7 V263.2" />
+    <path class="tick" d="M303.9 259.7 V263.2" />
+    <path class="tick" d="M386.9 259.7 V263.2" />
+    <path class="tick" d="M470 259.7 V263.2" />
+    <text class="serif size-9-5 secondary middle" x="54.7" y="273.9">0</text>
+    <text class="serif size-9-5 secondary middle" x="137.8" y="273.9">1</text>
+    <text class="serif size-9-5 secondary middle" x="220.8" y="273.9">2</text>
+    <text class="serif size-9-5 secondary middle" x="303.9" y="273.9">3</text>
+    <text class="serif size-9-5 secondary middle" x="386.9" y="273.9">4</text>
+    <text class="serif size-9-5 secondary middle" x="470" y="273.9">5</text>
+    <g class="backdrop">
+      <path class="grid" d="M54.7 259.7 H536.4" />
+      <path class="grid" d="M54.7 220.1 H536.4" />
+      <path class="grid" d="M54.7 180.4 H536.4" />
+      <path class="grid" d="M54.7 140.8 H536.4" />
+      <path class="grid" d="M54.7 101.1 H536.4" />
+      <path class="grid" d="M54.7 61.5 H536.4" />
+    </g>
+    <path class="tick" d="M54.7 259.7 H51.2" />
+    <path class="tick" d="M54.7 220.1 H51.2" />
+    <path class="tick" d="M54.7 180.4 H51.2" />
+    <path class="tick" d="M54.7 140.8 H51.2" />
+    <path class="tick" d="M54.7 101.1 H51.2" />
+    <path class="tick" d="M54.7 61.5 H51.2" />
+    <text class="serif size-9-5 secondary end" x="47.7" y="263.3">0</text>
+    <text class="serif size-9-5 secondary end" x="47.7" y="223.7">20</text>
+    <text class="serif size-9-5 secondary end" x="47.7" y="184">40</text>
+    <text class="serif size-9-5 secondary end" x="47.7" y="144.4">60</text>
+    <text class="serif size-9-5 secondary end" x="47.7" y="104.7">80</text>
+    <text class="serif size-9-5 secondary end" x="47.7" y="65.1">100</text>
+  </g>
+  <foreignObject x="48.7" y="11.1" width="492" height="21.2">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-11-5 text-clay lh-115">Put the data file where code can read it</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="59.6" y="274.6" width="472" height="19.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10-3 primary lh-115">cost of the 25-question run (USD, list)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0 to 5" d="M54.7 259.7 H536.4" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(25 148.7)">
+        <text class="serif size-10-3 primary middle rotated" transform="rotate(-90)">questions answered correctly (%)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 0 to 100" d="M54.7 259.7 V37.7" />
+    </g>
+  </g>
+  <g role="list" aria-label="Where the data file goes">
+    <g role="listitem">
+      <foreignObject x="98.4" y="61.1" width="312" height="19.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-10 primary lh-115">file uploaded, code execution</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="98.4" y="72.6" width="312" height="19.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-10 primary lh-115">$0.40 USD per run, 25 of 25 correct</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" aria-hidden="true" cx="87.9" cy="61.5" r="7.9" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="148.3" y="190.9" width="312" height="19.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-10 primary lh-115">CSV pasted in the prompt</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="148.3" y="202.4" width="312" height="19.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-10 primary lh-115">$5.01 USD per run, 7 of 25 correct</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-grey" aria-hidden="true" cx="470.8" cy="206.8" r="7.9" />
+    </g>
+  </g>
+  <foreignObject x="-0.5" y="298.4" width="547" height="26.2">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-7-9 secondary lh-115">Claude Sonnet 5; 25 aggregate questions over a 1,862-row public CSV, answers checked against pandas; mean of 3 runs per point.</span>
+    </div>
+  </foreignObject>
+</svg>

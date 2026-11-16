@@ -1,0 +1,123 @@
+<svg lang="en" width="1199" height="525" viewBox="0 0 1199 525" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Diagram of the advisor strategy: an executor model runs the main loop and calls a Claude Fable 5.1 advisor on demand">
+  <style>
+    /* Type: the page's serif font when the page inlines this diagram; the listed fallbacks otherwise, for example in a code review */
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    /* Chinese, Japanese and Korean have no serif in the docs fonts, and browsers pick different serif fallbacks for them, so their serif labels use the sans fonts, like the page's sans text */
+    .serif:is(:lang(ja), :lang(ko), :lang(zh)) { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); }
+    .middle { text-anchor: middle; }
+    .italic { font-style: italic; }
+    /* The titles are heavier than the CDS bold (600), as in the picture this diagram replaces. They set the weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .title { font-weight: 700; font-variation-settings: "wght" 700; letter-spacing: -0.01em; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .orange { fill: var(--cds-text-tint-orange, #863311); }
+    .box { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-text-primary, #0b0b0b); stroke-width: 2; }
+    /* The advisor's box is clay in both themes, so the text on it is dark in both */
+    .box-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-text-primary, #0b0b0b); stroke-width: 2.5; stroke-dasharray: 5.5 2.7; }
+    .on-clay { fill: var(--cds-gray-900, #0b0b0b); }
+    /* Dark text keeps its drawn weight: the page's dark-mode "wght" 360 is for light text on dark */
+    .drawn-weight { font-variation-settings: normal; }
+    .line { fill: none; stroke-width: 3; }
+    .line-primary { stroke: var(--cds-text-primary, #0b0b0b); }
+    .line-orange { stroke: var(--cds-text-tint-orange, #863311); }
+    .line-secondary { stroke: var(--cds-text-secondary, #52514e); stroke-width: 2; stroke-dasharray: 6 6.6; }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .fs-17-2 { font-size: 17.2px; }
+    .fs-20-3 { font-size: 20.3px; }
+    .fs-22 { font-size: 22px; }
+    .fs-23-7 { font-size: 23.7px; }
+    .fs-35-3 { font-size: 35.3px; }
+    .fs-51-6 { font-size: 51.6px; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.orange { color: var(--cds-text-tint-orange, #863311); }
+    .label.on-clay { color: var(--cds-gray-900, #0b0b0b); }
+  </style>
+  <rect class="canvas" width="1199" height="525" aria-hidden="true"/>
+  <g role="list" aria-label="Models">
+    <g role="listitem">
+      <rect class="box" x="136" y="173" width="328.5" height="200.5" rx="18"/>
+      <foreignObject x="140" y="177" width="320.5" height="84.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif title fs-35-3 primary">Executor</span>
+        </div>
+      </foreignObject>
+      <text class="serif middle italic primary" x="300.25" y="287" font-size="24">Sonnet 5</text>
+      <foreignObject x="140" y="307.8" width="320.5" height="61.7">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif italic fs-17-2 secondary">Runs every turn</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="box-clay" x="771.3" y="65" width="399.4" height="400" rx="24"/>
+      <foreignObject x="775.3" y="69" width="391.4" height="185.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif title fs-51-6 on-clay">Advisor</span>
+        </div>
+      </foreignObject>
+      <text class="serif middle italic on-clay drawn-weight" x="972.5" y="287" font-size="31.5">Fable 5.1</text>
+      <foreignObject x="776.3" y="314.6" width="390.4" height="146.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif italic on-clay drawn-weight fs-20-3">On-demand</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <!-- Each arrow tells a screen reader what it means, after its label -->
+  <g role="list" aria-label="How they work together">
+    <g role="listitem">
+      <foreignObject x="0" y="398.1" width="184" height="122.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif italic fs-23-7 secondary">Main loop</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="The executor runs the main loop">
+        <path class="line line-primary" d="M136 196.5 C36.6 158.7 -9.7 315.5 98 353"/>
+        <path class="primary" d="M98 342 L122.5 357.2 L96 367.5 Z"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="468.5" y="4" width="291" height="203.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif italic fs-23-7 orange">Tool call</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="The executor calls the advisor">
+        <path class="line line-orange" d="M465.5 221.5 H735"/>
+        <path class="orange" d="M734 209 L759.5 221.5 L734 234 Z"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="440.5" y="335.7" width="335" height="185.3">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif italic fs-22 secondary">Sends advice</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="The advisor answers the executor">
+        <path class="line line-secondary" d="M759.5 321 H485"/>
+        <path class="secondary" d="M485.3 312.3 L467 321 L485.3 329.7 Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

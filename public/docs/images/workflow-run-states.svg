@@ -1,0 +1,110 @@
+<svg lang="en" width="720" height="256" viewBox="0 0 720 256" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Type, shared by every text element */
+    .sans      { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 11px; dominant-baseline: central; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .head      { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); font-size: 12px; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise, for example in a code review */
+    .canvas    { fill: var(--cds-surface-0, #f9f9f7); }
+    .state     { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-strong, #c8c3b5); stroke-width: 1.5; }
+    .primary   { fill: var(--cds-text-primary, #141413); }
+    .secondary { fill: var(--cds-text-secondary, #666663); }
+    .edge      { fill: none; stroke: var(--cds-border-stronger, #aaa597); stroke-width: 1.5; }
+    .tip       { fill: var(--cds-border-stronger, #aaa597); }
+    .start     { fill: var(--cds-text-secondary, #666663); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #141413); }
+    .label.secondary { color: var(--cds-text-secondary, #666663); }
+    /* Line heights of labels whose lines were drawn closer or farther apart than 1.3 (lh-N is N/100) */
+    .lh-136 { line-height: 1.36; }
+    /* A centered label that grows to the left only when its text needs more than the English width */
+    .min-94 { min-width: 94px; text-align: center; }
+    /* Lines of about equal length, for a label in an area wider than its text */
+    .balance { text-wrap: balance; }
+  </style>
+  <defs>
+    <marker id="workflow-run-states-arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="6" refX="10" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon class="tip" points="0 0, 10 3, 0 6"/>
+    </marker>
+  </defs>
+  <g aria-hidden="true">
+    <rect class="canvas" width="720" height="256" rx="6"/>
+    <!-- States -->
+    <rect class="state" x="150" y="41" width="130" height="40" rx="6"/>
+    <foreignObject x="150" y="41" width="130" height="40">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans head primary">Running</span>
+      </div>
+    </foreignObject>
+    <rect class="state" x="150" y="161" width="130" height="40" rx="6"/>
+    <foreignObject x="150" y="161" width="130" height="40">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans head primary">Idle</span>
+      </div>
+    </foreignObject>
+    <rect class="state" x="560" y="101" width="130" height="40" rx="6"/>
+    <foreignObject x="560" y="101" width="130" height="40">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans head primary">Ended</span>
+      </div>
+    </foreignObject>
+    <!-- Start -->
+    <circle class="start" cx="36" cy="61" r="6"/>
+    <line class="edge" x1="42" y1="61" x2="150" y2="61" marker-end="url(#workflow-run-states-arrow)"/>
+    <foreignObject x="42" y="4" width="104" height="54">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+        <span class="label sans lh-136 secondary balance">The agent starts a run</span>
+      </div>
+    </foreignObject>
+    <path class="edge" d="M 36 67 V 181 H 150" marker-end="url(#workflow-run-states-arrow)"/>
+    <foreignObject x="4" y="186" width="142" height="70">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+        <span class="label sans lh-136 secondary min-94 balance">The agent starts a&#160;run after the budget is reached</span>
+      </div>
+    </foreignObject>
+    <!-- Running and Idle -->
+    <line class="edge" x1="195" y1="81" x2="195" y2="161" marker-end="url(#workflow-run-states-arrow)"/>
+    <foreignObject x="41" y="102" width="152" height="54.8">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+        <span class="label sans lh-136 secondary balance">The budget is reached</span>
+      </div>
+    </foreignObject>
+    <line class="edge" x1="235" y1="161" x2="235" y2="81" marker-end="url(#workflow-run-states-arrow)"/>
+    <foreignObject x="237" y="102" width="318" height="54.8">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label sans lh-136 secondary balance">The budget is raised or removed</span>
+      </div>
+    </foreignObject>
+    <!-- To Ended -->
+    <path class="edge" d="M 280 61 H 625 V 101" marker-end="url(#workflow-run-states-arrow)"/>
+    <foreignObject x="284.7" y="0" width="334.6" height="56">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+        <span class="label sans lh-136 secondary balance">The workflow finishes, the agent stops it, it fails, its lifetime passes, or the session is archived</span>
+      </div>
+    </foreignObject>
+    <path class="edge" d="M 280 181 H 625 V 141" marker-end="url(#workflow-run-states-arrow)"/>
+    <foreignObject x="285.7" y="188" width="332.6" height="68">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+        <span class="label sans lh-136 secondary balance">An idle run can end too, for example when the agent stops it or the session is archived</span>
+      </div>
+    </foreignObject>
+  </g>
+</svg>

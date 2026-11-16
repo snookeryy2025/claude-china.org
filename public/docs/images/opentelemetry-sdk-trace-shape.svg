@@ -1,0 +1,264 @@
+<svg lang="en" width="1600" height="784" viewBox="0 0 800 392" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Example Messages tool runner trace: two requests with client and server spans, model requests, web_search, and get_weather">
+  <style>
+    /* Type and strokes, shared by every element of a kind */
+    .mono      { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 12px; dominant-baseline: central; }
+    .sans      { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 11px; dominant-baseline: central; }
+    .code      { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 10.5px; font-style: normal; dominant-baseline: central; }
+    .note      { font-style: italic; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .head      { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .grid, .axis, .guide, .request, .turn { stroke-width: 1; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise, for example in a code review */
+    .canvas    { fill: var(--cds-surface-0, #f9f9f7); }
+    .band      { fill: var(--cds-alpha-1, #f2f1ec); }
+    .grid      { stroke: var(--cds-alpha-1, #eceae3); }
+    .axis      { stroke: var(--cds-alpha-2, #d9d4c5); }
+    .guide     { stroke: var(--cds-border-strong, #c8c3b5); }
+    .primary   { fill: var(--cds-text-primary, #141413); }
+    .secondary { fill: var(--cds-text-secondary, #666663); }
+    .request   { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #aaa597); }
+    .turn      { fill: var(--cds-alpha-2, #e4dccb); stroke: var(--cds-border-strong, #c9bea6); }
+    .model     { fill: var(--cds-clay, #df8c6f); }
+    .tool      { fill: var(--cds-blue-300, #86a5c2); }
+    .yours     { fill: var(--cds-text-secondary, #4d4c48); }
+    .kind      { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-strong, #c8c3b5); stroke-width: 1; }
+    .kind-label { font-size: 8.5px; font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); letter-spacing: 0.04em; text-anchor: middle; dominant-baseline: central; fill: var(--cds-text-secondary, #666663); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.top { align-items: flex-start; }
+    /* Areas at the right edge of their room: the text may reach the area's right edge */
+    .area.pad-right-0 { padding-right: 0; }
+    /* Areas that are exactly as tall as two lines: a translation may take two lines */
+    .area.pad-y-0 { padding-top: 0; padding-bottom: 0; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.secondary { color: var(--cds-text-secondary, #666663); }
+  </style>
+  <!-- Drawing only: hidden from screen readers, which read the span list below -->
+  <g aria-hidden="true">
+    <rect class="canvas" width="800" height="392" rx="6"/>
+    <rect class="band" x="12" y="78" width="776" height="30"/>
+    <rect class="band" x="12" y="138" width="776" height="30"/>
+    <rect class="band" x="12" y="198" width="776" height="30"/>
+    <rect class="band" x="12" y="258" width="776" height="30"/>
+    <rect class="band" x="12" y="318" width="776" height="30"/>
+    <line class="grid backdrop" x1="420" y1="40" x2="420" y2="378"/>
+    <line class="axis" x1="420" y1="35" x2="420" y2="40"/>
+    <line class="grid backdrop" x1="456" y1="40" x2="456" y2="378"/>
+    <line class="axis" x1="456" y1="35" x2="456" y2="40"/>
+    <line class="grid backdrop" x1="492" y1="40" x2="492" y2="378"/>
+    <line class="axis" x1="492" y1="35" x2="492" y2="40"/>
+    <line class="grid backdrop" x1="528" y1="40" x2="528" y2="378"/>
+    <line class="axis" x1="528" y1="35" x2="528" y2="40"/>
+    <line class="grid backdrop" x1="564" y1="40" x2="564" y2="378"/>
+    <line class="axis" x1="564" y1="35" x2="564" y2="40"/>
+    <line class="grid backdrop" x1="600" y1="40" x2="600" y2="378"/>
+    <line class="axis" x1="600" y1="35" x2="600" y2="40"/>
+    <line class="grid backdrop" x1="636" y1="40" x2="636" y2="378"/>
+    <line class="axis" x1="636" y1="35" x2="636" y2="40"/>
+    <line class="grid backdrop" x1="672" y1="40" x2="672" y2="378"/>
+    <line class="axis" x1="672" y1="35" x2="672" y2="40"/>
+    <line class="grid backdrop" x1="708" y1="40" x2="708" y2="378"/>
+    <line class="axis" x1="708" y1="35" x2="708" y2="40"/>
+    <line class="grid backdrop" x1="744" y1="40" x2="744" y2="378"/>
+    <line class="axis" x1="744" y1="35" x2="744" y2="40"/>
+    <line class="grid backdrop" x1="780" y1="40" x2="780" y2="378"/>
+    <line class="axis" x1="780" y1="35" x2="780" y2="40"/>
+    <foreignObject x="14" y="1" width="328" height="46">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+        <span class="label secondary sans head">Span</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="340" y="1" width="76" height="46">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+        <span class="label secondary sans head">Source</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="414" y="12.3" width="382" height="23.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+        <span class="label secondary sans head">Time →</span>
+      </div>
+    </foreignObject>
+    <line class="guide" x1="26" y1="72" x2="26" y2="93"/>
+    <line class="guide" x1="26" y1="93" x2="35" y2="93"/>
+    <line class="guide" x1="44" y1="102" x2="44" y2="303"/>
+    <line class="guide" x1="44" y1="123" x2="53" y2="123"/>
+    <line class="guide" x1="44" y1="273" x2="53" y2="273"/>
+    <line class="guide" x1="44" y1="303" x2="53" y2="303"/>
+    <line class="guide" x1="62" y1="132" x2="62" y2="153"/>
+    <line class="guide" x1="62" y1="153" x2="71" y2="153"/>
+    <line class="guide" x1="80" y1="162" x2="80" y2="243"/>
+    <line class="guide" x1="80" y1="183" x2="89" y2="183"/>
+    <line class="guide" x1="80" y1="213" x2="89" y2="213"/>
+    <line class="guide" x1="80" y1="243" x2="89" y2="243"/>
+    <line class="guide" x1="62" y1="312" x2="62" y2="333"/>
+    <line class="guide" x1="62" y1="333" x2="71" y2="333"/>
+    <line class="guide" x1="80" y1="342" x2="80" y2="363"/>
+    <line class="guide" x1="80" y1="363" x2="89" y2="363"/>
+  </g>
+  <!-- The spans, nested as in the trace. Each item has the span's name, its kind (requests only), its source and its timing. -->
+  <g role="list" aria-label="Spans">
+    <g role="listitem">
+      <text class="primary mono" x="20" y="63">answer_question</text>
+      <g role="group" aria-label="Source">
+        <foreignObject x="340" y="48.75" width="76" height="28.6">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="area start pad-y-0 pad-right-0">
+            <span class="label secondary sans">your code</span>
+          </div>
+        </foreignObject>
+      </g>
+      <g role="group" aria-label="Time">
+        <rect role="img" class="yours" x="420" y="55" width="360" height="16" rx="3"><title>It starts the trace.</title></rect>
+      </g>
+      <g role="list">
+        <g role="listitem">
+          <text class="primary mono" x="38" y="93">anthropic.messages.tool_runner</text>
+          <g role="group" aria-label="Source">
+            <text class="secondary sans" x="346" y="93">SDK</text>
+          </g>
+          <g role="group" aria-label="Time">
+            <rect role="img" class="turn" x="424.9" y="85" width="249.4" height="16" rx="3"><title>It starts with its parent and runs for most of it.</title></rect>
+          </g>
+          <g role="list">
+            <g role="listitem">
+              <text class="primary mono" x="56" y="123">anthropic.messages.create</text>
+              <g role="group" aria-label="Kind">
+                <rect aria-hidden="true" class="kind" x="242" y="116" width="44" height="14" rx="3"/>
+                <text class="sans kind-label" x="264" y="123">CLIENT</text>
+              </g>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="123">SDK</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="request" x="427.4" y="115" width="123.5" height="16" rx="3"><title>It starts with its parent and runs for about half of it.</title></rect>
+              </g>
+              <foreignObject x="552.9" y="111.9" width="243.1" height="86">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+                  <span class="label secondary sans note">asks to use a tool</span>
+                </div>
+              </foreignObject>
+              <g role="list">
+                <g role="listitem">
+                  <text class="primary mono" x="74" y="153">anthropic.messages.create</text>
+                  <g role="group" aria-label="Kind">
+                    <rect aria-hidden="true" class="kind" x="260" y="146" width="44" height="14" rx="3"/>
+                    <text class="sans kind-label" x="282" y="153">SERVER</text>
+                  </g>
+                  <g role="group" aria-label="Source">
+                    <text class="secondary sans" x="346" y="153">API</text>
+                  </g>
+                  <g role="group" aria-label="Time">
+                    <rect role="img" class="request" x="429.8" y="145" width="118.6" height="16" rx="3"><title>It starts with its parent and ends with its parent.</title></rect>
+                  </g>
+                  <g role="list">
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="183">anthropic.model_request</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="183">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="model" x="432.3" y="175" width="42.5" height="16" rx="3"><title>It starts with its parent and runs for about a third of it.</title></rect>
+                      </g>
+                    </g>
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="213">anthropic.tool_use web_search</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="213">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="tool" x="478.1" y="205" width="24.5" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+                      </g>
+                      <foreignObject x="504.6" y="201.9" width="291.4" height="29.2">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+                          <span class="label secondary sans note">the API runs the tool</span>
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="243">anthropic.model_request</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="243">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="model" x="505.9" y="235" width="40.1" height="16" rx="3"><title>It starts after the span before it and ends with its parent.</title></rect>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g role="listitem">
+              <text class="primary mono" x="56" y="273">anthropic.custom_tool_use get_weather</text>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="273">SDK</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="tool" x="555" y="265" width="30.3" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+              </g>
+              <foreignObject x="587.3" y="258.2" width="208.7" height="29.7">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+                  <span class="label secondary sans note">runs your tool</span>
+                </div>
+              </foreignObject>
+            </g>
+            <g role="listitem">
+              <text class="primary mono" x="56" y="303">anthropic.messages.create</text>
+              <g role="group" aria-label="Kind">
+                <rect aria-hidden="true" class="kind" x="242" y="296" width="44" height="14" rx="3"/>
+                <text class="sans kind-label" x="264" y="303">CLIENT</text>
+              </g>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="303">SDK</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="request" x="587.7" y="295" width="84.9" height="16" rx="3"><title>It starts after the span before it and ends with its parent.</title></rect>
+              </g>
+              <foreignObject x="674.6" y="285.55" width="114" height="35">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area start pad-y-0 pad-right-0">
+                  <span class="label secondary sans note">final answer</span>
+                </div>
+              </foreignObject>
+              <g role="list">
+                <g role="listitem">
+                  <text class="primary mono" x="74" y="333">anthropic.messages.create</text>
+                  <g role="group" aria-label="Kind">
+                    <rect aria-hidden="true" class="kind" x="260" y="326" width="44" height="14" rx="3"/>
+                    <text class="sans kind-label" x="282" y="333">SERVER</text>
+                  </g>
+                  <g role="group" aria-label="Source">
+                    <text class="secondary sans" x="346" y="333">API</text>
+                  </g>
+                  <g role="group" aria-label="Time">
+                    <rect role="img" class="request" x="590.2" y="325" width="80" height="16" rx="3"><title>It starts with its parent and ends with its parent.</title></rect>
+                  </g>
+                  <g role="list">
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="363">anthropic.model_request</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="363">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="model" x="592.6" y="355" width="75.1" height="16" rx="3"><title>It starts with its parent and ends with its parent.</title></rect>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

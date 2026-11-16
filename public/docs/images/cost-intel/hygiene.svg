@@ -1,0 +1,215 @@
+<svg lang="en" width="1290" height="720" viewBox="0 0 619.2 345.6" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Bar chart by run length: context editing adds 73% on the short run; compaction saves 32% and pruning 39% on the long">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/hygiene.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-green { fill: var(--cds-chart-categorical-3, #1baf7a); }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-blue { color: var(--cds-text-accent, #184f95); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 1.5; }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10 { font-size: 10px; }
+    .size-11-8 { font-size: 11.8px; }
+    .size-7-8 { font-size: 7.8px; }
+    .size-8-1 { font-size: 8.1px; }
+    .size-9-1 { font-size: 9.1px; }
+    .size-9-4 { font-size: 9.4px; }
+    .size-9-7 { font-size: 9.7px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="619.2" height="345.6" />
+  <g aria-hidden="true">
+    <path class="tick" d="M184 276.5 V280" />
+    <path class="tick" d="M346.6 276.5 V280" />
+    <path class="tick" d="M509.1 276.5 V280" />
+    <g class="backdrop">
+      <path class="grid" d="M86.4 253 H606.7" />
+      <path class="grid" d="M86.4 221.6 H606.7" />
+      <path class="grid" d="M86.4 190.3 H606.7" />
+      <path class="grid" d="M86.4 158.9 H606.7" />
+      <path class="grid" d="M86.4 127.5 H606.7" />
+      <path class="grid" d="M86.4 96.2 H606.7" />
+      <path class="grid" d="M86.4 64.8 H606.7" />
+    </g>
+    <path class="tick" d="M86.4 253 H82.9" />
+    <path class="tick" d="M86.4 221.6 H82.9" />
+    <path class="tick" d="M86.4 190.3 H82.9" />
+    <path class="tick" d="M86.4 158.9 H82.9" />
+    <path class="tick" d="M86.4 127.5 H82.9" />
+    <path class="tick" d="M86.4 96.2 H82.9" />
+    <path class="tick" d="M86.4 64.8 H82.9" />
+    <foreignObject x="-2.6" y="238" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">40% less</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="-2.6" y="206.7" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">20% less</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="-2.6" y="175.3" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">trimmed run</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="-2.6" y="143.9" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">20% more</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="-2.6" y="112.6" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">40% more</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="-2.6" y="81.2" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">60% more</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="-2.6" y="49.9" width="88" height="30.3">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+        <span class="label serif size-9-7 secondary lh-115">80% more</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="80.4" y="0.4" width="542" height="35.1">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-11-8 text-clay lh-115">Context levers only pay on long sessions, and not equally</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Context levers">
+    <g role="listitem">
+      <foreignObject x="103" y="277.9" width="162" height="42.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10 primary lh-115">context editing</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="context editing: change in cost by run length">
+        <g role="listitem">
+          <rect class="fill-grey" role="img" aria-label="20-issue run" x="122.2" y="75.3" width="58.5" height="115" />
+          <foreignObject x="116.4" y="44.9" width="70" height="28.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label serif size-9-1 primary lh-115">73% more</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="fill-green" role="img" aria-label="long run, 2.6x the tokens" x="187.2" y="184.6" width="58.5" height="5.7" />
+          <foreignObject x="181.5" y="154.2" width="70" height="28.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+              <span class="label serif size-9-1 primary lh-115">no change</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="265.6" y="277.9" width="162" height="42.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10 primary lh-115">compaction</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="compaction: change in cost by run length">
+        <g role="listitem">
+          <rect class="fill-grey" role="img" aria-label="20-issue run" x="284.8" y="190.3" width="58.5" height="10.3" />
+          <foreignObject x="279" y="199.8" width="70" height="28.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label serif size-9-1 primary lh-115">no change</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="fill-green" role="img" aria-label="long run, 2.6x the tokens" x="349.8" y="190.3" width="58.5" height="50" />
+          <foreignObject x="325.1" y="239.5" width="108" height="28.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label serif size-9-1 primary lh-115">32% less</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="433.1" y="277.9" width="152" height="42.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10 primary lh-115">prune stale tool results at task boundaries</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="prune stale tool results at task boundaries: change in cost by run length">
+        <g role="listitem">
+          <rect class="fill-grey" role="img" aria-label="20-issue run" x="447.4" y="190.3" width="58.5" height="0.4" />
+          <foreignObject x="441.6" y="189.9" width="70" height="28.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label serif size-9-1 primary lh-115">no change</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="fill-green" role="img" aria-label="long run, 2.6x the tokens" x="512.4" y="190.3" width="58.5" height="61.4" />
+          <foreignObject x="487.7" y="250.9" width="108" height="28.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label serif size-9-1 primary lh-115">39% less</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g role="list" aria-label="What every change is measured against">
+    <g role="listitem">
+      <foreignObject x="433.9" y="163.7" width="182" height="26.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end bottom">
+          <span class="label serif size-8-1 text-blue lh-115">cost of the trimmed run</span>
+        </div>
+      </foreignObject>
+      <path class="line-blue" aria-hidden="true" d="M86.4 190.3 H606.7" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <path class="axis" d="M86.4 276.5 V41.3" />
+    <path class="axis" d="M86.4 276.5 H606.7" />
+    <rect class="fill-grey" x="381.7" y="50.3" width="18.8" height="6.6" />
+    <foreignObject x="402" y="44" width="220" height="18.8">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-4 primary lh-115">20-issue run</span>
+      </div>
+    </foreignObject>
+    <rect class="fill-green" x="381.7" y="64.4" width="18.8" height="6.6" />
+    <foreignObject x="402" y="58.1" width="220" height="18.8">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-4 primary lh-115">long run, 2.6x the tokens</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="0.2" y="311.9" width="612" height="35.1">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-8 secondary lh-115">Change in cost vs the same run with caching and input trimming only ($0.42 USD short, $1.09 USD long);</span>
+      <span class="label serif size-7-8 secondary lh-115">Claude Sonnet 5, mean of 3 runs per bar; under 10% is noise.</span>
+    </div>
+  </foreignObject>
+</svg>

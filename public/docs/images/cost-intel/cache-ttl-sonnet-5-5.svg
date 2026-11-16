@@ -1,0 +1,189 @@
+<svg lang="en" width="1290" height="722" viewBox="0 0 619.2 346.4" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Line chart: cost per triage session by share of turns after a pause; the 1-hour cache is cheaper past about 1 turn in 30">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/cache-ttl-sonnet-5-5.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-chart-reference, #898781); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-blue { color: var(--cds-text-accent, #184f95); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 2.5; stroke-linecap: square; stroke-linejoin: round; }
+    .line-clay { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 1.4; stroke-dasharray: 5.2 2.2; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 2.5; stroke-linecap: square; stroke-linejoin: round; }
+    .middle { text-anchor: middle; }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-3 { font-size: 10.3px; }
+    .size-11-9 { font-size: 11.9px; }
+    .size-8 { font-size: 8px; }
+    .size-8-5 { font-size: 8.5px; }
+    .size-8-8 { font-size: 8.8px; }
+    .size-9-2 { font-size: 9.2px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="619.2" height="346.4" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M83.7 267.4 V55.3" />
+      <path class="grid" d="M170.9 267.4 V55.3" />
+      <path class="grid" d="M258.1 267.4 V55.3" />
+      <path class="grid" d="M345.3 267.4 V55.3" />
+      <path class="grid" d="M432.5 267.4 V55.3" />
+      <path class="grid" d="M519.7 267.4 V55.3" />
+      <path class="grid" d="M606.9 267.4 V55.3" />
+    </g>
+    <path class="tick" d="M83.7 267.4 V270.9" />
+    <path class="tick" d="M170.9 267.4 V270.9" />
+    <path class="tick" d="M258.1 267.4 V270.9" />
+    <path class="tick" d="M345.3 267.4 V270.9" />
+    <path class="tick" d="M432.5 267.4 V270.9" />
+    <path class="tick" d="M519.7 267.4 V270.9" />
+    <path class="tick" d="M606.9 267.4 V270.9" />
+    <text class="serif size-9-5 secondary middle" x="83.7" y="281.6">0</text>
+    <text class="serif size-9-5 secondary middle" x="170.9" y="281.6">2</text>
+    <text class="serif size-9-5 secondary middle" x="258.1" y="281.6">4</text>
+    <text class="serif size-9-5 secondary middle" x="345.3" y="281.6">6</text>
+    <text class="serif size-9-5 secondary middle" x="432.5" y="281.6">8</text>
+    <text class="serif size-9-5 secondary middle" x="519.7" y="281.6">10</text>
+    <text class="serif size-9-5 secondary middle" x="606.9" y="281.6">12</text>
+    <g class="backdrop">
+      <path class="grid" d="M61.9 267.4 H606.9" />
+      <path class="grid" d="M61.9 230.8 H606.9" />
+      <path class="grid" d="M61.9 194.3 H606.9" />
+      <path class="grid" d="M61.9 157.7 H606.9" />
+      <path class="grid" d="M61.9 121.1 H606.9" />
+      <path class="grid" d="M61.9 84.6 H606.9" />
+    </g>
+    <path class="tick" d="M61.9 267.4 H58.4" />
+    <path class="tick" d="M61.9 230.8 H58.4" />
+    <path class="tick" d="M61.9 194.3 H58.4" />
+    <path class="tick" d="M61.9 157.7 H58.4" />
+    <path class="tick" d="M61.9 121.1 H58.4" />
+    <path class="tick" d="M61.9 84.6 H58.4" />
+    <text class="serif size-9-5 secondary end" x="54.9" y="271">0.4</text>
+    <text class="serif size-9-5 secondary end" x="54.9" y="234.4">0.5</text>
+    <text class="serif size-9-5 secondary end" x="54.9" y="197.9">0.6</text>
+    <text class="serif size-9-5 secondary end" x="54.9" y="161.3">0.7</text>
+    <text class="serif size-9-5 secondary end" x="54.9" y="124.7">0.8</text>
+    <text class="serif size-9-5 secondary end" x="54.9" y="88.2">0.9</text>
+    <path class="line-clay" d="M218.9 267.4 V55.3" />
+    <path class="line-grey" d="M83.7 228.6 L306.1 186 L532.8 81.8" />
+    <path class="line-blue" d="M83.7 185.3 L306.1 197.7 L532.8 198.8" />
+  </g>
+  <foreignObject x="55.9" y="0.3" width="557" height="35.4">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-11-9 text-clay lh-115">The 1-hour cache is cheaper once about 1 turn in 30 follows a pause</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="48.4" y="282.3" width="572" height="31.7">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10-3 primary lh-115">turns that follow a pause of 5 to 60 minutes (% of all turns)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0 to 12" d="M61.9 267.4 H606.9" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="0.2" y="33.9" width="572" height="19.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label serif size-10-3 primary lh-115">cost per 20-issue session (USD, list)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 0.4 to 0.9" d="M61.9 267.4 V55.3" />
+    </g>
+  </g>
+  <g role="list" aria-label="5-minute cache (default)">
+    <g role="listitem">
+      <circle class="fill-grey" role="img" aria-label="0% of turns follow a pause: $0.51 USD per session" cx="83.7" cy="228.6" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-grey" role="img" aria-label="5.1% of turns follow a pause: $0.62 USD per session" cx="306.1" cy="186" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-grey" role="img" aria-label="10.3% of turns follow a pause: $0.91 USD per session" cx="532.8" cy="81.8" r="4" />
+    </g>
+  </g>
+  <g role="list" aria-label="1-hour cache">
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="0% of turns follow a pause: $0.62 USD per session" x="79.7" y="181.3" width="8" height="8" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="5.1% of turns follow a pause: $0.59 USD per session" x="302.1" y="193.7" width="8" height="8" />
+    </g>
+    <g role="listitem">
+      <rect class="fill-blue" role="img" aria-label="10.3% of turns follow a pause: $0.59 USD per session" x="528.8" y="194.8" width="8" height="8" />
+    </g>
+  </g>
+  <g role="list" aria-label="Which cache duration costs less, as more turns follow a pause">
+    <g role="listitem">
+      <foreignObject x="113.1" y="226" width="72" height="37.3">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label serif size-8-5 secondary lh-115">5-minute cheaper</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="225.9" y="71.5" width="232" height="50.3">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-9-2 text-clay lh-115">break-even from token counts:</span>
+          <span class="label serif size-9-2 text-clay lh-115">about 1 turn in 30</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="360.2" y="226.5" width="162" height="28.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label serif size-8-8 text-blue lh-115">1-hour cheaper</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <path class="line-grey" d="M70.5 79.8 H80 H89.5" />
+    <circle class="fill-grey" cx="80" cy="79.8" r="4" />
+    <foreignObject x="91.1" y="48.3" width="129" height="40.8">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">5-minute cache (default)</span>
+      </div>
+    </foreignObject>
+    <path class="line-blue" d="M70.5 94 H80 H89.5" />
+    <rect class="fill-blue" x="76" y="90" width="8" height="8" />
+    <foreignObject x="91.1" y="84.4" width="129" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">1-hour cache</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="0.2" y="303.4" width="612" height="44.8">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-8 secondary lh-115">The triage agent on Claude Sonnet 5.5, 3 runs per point. Runs at one point differ by 8% to 23%, so the dip in the 1-hour line is not an effect of pauses.</span>
+      <span class="label serif size-8 secondary lh-115">The break-even (3.1%) is the per-session median, computed from token counts. The lines cross later because the 5% point's two pauses fell on small prefixes.</span>
+    </div>
+  </foreignObject>
+</svg>

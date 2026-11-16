@@ -1,0 +1,191 @@
+<svg lang="en" width="1230" height="719" viewBox="0 0 590.4 345.2" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Line chart: with all tools loaded, run cost rises from $0.55 USD to $1.02 USD at 502 tools; tool search keeps it at $0.56 USD">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/tool-search.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; }
+    .line-clay { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; }
+    .middle { text-anchor: middle; }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-2 { font-size: 10.2px; }
+    .size-10-3 { font-size: 10.3px; }
+    .size-11 { font-size: 11px; }
+    .size-7-9 { font-size: 7.9px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="590.4" height="345.2" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M82.6 282.3 V57.1" />
+      <path class="grid" d="M180.7 282.3 V57.1" />
+      <path class="grid" d="M304.3 282.3 V57.1" />
+      <path class="grid" d="M378.8 282.3 V57.1" />
+      <path class="grid" d="M478.8 282.3 V57.1" />
+      <path class="grid" d="M555 282.3 V57.1" />
+    </g>
+    <path class="tick" d="M82.6 282.3 V285.8" />
+    <path class="tick" d="M180.7 282.3 V285.8" />
+    <path class="tick" d="M304.3 282.3 V285.8" />
+    <path class="tick" d="M378.8 282.3 V285.8" />
+    <path class="tick" d="M478.8 282.3 V285.8" />
+    <path class="tick" d="M555 282.3 V285.8" />
+    <text class="serif size-9-5 secondary middle" x="82.6" y="296.5">7</text>
+    <text class="serif size-9-5 secondary middle" x="180.7" y="296.5">17</text>
+    <text class="serif size-9-5 secondary middle" x="304.3" y="296.5">52</text>
+    <text class="serif size-9-5 secondary middle" x="378.8" y="296.5">102</text>
+    <text class="serif size-9-5 secondary middle" x="478.8" y="296.5">252</text>
+    <text class="serif size-9-5 secondary middle" x="555" y="296.5">502</text>
+    <g class="backdrop">
+      <path class="grid" d="M59 282.3 H578.6" />
+      <path class="grid" d="M59 252.3 H578.6" />
+      <path class="grid" d="M59 222.2 H578.6" />
+      <path class="grid" d="M59 192.2 H578.6" />
+      <path class="grid" d="M59 162.2 H578.6" />
+      <path class="grid" d="M59 132.2 H578.6" />
+      <path class="grid" d="M59 102.1 H578.6" />
+      <path class="grid" d="M59 72.1 H578.6" />
+    </g>
+    <path class="tick" d="M59 282.3 H55.5" />
+    <path class="tick" d="M59 252.3 H55.5" />
+    <path class="tick" d="M59 222.2 H55.5" />
+    <path class="tick" d="M59 192.2 H55.5" />
+    <path class="tick" d="M59 162.2 H55.5" />
+    <path class="tick" d="M59 132.2 H55.5" />
+    <path class="tick" d="M59 102.1 H55.5" />
+    <path class="tick" d="M59 72.1 H55.5" />
+    <text class="serif size-9-5 secondary end" x="52" y="285.9">0.4</text>
+    <text class="serif size-9-5 secondary end" x="52" y="255.9">0.5</text>
+    <text class="serif size-9-5 secondary end" x="52" y="225.9">0.6</text>
+    <text class="serif size-9-5 secondary end" x="52" y="195.8">0.7</text>
+    <text class="serif size-9-5 secondary end" x="52" y="165.8">0.8</text>
+    <text class="serif size-9-5 secondary end" x="52" y="135.8">0.9</text>
+    <text class="serif size-9-5 secondary end" x="52" y="105.8">1.0</text>
+    <text class="serif size-9-5 secondary end" x="52" y="75.7">1.1</text>
+  </g>
+  <foreignObject x="53" y="4.1" width="532" height="33.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-11 text-clay lh-115">Tool search keeps cost flat as the catalog grows; accuracy was the same either way</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="62.8" y="297.2" width="512" height="19.7">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-10-2 primary lh-115">tool definitions attached to the agent</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 7 to 502, logarithmic" d="M59 282.3 H578.6" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="-0.1" y="35.7" width="532" height="19.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label serif size-10-3 primary lh-115">cost of the 20-issue run (USD, list)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 0.4 to 1.1" d="M59 282.3 V57.1" />
+    </g>
+  </g>
+  <g role="list" aria-label="every tool definition loaded: cost of the run by catalog size">
+    <path class="line-clay" aria-hidden="true" d="M82.6 236.1 L180.7 232.8 L304.3 213.2 L378.8 206 L478.8 177.2 L555 95.4" />
+    <g role="listitem">
+      <circle class="fill-clay" role="img" aria-label="7 tool definitions: $0.55 USD" cx="82.6" cy="236.1" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-clay" role="img" aria-label="17 tool definitions: $0.56 USD" cx="180.7" cy="232.8" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-clay" role="img" aria-label="52 tool definitions: $0.63 USD" cx="304.3" cy="213.2" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-clay" role="img" aria-label="102 tool definitions: $0.65 USD" cx="378.8" cy="206" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-clay" role="img" aria-label="252 tool definitions: $0.75 USD" cx="478.8" cy="177.2" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-clay" role="img" aria-label="502 tool definitions: $1.02 USD" cx="555" cy="95.4" r="4" />
+    </g>
+  </g>
+  <g role="list" aria-label="tool search, definitions deferred: cost of the run by catalog size">
+    <path class="line-blue" aria-hidden="true" d="M82.6 234.6 L180.7 237.3 L304.3 235.2 L378.8 236.1 L478.8 234.3 L555 235.5" />
+    <g role="listitem">
+      <circle class="fill-blue" role="img" aria-label="7 tool definitions: $0.56 USD" cx="82.6" cy="234.6" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-blue" role="img" aria-label="17 tool definitions: $0.55 USD" cx="180.7" cy="237.3" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-blue" role="img" aria-label="52 tool definitions: $0.56 USD" cx="304.3" cy="235.2" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-blue" role="img" aria-label="102 tool definitions: $0.55 USD" cx="378.8" cy="236.1" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-blue" role="img" aria-label="252 tool definitions: $0.56 USD" cx="478.8" cy="234.3" r="4" />
+    </g>
+    <g role="listitem">
+      <circle class="fill-blue" role="img" aria-label="502 tool definitions: $0.56 USD" cx="555" cy="235.5" r="4" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <foreignObject x="464.5" y="74.1" width="92" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end bottom">
+        <span class="label serif size-9-5 primary lh-115">$1.02 USD</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="464.5" y="239.2" width="92" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+        <span class="label serif size-9-5 primary lh-115">$0.56 USD</span>
+      </div>
+    </foreignObject>
+    <path class="line-clay" d="M67.6 69.5 H87.5" />
+    <circle class="fill-clay" cx="77.6" cy="69.5" r="4" />
+    <foreignObject x="89.6" y="59.8" width="312" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">every tool definition loaded</span>
+      </div>
+    </foreignObject>
+    <path class="line-blue" d="M67.6 84.6 H87.5" />
+    <circle class="fill-blue" cx="77.6" cy="84.6" r="4" />
+    <foreignObject x="89.6" y="74.9" width="312" height="18.9">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9-5 primary lh-115">tool search, definitions deferred</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="-0.1" y="311.5" width="587" height="35.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-9 secondary lh-115">Same triage agent, Claude Sonnet 5, mean of 3 runs per point; catalog padded with real tool definitions from public MCP servers.</span>
+      <span class="label serif size-7-9 secondary lh-115">15 to 18 of 20 correct at every point.</span>
+    </div>
+  </foreignObject>
+</svg>

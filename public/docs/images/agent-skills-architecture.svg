@@ -1,0 +1,306 @@
+<svg lang="en" width="1024" height="576.5" viewBox="0 0 1024 576.5" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Agent Skills Architecture - showing how Skills integrate with the agent's configuration and virtual machine">
+  <style>
+    /* Type: the page's fonts when the page inlines this diagram; the listed fallbacks otherwise, for example in a code review */
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 11.2px; }
+    .mono { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 11.2px; }
+    .middle { text-anchor: middle; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .bold { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .title { font-size: 35.4px; }
+    .heading { font-size: 16.8px; }
+    .subheading { font-size: 13px; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .panel { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border, #e4e4e3); stroke-width: 1; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .text-blue { fill: var(--cds-text-accent, #184f95); }
+    .outline { fill: none; stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.25; }
+    .box-gray { fill: var(--cds-bg-neutral, #f3f3f3); stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.25; }
+    .box-white { fill: var(--cds-surface-3, #ffffff); stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.25; }
+    .box-blue-pale { fill: var(--cds-bg-accent, #cde2fb); fill-opacity: 0.5; stroke: var(--cds-fill-accent, #2a78d6); stroke-width: 1.25; }
+    .box-green { fill: var(--cds-bg-success, #caeac7); fill-opacity: 0.5; stroke: var(--cds-fill-success, #009300); stroke-width: 1.25; }
+    .arrow { fill: none; stroke: var(--cds-fill-success, #009300); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+    .arrow-gray { fill: none; stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.top { align-items: flex-start; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label.balance-translation:not(:lang(en)) { text-wrap: balance; } /* a translated label with lines of about the same length */
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    /* Line heights of labels whose lines were drawn closer or farther apart than 1.3 (lh-N is N/100) */
+    .lh-119 { line-height: 1.19; }
+    .lh-120 { line-height: 1.2; }
+    /* The green note: less room above and below, so that a translation that wraps to more lines still fits its box */
+    .area.pad-y-2 { padding-top: 2px; padding-bottom: 2px; }
+    /* The label on the arrow: less room at the sides, so that a translated word fits in the gap of the arrow */
+    .area.pad-x-3 { padding-left: 3px; padding-right: 3px; }
+  </style>
+  <g aria-hidden="true">
+    <rect class="canvas" width="1024" height="576.5"/>
+    <rect class="panel" x="18.5" y="90" width="985.5" height="467.5" rx="16"/>
+  </g>
+  <foreignObject x="20" y="1" width="984" height="85">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+      <span class="label sans bold title primary">Agent + Skills + Computer</span>
+    </div>
+  </foreignObject>
+  <!-- A heading that is also its list's label is hidden from screen readers, so that it is not read twice -->
+  <g role="list" aria-label="Agent configuration">
+    <foreignObject aria-hidden="true" x="31.3" y="97.9" width="544" height="34.2">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label sans bold heading secondary">Agent configuration</span>
+      </div>
+    </foreignObject>
+    <rect class="box-gray" aria-hidden="true" x="37.6" y="136.1" width="399.9" height="274.3" rx="7"/>
+    <g role="listitem">
+      <rect class="box-white" x="54.6" y="155.5" width="363.4" height="37.3" rx="6"/>
+      <foreignObject x="54.6" y="155.5" width="363.4" height="37.3">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans bold secondary">Core system prompt</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g role="list" aria-label="Equipped Skills">
+        <foreignObject aria-hidden="true" x="49.4" y="205.1" width="117.8" height="84.7">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+            <span class="label sans bold subheading secondary">Equipped Skills</span>
+          </div>
+        </foreignObject>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="171.2" y="210.8" width="72.3" height="27.7" rx="4"/>
+          <text class="mono secondary middle" x="207.1" y="228" translate="no">bigquery</text>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="250.3" y="210.8" width="45.7" height="27.7" rx="4"/>
+          <text class="mono secondary middle" x="272.8" y="228" translate="no">docx</text>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="302.5" y="210.8" width="85" height="27.7" rx="4"/>
+          <text class="mono secondary middle" x="344.7" y="228" translate="no">nda-review</text>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="171.2" y="252.1" width="39.2" height="28" rx="4"/>
+          <text class="mono secondary middle" x="190.7" y="269.5" translate="no">pdf</text>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="217.3" y="252.1" width="46.8" height="28" rx="4"/>
+          <text class="mono secondary middle" x="240.4" y="269.5" translate="no">pptx</text>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" role="img" aria-label="and more" x="270.5" y="252.1" width="34.9" height="28" rx="4"/>
+          <text class="mono secondary middle" aria-hidden="true" x="287.6" y="269.5" translate="no">...</text>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="312.3" y="252.1" width="44.5" height="28" rx="4"/>
+          <text class="mono secondary middle" x="334.9" y="269.5" translate="no">xlsx</text>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <g role="list" aria-label="Equipped MCP servers">
+        <foreignObject aria-hidden="true" x="49.4" y="293.8" width="117.8" height="112.6">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+            <span class="label sans bold subheading secondary lh-119 balance-translation">Equipped MCP servers</span>
+          </div>
+        </foreignObject>
+        <g role="listitem">
+          <rect class="box-white" x="171.3" y="298.2" width="137" height="27.9" rx="4"/>
+          <circle class="outline" aria-hidden="true" cx="186.2" cy="312.1" r="3.7"/>
+          <foreignObject x="189.1" y="298.2" width="107.9" height="27.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans bold secondary">MCP server 1</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="box-white" x="171.3" y="331.8" width="137" height="27.9" rx="4"/>
+          <circle class="outline" aria-hidden="true" cx="186.2" cy="345.8" r="3.7"/>
+          <foreignObject x="189.1" y="331.8" width="107.9" height="27.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans bold secondary">MCP server 2</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="box-white" x="171.3" y="364.3" width="137" height="27.9" rx="4"/>
+          <circle class="outline" aria-hidden="true" cx="186.2" cy="378.3" r="3.7"/>
+          <foreignObject x="189.1" y="364.3" width="107.9" height="27.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans bold secondary">MCP server 3</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+      <g role="img" aria-label="The equipped MCP servers connect to the remote MCP servers">
+        <path class="arrow-gray" d="M239.8 392.3 V465.2 M234.2 459.4 L239.8 465.2 L245.4 459.4"/>
+        <path class="arrow-gray" d="M239.8 428.6 a6 6 0 0 1 -6 6 H101.95 a6 6 0 0 0 -6 6 V465.2 M90.35 459.4 L95.95 465.2 L101.55 459.4"/>
+        <path class="arrow-gray" d="M239.8 428.6 a6 6 0 0 0 6 6 H377.65 a6 6 0 0 1 6 6 V465.2 M378.05 459.4 L383.65 465.2 L389.25 459.4"/>
+      </g>
+    </g>
+  </g>
+  <g role="list" aria-label="Remote MCP servers (elsewhere on the internet)">
+    <foreignObject aria-hidden="true" x="22.5" y="514.7" width="429" height="38.8">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+        <span class="label sans bold secondary">Remote MCP servers (elsewhere on the internet)</span>
+      </div>
+    </foreignObject>
+    <g role="listitem">
+      <rect class="box-white" x="27.45" y="475.2" width="137" height="27.9" rx="4"/>
+      <circle class="outline" aria-hidden="true" cx="42.35" cy="489.1" r="3.7"/>
+      <foreignObject x="45.25" y="475.2" width="107.9" height="27.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans bold secondary">MCP server 1</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="box-white" x="171.3" y="475.2" width="137" height="27.9" rx="4"/>
+      <circle class="outline" aria-hidden="true" cx="186.2" cy="489.1" r="3.7"/>
+      <foreignObject x="189.1" y="475.2" width="107.9" height="27.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans bold secondary">MCP server 2</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="box-white" x="315.15" y="475.2" width="137" height="27.9" rx="4"/>
+      <circle class="outline" aria-hidden="true" cx="330.05" cy="489.1" r="3.7"/>
+      <foreignObject x="332.95" y="475.2" width="107.9" height="27.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans bold secondary">MCP server 3</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <foreignObject x="460.2" y="162.9" width="102" height="59.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area center top pad-x-3">
+      <span class="label sans bold secondary">use computer</span>
+    </div>
+  </foreignObject>
+  <path class="arrow-gray" role="img" aria-label="From Agent configuration to Agent virtual machine" d="M437.5 175 H459.5 M562 175 H575 M568.6 169.4 L575 175 L568.6 180.6"/>
+  <g role="list" aria-label="Agent virtual machine">
+    <foreignObject aria-hidden="true" x="579.3" y="97.9" width="420.7" height="34.6">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label sans bold heading secondary">Agent virtual machine</span>
+      </div>
+    </foreignObject>
+    <rect class="box-gray" aria-hidden="true" x="585.1" y="136.5" width="399.9" height="385.2" rx="7"/>
+    <g role="listitem">
+      <rect class="box-white" x="605.7" y="157.5" width="104.3" height="37.2" rx="7"/>
+      <text class="sans bold secondary middle" x="657.9" y="179.3">Bash</text>
+    </g>
+    <g role="listitem">
+      <rect class="box-white" x="732.9" y="157.5" width="104.3" height="37.2" rx="7"/>
+      <text class="sans bold secondary middle" x="785.3" y="179.3">Python</text>
+    </g>
+    <g role="listitem">
+      <rect class="box-white" x="860.2" y="157.5" width="104.3" height="37.2" rx="7"/>
+      <text class="sans bold secondary middle" x="912.5" y="179.3">Nodejs</text>
+    </g>
+    <g role="listitem">
+      <foreignObject aria-hidden="true" x="597.7" y="200.9" width="383.3" height="33.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans bold subheading secondary">File system</span>
+        </div>
+      </foreignObject>
+      <rect class="box-white" aria-hidden="true" x="603.7" y="238.1" width="362.9" height="263.9" rx="7"/>
+      <g role="note">
+        <rect class="box-green" x="451" y="226.2" width="121.4" height="100" rx="4"/>
+        <foreignObject x="457.6" y="226.2" width="114.8" height="100">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="area start pad-y-2">
+            <span class="label sans bold secondary lh-120">Contents of Skill&#160;directories live in the agent&#160;computer’s file system</span>
+          </div>
+        </foreignObject>
+        <path class="arrow" role="img" aria-label="Describes the Skill directories that follow" d="M572.4 276.2 H615 M609 270.4 L615 276.2 L609 282"/>
+      </g>
+      <g role="list" aria-label="File system">
+        <g role="listitem">
+          <rect class="box-blue-pale" x="622.2" y="256.9" width="153.4" height="82.7" rx="4"/>
+          <text class="mono secondary" x="631.5" y="275.2" translate="no">skills/bigquery/</text>
+          <g role="list" aria-label="Contents of skills/bigquery/">
+            <g role="listitem">
+              <text class="mono text-blue" x="631.8" y="288.6" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="648.7">SKILL.md</tspan></text>
+            </g>
+            <g role="listitem">
+              <text class="mono text-blue" x="631.8" y="302" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="648.7">datasources.md</tspan></text>
+            </g>
+            <g role="listitem">
+              <text class="mono text-blue" x="631.8" y="315.4" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="648.7">rules.md</tspan></text>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="794.4" y="256.9" width="153.4" height="82.7" rx="4"/>
+          <text class="mono secondary" x="803.7" y="275.2" translate="no">skills/docx/</text>
+          <g role="list" aria-label="Contents of skills/docx/">
+            <g role="listitem">
+              <text class="mono text-blue" x="804" y="288.6" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="820.4">SKILL.md</tspan></text>
+            </g>
+            <g role="listitem">
+              <text class="mono text-blue" x="804" y="302" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="820.4">ooxml/</tspan></text>
+              <g role="list" aria-label="Contents of skills/docx/ooxml/">
+                <g role="listitem">
+                  <text class="mono text-blue" x="837.4" y="315.4" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="850.8">spec.md</tspan></text>
+                </g>
+                <g role="listitem">
+                  <text class="mono text-blue" x="837.4" y="328.8" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="850.8">editing.md</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="622.2" y="356.4" width="153.4" height="82.7" rx="4"/>
+          <text class="mono secondary" x="631.5" y="373.6" translate="no">skills/nda-review/</text>
+          <g role="list" aria-label="Contents of skills/nda-review/">
+            <g role="listitem">
+              <text class="mono text-blue" x="631.8" y="387.6" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="648.7">SKILL.md</tspan></text>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" x="794.4" y="356.4" width="153.4" height="82.7" rx="4"/>
+          <text class="mono secondary" x="803.7" y="373.6" translate="no">skills/pdf/</text>
+          <g role="list" aria-label="Contents of skills/pdf/">
+            <g role="listitem">
+              <text class="mono text-blue" x="804" y="387.6" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="820.4">SKILL.md</tspan></text>
+            </g>
+            <g role="listitem">
+              <text class="mono text-blue" x="804" y="401" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="820.4">forms.md</tspan></text>
+            </g>
+            <g role="listitem">
+              <text class="mono text-blue" x="804" y="414.4" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="820.4">reference.md</tspan></text>
+            </g>
+            <g role="listitem">
+              <text class="mono text-blue" x="804" y="427.8" translate="no"><tspan aria-hidden="true">- </tspan><tspan x="820.4">extract_fields.py</tspan></text>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box-blue-pale" role="img" aria-label="and more" x="622.2" y="455.5" width="153.4" height="27.8" rx="4"/>
+          <foreignObject aria-hidden="true" x="625.5" y="455.5" width="150.1" height="27.8">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+              <span class="label mono secondary">...etc...</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

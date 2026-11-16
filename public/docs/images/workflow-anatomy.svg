@@ -1,0 +1,172 @@
+<svg lang="en" width="720" height="338" viewBox="0 0 720 338" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Layers of a workflow run: the run, its two phases, and the agent threads in each. The program passes results from one phase to the next. Inside a phase, it chooses what runs and can repeat a step.">
+  <style>
+    /* Type, shared by every text element */
+    .sans      { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 11px; dominant-baseline: central; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .head      { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); font-size: 12px; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise, for example in a code review */
+    .canvas    { fill: var(--cds-surface-0, #f9f9f7); }
+    .state     { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-strong, #c8c3b5); stroke-width: 1.5; }
+    /* A phase is drawn in the canvas color, so that it stands out from the run around it and from the threads in it */
+    .phase     { fill: var(--cds-surface-0, #f9f9f7); stroke: var(--cds-border-strong, #c8c3b5); stroke-width: 1.5; }
+    .primary   { fill: var(--cds-text-primary, #141413); }
+    .secondary { fill: var(--cds-text-secondary, #666663); }
+    .edge      { fill: none; stroke: var(--cds-border-stronger, #aaa597); stroke-width: 1.5; }
+    .tip       { fill: var(--cds-border-stronger, #aaa597); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label.balance-translation:not(:lang(en)) { text-wrap: balance; } /* a translated label with lines of about the same length */
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #141413); }
+    .label.secondary { color: var(--cds-text-secondary, #666663); }
+    /* Line heights of labels whose lines were drawn closer or farther apart than 1.3 (lh-N is N/100) */
+    .lh-136 { line-height: 1.36; }
+    /* Lines of about equal length, for a label in an area wider than its text */
+    .balance { text-wrap: balance; }
+  </style>
+  <defs>
+    <marker id="workflow-anatomy-arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="6" refX="10" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon class="tip" points="0 0, 10 3, 0 6"/>
+    </marker>
+  </defs>
+  <rect class="canvas" width="720" height="338" rx="6" aria-hidden="true"/>
+  <!-- The layers, outermost first: the run, its phases, the agent threads in each phase -->
+  <g role="list" aria-label="Who does the work">
+    <g role="listitem">
+      <rect class="state" x="16" y="16" width="688" height="40" rx="6"/>
+      <foreignObject x="16" y="16" width="688" height="40">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans head primary">Agent on the primary thread</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="state" x="16" y="104" width="688" height="218" rx="6"/>
+      <foreignObject x="26" y="112.2" width="247.8" height="25.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label sans head primary">Workflow run</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="277.8" y="112.9" width="416.2" height="25.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+          <span class="label sans secondary">The server runs the workflow in the background</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Phases of the run">
+        <g role="listitem">
+          <rect class="phase" x="32" y="142" width="264" height="164" rx="6"/>
+          <foreignObject x="42" y="150.2" width="250" height="23.8">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+              <span class="label sans head primary">Phase: Read the contracts</span>
+            </div>
+          </foreignObject>
+          <g role="list" aria-label="Agent threads in this phase">
+            <g role="listitem">
+              <rect class="state" x="94" y="178" width="140" height="28" rx="6"/>
+              <foreignObject x="94" y="178" width="140" height="28">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+                  <span class="label sans primary">Agent thread</span>
+                </div>
+              </foreignObject>
+            </g>
+            <g role="listitem">
+              <rect class="state" x="94" y="214" width="140" height="28" rx="6"/>
+              <foreignObject x="94" y="214" width="140" height="28">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+                  <span class="label sans primary">Agent thread</span>
+                </div>
+              </foreignObject>
+            </g>
+            <g role="listitem">
+              <rect class="state" x="94" y="250" width="140" height="28" rx="6"/>
+              <foreignObject x="94" y="250" width="140" height="28">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+                  <span class="label sans primary">Agent thread</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <foreignObject x="36" y="280.9" width="256" height="22.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label sans secondary">Agents work at the same time</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="phase" x="424" y="142" width="264" height="164" rx="6"/>
+          <foreignObject x="434" y="150.2" width="250" height="59.8">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+              <span class="label sans head primary">Phase: Reconcile the findings</span>
+            </div>
+          </foreignObject>
+          <g role="list" aria-label="Agent threads in this phase">
+            <g role="listitem">
+              <rect class="state" x="486" y="214" width="140" height="28" rx="6"/>
+              <foreignObject x="486" y="214" width="140" height="28">
+                <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+                  <span class="label sans primary">Agent thread</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+          <foreignObject x="428" y="244.9" width="256" height="22.9">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label sans secondary">An agent works with the results</span>
+            </div>
+          </foreignObject>
+          <foreignObject x="432" y="259.5" width="248" height="42.5">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+              <span class="label sans lh-136 secondary balance">The program chooses what runs here and can repeat a step</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+  </g>
+  <!-- Each arrow tells a screen reader where it goes from and to, after its label -->
+  <g role="list" aria-label="What happens, in order">
+    <g role="listitem">
+      <foreignObject x="100" y="60.5" width="238" height="37.92">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans lh-136 secondary balance-translation">The agent writes a workflow (a program) and starts a run</span>
+        </div>
+      </foreignObject>
+      <line class="edge" x1="96" y1="56" x2="96" y2="104" marker-end="url(#workflow-anatomy-arrow)" role="img" aria-label="From the agent to the workflow run"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="299.5" y="142" width="121" height="83.42">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label sans lh-136 secondary balance">The program passes the results on</span>
+        </div>
+      </foreignObject>
+      <line class="edge" x1="296" y1="228" x2="424" y2="228" marker-end="url(#workflow-anatomy-arrow)" role="img" aria-label="From the first phase to the second phase"/>
+    </g>
+    <g role="listitem">
+      <path class="edge" d="M 626 221 C 668 205, 668 251, 626 235" marker-end="url(#workflow-anatomy-arrow)" role="img" aria-label="Inside the second phase, the program can repeat a step"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="340" y="60.5" width="280" height="37.92">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label sans lh-136 secondary balance">When the run ends, the agent reads what the run did</span>
+        </div>
+      </foreignObject>
+      <line class="edge" x1="624" y1="104" x2="624" y2="56" marker-end="url(#workflow-anatomy-arrow)" role="img" aria-label="From the workflow run to the agent"/>
+    </g>
+  </g>
+</svg>

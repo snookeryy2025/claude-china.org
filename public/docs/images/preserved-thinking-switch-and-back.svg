@@ -1,0 +1,230 @@
+<svg lang="en" width="480" height="520.6" viewBox="0 0 402 436" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Three requests in one conversation. On Claude Fable 5.1, thinking 1 is read. After a switch to Claude Opus 5.5, thinking 1 and 2 are not read and there is no error. Back on Claude Fable 5.1, thinking 1, 2 and 3 are read, thinking 3 from Claude Opus 5.5 included.">
+  <style>
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); }
+    .mono { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, monospace); }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .box { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    .box-shaded { fill: var(--cds-alpha-2, #e4e4e3); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    .box-changed { fill: var(--cds-bg-accent, #d7e7f9); stroke: var(--cds-text-accent, #1f5fa8); stroke-width: 1.75; }
+    .box-valid { fill: var(--cds-bg-success, #d3ecd3); stroke: var(--cds-text-success, #006300); stroke-width: 1.5; }
+    .box-invalid { fill: var(--cds-bg-danger, #fad6d6); stroke: var(--cds-text-danger, #8e2626); stroke-width: 1.5; stroke-dasharray: 3 2; }
+    .box-may { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-text-success, #006300); stroke-width: 1.75; }
+    .box-unread { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.5; stroke-dasharray: 3 2; }
+    .mark-valid { fill: none; stroke: var(--cds-text-success, #006300); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .mark-invalid { fill: none; stroke: var(--cds-text-danger, #8e2626); stroke-width: 2; stroke-linecap: round; }
+    .mark-unread { fill: none; stroke: var(--cds-text-secondary, #52514e); stroke-width: 2; stroke-linecap: round; }
+    .rule { stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1; stroke-dasharray: 2 3; }
+    .ink { fill: var(--cds-text-primary, #0b0b0b); }
+    .muted { fill: var(--cds-text-secondary, #52514e); }
+    .accent { fill: var(--cds-text-accent, #1f5fa8); }
+    .valid { fill: var(--cds-text-success, #006300); }
+    .invalid { fill: var(--cds-text-danger, #8e2626); }
+    .middle { text-anchor: middle; }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 2px 2px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.25; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    .label .mono, .label .code, .label code { hyphens: none; overflow-wrap: normal; }
+    .label code { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, monospace); font-size: 0.92em; line-height: inherit; color: inherit; background: none; border: 0; border-radius: 0; padding: 0; white-space: inherit; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    /* Sizes and weights. Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .title { font-size: 15px; font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .note { font-size: 13.5px; }
+    .small { font-size: 13px; }
+    .strong { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .label.ink { color: var(--cds-text-primary, #0b0b0b); }
+    .label.muted { color: var(--cds-text-secondary, #52514e); }
+    .label.accent { color: var(--cds-text-accent, #1f5fa8); }
+    .label.valid { color: var(--cds-text-success, #006300); }
+    .label.invalid { color: var(--cds-text-danger, #8e2626); }
+  </style>
+  <rect class="canvas" width="402" height="436" rx="6" aria-hidden="true"/>
+  <g aria-hidden="true">
+    <foreignObject x="10" y="4" width="188" height="38">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small muted">from Claude Fable&#160;5.1</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="200" y="4" width="99" height="38">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small muted">from Claude Opus&#160;5.5</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="299" y="4" width="95" height="38">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+        <span class="label sans small muted">from Claude Fable&#160;5.1</span>
+      </div>
+    </foreignObject>
+    <line class="rule backdrop" x1="201" y1="6" x2="201" y2="42"/>
+    <line class="rule backdrop" x1="201" y1="177" x2="201" y2="217"/>
+    <line class="rule backdrop" x1="201" y1="281" x2="201" y2="321"/>
+    <line class="rule backdrop" x1="298" y1="6" x2="298" y2="42"/>
+    <line class="rule backdrop" x1="298" y1="281" x2="298" y2="321"/>
+  </g>
+  <g role="list" aria-label="Three requests">
+    <g role="listitem">
+      <foreignObject x="10" y="48" width="382" height="24">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans title ink">On Claude Fable&#160;5.1</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="On Claude Fable 5.1">
+        <g role="listitem">
+          <rect class="box" x="12" y="76" width="30" height="34" rx="5" role="img" aria-label="message 1"/>
+          <g role="img" aria-label="thinking 1, read">
+            <rect class="box-valid" x="45" y="76" width="54" height="34" rx="5"/>
+            <text x="61.2" y="97.8" class="sans small strong middle valid" aria-hidden="true">1</text>
+            <path class="mark-valid" d="M78.3 93.3 L81.5 96.6 L87.4 89.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="109" y="76" width="30" height="34" rx="5" role="img" aria-label="message 2"/>
+          <g role="img" aria-label="thinking 2, new">
+            <rect class="box-shaded" x="142" y="76" width="54" height="34" rx="5"/>
+            <text x="169" y="97.8" class="sans small strong middle ink" aria-hidden="true">2</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="10" y="152" width="382" height="24">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans title ink">Switch to Claude Opus&#160;5.5</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Switch to Claude Opus 5.5">
+        <g role="listitem">
+          <rect class="box" x="12" y="180" width="30" height="34" rx="5" role="img" aria-label="message 1"/>
+          <g role="img" aria-label="thinking 1, not read">
+            <rect class="box-unread" x="45" y="180" width="54" height="34" rx="5"/>
+            <text x="61.2" y="201.8" class="sans small strong middle muted" aria-hidden="true">1</text>
+            <path class="mark-unread" d="M78.8 197 L86.8 197"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="109" y="180" width="30" height="34" rx="5" role="img" aria-label="message 2"/>
+          <g role="img" aria-label="thinking 2, not read">
+            <rect class="box-unread" x="142" y="180" width="54" height="34" rx="5"/>
+            <text x="158.2" y="201.8" class="sans small strong middle muted" aria-hidden="true">2</text>
+            <path class="mark-unread" d="M175.8 197 L183.8 197"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="206" y="180" width="30" height="34" rx="5" role="img" aria-label="message 3"/>
+          <g role="img" aria-label="thinking 3, new">
+            <rect class="box-shaded" x="239" y="180" width="54" height="34" rx="5"/>
+            <text x="266" y="201.8" class="sans small strong middle ink" aria-hidden="true">3</text>
+          </g>
+        </g>
+      </g>
+      <foreignObject x="10" y="215" width="188" height="20">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans note strong muted">not read, no error</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="10" y="256" width="382" height="24">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans title ink">Back on Claude Fable&#160;5.1</span>
+        </div>
+      </foreignObject>
+      <g role="list" aria-label="Back on Claude Fable 5.1">
+        <g role="listitem">
+          <rect class="box" x="12" y="284" width="30" height="34" rx="5" role="img" aria-label="message 1"/>
+          <g role="img" aria-label="thinking 1, read">
+            <rect class="box-valid" x="45" y="284" width="54" height="34" rx="5"/>
+            <text x="61.2" y="305.8" class="sans small strong middle valid" aria-hidden="true">1</text>
+            <path class="mark-valid" d="M78.3 301.3 L81.5 304.6 L87.4 297.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="109" y="284" width="30" height="34" rx="5" role="img" aria-label="message 2"/>
+          <g role="img" aria-label="thinking 2, read">
+            <rect class="box-valid" x="142" y="284" width="54" height="34" rx="5"/>
+            <text x="158.2" y="305.8" class="sans small strong middle valid" aria-hidden="true">2</text>
+            <path class="mark-valid" d="M175.3 301.3 L178.5 304.6 L184.4 297.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="206" y="284" width="30" height="34" rx="5" role="img" aria-label="message 3"/>
+          <g role="img" aria-label="thinking 3, read">
+            <rect class="box-valid" x="239" y="284" width="54" height="34" rx="5"/>
+            <text x="255.2" y="305.8" class="sans small strong middle valid" aria-hidden="true">3</text>
+            <path class="mark-valid" d="M272.3 301.3 L275.5 304.6 L281.4 297.4"/>
+          </g>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="303" y="284" width="30" height="34" rx="5" role="img" aria-label="message 4"/>
+          <g role="img" aria-label="thinking 4, new">
+            <rect class="box-shaded" x="336" y="284" width="54" height="34" rx="5"/>
+            <text x="363" y="305.8" class="sans small strong middle ink" aria-hidden="true">4</text>
+          </g>
+        </g>
+      </g>
+      <foreignObject x="10" y="319" width="188" height="20">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans note strong valid">read again</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <g role="list" aria-label="Key">
+    <g role="listitem">
+      <g aria-hidden="true">
+        <rect class="box" x="12" y="364" width="20" height="20" rx="4"/>
+      </g>
+      <foreignObject x="36" y="356" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">your message</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g aria-hidden="true">
+        <g role="img" aria-label="read">
+          <rect class="box-valid" x="204" y="364" width="20" height="20" rx="5"/>
+          <path class="mark-valid" d="M209.5 374.3 L212.7 377.6 L218.6 370.4"/>
+        </g>
+      </g>
+      <foreignObject x="228" y="356" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">thinking, read</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g aria-hidden="true">
+        <rect class="box-shaded" x="12" y="401" width="20" height="20" rx="4"/>
+      </g>
+      <foreignObject x="36" y="393" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">new on this turn</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <g aria-hidden="true">
+        <g role="img" aria-label="not read">
+          <rect class="box-unread" x="204" y="401" width="20" height="20" rx="5"/>
+          <path class="mark-unread" d="M210 411 L218 411"/>
+        </g>
+      </g>
+      <foreignObject x="228" y="393" width="164" height="36">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans small muted">thinking, not read</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+</svg>

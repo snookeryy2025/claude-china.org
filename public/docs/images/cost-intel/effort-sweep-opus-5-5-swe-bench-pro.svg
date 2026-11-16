@@ -1,0 +1,155 @@
+<svg lang="en" width="1290" height="750" viewBox="0 0 619.2 360" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Line chart of accuracy against cost per task by effort: steep from low to high for Claude Opus 5.5 on SWE-bench Pro">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/effort-sweep-opus-5-5-swe-bench-pro.ts: change that file, not this one -->
+  <style>
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .italic { font-style: italic; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 1.9; stroke-linecap: square; stroke-linejoin: round; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10 { font-size: 10px; }
+    .size-11-5 { font-size: 11.5px; }
+    .size-8-3 { font-size: 8.3px; }
+    .size-9-3 { font-size: 9.3px; }
+    .size-9-7 { font-size: 9.7px; }
+    .size-9-8 { font-size: 9.8px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="619.2" height="360" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M44.2 304.2 V32.2" />
+      <path class="grid" d="M169 304.2 V32.2" />
+      <path class="grid" d="M293.8 304.2 V32.2" />
+      <path class="grid" d="M418.6 304.2 V32.2" />
+      <path class="grid" d="M543.4 304.2 V32.2" />
+    </g>
+    <path class="tick" d="M44.2 304.2 V307.7" />
+    <path class="tick" d="M169 304.2 V307.7" />
+    <path class="tick" d="M293.8 304.2 V307.7" />
+    <path class="tick" d="M418.6 304.2 V307.7" />
+    <path class="tick" d="M543.4 304.2 V307.7" />
+    <g class="backdrop">
+      <path class="grid" d="M44.2 304.2 H605.8" />
+      <path class="grid" d="M44.2 267.9 H605.8" />
+      <path class="grid" d="M44.2 231.7 H605.8" />
+      <path class="grid" d="M44.2 195.4 H605.8" />
+      <path class="grid" d="M44.2 159.1 H605.8" />
+      <path class="grid" d="M44.2 122.9 H605.8" />
+      <path class="grid" d="M44.2 86.6 H605.8" />
+      <path class="grid" d="M44.2 50.3 H605.8" />
+    </g>
+    <path class="tick" d="M44.2 304.2 H40.7" />
+    <path class="tick" d="M44.2 267.9 H40.7" />
+    <path class="tick" d="M44.2 231.7 H40.7" />
+    <path class="tick" d="M44.2 195.4 H40.7" />
+    <path class="tick" d="M44.2 159.1 H40.7" />
+    <path class="tick" d="M44.2 122.9 H40.7" />
+    <path class="tick" d="M44.2 86.6 H40.7" />
+    <path class="tick" d="M44.2 50.3 H40.7" />
+    <path class="line-blue" d="M112.8 241.7 L175.2 145 L225.2 99.4 L506 74.8" />
+  </g>
+  <foreignObject x="38.2" y="5.6" width="572" height="21.2">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-11-5 text-clay lh-115">SWE-bench Pro: on Claude Opus 5.5, accuracy climbs steeply from low to high effort</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="99" y="319.3" width="452" height="19.3">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-8 primary lh-115">cost per task (USD, as a customer is billed)</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Horizontal axis, labeled from 0.0 to 0.8">
+        <text class="serif size-10 primary middle" aria-hidden="true" x="44.2" y="318.8">0.0</text>
+        <text class="serif size-10 primary middle" aria-hidden="true" x="169" y="318.8">0.2</text>
+        <text class="serif size-10 primary middle" aria-hidden="true" x="293.8" y="318.8">0.4</text>
+        <text class="serif size-10 primary middle" aria-hidden="true" x="418.6" y="318.8">0.6</text>
+        <text class="serif size-10 primary middle" aria-hidden="true" x="543.4" y="318.8">0.8</text>
+      </g>
+    </g>
+    <g role="listitem">
+      <g transform="translate(18.2 168.2)">
+        <text class="serif size-9-7 primary middle rotated" transform="rotate(-90)">accuracy (%)</text>
+      </g>
+      <g role="img" aria-label="Vertical axis, labeled from 84 to 98">
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="308">84</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="271.7">86</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="235.5">88</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="199.2">90</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="162.9">92</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="126.7">94</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="90.4">96</text>
+        <text class="serif size-10 primary end" aria-hidden="true" x="37.2" y="54.1">98</text>
+      </g>
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Opus 5.5, by effort: 1 run at xhigh, 2 at each other setting">
+    <g role="listitem">
+      <foreignObject x="115.8" y="244.9" width="162" height="29.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-3 primary lh-115">low</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="$0.11 USD per task, 87.4% accuracy" cx="112.8" cy="241.7" r="6" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="178.2" y="148.2" width="147" height="29.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-3 primary lh-115">medium (default)</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="$0.21 USD per task, 92.8% accuracy" cx="175.2" cy="145" r="6" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="228.2" y="102.7" width="212" height="29.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-3 primary lh-115">high</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="$0.29 USD per task, 95.3% accuracy" cx="225.2" cy="99.4" r="6" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="509" y="78" width="104" height="29.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-3 primary lh-115">xhigh</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="$0.74 USD per task, 96.7% accuracy" cx="506" cy="74.8" r="6" />
+    </g>
+  </g>
+  <foreignObject x="331.5" y="168.2" width="282" height="29.4">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-9-3 secondary italic lh-115">xhigh adds about 1.4 points for 2.5 times the cost of high</span>
+    </div>
+  </foreignObject>
+  <foreignObject x="0.2" y="334.4" width="612" height="27.1">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-8-3 secondary lh-115">The 478 problems described in reference 3; 1 run at xhigh, 2 at each other setting; priced as a customer is billed; y-axis starts at 84.</span>
+    </div>
+  </foreignObject>
+</svg>

@@ -1,0 +1,7 @@
+.next/
+.next-dev/
+.next-build/
+node_modules/
+.env*
+.DS_Store
+.docs-sync-staging/

@@ -1,0 +1,130 @@
+<svg lang="en" width="840" height="292" viewBox="0 0 840 292" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Key states: attaching is one-way, a disabled key can be re-enabled, and Anthropic can't recover data once the key is deleted.">
+  <style>
+    /* Type */
+    .sans      { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 12px; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .head      { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); font-size: 14px; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise, for example in a code review */
+    .canvas    { fill: var(--cds-surface-1, #fcfcfb); }
+    .state     { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    /* The one state with no way back, tinted and named so that color is not the only sign */
+    .final     { fill: var(--cds-bg-danger, #fad6d6); stroke: var(--cds-text-danger, #8e2626); stroke-width: 1.5; }
+    .edge      { fill: none; stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.5; }
+    .tip       { fill: var(--cds-text-secondary, #52514e); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code, .label code { hyphens: none; overflow-wrap: normal; }
+    .label code { color: inherit; background: none; border: 0; border-radius: 0; padding: 0; white-space: inherit; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.danger { color: var(--cds-text-danger, #8e2626); }
+    /* A state's name and its description, stacked in one area, so that a description that wraps moves the name up */
+    .area.column { flex-direction: column; gap: 3px; }
+    /* Lines of about equal length, for a label in an area wider than its text */
+    .balance { text-wrap: balance; }
+  </style>
+  <defs>
+    <marker id="key-states-arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="6" refX="10" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon class="tip" points="0 0, 10 3, 0 6"/>
+    </marker>
+  </defs>
+  <g aria-hidden="true">
+    <rect class="canvas" width="840" height="292" rx="6"/>
+  </g>
+  <!-- The states, in the order a key moves through them -->
+  <g role="list" aria-label="Key states">
+    <g role="listitem">
+      <rect class="state" x="16" y="72" width="128" height="48" rx="6"/>
+      <foreignObject x="16" y="72" width="128" height="48">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+          <span class="label sans head primary">Not attached</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="state" x="240" y="56" width="176" height="80" rx="6"/>
+      <foreignObject x="240" y="56" width="176" height="80">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center column">
+          <span class="label sans head primary">In use</span>
+          <span class="label sans secondary balance">Claude reads and writes your data</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="state" x="648" y="56" width="176" height="80" rx="6"/>
+      <foreignObject x="648" y="56" width="176" height="80">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center column">
+          <span class="label sans head primary">Unavailable</span>
+          <span class="label sans secondary balance">Claude can't read or write your data</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="final" x="444" y="184" width="176" height="80" rx="6"/>
+      <foreignObject x="444" y="184" width="176" height="80">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center column">
+          <span class="label sans head danger">Deleted</span>
+          <span class="label sans danger balance">Anthropic can't recover your data</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <!-- Each arrow follows its label and tells a screen reader where it goes from and to -->
+  <g role="list" aria-label="What moves a key between states">
+    <g role="listitem">
+      <foreignObject x="148" y="36" width="88" height="56">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label sans secondary">Attach</span>
+        </div>
+      </foreignObject>
+      <path class="edge" d="M 144 96 H 240" marker-end="url(#key-states-arrow)" role="img" aria-label="From Not attached to In use: attach"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="420" y="16" width="224" height="60">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label sans secondary">Disable the key or remove access (within 1 hour)</span>
+        </div>
+      </foreignObject>
+      <path class="edge" d="M 416 80 H 648" marker-end="url(#key-states-arrow)" role="img" aria-label="From In use to Unavailable: disable the key or remove access (within 1 hour)"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="420" y="116" width="224" height="60">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label sans secondary">Re-enable the key or restore access</span>
+        </div>
+      </foreignObject>
+      <path class="edge" d="M 648 112 H 416" marker-end="url(#key-states-arrow)" role="img" aria-label="From Unavailable to In use: re-enable the key or restore access"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="260" y="228" width="180" height="48">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+          <span class="label sans secondary">Delete the key</span>
+        </div>
+      </foreignObject>
+      <path class="edge" d="M 328 136 V 224 H 444" marker-end="url(#key-states-arrow)" role="img" aria-label="From In use to Deleted: delete the key"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="624" y="228" width="196" height="48">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label sans secondary">Delete the key</span>
+        </div>
+      </foreignObject>
+      <path class="edge" d="M 736 136 V 224 H 620" marker-end="url(#key-states-arrow)" role="img" aria-label="From Unavailable to Deleted: delete the key"/>
+    </g>
+  </g>
+</svg>

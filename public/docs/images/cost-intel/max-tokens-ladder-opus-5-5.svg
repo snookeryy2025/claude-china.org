@@ -1,0 +1,257 @@
+<svg lang="en" width="1284" height="778" viewBox="0 0 616.3 373.2" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Dot plot of per-turn output for Opus 5.5 and Fable 5.1: medians a few hundred tokens, longest 61k and 128k, against the caps">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/max-tokens-ladder-opus-5-5.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-primary { fill: var(--cds-text-primary, #0b0b0b); stroke: var(--cds-text-primary, #0b0b0b); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .italic { font-style: italic; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-blue { color: var(--cds-text-accent, #184f95); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-clay { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 1.6; stroke-dasharray: 5.9 2.6; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 1.1; stroke-dasharray: 4.1 1.8; }
+    .line-grey-2 { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 2; stroke-linecap: square; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-5 { font-size: 10.5px; }
+    .size-11 { font-size: 11px; }
+    .size-13-5 { font-size: 13.5px; }
+    .size-8 { font-size: 8px; }
+    .size-8-5 { font-size: 8.5px; }
+    .size-9-5 { font-size: 9.5px; }
+    .text-clay { fill: var(--cds-text-tint-orange, #863311); }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    .tick-2 { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.6; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="616.3" height="373.2" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M108.5 300.1 V37.7" />
+      <path class="grid" d="M260.2 300.1 V37.7" />
+      <path class="grid" d="M411.9 300.1 V37.7" />
+      <path class="grid" d="M563.5 300.1 V37.7" />
+    </g>
+    <path class="tick" d="M108.5 300.1 V303.6" />
+    <path class="tick" d="M260.2 300.1 V303.6" />
+    <path class="tick" d="M411.9 300.1 V303.6" />
+    <path class="tick" d="M563.5 300.1 V303.6" />
+    <path class="tick-2" d="M154.2 300.1 V302.1" />
+    <path class="tick-2" d="M180.9 300.1 V302.1" />
+    <path class="tick-2" d="M199.8 300.1 V302.1" />
+    <path class="tick-2" d="M214.5 300.1 V302.1" />
+    <path class="tick-2" d="M226.5 300.1 V302.1" />
+    <path class="tick-2" d="M236.7 300.1 V302.1" />
+    <path class="tick-2" d="M245.5 300.1 V302.1" />
+    <path class="tick-2" d="M253.2 300.1 V302.1" />
+    <path class="tick-2" d="M305.8 300.1 V302.1" />
+    <path class="tick-2" d="M332.5 300.1 V302.1" />
+    <path class="tick-2" d="M351.5 300.1 V302.1" />
+    <path class="tick-2" d="M366.2 300.1 V302.1" />
+    <path class="tick-2" d="M378.2 300.1 V302.1" />
+    <path class="tick-2" d="M388.4 300.1 V302.1" />
+    <path class="tick-2" d="M397.2 300.1 V302.1" />
+    <path class="tick-2" d="M404.9 300.1 V302.1" />
+    <path class="tick-2" d="M457.5 300.1 V302.1" />
+    <path class="tick-2" d="M484.2 300.1 V302.1" />
+    <path class="tick-2" d="M503.2 300.1 V302.1" />
+    <path class="tick-2" d="M517.9 300.1 V302.1" />
+    <path class="tick-2" d="M529.9 300.1 V302.1" />
+    <path class="tick-2" d="M540 300.1 V302.1" />
+    <path class="tick-2" d="M548.8 300.1 V302.1" />
+    <path class="tick-2" d="M556.6 300.1 V302.1" />
+    <path class="tick-2" d="M609.2 300.1 V302.1" />
+    <text class="serif size-9-5 secondary middle" x="108.5" y="314.3">100</text>
+    <text class="serif size-9-5 secondary middle" x="260.2" y="314.3">1,000</text>
+    <text class="serif size-9-5 secondary middle" x="411.9" y="314.3">10,000</text>
+    <text class="serif size-9-5 secondary middle" x="563.5" y="314.3">100,000</text>
+    <g class="backdrop">
+      <path class="grid" d="M108.5 238.9 H609.2" />
+      <path class="grid" d="M108.5 151.4 H609.2" />
+    </g>
+    <path class="tick" d="M108.5 238.9 H105" />
+    <path class="tick" d="M108.5 151.4 H105" />
+  </g>
+  <foreignObject x="1.2" y="0.4" width="608" height="39">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-13-5 text-clay lh-115">Almost no turn is long, but the cap decides the whole attempt</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="152.9" y="314.7" width="412" height="20.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-11 primary lh-115">Output tokens in one turn (log scale)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 100 to 100,000, logarithmic" d="M108.5 300.1 H609.2" />
+    </g>
+  </g>
+  <g role="list" aria-label="Values of max_tokens marked on the axis">
+    <g role="listitem">
+      <g transform="translate(440.7 50.8)">
+        <text class="serif size-8-5 text-clay end rotated" transform="rotate(-90)">16k cap</text>
+      </g>
+      <path class="line-clay" role="img" aria-label="at 16,384 tokens" d="M444.4 300.1 V37.7" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(484.8 50.8)">
+        <text class="serif size-8-5 secondary end rotated" transform="rotate(-90)">32k</text>
+      </g>
+      <path class="line-grey" role="img" aria-label="at 32,000 tokens" d="M488.5 300.1 V37.7" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(530.4 50.8)">
+        <text class="serif size-8-5 secondary end rotated" transform="rotate(-90)">64k</text>
+      </g>
+      <path class="line-grey" role="img" aria-label="at 64,000 tokens" d="M534.1 300.1 V37.7" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(576.1 50.8)">
+        <text class="serif size-8-5 secondary end rotated" transform="rotate(-90)">128k max</text>
+      </g>
+      <path class="line-grey" role="img" aria-label="at 128,000 tokens" d="M579.8 300.1 V37.7" />
+    </g>
+  </g>
+  <g role="list" aria-label="Models">
+    <g role="listitem">
+      <text class="serif size-10-5 primary end" x="101.5" y="155.4">Claude Opus 5.5</text>
+      <foreignObject x="108.8" y="113.3" width="312" height="27.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-8-5 secondary italic lh-115">0.56% of turns exceeded 16,384 tokens; that cap ended 25% of attempts</span>
+        </div>
+      </foreignObject>
+      <path class="line-grey-2" aria-hidden="true" d="M194.9 151.4 H531.2" />
+      <g role="list" aria-label="Claude Opus 5.5: output tokens in one turn">
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="179.4" y="164.2" width="31" height="29.4" />
+          <foreignObject x="138.9" y="159.9" width="112" height="35.6">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 text-blue lh-115">median</span>
+              <span class="label serif size-8 text-blue lh-115">371</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" aria-hidden="true" cx="194.9" cy="151.4" r="4.5" />
+        </g>
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="314.4" y="164.2" width="22.5" height="19.6" />
+          <foreignObject x="304.7" y="159.9" width="42" height="26.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 text-blue lh-115" translate="no">90th</span>
+              <span class="label serif size-8 text-blue lh-115">2,702</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" aria-hidden="true" cx="325.7" cy="151.4" r="4.5" />
+        </g>
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="416.1" y="164.2" width="25.8" height="19.6" />
+          <foreignObject x="410" y="159.9" width="38" height="26.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 text-blue lh-115" translate="no">99th</span>
+              <span class="label serif size-8 text-blue lh-115">12,978</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" aria-hidden="true" cx="429" cy="151.4" r="4.5" />
+        </g>
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="499.2" y="164.2" width="64" height="29.4" />
+          <foreignObject x="492.2" y="159.9" width="78" height="35.6">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 primary lh-115">longest turn</span>
+              <span class="label serif size-8 primary lh-115">61,233</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-primary" aria-hidden="true" cx="531.2" cy="151.4" r="5.5" />
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <text class="serif size-10-5 primary end" x="101.5" y="242.9">Claude Fable 5.1</text>
+      <foreignObject x="108.8" y="200.7" width="312" height="27.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-8-5 secondary italic lh-115">0.46% of turns exceeded 16,384 tokens; that cap ended 43% of attempts</span>
+        </div>
+      </foreignObject>
+      <path class="line-grey-2" aria-hidden="true" d="M167 238.9 H579.8" />
+      <g role="list" aria-label="Claude Fable 5.1: output tokens in one turn">
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="151.5" y="251.7" width="31" height="29.4" />
+          <foreignObject x="111" y="247.4" width="112" height="35.6">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 text-blue lh-115">median</span>
+              <span class="label serif size-8 text-blue lh-115">243</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" aria-hidden="true" cx="167" cy="238.9" r="4.5" />
+        </g>
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="308.9" y="251.7" width="22.5" height="19.6" />
+          <foreignObject x="299.2" y="247.4" width="42" height="26.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 text-blue lh-115" translate="no">90th</span>
+              <span class="label serif size-8 text-blue lh-115">2,487</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" aria-hidden="true" cx="320.2" cy="238.9" r="4.5" />
+        </g>
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="415.1" y="251.7" width="25.8" height="19.6" />
+          <foreignObject x="409" y="247.4" width="38" height="26.4">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 text-blue lh-115" translate="no">99th</span>
+              <span class="label serif size-8 text-blue lh-115">12,782</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-blue" aria-hidden="true" cx="428" cy="238.9" r="4.5" />
+        </g>
+        <g role="listitem">
+          <rect class="fill-canvas" aria-hidden="true" x="547.8" y="251.7" width="64" height="29.4" />
+          <foreignObject x="540.8" y="247.4" width="78" height="35.6">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+              <span class="label serif size-8 primary lh-115">longest turn</span>
+              <span class="label serif size-8 primary lh-115">128,000</span>
+            </div>
+          </foreignObject>
+          <circle class="fill-primary" aria-hidden="true" cx="579.8" cy="238.9" r="5.5" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <path class="axis" d="M108.5 300.1 V37.7" />
+  </g>
+  <foreignObject x="1.2" y="334.3" width="618" height="35.6">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-8 secondary lh-115">Internal repository tasks (reference 12): both models run with a 128,000-token cap, each at its default effort (Claude Opus 5.5: medium).</span>
+      <span class="label serif size-8 secondary lh-115">No Opus 5.5 turn reached its cap; 1 of Fable 5.1's 14,331 turns reached 128,000.</span>
+    </div>
+  </foreignObject>
+</svg>

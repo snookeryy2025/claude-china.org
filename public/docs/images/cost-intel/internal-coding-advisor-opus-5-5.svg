@@ -1,0 +1,224 @@
+<svg lang="en" width="1564" height="783" viewBox="0 0 750.7 376" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Coding benchmark: Opus 5.5 at high with a Fable 5.1 advisor gains 1.7 points for 2.1 times the cost, near its effort curve">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/internal-coding-advisor-opus-5-5.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); stroke-linejoin: round; }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-chart-reference, #898781); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-blue { color: var(--cds-text-accent, #184f95); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-11 { font-size: 11px; }
+    .size-13-5 { font-size: 13.5px; }
+    .size-8 { font-size: 8px; }
+    .size-9 { font-size: 9px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="750.7" height="376" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M45.3 296.7 V43.8" />
+      <path class="grid" d="M166 296.7 V43.8" />
+      <path class="grid" d="M286.8 296.7 V43.8" />
+      <path class="grid" d="M407.5 296.7 V43.8" />
+      <path class="grid" d="M528.3 296.7 V43.8" />
+      <path class="grid" d="M649 296.7 V43.8" />
+    </g>
+    <path class="tick" d="M45.3 296.7 V300.2" />
+    <path class="tick" d="M166 296.7 V300.2" />
+    <path class="tick" d="M286.8 296.7 V300.2" />
+    <path class="tick" d="M407.5 296.7 V300.2" />
+    <path class="tick" d="M528.3 296.7 V300.2" />
+    <path class="tick" d="M649 296.7 V300.2" />
+    <text class="serif size-9-5 secondary middle" x="45.3" y="310.9">0</text>
+    <text class="serif size-9-5 secondary middle" x="166" y="310.9">1</text>
+    <text class="serif size-9-5 secondary middle" x="286.8" y="310.9">2</text>
+    <text class="serif size-9-5 secondary middle" x="407.5" y="310.9">3</text>
+    <text class="serif size-9-5 secondary middle" x="528.3" y="310.9">4</text>
+    <text class="serif size-9-5 secondary middle" x="649" y="310.9">5</text>
+    <g class="backdrop">
+      <path class="grid" d="M45.3 296.7 H709.4" />
+      <path class="grid" d="M45.3 273.7 H709.4" />
+      <path class="grid" d="M45.3 250.7 H709.4" />
+      <path class="grid" d="M45.3 227.7 H709.4" />
+      <path class="grid" d="M45.3 204.7 H709.4" />
+      <path class="grid" d="M45.3 181.7 H709.4" />
+      <path class="grid" d="M45.3 158.8 H709.4" />
+      <path class="grid" d="M45.3 135.8 H709.4" />
+      <path class="grid" d="M45.3 112.8 H709.4" />
+      <path class="grid" d="M45.3 89.8 H709.4" />
+      <path class="grid" d="M45.3 66.8 H709.4" />
+      <path class="grid" d="M45.3 43.8 H709.4" />
+    </g>
+    <path class="tick" d="M45.3 296.7 H41.8" />
+    <path class="tick" d="M45.3 273.7 H41.8" />
+    <path class="tick" d="M45.3 250.7 H41.8" />
+    <path class="tick" d="M45.3 227.7 H41.8" />
+    <path class="tick" d="M45.3 204.7 H41.8" />
+    <path class="tick" d="M45.3 181.7 H41.8" />
+    <path class="tick" d="M45.3 158.8 H41.8" />
+    <path class="tick" d="M45.3 135.8 H41.8" />
+    <path class="tick" d="M45.3 112.8 H41.8" />
+    <path class="tick" d="M45.3 89.8 H41.8" />
+    <path class="tick" d="M45.3 66.8 H41.8" />
+    <path class="tick" d="M45.3 43.8 H41.8" />
+    <text class="serif size-9-5 secondary end" x="38.3" y="300.3">72</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="277.3">74</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="254.3">76</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="231.3">78</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="208.4">80</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="185.4">82</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="162.4">84</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="139.4">86</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="116.4">88</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="93.4">90</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="70.4">92</text>
+    <text class="serif size-9-5 secondary end" x="38.3" y="47.4">94</text>
+    <path class="line-blue" d="M87.5 264.5 L146.7 128.9 L212.1 107.8 L541.5 77.6" />
+    <path class="line-grey" d="M275.2 201 L368.5 156.5 L607.6 139.9" />
+  </g>
+  <foreignObject x="39.3" y="0.5" width="712" height="39">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-13-5 text-clay lh-115">A Fable 5.1 advisor adds 1.7 points to Opus 5.5 at high for 2.1× the cost, about what more effort buys</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="71.4" y="311.3" width="612" height="20.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-11 primary lh-115">cost per attempt (USD, as a customer is billed)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0 to 5" d="M45.3 296.7 H709.4" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(20.1 170.3)">
+        <text class="serif size-11 primary middle rotated" transform="rotate(-90)">attempts solved (%)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 72 to 94" d="M45.3 296.7 V43.8" />
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Opus 5.5 alone (effort settings)">
+    <g role="listitem">
+      <foreignObject x="88.2" y="262.8" width="312" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-5 text-blue lh-115">low, one attempt per task</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="about $0.3 USD per attempt, 74.8% of attempts solved" cx="87.5" cy="264.5" r="4.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="145.4" y="129.2" width="162" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-5 text-blue lh-115">medium (default)</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="about $0.8 USD per attempt, 86.6% of attempts solved" cx="146.7" cy="128.9" r="4.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="217.8" y="114.1" width="102" height="18.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-9-5 text-blue lh-115">high</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="about $1.4 USD per attempt, 88.4% of attempts solved" cx="212.1" cy="107.8" r="4.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="415.5" y="39.5" width="212" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-5 text-blue lh-115">xhigh, one attempt per task</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="about $4.1 USD per attempt, 91.1% of attempts solved" cx="541.5" cy="77.6" r="4.7" />
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Fable 5.1 alone (effort settings, August)">
+    <g role="listitem">
+      <foreignObject x="107.2" y="185" width="162" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-9-5 secondary lh-115">low</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-grey" role="img" aria-label="about $1.9 USD per attempt, 80.3% of attempts solved" cx="275.2" cy="201" r="4.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="256.5" y="122.3" width="172" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-5 secondary lh-115">medium</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-grey" role="img" aria-label="about $2.7 USD per attempt, 84.2% of attempts solved" cx="368.5" cy="156.5" r="4.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="521.6" y="101.8" width="172" height="29.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-5 secondary lh-115">high</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-grey" role="img" aria-label="about $4.7 USD per attempt, 85.6% of attempts solved" cx="607.6" cy="139.9" r="4.7" />
+    </g>
+  </g>
+  <g role="list" aria-label="Opus 5.5 executor at high + Fable 5.1 advisor">
+    <g role="listitem">
+      <foreignObject x="296.6" y="61.6" width="202" height="18.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-9-5 primary lh-115">Opus 5.5 + Fable 5.1 advisor</span>
+        </div>
+      </foreignObject>
+      <path class="fill-clay" role="img" aria-label="about $2.9 USD per attempt, 90.1% of attempts solved" d="M397.6 98.1 L406.8 88.9 L397.6 79.6 L388.3 88.9 Z" />
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <circle class="fill-blue" cx="389.5" cy="256.8" r="4.7" />
+    <foreignObject x="399.7" y="246.5" width="347" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9 primary lh-115">Claude Opus 5.5 alone (effort settings)</span>
+      </div>
+    </foreignObject>
+    <circle class="fill-grey" cx="389.5" cy="270.3" r="4.7" />
+    <foreignObject x="399.7" y="260" width="347" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9 primary lh-115">Claude Fable 5.1 alone (effort settings, August)</span>
+      </div>
+    </foreignObject>
+    <path class="fill-clay" d="M389.5 293 L398.7 283.8 L389.5 274.5 L380.3 283.8 Z" />
+    <foreignObject x="399.7" y="273.5" width="347" height="18.4">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label serif size-9 primary lh-115">Opus 5.5 executor at high + Fable 5.1 advisor</span>
+      </div>
+    </foreignObject>
+  </g>
+  <foreignObject x="1.4" y="328.1" width="482" height="44.8">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-8 secondary lh-115">Internal repository tasks (reference 11), 370 problems, plain API agent. Every point priced as a customer is billed, at list prices. Opus 5.5 at medium and high, and the pairing: five attempts per task. Opus 5.5 at low and xhigh, and Claude Fable 5.1 alone (August, pre-release snapshot): one attempt per task.</span>
+    </div>
+  </foreignObject>
+</svg>

@@ -1,0 +1,391 @@
+<svg lang="en" width="1600" height="1264" viewBox="0 0 800 632" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Example trace of a Managed Agents session: your POST /chat span, the event stream and event list requests of the session tool runner, the client and server spans for the request that sends the user message, a turn with model requests, a bash tool use and a turn on another thread, the runner running list_issues, the client and server spans for the request that sends the tool result, and a second turn.">
+  <style>
+    /* Type and strokes, shared by every element of a kind */
+    .mono      { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 12px; dominant-baseline: central; }
+    .sans      { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); font-size: 11px; dominant-baseline: central; }
+    .code      { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 10.5px; font-style: normal; dominant-baseline: central; }
+    .note      { font-style: italic; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .head      { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .grid, .axis, .guide, .request, .turn { stroke-width: 1; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise, for example in a code review */
+    .canvas    { fill: var(--cds-surface-0, #f9f9f7); }
+    .band      { fill: var(--cds-alpha-1, #f2f1ec); }
+    .grid      { stroke: var(--cds-alpha-1, #eceae3); }
+    .axis      { stroke: var(--cds-alpha-2, #d9d4c5); }
+    .guide     { stroke: var(--cds-border-strong, #c8c3b5); }
+    .primary   { fill: var(--cds-text-primary, #141413); }
+    .secondary { fill: var(--cds-text-secondary, #666663); }
+    .request   { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #aaa597); }
+    .turn      { fill: var(--cds-alpha-2, #e4dccb); stroke: var(--cds-border-strong, #c9bea6); }
+    .model     { fill: var(--cds-clay, #df8c6f); }
+    .tool      { fill: var(--cds-blue-300, #86a5c2); }
+    .yours     { fill: var(--cds-text-secondary, #4d4c48); }
+    .kind      { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-strong, #c8c3b5); stroke-width: 1; }
+    .kind-label { font-size: 8.5px; font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); letter-spacing: 0.04em; text-anchor: middle; dominant-baseline: central; fill: var(--cds-text-secondary, #666663); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label code { font-family: var(--cds-font-mono, "Anthropic Mono", ui-monospace, SFMono-Regular, Menlo, monospace); font-size: 10.5px; font-style: normal; line-height: inherit; color: inherit; background: none; border: 0; border-radius: 0; padding: 0; white-space: inherit; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.secondary { color: var(--cds-text-secondary, #666663); }
+  </style>
+  <!-- Drawing only: hidden from screen readers, which read the span list below -->
+  <g aria-hidden="true">
+    <rect class="canvas" width="800" height="632" rx="6"/>
+    <rect class="band" x="12" y="78" width="776" height="30"/>
+    <rect class="band" x="12" y="138" width="776" height="30"/>
+    <rect class="band" x="12" y="198" width="776" height="30"/>
+    <rect class="band" x="12" y="258" width="776" height="30"/>
+    <rect class="band" x="12" y="318" width="776" height="30"/>
+    <rect class="band" x="12" y="378" width="776" height="30"/>
+    <rect class="band" x="12" y="438" width="776" height="30"/>
+    <rect class="band" x="12" y="498" width="776" height="30"/>
+    <rect class="band" x="12" y="558" width="776" height="30"/>
+    <line class="grid backdrop" x1="420" y1="40" x2="420" y2="618"/>
+    <line class="axis" x1="420" y1="35" x2="420" y2="40"/>
+    <line class="grid backdrop" x1="456" y1="40" x2="456" y2="618"/>
+    <line class="axis" x1="456" y1="35" x2="456" y2="40"/>
+    <line class="grid backdrop" x1="492" y1="40" x2="492" y2="618"/>
+    <line class="axis" x1="492" y1="35" x2="492" y2="40"/>
+    <line class="grid backdrop" x1="528" y1="40" x2="528" y2="618"/>
+    <line class="axis" x1="528" y1="35" x2="528" y2="40"/>
+    <line class="grid backdrop" x1="564" y1="40" x2="564" y2="618"/>
+    <line class="axis" x1="564" y1="35" x2="564" y2="40"/>
+    <line class="grid backdrop" x1="600" y1="40" x2="600" y2="618"/>
+    <line class="axis" x1="600" y1="35" x2="600" y2="40"/>
+    <line class="grid backdrop" x1="636" y1="40" x2="636" y2="618"/>
+    <line class="axis" x1="636" y1="35" x2="636" y2="40"/>
+    <line class="grid backdrop" x1="672" y1="40" x2="672" y2="618"/>
+    <line class="axis" x1="672" y1="35" x2="672" y2="40"/>
+    <line class="grid backdrop" x1="708" y1="40" x2="708" y2="618"/>
+    <line class="axis" x1="708" y1="35" x2="708" y2="40"/>
+    <line class="grid backdrop" x1="744" y1="40" x2="744" y2="618"/>
+    <line class="axis" x1="744" y1="35" x2="744" y2="40"/>
+    <line class="grid backdrop" x1="780" y1="40" x2="780" y2="618"/>
+    <line class="axis" x1="780" y1="35" x2="780" y2="40"/>
+    <foreignObject x="14" y="12.85" width="334" height="38.65">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label secondary sans head">Span</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="340" y="12.85" width="76" height="39.15">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+        <span class="label secondary sans head">Source</span>
+      </div>
+    </foreignObject>
+    <foreignObject x="414" y="0" width="374" height="35.15">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+        <span class="label secondary sans head">Time →</span>
+      </div>
+    </foreignObject>
+    <line class="guide" x1="26" y1="72" x2="26" y2="513"/>
+    <line class="guide" x1="26" y1="93" x2="35" y2="93"/>
+    <line class="guide" x1="26" y1="153" x2="35" y2="153"/>
+    <line class="guide" x1="26" y1="213" x2="35" y2="213"/>
+    <line class="guide" x1="26" y1="453" x2="35" y2="453"/>
+    <line class="guide" x1="26" y1="513" x2="35" y2="513"/>
+    <line class="guide" x1="44" y1="102" x2="44" y2="123"/>
+    <line class="guide" x1="44" y1="123" x2="53" y2="123"/>
+    <line class="guide" x1="44" y1="162" x2="44" y2="183"/>
+    <line class="guide" x1="44" y1="183" x2="53" y2="183"/>
+    <line class="guide" x1="44" y1="222" x2="44" y2="243"/>
+    <line class="guide" x1="44" y1="243" x2="53" y2="243"/>
+    <line class="guide" x1="62" y1="252" x2="62" y2="273"/>
+    <line class="guide" x1="62" y1="273" x2="71" y2="273"/>
+    <line class="guide" x1="80" y1="282" x2="80" y2="423"/>
+    <line class="guide" x1="80" y1="303" x2="89" y2="303"/>
+    <line class="guide" x1="80" y1="333" x2="89" y2="333"/>
+    <line class="guide" x1="80" y1="363" x2="89" y2="363"/>
+    <line class="guide" x1="80" y1="423" x2="89" y2="423"/>
+    <line class="guide" x1="98" y1="372" x2="98" y2="393"/>
+    <line class="guide" x1="98" y1="393" x2="107" y2="393"/>
+    <line class="guide" x1="44" y1="462" x2="44" y2="483"/>
+    <line class="guide" x1="44" y1="483" x2="53" y2="483"/>
+    <line class="guide" x1="44" y1="522" x2="44" y2="543"/>
+    <line class="guide" x1="44" y1="543" x2="53" y2="543"/>
+    <line class="guide" x1="62" y1="552" x2="62" y2="573"/>
+    <line class="guide" x1="62" y1="573" x2="71" y2="573"/>
+    <line class="guide" x1="80" y1="582" x2="80" y2="603"/>
+    <line class="guide" x1="80" y1="603" x2="89" y2="603"/>
+  </g>
+  <!-- The spans, nested as in the trace. Each item has the span's name, its kind (requests only), its source and its timing. -->
+  <g role="list" aria-label="Spans">
+    <g role="listitem">
+      <text class="primary mono" x="20" y="63">POST /chat</text>
+      <g role="group" aria-label="Kind">
+        <rect aria-hidden="true" class="kind" x="98" y="56" width="44" height="14" rx="3"/>
+        <text class="sans kind-label" x="120" y="63">SERVER</text>
+      </g>
+      <g role="group" aria-label="Source">
+        <foreignObject x="340" y="44" width="76" height="38">
+          <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+            <span class="label secondary sans">your code</span>
+          </div>
+        </foreignObject>
+      </g>
+      <g role="group" aria-label="Time">
+        <rect role="img" class="yours" x="420" y="55" width="360" height="16" rx="3"><title>It starts the trace.</title></rect>
+      </g>
+      <g role="list">
+        <g role="listitem">
+          <text class="primary mono" x="38" y="93">anthropic.sessions.events.stream</text>
+          <g role="group" aria-label="Kind">
+            <rect aria-hidden="true" class="kind" x="274.5" y="86" width="44" height="14" rx="3"/>
+            <text class="sans kind-label" x="296.5" y="93">CLIENT</text>
+          </g>
+          <g role="group" aria-label="Source">
+            <text class="secondary sans" x="346" y="93">SDK</text>
+          </g>
+          <g role="group" aria-label="Time">
+            <rect role="img" class="request" x="421" y="85" width="356" height="16" rx="3"><title>It starts with its parent and ends with its parent.</title></rect>
+          </g>
+          <g role="list">
+            <g role="listitem">
+              <text class="primary mono" x="56" y="123">anthropic.sessions.events.stream</text>
+              <g role="group" aria-label="Kind">
+                <rect aria-hidden="true" class="kind" x="292.5" y="116" width="44" height="14" rx="3"/>
+                <text class="sans kind-label" x="314.5" y="123">SERVER</text>
+              </g>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="123">API</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="request" x="422.5" y="115" width="353" height="16" rx="3"><title>It starts with its parent and ends with its parent.</title></rect>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <text class="primary mono" x="38" y="153">anthropic.sessions.events.list</text>
+          <g role="group" aria-label="Kind">
+            <rect aria-hidden="true" class="kind" x="260" y="146" width="44" height="14" rx="3"/>
+            <text class="sans kind-label" x="282" y="153">CLIENT</text>
+          </g>
+          <g role="group" aria-label="Source">
+            <text class="secondary sans" x="346" y="153">SDK</text>
+          </g>
+          <g role="group" aria-label="Time">
+            <rect role="img" class="request" x="423" y="145" width="7.5" height="16" rx="3"><title>It starts while the span before it runs and runs for a short part of it.</title></rect>
+          </g>
+          <g role="list">
+            <g role="listitem">
+              <text class="primary mono" x="56" y="183">anthropic.sessions.events.list</text>
+              <g role="group" aria-label="Kind">
+                <rect aria-hidden="true" class="kind" x="278" y="176" width="44" height="14" rx="3"/>
+                <text class="sans kind-label" x="300" y="183">SERVER</text>
+              </g>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="183">API</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="request" x="424.5" y="175" width="4.5" height="16" rx="3"><title>It starts early in its parent and runs for most of it.</title></rect>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <text class="primary mono" x="38" y="213">anthropic.sessions.events.send</text>
+          <g role="group" aria-label="Kind">
+            <rect aria-hidden="true" class="kind" x="260" y="206" width="44" height="14" rx="3"/>
+            <text class="sans kind-label" x="282" y="213">CLIENT</text>
+          </g>
+          <g role="group" aria-label="Source">
+            <text class="secondary sans" x="346" y="213">SDK</text>
+          </g>
+          <g role="group" aria-label="Time">
+            <rect role="img" class="request" x="432" y="205" width="34.5" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+          </g>
+          <foreignObject x="468.5" y="165" width="319.5" height="96">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+              <span class="label secondary sans note">sends a user message</span>
+            </div>
+          </foreignObject>
+          <g role="list">
+            <g role="listitem">
+              <text class="primary mono" x="56" y="243">anthropic.sessions.events.send</text>
+              <g role="group" aria-label="Kind">
+                <rect aria-hidden="true" class="kind" x="278" y="236" width="44" height="14" rx="3"/>
+                <text class="sans kind-label" x="300" y="243">SERVER</text>
+              </g>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="243">API</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="request" x="435" y="235" width="28.5" height="16" rx="3"><title>It starts early in its parent and runs for most of it.</title></rect>
+              </g>
+              <g role="list">
+                <g role="listitem">
+                  <text class="primary mono" x="74" y="273">anthropic.session.turn</text>
+                  <g role="group" aria-label="Source">
+                    <text class="secondary sans" x="346" y="273">API</text>
+                  </g>
+                  <g role="group" aria-label="Time">
+                    <rect role="img" class="turn" x="454.5" y="265" width="139.5" height="16" rx="3"><title>It starts late in its parent and runs past the end of its parent.</title></rect>
+                  </g>
+                  <foreignObject x="596" y="223.5" width="192" height="99">
+                    <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+                      <span class="label secondary sans note">stop reason <code>requires_action</code></span>
+                    </div>
+                  </foreignObject>
+                  <g role="list">
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="303">anthropic.model_request</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="303">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="model" x="465" y="295" width="37.5" height="16" rx="3"><title>It starts early in its parent and runs for a short part of it.</title></rect>
+                      </g>
+                    </g>
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="333">anthropic.tool_use bash</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="333">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="tool" x="505.5" y="325" width="18" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+                      </g>
+                      <text class="secondary code" x="531.5" y="333">gen_ai.tool.name = bash</text>
+                    </g>
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="363">anthropic.session.turn</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="363">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="turn" x="526.5" y="355" width="37.5" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+                      </g>
+                      <foreignObject x="566" y="351.85" width="222" height="59.15">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+                          <span class="label secondary sans note">on another thread</span>
+                        </div>
+                      </foreignObject>
+                      <g role="list">
+                        <g role="listitem">
+                          <text class="primary mono" x="110" y="393">anthropic.model_request</text>
+                          <g role="group" aria-label="Source">
+                            <text class="secondary sans" x="346" y="393">API</text>
+                          </g>
+                          <g role="group" aria-label="Time">
+                            <rect role="img" class="model" x="531" y="385" width="28.5" height="16" rx="3"><title>It starts early in its parent and runs for most of it.</title></rect>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="423">anthropic.model_request</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="423">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="model" x="567" y="415" width="24" height="16" rx="3"><title>It starts after the span before it and ends with its parent.</title></rect>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <text class="primary mono" x="38" y="453">anthropic.custom_tool_use list_issues</text>
+          <g role="group" aria-label="Source">
+            <text class="secondary sans" x="346" y="453">SDK</text>
+          </g>
+          <g role="group" aria-label="Time">
+            <rect role="img" class="tool" x="598.5" y="445" width="33" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+          </g>
+          <foreignObject x="633.5" y="405" width="154.5" height="96">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+              <span class="label secondary sans note">runs your tool</span>
+            </div>
+          </foreignObject>
+          <g role="list">
+            <g role="listitem">
+              <text class="primary mono" x="56" y="483">list_issues</text>
+              <g role="group" aria-label="Source">
+                <foreignObject x="340" y="464" width="76" height="38">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+                    <span class="label secondary sans">your code</span>
+                  </div>
+                </foreignObject>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="yours" x="601.5" y="475" width="27" height="16" rx="3"><title>It starts early in its parent and runs for most of it.</title></rect>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g role="listitem">
+          <text class="primary mono" x="38" y="513">anthropic.sessions.events.send</text>
+          <g role="group" aria-label="Kind">
+            <rect aria-hidden="true" class="kind" x="260" y="506" width="44" height="14" rx="3"/>
+            <text class="sans kind-label" x="282" y="513">CLIENT</text>
+          </g>
+          <g role="group" aria-label="Source">
+            <text class="secondary sans" x="346" y="513">SDK</text>
+          </g>
+          <g role="group" aria-label="Time">
+            <rect role="img" class="request" x="634.5" y="505" width="28.5" height="16" rx="3"><title>It starts after the span before it and runs for a short part of it.</title></rect>
+          </g>
+          <foreignObject x="665" y="465" width="126" height="96">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+              <span class="label secondary sans note">sends the tool result</span>
+            </div>
+          </foreignObject>
+          <g role="list">
+            <g role="listitem">
+              <text class="primary mono" x="56" y="543">anthropic.sessions.events.send</text>
+              <g role="group" aria-label="Kind">
+                <rect aria-hidden="true" class="kind" x="278" y="536" width="44" height="14" rx="3"/>
+                <text class="sans kind-label" x="300" y="543">SERVER</text>
+              </g>
+              <g role="group" aria-label="Source">
+                <text class="secondary sans" x="346" y="543">API</text>
+              </g>
+              <g role="group" aria-label="Time">
+                <rect role="img" class="request" x="637.5" y="535" width="22.5" height="16" rx="3"><title>It starts early in its parent and runs for most of it.</title></rect>
+              </g>
+              <g role="list">
+                <g role="listitem">
+                  <text class="primary mono" x="74" y="573">anthropic.session.turn</text>
+                  <g role="group" aria-label="Source">
+                    <text class="secondary sans" x="346" y="573">API</text>
+                  </g>
+                  <g role="group" aria-label="Time">
+                    <rect role="img" class="turn" x="654" y="565" width="123" height="16" rx="3"><title>It starts late in its parent and runs past the end of its parent.</title></rect>
+                  </g>
+                  <g role="list">
+                    <g role="listitem">
+                      <text class="primary mono" x="92" y="603">anthropic.model_request</text>
+                      <g role="group" aria-label="Source">
+                        <text class="secondary sans" x="346" y="603">API</text>
+                      </g>
+                      <g role="group" aria-label="Time">
+                        <rect role="img" class="model" x="663" y="595" width="105" height="16" rx="3"><title>It starts early in its parent and runs for most of it.</title></rect>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

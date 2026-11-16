@@ -1,0 +1,207 @@
+<svg lang="en" width="1290" height="801" viewBox="0 0 619.2 384.4" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Chart, SWE-bench Pro, Opus 5.5: low or medium effort with failures re-run at high matches any fixed effort for less than high">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/escalation-opus-5-5.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); stroke-linejoin: round; }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-chart-reference, #898781); stroke-linejoin: round; }
+    .fill-grey-2 { fill: var(--cds-chart-reference, #898781); stroke: var(--cds-chart-reference, #898781); stroke-linejoin: round; opacity: 0.8; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-106 { line-height: 1.06; }
+    .lh-115 { line-height: 1.15; }
+    .line-grey { fill: none; stroke: var(--cds-chart-reference, #898781); stroke-width: 2.2; stroke-linecap: square; stroke-linejoin: round; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-11 { font-size: 11px; }
+    .size-12 { font-size: 12px; }
+    .size-12-5 { font-size: 12.5px; }
+    .size-7-2 { font-size: 7.2px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="619.2" height="384.4" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M49.5 299.8 V41.4" />
+      <path class="grid" d="M115.1 299.8 V41.4" />
+      <path class="grid" d="M180.6 299.8 V41.4" />
+      <path class="grid" d="M246.2 299.8 V41.4" />
+      <path class="grid" d="M311.8 299.8 V41.4" />
+      <path class="grid" d="M377.3 299.8 V41.4" />
+      <path class="grid" d="M442.9 299.8 V41.4" />
+      <path class="grid" d="M508.5 299.8 V41.4" />
+      <path class="grid" d="M574 299.8 V41.4" />
+    </g>
+    <path class="tick" d="M49.5 299.8 V303.3" />
+    <path class="tick" d="M115.1 299.8 V303.3" />
+    <path class="tick" d="M180.6 299.8 V303.3" />
+    <path class="tick" d="M246.2 299.8 V303.3" />
+    <path class="tick" d="M311.8 299.8 V303.3" />
+    <path class="tick" d="M377.3 299.8 V303.3" />
+    <path class="tick" d="M442.9 299.8 V303.3" />
+    <path class="tick" d="M508.5 299.8 V303.3" />
+    <path class="tick" d="M574 299.8 V303.3" />
+    <text class="serif size-9-5 secondary middle" x="49.5" y="314">0.0</text>
+    <text class="serif size-9-5 secondary middle" x="115.1" y="314">0.1</text>
+    <text class="serif size-9-5 secondary middle" x="180.6" y="314">0.2</text>
+    <text class="serif size-9-5 secondary middle" x="246.2" y="314">0.3</text>
+    <text class="serif size-9-5 secondary middle" x="311.8" y="314">0.4</text>
+    <text class="serif size-9-5 secondary middle" x="377.3" y="314">0.5</text>
+    <text class="serif size-9-5 secondary middle" x="442.9" y="314">0.6</text>
+    <text class="serif size-9-5 secondary middle" x="508.5" y="314">0.7</text>
+    <text class="serif size-9-5 secondary middle" x="574" y="314">0.8</text>
+    <g class="backdrop">
+      <path class="grid" d="M49.5 283 H606.8" />
+      <path class="grid" d="M49.5 249.5 H606.8" />
+      <path class="grid" d="M49.5 215.9 H606.8" />
+      <path class="grid" d="M49.5 182.3 H606.8" />
+      <path class="grid" d="M49.5 148.8 H606.8" />
+      <path class="grid" d="M49.5 115.2 H606.8" />
+      <path class="grid" d="M49.5 81.7 H606.8" />
+      <path class="grid" d="M49.5 48.1 H606.8" />
+    </g>
+    <path class="tick" d="M49.5 283 H46" />
+    <path class="tick" d="M49.5 249.5 H46" />
+    <path class="tick" d="M49.5 215.9 H46" />
+    <path class="tick" d="M49.5 182.3 H46" />
+    <path class="tick" d="M49.5 148.8 H46" />
+    <path class="tick" d="M49.5 115.2 H46" />
+    <path class="tick" d="M49.5 81.7 H46" />
+    <path class="tick" d="M49.5 48.1 H46" />
+    <text class="serif size-9-5 secondary end" x="42.5" y="286.6">86</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="253.1">88</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="219.5">90</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="186">92</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="152.4">94</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="118.8">96</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="85.3">98</text>
+    <text class="serif size-9-5 secondary end" x="42.5" y="51.7">100</text>
+    <path class="line-grey" d="M119.3 258.7 L184.7 169.2 L242.7 127.1 L534.8 104.3" />
+  </g>
+  <foreignObject x="43.5" y="2.8" width="572" height="33.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+      <span class="label serif size-11 text-clay lh-115">Low or medium, then high on failures, scores as well as any fixed setting for less than high alone</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="33.6" y="314.1" width="589" height="36.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-12-5 primary lh-115">cost per task (USD, as a customer is billed; re-run points include the failed first attempt)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0.0 to 0.8" d="M49.5 299.8 H606.8" />
+    </g>
+    <g role="listitem">
+      <g transform="translate(19.8 170.6)">
+        <text class="serif size-11 primary middle rotated" transform="rotate(-90)">tasks solved (%)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 86 to 100" d="M49.5 299.8 V41.4" />
+    </g>
+  </g>
+  <g role="list" aria-label="Fixed effort settings">
+    <g role="listitem">
+      <foreignObject x="125.1" y="259.7" width="212" height="33.4">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-12 secondary lh-106">low alone</span>
+          <span class="label serif size-12 secondary lh-106">87.4%  $0.11 USD</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Its two runs solved 86.6% and 88.3%">
+        <circle class="fill-grey" cx="119.3" cy="258.7" r="7.4" />
+        <circle class="fill-grey-2" cx="119.6" cy="272.8" r="3.5" />
+        <circle class="fill-grey-2" cx="118.9" cy="244.7" r="3.5" />
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="190.5" y="170.2" width="252" height="46.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-12 secondary lh-106">medium alone (default)</span>
+          <span class="label serif size-12 secondary lh-106">92.8%  $0.21 USD</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Its two runs solved 93.1% and 92.5%">
+        <circle class="fill-grey" cx="184.7" cy="169.2" r="7.4" />
+        <circle class="fill-grey-2" cx="184" cy="164" r="3.5" />
+        <circle class="fill-grey-2" cx="185.4" cy="174.5" r="3.5" />
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="248.5" y="128.1" width="222" height="46.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-12 secondary lh-106">high alone</span>
+          <span class="label serif size-12 secondary lh-106">95.3%  $0.29 USD</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Its two runs solved 94.8% and 95.8%">
+        <circle class="fill-grey" cx="242.7" cy="127.1" r="7.4" />
+        <circle class="fill-grey-2" cx="242.2" cy="135.9" r="3.5" />
+        <circle class="fill-grey-2" cx="243.1" cy="118.3" r="3.5" />
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="448.8" y="111.1" width="172" height="46.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+          <span class="label serif size-12 secondary lh-106">xhigh alone</span>
+          <span class="label serif size-12 secondary lh-106">96.7%  $0.74 USD</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-grey" aria-hidden="true" cx="534.8" cy="104.3" r="7.4" />
+    </g>
+  </g>
+  <g role="list" aria-label="Cheap setting first, failures run again at high">
+    <g role="listitem">
+      <foreignObject x="48.7" y="37.3" width="164" height="46.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-12 primary lh-106">low, re-run failures at high</span>
+          <span class="label serif size-12 primary lh-106">97.0%  $0.17 USD</span>
+        </div>
+      </foreignObject>
+      <path class="fill-clay" aria-hidden="true" d="M159.6 111.3 L171.8 99 L159.6 86.8 L147.3 99 Z" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="230.4" y="37.3" width="192" height="58.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif size-12 primary lh-106">medium, re-run failures at high</span>
+          <span class="label serif size-12 primary lh-106">96.7%  $0.24 USD</span>
+        </div>
+      </foreignObject>
+      <path class="fill-clay" aria-hidden="true" d="M205 116.5 L217.2 104.3 L205 92 L192.7 104.3 Z" />
+    </g>
+  </g>
+  <foreignObject x="0.2" y="345.2" width="612" height="41.1">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-2 secondary lh-115">Claude Opus 5.5 on 478 SWE-bench Pro problems (see reference 3 on the page), priced as a customer is billed (5-minute cache).</span>
+      <span class="label serif size-7-2 secondary lh-115">Re-run points are worked out task by task from the fixed-setting runs, not run separately.</span>
+      <span class="label serif size-7-2 secondary lh-115">Each large dot averages two runs, shown as the small dots beside it; xhigh has one run. The y-axis starts at 85.</span>
+    </div>
+  </foreignObject>
+</svg>

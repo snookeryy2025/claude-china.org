@@ -1,0 +1,225 @@
+<svg lang="en" width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Flow diagram: the prompt, the tool call, and the tool result are each checked by the AI security server; the response is not">
+  <style>
+    /* Type: the page's fonts when the page inlines this diagram; the listed fallbacks otherwise, for example in a code review */
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); }
+    .heading { font-size: 48px; }
+    .intro { font-size: 21px; }
+    .legend { font-size: 19px; }
+    .title { font-size: 29.5px; }
+    .sub { font-size: 19px; }
+    .step { font-size: 23px; }
+    .quote { font-size: 18px; font-style: italic; }
+    .digit { font-size: 17.5px; }
+    .pill-text { font-size: 14px; }
+    .note { font-size: 14.5px; }
+    .middle { text-anchor: middle; }
+    .end { text-anchor: end; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .bold { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .purple { fill: var(--cds-text-pro, #4a3aa7); }
+    .blue { fill: var(--cds-text-accent, #184f95); }
+    .on-purple { fill: var(--cds-on-pro, #ffffff); }
+    .card { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border, #e4e4e3); stroke-width: 1; }
+    .box { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 2; }
+    .box-claude { fill: var(--cds-bg-tint-orange-opaque, #f7d8cb); stroke: var(--cds-clay, #d97757); stroke-width: 2; }
+    .badge-hooked { fill: var(--cds-fill-pro, #7161e0); }
+    .badge { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-text-accent, #184f95); stroke-width: 2; }
+    .swatch { fill: var(--cds-bg-pro, #dfdbfd); }
+    .halo { stroke: var(--cds-bg-pro, #dfdbfd); stroke-width: 28; stroke-linecap: round; }
+    .hooked { stroke: var(--cds-fill-pro, #7161e0); stroke-width: 6; }
+    .hooked-key { stroke: var(--cds-fill-pro, #7161e0); stroke-width: 4; }
+    .hooked-head { fill: var(--cds-fill-pro, #7161e0); }
+    .plain { stroke: var(--cds-text-muted, #898781); stroke-width: 3; }
+    .plain-key { stroke: var(--cds-text-muted, #898781); stroke-width: 2; }
+    .plain-head { fill: var(--cds-text-muted, #898781); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.pad-y-0 { padding-top: 0; padding-bottom: 0; }
+    /* The application box: its name and product as one column in the middle of the box, so that a name that wraps to a second line moves the product down */
+    .area.column { flex-direction: column; justify-content: center; align-items: center; }
+    .area.app-box { padding-bottom: 8px; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.on-purple { color: var(--cds-on-pro, #ffffff); }
+    .label .purple { color: var(--cds-text-pro, #4a3aa7); }
+    /* A step number and its label in one row, so that the number moves with a longer label */
+    .area.row { gap: 6.32px; }
+    /* A label that stays on one line */
+    .nowrap { white-space: nowrap; }
+    /* The round step number, which moves with its label */
+    .step-badge { flex: none; box-sizing: border-box; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 22px; margin: 3.1px 0 -3.1px; background: var(--cds-fill-pro, #7161e0); color: var(--cds-on-pro, #ffffff); }
+  </style>
+  <rect class="canvas" width="1600" height="900" aria-hidden="true"/>
+  <foreignObject x="54" y="4.2" width="1492" height="87.2">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label sans heading bold primary">Hooked flows, highlighted</span>
+    </div>
+  </foreignObject>
+  <foreignObject x="54" y="88.21" width="1492" height="78.45">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label sans intro secondary">Highlighted flows are checked by your security server before Claude Inference uses them.</span>
+    </div>
+  </foreignObject>
+  <rect class="card" x="100.5" y="170.5" width="763" height="95" rx="15.5" aria-hidden="true"/>
+  <g role="list" aria-label="Legend">
+    <g role="listitem">
+      <rect class="swatch" x="121" y="194" width="54" height="18" rx="4"/>
+      <path class="hooked-key" d="M127 203 H165"/>
+      <foreignObject x="179" y="185.04" width="680" height="33">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans legend primary"><span class="bold purple">Highlighted:</span> hooked. Sent for validation to the AI server.</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <path class="plain-key" d="M127 234 H169"/>
+      <foreignObject x="179" y="216.04" width="680" height="33">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label sans legend primary">Grey: not hooked today.</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <g role="list" aria-label="Components">
+    <g role="listitem">
+      <rect class="box" x="101" y="521" width="358" height="198" rx="23"/>
+      <foreignObject x="105" y="525" width="350" height="190">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center column app-box">
+          <span class="label sans title bold primary">Application / Harness</span>
+          <span class="label sans sub secondary">Cowork</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="box-claude" x="921" y="521" width="358" height="198" rx="23"/>
+      <foreignObject x="925" y="525.68" width="350" height="102.57">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label sans title bold primary">Claude Inference</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="925" y="620.81" width="350" height="94.55">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label sans sub secondary">Anthropic-hosted</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <rect class="box" x="921" y="151" width="358" height="168" rx="23"/>
+      <foreignObject x="925" y="155.67" width="350" height="87.58">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label sans title bold primary">MCP connector</span>
+        </div>
+      </foreignObject>
+      <text class="sans sub secondary middle" x="1100" y="258.8">O365</text>
+    </g>
+  </g>
+  <!-- Each arrow says whether its flow is hooked and where it goes from and to -->
+  <g role="list" aria-label="Steps, in order">
+    <g role="listitem">
+      <circle class="badge-hooked" cx="645.4" cy="517" r="17"/>
+      <text class="sans digit bold on-purple middle" x="645.4" y="523">1</text>
+      <foreignObject x="662.8" y="467.45" width="254.2" height="67.45">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans step bold primary">Prompt</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="463" y="531" width="454" height="36.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label sans quote secondary">“Find my calendar for tomorrow”</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Hooked: from Application / Harness to Claude Inference">
+        <path class="halo" d="M475 585 H905"/>
+        <path class="hooked" d="M465 585 H905"/>
+        <path class="hooked-head" d="M899.5 576.5 L916.5 585 L899.5 593.5 Z"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="466" y="371.88" width="560" height="38.02">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end bottom row">
+          <span class="step-badge sans digit bold">2</span>
+          <span class="label sans step bold primary nowrap">Tool call</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="4" y="406" width="1022" height="57.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+          <span class="label sans quote secondary">“Check calendar”</span>
+        </div>
+      </foreignObject>
+      <rect class="badge-hooked" x="939.8" y="343" width="80.2" height="22" rx="11"/>
+      <foreignObject x="939.8" y="343" width="80.2" height="22">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center pad-y-0">
+          <span class="label sans pill-text bold on-purple">New</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="466" y="323.42" width="472.23" height="44.43">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end bottom">
+          <span class="label sans note secondary">Requires tool call setting</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Hooked: from Claude Inference to MCP connector">
+        <path class="halo" d="M1040 505 V335"/>
+        <path class="hooked" d="M1040 515 V335"/>
+        <path class="hooked-head" d="M1031.5 340.5 L1040 323.5 L1048.5 340.5 Z"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <circle class="badge-hooked" cx="1197" cy="392" r="17"/>
+      <text class="sans digit bold on-purple middle" x="1197" y="398">3</text>
+      <foreignObject x="1214.41" y="323.45" width="381.6" height="86.45">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans step bold primary">Tool result</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="1174" y="406" width="422" height="111.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label sans quote secondary">“Return meetings”</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Hooked: from MCP connector to Claude Inference">
+        <path class="halo" d="M1160 335 V505"/>
+        <path class="hooked" d="M1160 325 V505"/>
+        <path class="hooked-head" d="M1151.5 499.5 L1160 516.5 L1168.5 499.5 Z"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <circle class="badge" cx="632.3" cy="693" r="16"/>
+      <text class="sans digit bold blue middle" x="632.3" y="699">4</text>
+      <foreignObject x="649.71" y="667.95" width="267.3" height="42.95">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans step bold primary">Response</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="463" y="707" width="454" height="189.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label sans quote secondary">“Schedule for tomorrow”</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="Not hooked today: from Claude Inference to Application / Harness">
+        <path class="plain" d="M915 655 H475"/>
+        <path class="plain-head" d="M480.5 646.5 L463.5 655 L480.5 663.5 Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

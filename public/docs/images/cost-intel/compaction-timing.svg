@@ -1,0 +1,176 @@
+<svg lang="en" width="1440" height="690" viewBox="0 0 691.2 331.2" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Bar chart, cost per triage session: $0.81 USD no changes, $0.95 USD mid-session, $0.92 USD at compaction, $0.75 USD after">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/compaction-timing.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .bold { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); }
+    .fill-grey { fill: var(--cds-chart-reference, #898781); }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.on-mark { color: var(--cds-gray-900, #0b0b0b); font-variation-settings: normal; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-115 { line-height: 1.15; }
+    .lh-120 { line-height: 1.2; }
+    .middle { text-anchor: middle; }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-3 { font-size: 10.3px; }
+    .size-11-3 { font-size: 11.3px; }
+    .size-12-2 { font-size: 12.2px; }
+    .size-7-9 { font-size: 7.9px; }
+    .size-8-8 { font-size: 8.8px; }
+    .size-9-4 { font-size: 9.4px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    .rotated:not(.middle, .end):is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: end; }
+    .rotated.end:is(:lang(ja), :lang(ko), :lang(zh)) { text-anchor: start; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="691.2" height="331.2" />
+  <g aria-hidden="true">
+    <path class="tick" d="M140.4 251.5 V255" />
+    <path class="tick" d="M298 251.5 V255" />
+    <path class="tick" d="M455.6 251.5 V255" />
+    <path class="tick" d="M613.2 251.5 V255" />
+    <g class="backdrop">
+      <path class="grid" d="M69.1 251.5 H684.5" />
+      <path class="grid" d="M69.1 214.2 H684.5" />
+      <path class="grid" d="M69.1 176.9 H684.5" />
+      <path class="grid" d="M69.1 139.6 H684.5" />
+      <path class="grid" d="M69.1 102.3 H684.5" />
+      <path class="grid" d="M69.1 65 H684.5" />
+    </g>
+    <path class="tick" d="M69.1 251.5 H65.6" />
+    <path class="tick" d="M69.1 214.2 H65.6" />
+    <path class="tick" d="M69.1 176.9 H65.6" />
+    <path class="tick" d="M69.1 139.6 H65.6" />
+    <path class="tick" d="M69.1 102.3 H65.6" />
+    <path class="tick" d="M69.1 65 H65.6" />
+    <text class="serif size-9-5 secondary end" x="62.1" y="255.1">0.0</text>
+    <text class="serif size-9-5 secondary end" x="62.1" y="217.8">0.2</text>
+    <text class="serif size-9-5 secondary end" x="62.1" y="180.5">0.4</text>
+    <text class="serif size-9-5 secondary end" x="62.1" y="143.2">0.6</text>
+    <text class="serif size-9-5 secondary end" x="62.1" y="106">0.8</text>
+    <text class="serif size-9-5 secondary end" x="62.1" y="68.7">1.0</text>
+  </g>
+  <foreignObject x="63.1" y="6.9" width="622" height="34">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif size-11-3 text-clay lh-115">Make cache-breaking changes on the request after compaction, not before it</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <g transform="translate(39.8 148.9)">
+        <text class="serif size-10-3 primary middle rotated" transform="rotate(-90)">cost per session (USD, list)</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 0.0 to 1.0" d="M69.1 251.5 V46.4" />
+    </g>
+  </g>
+  <g role="list" aria-label="Sessions, by when the cache-breaking changes are made">
+    <g role="listitem">
+      <foreignObject x="60.4" y="252.5" width="160" height="41.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-9-4 secondary lh-120">No changes</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="60.4" y="79.5" width="160" height="22">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-12-2 primary bold lh-115">$0.81 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-grey" aria-hidden="true" x="89.2" y="100.5" width="102.4" height="151" />
+      <foreignObject x="89.2" y="217.6" width="102.4" height="28.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-8-8 on-mark lh-115">0 large re-writes</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="218" y="252.5" width="160" height="41.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-9-4 secondary lh-120">Changes mid-session</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="218" y="53.4" width="160" height="22">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-12-2 primary bold lh-115">$0.95 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="246.8" y="74.4" width="102.4" height="177.1" />
+      <foreignObject x="246.8" y="217.6" width="102.4" height="28.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-8-8 on-mark lh-115">2 large re-writes</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="394.6" y="252.5" width="122" height="41.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-9-4 secondary lh-120">Changes on the request that triggers compaction</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="375.6" y="58.9" width="160" height="22">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-12-2 primary bold lh-115">$0.92 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" aria-hidden="true" x="404.4" y="80" width="102.4" height="171.5" />
+      <foreignObject x="404.4" y="217.6" width="102.4" height="28.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-8-8 on-mark lh-115">1 large re-write</span>
+        </div>
+      </foreignObject>
+    </g>
+    <g role="listitem">
+      <foreignObject x="552.2" y="252.5" width="122" height="41.8">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-9-4 secondary lh-120">Changes on the request after compaction</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="533.2" y="90.6" width="160" height="22">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-12-2 primary bold lh-115">$0.75 USD</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-blue" aria-hidden="true" x="562" y="111.7" width="102.4" height="139.8" />
+      <foreignObject x="562" y="217.6" width="102.4" height="28.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-8-8 on-mark lh-115">0 large re-writes</span>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+  <g aria-hidden="true">
+    <path class="axis" d="M69.1 251.5 H684.5" />
+  </g>
+  <foreignObject x="0.9" y="297.9" width="687" height="35.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-9 secondary lh-115">Triage agent, long variant; Claude Sonnet 5, 5-minute cache; means of 5 sessions per bar (6 for the triggering request).</span>
+      <span class="label serif size-7-9 secondary lh-115">The changed sessions start at low effort and switch to the default as one of their changes; accuracy 14.2 to 14.7 of 20 in every case.</span>
+    </div>
+  </foreignObject>
+</svg>

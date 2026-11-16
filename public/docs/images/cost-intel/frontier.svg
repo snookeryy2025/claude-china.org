@@ -1,0 +1,152 @@
+<svg lang="en" width="1380" height="780" viewBox="0 0 1380 780" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Schematic of the cost-to-intelligence frontier: one arrow cuts spend at the same quality, the other trades quality for cost">
+  <style>
+    /* Type: the page's fonts when the page inlines this diagram; the listed fallbacks otherwise, for example in a code review */
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .bold { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .title { font-size: 23.5px; }
+    .axis-label { font-size: 22px; }
+    .curve-label { font-size: 19.8px; }
+    .cut-detail { font-size: 18.7px; }
+    .workload-detail { font-size: 19.5px; }
+    .trade-detail { font-size: 18.3px; }
+    .footnote { font-size: 16.4px; }
+    .middle { text-anchor: middle; }
+    .end { text-anchor: end; }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .primary { fill: var(--cds-text-primary, #0b0b0b); }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .cut-text { fill: var(--cds-text-accent, #184f95); }
+    .trade-text { fill: var(--cds-text-success, #006300); }
+    .axis { stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 2; fill: none; }
+    .curve { stroke: var(--cds-text-primary, #0b0b0b); stroke-width: 4.6; fill: none; }
+    .cut-line { stroke: var(--cds-text-accent, #184f95); stroke-width: 4.2; stroke-linecap: round; fill: none; }
+    .cut-head { fill: var(--cds-text-accent, #184f95); stroke: var(--cds-text-accent, #184f95); stroke-width: 2; stroke-linejoin: round; }
+    .cut-target { fill: var(--cds-surface-1, #fcfcfb); stroke: var(--cds-text-accent, #184f95); stroke-width: 4.2; }
+    /* A brighter green than the text's, so that the arrow stands out from the curve it lies on */
+    .trade-line { stroke: var(--cds-fill-success, #009300); stroke-width: 5.4; fill: none; }
+    .trade-head { fill: var(--cds-fill-success, #009300); stroke: var(--cds-fill-success, #009300); stroke-width: 2; stroke-linejoin: round; }
+    .workload { fill: var(--cds-clay, #d97757); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    /* Labels stacked in one area, so that one that wraps moves the next: the main axis is vertical, so the alignments swap */
+    .area.column { flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.bottom { justify-content: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate and try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    /* Rotated text: in Chinese, Japanese and Korean it is written top to bottom instead, about where the English lies */
+    .rotated:lang(ja), .rotated:lang(ko), .rotated:lang(zh) { writing-mode: vertical-rl; transform: translate(-0.33em); }
+    /* On a label: lines of about the same length, in every language */
+    .balance { text-wrap: balance; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.cut-text { color: var(--cds-text-accent, #184f95); }
+    .label.trade-text { color: var(--cds-text-success, #006300); }
+    /* Line heights of labels whose lines were drawn closer together than 1.3 (lh-N is N/100) */
+    .lh-102 { line-height: 1.02; }
+    .lh-108 { line-height: 1.08; }
+    .lh-109 { line-height: 1.09; }
+    .lh-116 { line-height: 1.16; }
+  </style>
+  <rect class="canvas" width="1380" height="780" aria-hidden="true"/>
+  <!-- Screen readers get the texts, and from each shape with role="img" what only the drawing shows -->
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <g transform="translate(71 346.5)">
+        <text class="serif axis-label primary middle rotated" transform="rotate(-90)">quality</text>
+      </g>
+      <path class="axis" role="img" aria-label="Vertical axis" d="M83 22 V670"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="519" y="671.7" width="412" height="36.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif axis-label primary lh-130">cost per task</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis" d="M82 671 H1367"/>
+    </g>
+  </g>
+  <g role="list" aria-label="The frontier, your workload, and the two moves">
+    <g role="listitem">
+      <foreignObject x="717" y="15" width="572" height="76.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end top">
+          <span class="label serif curve-label primary balance lh-116">the frontier: every configuration that buys quality with cost and nothing else</span>
+        </div>
+      </foreignObject>
+      <!-- y = 75.2 + 517.6 * exp(-(x - 160) / 308.1), without the piece that the green arrow covers -->
+      <g role="img" aria-label="Along the frontier, quality rises steeply at low cost and levels off at high cost">
+        <path class="curve" d="M159.2 594.2 C193.3 536.7 227.5 488.7 261.6 447.4"/>
+        <path class="curve" d="M433.5 288.2 C522.3 226.8 611.2 190.8 700 164.9 C800 135.8 900 120.1 1000 109.1 C1097.2 98.4 1194.3 92.5 1291.5 88.3"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="851" y="315.2" width="312" height="38.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif title bold primary lh-130">your workload</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="851" y="352.5" width="312" height="92.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+          <span class="label serif workload-detail secondary lh-108">same quality the frontier offers,</span>
+          <span class="label serif workload-detail secondary lh-108">at a higher cost than it needs</span>
+        </div>
+      </foreignObject>
+      <circle class="workload" role="img" aria-label="Your workload lies to the right of the frontier" cx="1007.5" cy="289.5" r="14.7"/>
+    </g>
+    <g role="listitem">
+      <foreignObject x="446.0" y="298.2" width="412" height="140">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column center top">
+          <span class="label serif title bold cut-text">Cut spend without losing quality</span>
+          <span class="label serif cut-detail cut-text">caching, trimming, a prompt audit, batching</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="This move takes your workload straight left, onto the frontier">
+        <path class="cut-line" d="M969.9 289 H466"/>
+        <path class="cut-head" d="M455.5 289 L466 283.8 V294.2 Z"/>
+      </g>
+    </g>
+    <g role="listitem">
+      <foreignObject x="371" y="451.5" width="352" height="79.9">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif title bold trade-text lh-102">Trade cost against intelligence</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="371" y="517.5" width="352" height="107.7">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area column start top">
+          <span class="label serif trade-detail trade-text lh-109">effort, model tier, budgets:</span>
+          <span class="label serif trade-detail trade-text lh-109">less quality for less cost,</span>
+          <span class="label serif trade-detail trade-text lh-109">along the curve</span>
+        </div>
+      </foreignObject>
+      <g role="img" aria-label="This move goes on from there, down and to the left along the frontier">
+        <path class="trade-line" d="M433.5 288.2 C377.9 326.7 322.4 375.2 266.8 441.2"/>
+        <path class="trade-head" d="M260.8 448.3 L263.3 437.3 L271.2 444 Z"/>
+      </g>
+    </g>
+  </g>
+  <!-- The point on the frontier where the first move ends and the second starts; drawn last, on top of the lines that meet in it -->
+  <circle class="cut-target" cx="433.5" cy="289.5" r="13.6" aria-hidden="true"/>
+  <foreignObject x="7" y="732.3" width="312" height="29.3">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+      <span class="label serif footnote secondary lh-130">Schematic.</span>
+    </div>
+  </foreignObject>
+</svg>

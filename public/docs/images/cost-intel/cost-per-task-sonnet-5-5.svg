@@ -1,0 +1,190 @@
+<svg lang="en" width="1500" height="796" viewBox="0 0 720 382" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Scatter chart, SWE-bench Pro: Claude Opus 5.5 at low effort matches Sonnet 5.5's default for about 7% more per solved task">
+  <!-- Drawn by apps/console/scripts/docs-charts/charts/cost-intel/cost-per-task-sonnet-5-5.ts: change that file, not this one -->
+  <style>
+    .axis { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; stroke-linecap: square; }
+    .end { text-anchor: end; }
+    .fill-blue { fill: var(--cds-chart-sequential-4, #3987e5); stroke: var(--cds-chart-sequential-4, #3987e5); stroke-linejoin: round; }
+    .fill-canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .fill-clay { fill: var(--cds-clay, #d97757); stroke: var(--cds-clay, #d97757); stroke-linejoin: round; }
+    .grid { fill: none; stroke: var(--cds-chart-grid, #e4e4e3); stroke-width: 0.8; stroke-linecap: square; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+    .label.text-blue { color: var(--cds-text-accent, #184f95); }
+    .label.text-clay { color: var(--cds-text-tint-orange, #863311); }
+    .lh-111 { line-height: 1.11; }
+    .lh-115 { line-height: 1.15; }
+    .line-blue { fill: none; stroke: var(--cds-chart-sequential-4, #3987e5); stroke-width: 1.6; }
+    .line-clay { fill: none; stroke: var(--cds-clay, #d97757); stroke-width: 1.6; }
+    .middle { text-anchor: middle; }
+    .secondary { fill: var(--cds-text-secondary, #52514e); }
+    .serif { font-family: var(--cds-font-voice, "Anthropic Serif", ui-serif, Georgia, "Times New Roman", serif); }
+    .size-10-5 { font-size: 10.5px; }
+    .size-11 { font-size: 11px; }
+    .size-11-5 { font-size: 11.5px; }
+    .size-7-4 { font-size: 7.4px; }
+    .size-9-5 { font-size: 9.5px; }
+    .tick { fill: none; stroke: var(--cds-chart-axis, #c3c2b7); stroke-width: 0.8; }
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.end { justify-content: flex-end; text-align: end; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    .label { overflow-wrap: anywhere; }
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; text-wrap: balance; }
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } }
+    .area.column { flex-direction: column; justify-content: center; }
+    .area.column.start { align-items: flex-start; }
+    .area.column.center { align-items: center; }
+    .area.column.end { align-items: flex-end; }
+    .area.column.top { justify-content: flex-start; }
+    .area.column.bottom { justify-content: flex-end; }
+  </style>
+  <rect class="fill-canvas" aria-hidden="true" x="0" y="0" width="720" height="382" />
+  <g aria-hidden="true">
+    <g class="backdrop">
+      <path class="grid" d="M57.6 313.6 V58" />
+      <path class="grid" d="M147.6 313.6 V58" />
+      <path class="grid" d="M237.6 313.6 V58" />
+      <path class="grid" d="M327.6 313.6 V58" />
+      <path class="grid" d="M417.6 313.6 V58" />
+      <path class="grid" d="M507.6 313.6 V58" />
+      <path class="grid" d="M597.6 313.6 V58" />
+      <path class="grid" d="M687.6 313.6 V58" />
+    </g>
+    <path class="tick" d="M57.6 313.6 V317.1" />
+    <path class="tick" d="M147.6 313.6 V317.1" />
+    <path class="tick" d="M237.6 313.6 V317.1" />
+    <path class="tick" d="M327.6 313.6 V317.1" />
+    <path class="tick" d="M417.6 313.6 V317.1" />
+    <path class="tick" d="M507.6 313.6 V317.1" />
+    <path class="tick" d="M597.6 313.6 V317.1" />
+    <path class="tick" d="M687.6 313.6 V317.1" />
+    <text class="serif size-9-5 secondary middle" x="57.6" y="327.8">0.00</text>
+    <text class="serif size-9-5 secondary middle" x="147.6" y="327.8">0.05</text>
+    <text class="serif size-9-5 secondary middle" x="237.6" y="327.8">0.10</text>
+    <text class="serif size-9-5 secondary middle" x="327.6" y="327.8">0.15</text>
+    <text class="serif size-9-5 secondary middle" x="417.6" y="327.8">0.20</text>
+    <text class="serif size-9-5 secondary middle" x="507.6" y="327.8">0.25</text>
+    <text class="serif size-9-5 secondary middle" x="597.6" y="327.8">0.30</text>
+    <text class="serif size-9-5 secondary middle" x="687.6" y="327.8">0.35</text>
+    <g class="backdrop">
+      <path class="grid" d="M57.6 277.9 H705.6" />
+      <path class="grid" d="M57.6 218.5 H705.6" />
+      <path class="grid" d="M57.6 159.1 H705.6" />
+      <path class="grid" d="M57.6 99.6 H705.6" />
+    </g>
+    <path class="tick" d="M57.6 277.9 H54.1" />
+    <path class="tick" d="M57.6 218.5 H54.1" />
+    <path class="tick" d="M57.6 159.1 H54.1" />
+    <path class="tick" d="M57.6 99.6 H54.1" />
+    <text class="serif size-9-5 secondary end" x="50.6" y="281.5">80</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="222.1">85</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="162.7">90</text>
+    <text class="serif size-9-5 secondary end" x="50.6" y="103.2">95</text>
+    <path class="line-clay" d="M189.5 274 L261.5 188.2" />
+    <path class="line-blue" d="M276.7 189.4 L457.6 126 L614 96.1" />
+  </g>
+  <foreignObject x="1.2" y="5" width="712" height="32.1">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+      <span class="label serif size-10-5 text-clay lh-115">SWE-bench Pro: Claude Opus 5.5 at low effort matches Claude Sonnet 5.5's default for about 7% more per solved task</span>
+    </div>
+  </foreignObject>
+  <g role="list" aria-label="Axes">
+    <g role="listitem">
+      <foreignObject x="75.6" y="328.2" width="612" height="34.5">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label serif size-11-5 primary lh-115">cost per solved task (USD, as a customer is billed)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Horizontal axis, labeled from 0.00 to 0.35" d="M57.6 313.6 H705.6" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="1.2" y="35.7" width="712" height="20.6">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label serif size-11 primary lh-115">SWE-bench Pro subset, tasks solved (%)</span>
+        </div>
+      </foreignObject>
+      <path class="axis" role="img" aria-label="Vertical axis, labeled from 80 to 95" d="M57.6 313.6 V58" />
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Sonnet 5.5">
+    <g role="listitem">
+      <foreignObject x="201.5" y="256.6" width="292" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-11 text-clay lh-111">Claude Sonnet 5.5, medium effort</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="201.5" y="268.8" width="292" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start">
+          <span class="label serif size-11 text-clay lh-111">80.3%, $0.07 USD per solved task</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" role="img" aria-label="80.3% of tasks solved, $0.07 USD per solved task" x="182.8" y="267.2" width="13.4" height="13.5" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="51.3" y="126.1" width="352" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-11 text-clay lh-111">Claude Sonnet 5.5, high effort (default)</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="51.3" y="138.2" width="352" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center bottom">
+          <span class="label serif size-11 text-clay lh-111">87.6%, $0.11 USD per solved task</span>
+        </div>
+      </foreignObject>
+      <rect class="fill-clay" role="img" aria-label="87.6% of tasks solved, $0.11 USD per solved task" x="254.8" y="181.4" width="13.4" height="13.5" />
+    </g>
+  </g>
+  <g role="list" aria-label="Claude Opus 5.5">
+    <g role="listitem">
+      <foreignObject x="288.7" y="189.6" width="392" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-11 text-blue lh-111">Claude Opus 5.5, low effort</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="288.7" y="201.8" width="392" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start top">
+          <span class="label serif size-11 text-blue lh-111">87.4%, $0.12 USD per solved task</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="87.4% of tasks solved, $0.12 USD per solved task" cx="276.7" cy="189.4" r="6.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="70" y="95.2" width="372" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-11 text-blue lh-111">Claude Opus 5.5, medium effort (default)</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="70" y="107.4" width="372" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-11 text-blue lh-111">92.8%, $0.22 USD per solved task</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="92.8% of tasks solved, $0.22 USD per solved task" cx="457.6" cy="126" r="6.7" />
+    </g>
+    <g role="listitem">
+      <foreignObject x="86.4" y="61" width="512" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-11 text-blue lh-111">Claude Opus 5.5, high effort</span>
+        </div>
+      </foreignObject>
+      <foreignObject x="86.4" y="73.1" width="512" height="20.2">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area end">
+          <span class="label serif size-11 text-blue lh-111">95.3%, $0.31 USD per solved task</span>
+        </div>
+      </foreignObject>
+      <circle class="fill-blue" role="img" aria-label="95.3% of tasks solved, $0.31 USD per solved task" cx="614" cy="96.1" r="6.7" />
+    </g>
+  </g>
+  <foreignObject x="1.2" y="349.9" width="712" height="33.5">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area column start bottom">
+      <span class="label serif size-7-4 secondary lh-115">All points: the 478 problems described in reference 3, two runs per setting, run September 2026.</span>
+      <span class="label serif size-7-4 secondary lh-115">Priced at list prices with the 5-minute prompt cache; Sonnet 5.5's cache reads at $0.10 USD per million tokens.</span>
+    </div>
+  </foreignObject>
+</svg>

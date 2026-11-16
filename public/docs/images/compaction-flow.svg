@@ -1,0 +1,140 @@
+<svg lang="en" width="480" height="500" viewBox="0 0 480 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Compaction flow: when input tokens reach the trigger, Claude writes a summary into a compaction block and continues">
+  <style>
+    .sans { font-family: var(--cds-font-sans, "Anthropic Sans", system-ui, -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans", "Apple SD Gothic Neo", sans-serif); }
+    /* Colors: the docs theme's CSS variables when the page inlines this diagram; the light values otherwise */
+    .canvas { fill: var(--cds-surface-1, #fcfcfb); }
+    .box { fill: var(--cds-surface-2, #ffffff); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    .box-shaded { fill: var(--cds-alpha-2, #e4e4e3); stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1.5; }
+    .rule { stroke: var(--cds-border-stronger, #9c9c9b); stroke-width: 1; }
+    .arrow { fill: none; stroke: var(--cds-text-secondary, #52514e); stroke-width: 1.5; }
+    .arrow-head { fill: var(--cds-text-secondary, #52514e); }
+    /* Labels are HTML text in an area, so that a longer translation wraps inside it */
+    :where(foreignObject) { overflow: visible; }
+    .area { box-sizing: border-box; width: 100%; height: 100%; display: flex; align-items: center; padding: 4px 6px; }
+    .area.center { justify-content: center; text-align: center; }
+    .area.start { justify-content: flex-start; text-align: start; }
+    .area.top { align-items: flex-start; }
+    .area.bottom { align-items: flex-end; }
+    /* No padding above and below, so that a translation that wraps to two lines still fits between the last box and the bottom edge */
+    .area.pad-y-0 { padding-top: 0; padding-bottom: 0; }
+    .label { line-height: 1.3; overflow-wrap: anywhere; }
+    /* Only translations hyphenate, and only words of 10 or more letters, with 5 on each side of the hyphen. They also try to avoid a single word on their last line. A translated copy has its language on the root. */
+    .label:not(:lang(en)) { hyphens: auto; hyphenate-limit-chars: 10 5 5; -webkit-hyphenate-limit-before: 5; -webkit-hyphenate-limit-after: 5; }
+    .label:not(:lang(en)):not(.balance) { text-wrap: pretty; }
+    /* Firefox has no text-wrap: pretty. There a translation balances its lines instead, which also keeps a single word off its last line, and has no automatic hyphens. */
+    @supports not (text-wrap: pretty) { .label:not(:lang(en)) { hyphens: manual; } .label:not(:lang(en)):not(.balance) { text-wrap: balance; } }
+    .label.balance-translation:not(:lang(en)) { text-wrap: balance; } /* a translated label with lines of about the same length */
+    .label .mono, .label .code { hyphens: none; overflow-wrap: normal; }
+    /* Chinese, Japanese and Korean labels break lines only at spaces and punctuation, and at the zero-width spaces that the docs translator adds to Chinese and Japanese text */
+    .label:is(:lang(ja), :lang(ko), :lang(zh)) { word-break: keep-all; }
+    /* Chinese, Japanese and Korean fonts have no italics, so the browser would slant the glyphs. This overrides the diagram's italic classes. */
+    :is(:lang(ja), :lang(ko), :lang(zh)) { font-style: normal !important; }
+    /* Sizes, weights and colors, from the attributes the labels had as SVG text */
+    .size-10-5 { font-size: 10.5px; }
+    .size-11 { font-size: 11px; }
+    .size-11-5 { font-size: 11.5px; }
+    .size-13 { font-size: 13px; }
+    /* Bold text sets its weight axis too: in dark mode the page sets "wght" 360, which this text inherits and which overrides font-weight */
+    .weight-600 { font-weight: 600; font-variation-settings: var(--cds-font-wght-bold, normal); }
+    .italic { font-style: italic; }
+    .label.primary { color: var(--cds-text-primary, #0b0b0b); }
+    .label.secondary { color: var(--cds-text-secondary, #52514e); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 6" markerWidth="10" markerHeight="6" refX="10" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon class="arrow-head" points="0 0, 10 3, 0 6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="canvas" width="480" height="500" rx="6" aria-hidden="true"/>
+  <g role="list" aria-label="Where each step runs">
+    <g role="listitem">
+      <!-- Section label: Server -->
+      <foreignObject x="34" y="0" width="406" height="35.15">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans size-11 weight-600 secondary">Server</span>
+        </div>
+      </foreignObject>
+
+      <!-- Boxes 1–4: server steps -->
+      <g role="list" aria-label="Server steps">
+        <g role="listitem">
+          <rect class="box" x="40" y="42" width="400" height="48" rx="6"/>
+          <foreignObject x="40" y="42" width="400" height="48">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans size-13 primary">Input tokens exceed trigger threshold</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="40" y="126" width="400" height="48" rx="6"/>
+          <foreignObject x="40" y="126" width="400" height="48">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans size-13 primary">Conversation is summarized</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="40" y="210" width="400" height="48" rx="6"/>
+          <foreignObject x="40" y="210" width="400" height="48">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans size-13 primary">Compaction block created with summary</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g role="listitem">
+          <rect class="box" x="40" y="294" width="400" height="48" rx="6"/>
+          <foreignObject x="40" y="294" width="400" height="48">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans size-13 primary">Response continues with compacted context</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+    <g role="listitem">
+      <!-- Divider: ——— next request ——— -->
+      <line class="rule" x1="40" y1="370" x2="172" y2="370" aria-hidden="true"/>
+      <foreignObject x="176" y="359.18" width="128" height="40.82">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area center top">
+          <span class="label sans size-10-5 italic secondary">next request</span>
+        </div>
+      </foreignObject>
+      <line class="rule" x1="308" y1="370" x2="440" y2="370" aria-hidden="true"/>
+
+      <!-- Section label: Client -->
+      <foreignObject x="34" y="374" width="406" height="23.15">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="area start bottom">
+          <span class="label sans size-11 weight-600 secondary">Client</span>
+        </div>
+      </foreignObject>
+
+      <!-- Box 5: client action -->
+      <g role="list" aria-label="Client steps">
+        <g role="listitem">
+          <rect class="box-shaded" x="40" y="404" width="400" height="48" rx="6"/>
+          <foreignObject x="40" y="404" width="400" height="48">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="area center">
+              <span class="label sans size-13 primary">Append response to messages</span>
+            </div>
+          </foreignObject>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Closing note -->
+  <foreignObject x="40" y="456.75" width="400" height="34.5">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="area center pad-y-0">
+      <span class="label sans size-11-5 italic secondary balance-translation">Messages before the compaction block are dropped on next request</span>
+    </div>
+  </foreignObject>
+
+  <!-- Arrows: steps 1→2→3→4 -->
+  <g aria-hidden="true">
+    <line class="arrow" x1="240" y1="90" x2="240" y2="126" marker-end="url(#arrow)"/>
+    <line class="arrow" x1="240" y1="174" x2="240" y2="210" marker-end="url(#arrow)"/>
+    <line class="arrow" x1="240" y1="258" x2="240" y2="294" marker-end="url(#arrow)"/>
+  </g>
+</svg>
