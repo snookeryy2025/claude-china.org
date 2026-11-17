@@ -69,7 +69,7 @@ inference:
   #  claude-haiku-4-5: claude-haiku-4-5@20251001
 ```
 
-`region` 是必需的。它是提供您所用模型的 Google Cloud’s Agent Platform 位置，或 `global`。`project_id` 是发起调用并计费的项目。
+`region` 是必需的。它是提供您所用模型的 Google Cloud’s Agent 平台 位置，或 `global`。`project_id` 是发起调用并计费的项目。
 
 服务器使用 Google Application Default Credentials：即 `GOOGLE_APPLICATION_CREDENTIALS` 指定的文件，或 Compute Engine、Cloud Run 或 GKE 附加的服务账号。该身份需要在项目上拥有 `roles/aiplatform.user` 角色。项目需要启用 `aiplatform.googleapis.com` API 以及您使用的 Claude 模型。
 

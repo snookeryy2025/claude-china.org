@@ -10,9 +10,9 @@ description: Google 将 Claude Models on Google Cloud (Google managed) 作为 Go
 
 要使用 Claude Models on Google Cloud (Google managed)，您需要：
 
-1. 一个可以使用 Agent Platform 的 Google Cloud 项目。有关设置步骤，请参阅 Google Cloud 的 [Agent Platform 上的 Anthropic Claude 模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude)页面。
+1. 一个可以使用 Agent 平台 的 Google Cloud 项目。有关设置步骤，请参阅 Google Cloud 的 [Agent 平台 上的 Anthropic Claude 模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude)页面。
 2. 已安装 [gcloud CLI](https://cloud.google.com/sdk/docs/install)，用于本地开发。
-3. 对于发起调用的身份，需要一个包含 `aiplatform.endpoints.predict` 权限的 IAM 角色，例如 Agent Platform User（`roles/aiplatform.user`）。有关详细信息，请参阅 Google Cloud 的 [Agent Platform 合作伙伴模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/use-partner-models)页面。
+3. 对于发起调用的身份，需要一个包含 `aiplatform.endpoints.predict` 权限的 IAM 角色，例如 Agent 平台 User（`roles/aiplatform.user`）。有关详细信息，请参阅 Google Cloud 的 [Agent 平台 合作伙伴模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/use-partner-models)页面。
 4. 该身份的 Google Cloud 凭据。要让 SDK 向 Google Cloud 进行身份验证，您可能需要运行 `gcloud auth application-default login`。发往 Claude Models on Google Cloud (Google managed) 的 cURL 请求可以通过 `gcloud auth print-access-token` 获取令牌。该命令使用 gcloud CLI 自身的登录，而不是 Application Default Credentials，因此请在使用它之前先运行 `gcloud auth login` 或 `gcloud init`。
 
 ### 安装 SDK
@@ -90,7 +90,7 @@ description: Google 将 Claude Models on Google Cloud (Google managed) 作为 Go
 
 ## 发起请求
 
-发往 Claude Models on Google Cloud (Google managed) 的请求会发送到以 `:rawPredict` 结尾的 Agent Platform 端点 URL。"Streaming"（流式传输）请求则改用 `:streamRawPredict`。
+发往 Claude Models on Google Cloud (Google managed) 的请求会发送到以 `:rawPredict` 结尾的 Agent 平台 端点 URL。"Streaming"（流式传输）请求则改用 `:streamRawPredict`。
 
 请求与 [Messages API](/docs/api/messages/create) 请求几乎完全相同，主要有两点区别：
 
@@ -287,14 +287,14 @@ description: Google 将 Claude Models on Google Cloud (Google managed) 作为 Go
 
 ### API 模型 ID
 
-| Model                                                                                                    | Agent Platform API model ID  |
+| 模型                                                                                                    | Agent 平台 API model ID  |
 | :------------------------------------------------------------------------------------------------------- | :--------------------------- |
 | Claude Fable 5.2                                                                                         | `claude-fable-5-2`           |
-| Claude Mythos 5.2 ([limited availability](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-2`          |
+| Claude Mythos 5.2 ([受限开放](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-2`          |
 | Claude Fable 5.1                                                                                         | `claude-fable-5-1`           |
-| Claude Mythos 5.1 ([limited availability](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-1`          |
+| Claude Mythos 5.1 ([受限开放](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-1`          |
 | Claude Fable 5                                                                                           | `claude-fable-5`             |
-| Claude Mythos 5 ([limited availability](https://support.claude.com/en/articles/14604842))                | `claude-mythos-5`            |
+| Claude Mythos 5 ([受限开放](https://support.claude.com/en/articles/14604842))                | `claude-mythos-5`            |
 | Claude Opus 5.5                                                                                          | `claude-opus-5-5`            |
 | Claude Opus 5                                                                                            | `claude-opus-5`              |
 | Claude Opus 4.8                                                                                          | `claude-opus-4-8`            |
@@ -311,9 +311,9 @@ description: Google 将 Claude Models on Google Cloud (Google managed) 作为 Go
 | Claude Haiku 5.5                                                                                         | `claude-haiku-5-5`           |
 | Claude Haiku 4.5                                                                                         | `claude-haiku-4-5@20251001`  |
 
-Claude Models on Google Cloud (Google managed) 在不同区域提供不同的 Claude 模型。要查看某个区域提供哪些模型，请在 [Model Garden](https://cloud.google.com/model-garden) 中搜索"Claude"，或参阅 Google Cloud 的 [Agent Platform 上的 Anthropic Claude 模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude)页面。
+Claude Models on Google Cloud (Google managed) 在不同区域提供不同的 Claude 模型。要查看某个区域提供哪些模型，请在 [模型 Garden](https://cloud.google.com/model-garden) 中搜索"Claude"，或参阅 Google Cloud 的 [Agent 平台 上的 Anthropic Claude 模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude)页面。
 
-Google 为 Claude Models on Google Cloud (Google managed) 所提供的模型设定生命周期日期。这些日期可能与 Claude API 的时间表不同。有关模型当前的停用日期，请参阅 Google Cloud 的 [Agent Platform 上的 Anthropic Claude 模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude)页面。有关"已弃用"和"已停用"的含义，请参阅[模型弃用](/docs/about-claude/model-deprecations)。
+Google 为 Claude Models on Google Cloud (Google managed) 所提供的模型设定生命周期日期。这些日期可能与 Claude API 的时间表不同。有关模型当前的停用日期，请参阅 Google Cloud 的 [Agent 平台 上的 Anthropic Claude 模型](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude)页面。有关"已弃用"和"已停用"的含义，请参阅[模型弃用](/docs/about-claude/model-deprecations)。
 
 <Note>
   Claude Mythos Preview 是一项研究预览。Claude Models on Google Cloud (Google managed) 向受邀客户提供该模型。有关更多信息，请参阅 [Project Glasswing](https://anthropic.com/glasswing)。
@@ -474,7 +474,7 @@ Claude Models on Google Cloud (Google managed) 支持的功能包括：
 
 * [结构化输出](/docs/build-with-claude/structured-outputs)
 
-* 在[支持的模型](/docs/build-with-claude/fast-mode#feature-availability)上使用["Fast mode"（快速模式）](/docs/build-with-claude/fast-mode)
+* 在[支持的模型](/docs/build-with-claude/fast-mode#feature-availability)上使用["快 mode"（快速模式）](/docs/build-with-claude/fast-mode)
 
 [功能概览](/docs/build-with-claude/overview)列出了所有功能。每个功能的页面会显示 Claude Models on Google Cloud (Google managed) 是否支持该功能。
 
@@ -513,7 +513,7 @@ Claude Models on Google Cloud (Google managed) 为以下模型提供 [1M 令牌�
 
 其他 Claude 模型的上下文窗口为 200k 令牌，其中包括 Claude Sonnet 4.5（已弃用）和 Claude Sonnet 4（已弃用）。
 
-Agent Platform 将请求负载限制为 30 MB。当您发送大型文档或大量图像时，可能会在达到令牌限制之前先达到此限制。
+Agent 平台 将请求负载限制为 30 MB。当您发送大型文档或大量图像时，可能会在达到令牌限制之前先达到此限制。
 
 ## 计费、速率限制和日志记录
 
@@ -527,11 +527,11 @@ Google Cloud 会就 Claude Models on Google Cloud (Google managed) 向您开具�
 
 ### 数据保留
 
-Google Cloud 负责管理 Claude Models on Google Cloud (Google managed) 的数据处理。有关详细信息，请参阅 [Agent Platform 和零数据保留](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance)。
+Google Cloud 负责管理 Claude Models on Google Cloud (Google managed) 的数据处理。有关详细信息，请参阅 [Agent 平台 和零数据保留](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance)。
 
 ### 监控和日志记录
 
-要记录 Claude Models on Google Cloud (Google managed) 的提示和补全内容，请使用 Agent Platform 的[请求-响应日志记录服务](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/request-response-logging)。
+要记录 Claude Models on Google Cloud (Google managed) 的提示和补全内容，请使用 Agent 平台 的[请求-响应日志记录服务](https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/request-response-logging)。
 
 Anthropic 建议您至少保留最近 30 天的日志。这些日志有助于您了解自己的活动并调查可能的滥用行为。
 
@@ -754,12 +754,12 @@ Anthropic 建议您至少保留最近 30 天的日志。这些日志有助于您
     探索 Claude 的功能。
   </Card>
 
-  <Card title="Agent Platform 上的 Anthropic Claude 模型" icon="book" href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude">
+  <Card title="Agent 平台 上的 Anthropic Claude 模型" icon="book" href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude">
     查看每个区域提供哪些 Claude 模型及其停用日期。
   </Card>
 
-  <Card title="Agent Platform 文档" icon="book" href="https://cloud.google.com/vertex-ai/docs">
-    阅读 Google Cloud’s Agent Platform 文档。
+  <Card title="Agent 平台 文档" icon="book" href="https://cloud.google.com/vertex-ai/docs">
+    阅读 Google Cloud’s Agent 平台 文档。
   </Card>
 
   <Card title="Claude 模型的全局端点" icon="link" href="https://cloud.google.com/blog/products/ai-machine-learning/global-endpoint-for-claude-models-generally-available-on-vertex-ai">

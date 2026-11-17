@@ -1,0 +1,2073 @@
+[
+  {
+    "description": "管理活动门票、订单等事务的平台",
+    "href": "https://help.tickettailor.com/en/articles/11892797-how-to-connect-ticket-tailor-to-your-favourite-ai-agent",
+    "name": "Ticket Tailor",
+    "url": "https://mcp.tickettailor.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Linear 中管理问题、项目和团队工作流",
+    "href": "https://linear.app/docs/mcp",
+    "name": "Linear",
+    "url": "https://mcp.linear.app/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问 Hugging Face Hub 和数千个 Gradio 应用",
+    "href": "https://huggingface.co/settings/mcp",
+    "name": "Hugging Face",
+    "url": "https://huggingface.co/mcp?login&gradio=none",
+    "urlHelp": []
+  },
+  {
+    "description": "访问和分析区块链数据",
+    "href": "https://github.com/blockscout/mcp-server",
+    "name": "Blockscout",
+    "url": "https://mcp.blockscout.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接 Close CRM，安全访问和处理销售数据",
+    "href": "https://help.close.com/v1/docs/en/mcp-server",
+    "name": "Close",
+    "url": "https://mcp.close.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用计算、存储和 AI 服务构建应用",
+    "href": "https://www.support.cloudflare.com/",
+    "name": "Cloudflare Developer Platform",
+    "url": "https://bindings.mcp.cloudflare.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "安全访问和分析 Egnyte 内容",
+    "href": "https://developers.egnyte.com/docs/Remote_MCP_Server",
+    "name": "Egnyte",
+    "url": "https://mcp-server.egnyte.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "根据 Figma 上下文生成图表和更合适的代码",
+    "href": "https://help.figma.com/hc/en-us/articles/32132100833559",
+    "name": "Figma",
+    "url": "https://mcp.figma.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索并使用企业知识",
+    "href": "https://help.getguru.com/docs/connecting-gurus-mcp-server",
+    "name": "Guru",
+    "url": "https://mcp.api.getguru.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中创建表单并分析提交结果",
+    "href": "https://www.jotform.com/developers/mcp/",
+    "name": "Jotform",
+    "url": "https://mcp.jotform.com/mcp-app",
+    "urlHelp": []
+  },
+  {
+    "description": "在 monday.com 中管理项目、看板和工作流",
+    "href": "https://developer.monday.com/apps/docs/mondaycom-mcp-integration",
+    "name": "monday.com",
+    "url": "https://mcp.monday.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接 Notion 工作区，搜索、更新内容并串联工具工作流",
+    "href": "https://developers.notion.com/docs/mcp",
+    "name": "Notion",
+    "url": "https://mcp.notion.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问 PayPal 支付平台",
+    "href": "https://mcp.paypal.com/",
+    "name": "PayPal",
+    "url": "https://mcp.paypal.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "支付处理和金融基础设施工具",
+    "href": "https://docs.stripe.com/mcp",
+    "name": "Stripe",
+    "url": "https://mcp.stripe.com",
+    "urlHelp": []
+  },
+  {
+    "description": "管理数据库、身份验证和存储",
+    "href": "https://supabase.com/docs/guides/getting-started/mcp",
+    "name": "Supabase",
+    "url": "https://mcp.supabase.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析、调试和管理项目与部署",
+    "href": "https://vercel.com/docs/mcp/vercel-mcp",
+    "name": "Vercel",
+    "url": "https://mcp.vercel.com/",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Wix 上构建和管理网站及应用",
+    "href": "https://dev.wix.com/docs/sdk/articles/use-the-wix-mcp/about-the-wix-mcp",
+    "name": "Wix",
+    "url": "https://mcp.wix.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问数百个来源的业务数据",
+    "href": "https://help.coupler.io/article/592-coupler-local-mcp-server",
+    "name": "Coupler.io",
+    "url": "https://mcp.coupler.io/mcp/",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Dice 上查找正在招聘的技术职位",
+    "href": "https://www.dice.com/about/mcp",
+    "name": "Dice",
+    "url": "https://mcp.dice.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问和创建 Miro 看板内容",
+    "href": "https://developers.miro.com/docs/miro-mcp",
+    "name": "Miro",
+    "url": "https://mcp.miro.com/",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索上下文数据湖并安全执行操作",
+    "href": "https://docs.port.io/ai-interfaces/port-mcp-server/overview-and-installation",
+    "name": "Port IO",
+    "urlHelp": [
+      "https://docs.port.io/ai-interfaces/port-mcp-server/overview-and-installation/?mcp-setup=claude&region=eu#installing-port-mcp"
+    ]
+  },
+  {
+    "description": "使用 Aiwyn 税务引擎估算联邦税和州税",
+    "href": "https://docs.columntax.com/page/aiwyn-tax-mcp-server",
+    "name": "Aiwyn Tax (formerly Column Tax)",
+    "url": "https://mcp.columnapi.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和获取会议上下文",
+    "href": "https://circleback.ai/docs/mcp",
+    "name": "Circleback",
+    "url": "https://app.circleback.ai/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查询 CRM、创建记录并提出问题",
+    "href": "https://docs.clarify.ai/en/articles/13367278-clarify-mcp",
+    "name": "Clarify",
+    "url": "https://api.clarify.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "根据拟议的 SFDR 2.0 规则模拟基金分类",
+    "href": "https://clarity-sfdr20-mcp.pro.clarity.ai/",
+    "name": "Clarity AI",
+    "url": "https://clarity-sfdr20-mcp.pro.clarity.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 CRMx 了解潜在客户和现有客户",
+    "href": "https://day.ai/mcp",
+    "name": "Day AI",
+    "url": "https://day.ai/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问 ICD-10-CM 和 ICD-10-PCS 编码集",
+    "href": "https://claude.com/resources/tutorials/using-the-icd-10-connector-in-claude",
+    "name": "ICD-10 Codes",
+    "url": "https://hcls.mcp.claude.com/icd10_codes/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和更新企业知识图谱",
+    "href": "https://support.devrev.ai/en-US/devrev/article/ART-21859-remote-mcp-server",
+    "name": "DevRev",
+    "url": "https://api.devrev.ai/mcp/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "比较酒店并直接预订",
+    "href": "https://www.directbooker.ai/products/mcp-server-documentation",
+    "name": "DirectBooker",
+    "url": "https://www.directbooker.ai/claude",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索网页和代码文档",
+    "href": "https://docs.exa.ai/reference/exa-mcp",
+    "name": "Exa",
+    "url": "https://mcp.exa.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 对话中使用会议内容",
+    "href": "https://help.fathom.video/en/articles/11497793",
+    "name": "Fathom",
+    "url": "https://api.fathom.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析会议记录并提炼见解",
+    "href": "https://guide.fireflies.ai/articles/8272956938-learn-about-the-fireflies-mcp-server-model-context-protocol",
+    "name": "Fireflies",
+    "url": "https://api.fireflies.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取整理后的上市公司基本面数据",
+    "href": "https://docs.fiscal.ai/docs/guides/mcp-integration",
+    "name": "Fiscal.ai",
+    "url": "https://api.fiscal.ai/mcp/sse",
+    "urlHelp": []
+  },
+  {
+    "description": "用于会议的 AI 笔记工具",
+    "href": "https://help.granola.ai/article/granola-mcp#set-up-guide",
+    "name": "Granola",
+    "url": "https://mcp.granola.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "发现、研究和补充企业及人员信息",
+    "href": "https://support.harmonic.ai/en/articles/12785899-harmonic-mcp-server-getting-started-guide",
+    "name": "Harmonic",
+    "url": "https://mcp.api.harmonic.ai",
+    "urlHelp": []
+  },
+  {
+    "description": "了解组织的业务流程",
+    "href": "https://github.com/Klarity-AI/klarity-mcp/blob/main/skills/klarity-process-context-graph/SKILL.md",
+    "name": "Klarity",
+    "url": "https://architect-v2-api.klarity.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过会议记录和笔记补充上下文",
+    "href": "https://help.krisp.ai/hc/en-us/articles/25416265429660-Krisp-MCP-Supported-tools",
+    "name": "Krisp",
+    "url": "https://mcp.krisp.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查找专家编写的法律工作技能",
+    "href": "https://lawve.ai/en/learn/mcp-setup",
+    "name": "Lawve AI",
+    "url": "https://mcp.lawve.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "面向复杂业务的通用事务助手",
+    "href": "https://docs.lorikeetcx.ai/mcp/mcp-server",
+    "name": "Lorikeet",
+    "url": "https://mcp.lorikeetcx.ai",
+    "urlHelp": []
+  },
+  {
+    "description": "在搜索中加入实时社交媒体数据",
+    "href": "https://lunarcrush.com/developers/api/ai",
+    "name": "LunarCrush",
+    "url": "https://lunarcrush.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "记录想法和信息的 AI 笔记本",
+    "href": "https://docs.mem.ai/mcp/overview",
+    "name": "Mem",
+    "url": "https://mcp.mem.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "面向招聘的 AI 平台",
+    "href": "https://support.metaview.ai/integrations/mcp-integration/mcp-overview.mdx",
+    "name": "Metaview",
+    "url": "https://mcp.metaview.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析并利用会议中的信息",
+    "href": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "name": "Otter.ai",
+    "url": "https://mcp.otter.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析品牌在大语言模型中的可见度",
+    "href": "https://docs.peec.ai/mcp/introduction",
+    "name": "Peec AI",
+    "url": "https://api.peec.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将会议内容带入 Claude",
+    "href": "https://support.read.ai/hc/en-us/articles/49381158409491-MCP-Server",
+    "name": "Read AI",
+    "url": "https://api.read.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用学术研究和引文完善回答",
+    "href": "https://docs.scholargateway.ai",
+    "name": "Scholar Gateway",
+    "url": "https://connector.scholargateway.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取以研究证据为依据的回答",
+    "href": "https://scite.ai/mcp",
+    "name": "Scite",
+    "url": "https://api.scite.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "从查询快速获得符合条件的销售线索",
+    "href": "https://support.sprouts.ai/en/articles/13384582-sprouts-mcp-server-documentation#h_541c149a52",
+    "name": "Sprouts Data Intelligence",
+    "url": "https://sprouts-mcp-server.kartikay-dhar.workers.dev",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 AI 查询销售通话、交易和销售漏斗",
+    "href": "https://api.sybill.ai/docs/mcp.html",
+    "name": "Sybill",
+    "url": "https://mcp.sybill.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在治理规则下自动化处理 700 多个应用和工作流",
+    "href": "https://tray.ai/documentation/platform/artificial-intelligence/agent-gateway/connecting-clients",
+    "name": "Tray.ai",
+    "urlHelp": [
+      "https://tray.ai/documentation/platform/artificial-intelligence/agent-gateway/connecting-clients"
+    ]
+  },
+  {
+    "description": "查找企业和联系人数据",
+    "href": "https://developers.explorium.ai/mcp-docs/agentsource-mcp",
+    "name": "Vibe Prospecting",
+    "url": "https://vibeprospecting.explorium.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接 Meta、Google、TikTok、LinkedIn 广告及另外 320 多个平台",
+    "href": "https://windsor.ai/introducing-windsor-mcp/#method-1-using-claude-desktop-3",
+    "name": "Windsor.ai",
+    "url": "https://mcp.windsor.ai",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Claude 管理个人财务",
+    "href": "https://era.app/help/mcp-server-era-context/",
+    "name": "Era Context",
+    "url": "https://context.era.app",
+    "urlHelp": []
+  },
+  {
+    "description": "通过对话分析会议并发现可执行的见解",
+    "href": "https://help.fellow.ai/en/articles/12622641-fellow-s-mcp-server",
+    "name": "Fellow.ai",
+    "url": "https://fellow.app/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 AI 创建演示文稿、文档、社交内容和网站",
+    "href": "https://gamma.app/docs/Gamma-MCP-Server-Documentation-m6p43kobgzy15zj?mode=doc",
+    "name": "Gamma",
+    "url": "https://mcp.gamma.app/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "构思、绘图并帮助团队达成共识",
+    "href": "https://help.lucid.co/hc/en-us/articles/42578801807508-Integrate-Lucid-with-AI-tools-using-the-Lucid-MCP-server",
+    "name": "Lucid",
+    "url": "https://mcp.lucid.app/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问内部工具、企业应用和数据",
+    "href": "https://docs.natoma.ai",
+    "name": "Natoma",
+    "urlHelp": [
+      "https://natoma.app/?utm=claude"
+    ]
+  },
+  {
+    "description": "安全访问 NetDocuments 中的文档",
+    "href": "https://support.netdocuments.com/",
+    "name": "NetDocuments",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Netlify 上创建、部署、管理和保护网站",
+    "href": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+    "name": "Netlify",
+    "url": "https://netlify-mcp.netlify.app/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 AI 数据分析获得有依据的见解",
+    "href": "https://developers.thoughtspot.com/docs/mcp-integration#_add_mcp_server_to_the_mcp_clients_config",
+    "name": "ThoughtSpot Spotter",
+    "url": "https://agent.thoughtspot.app/mcp?api-version=latest",
+    "urlHelp": []
+  },
+  {
+    "description": "发现、评估和购买云解决方案",
+    "href": "https://docs.aws.amazon.com/marketplace/latest/APIReference/marketplace-mcp-server.html",
+    "name": "AWS Marketplace",
+    "url": "https://marketplace-mcp.us-east-1.api.aws/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过虚拟人体模型生成基因表达数据",
+    "href": "https://app.synthesize.bio/mcp/docs",
+    "name": "Synthesize Bio",
+    "url": "https://app.synthesize.bio/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "寻找支持相关公益事业的资助方",
+    "href": "https://kindora.co/mcp",
+    "name": "Kindora Funder Discovery",
+    "url": "https://kindora-mcp.azurewebsites.net/mcp/",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 Omni 语义模型使用自然语言查询数据",
+    "href": "https://docs.omni.co/ai/mcp",
+    "name": "Omni Analytics",
+    "url": "https://callbacks.omniapp.co/callback/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "创建可分享的文档、单页介绍和演示文稿",
+    "href": "https://www.send.co/mcp/docs",
+    "name": "Send",
+    "url": "https://www.send.co/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "直接在 Claude 中分析实时人员数据",
+    "href": "https://mcp.shapes.co",
+    "name": "Shapes",
+    "url": "https://mcp.shapes.co/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "为 The L Suite 会员提供企业内部法律顾问见解",
+    "href": "https://docs.google.com/document/d/1glRh-BdxnTPxzM1cZLzCcmlgIW5-dQ4-NnnStfhI6vk/edit?tab=t.0#heading=h.hgwkvyizzdb3",
+    "name": "Lloyd by The L Suite",
+    "urlHelp": [
+      "https://docs.google.com/forms/d/e/1FAIpQLSeK2KFt1G1XbqgQdp2J-cvnLDtiUDigSsTjFH-Hk_B-Va0pRw/viewform?usp=publish-editor"
+    ]
+  },
+  {
+    "description": "获取企业内部法律顾问推荐的外部律师",
+    "href": "https://docs.google.com/document/d/1jcekau3Njlc5XfSspSdSGu7qSgKvM00M6DrYm91ZTzA/edit?tab=t.0#heading=h.hgwkvyizzdb3",
+    "name": "TopCounsel by The L Suite",
+    "url": "https://api.techgc.co/api/mcp/topcounsel",
+    "urlHelp": []
+  },
+  {
+    "description": "通过自主营销改变工作方式",
+    "href": "https://developers.activecampaign.com/page/mcp",
+    "name": "ActiveCampaign",
+    "urlHelp": [
+      "https://developers.activecampaign.com/page/mcp"
+    ]
+  },
+  {
+    "description": "管理 Adobe Experience Manager 内容",
+    "href": "https://www.adobe.com/go/aem_claude_mcp_docs",
+    "name": "Adobe Experience Manager",
+    "url": "https://mcp.adobeaemcloud.com/adobe/mcp/aem",
+    "urlHelp": []
+  },
+  {
+    "description": "分析 SEO 和 AI 搜索表现",
+    "href": "https://docs.ahrefs.com/docs/mcp/reference/introduction",
+    "name": "Ahrefs",
+    "url": "https://api.ahrefs.com/mcp/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "创作适合 AI 搜索的内容",
+    "href": "https://docs.airops.com/mcp",
+    "name": "AirOps",
+    "url": "https://app.airops.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中使用结构化数据",
+    "href": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
+    "name": "Airtable",
+    "url": "https://mcp.airtable.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Claude 集成 Airwallex 平台",
+    "href": "https://www.airwallex.com/docs/developer-tools/ai/developer-mcp",
+    "name": "Airwallex Developer",
+    "url": "https://mcp-demo.airwallex.com/developer",
+    "urlHelp": []
+  },
+  {
+    "description": "寻找下一条徒步路线",
+    "href": "https://support.alltrails.com/hc/en-us/articles/47343827423764-AllTrails-integrations-with-AI-services",
+    "name": "AllTrails",
+    "url": "https://www.alltrails.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 Claude 搜索、管理和更新 Attio CRM",
+    "href": "https://docs.attio.com/mcp/overview",
+    "name": "Attio",
+    "url": "https://mcp.attio.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取有声书推荐",
+    "href": "https://help.audible.com/s/article/connect-audible-to-claude?language=en_US",
+    "name": "Audible",
+    "url": "https://mcp.audible.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "安全访问 Autodesk 帮助文档",
+    "href": "https://help.autodesk.com/view/ADSKMCP/ENU/?guid=ADSKMCP_KnowledgeMcp_autodesk_product_help_mcp_server_html",
+    "name": "Autodesk Product Help",
+    "url": "https://developer.api.autodesk.com/knowledge/public/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "构建和管理 Base44 应用",
+    "href": "https://docs.base44.com/developers/backend/overview/mcp-server",
+    "name": "Base44",
+    "url": "https://app.base44.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接研发数据、实验资料和实验笔记",
+    "href": "https://help.benchling.com/hc/en-us/articles/40342713479437-Benchling-MCP",
+    "name": "Benchling",
+    "urlHelp": [
+      "https://help.benchling.com/hc/en-us/articles/40342713479437-Benchling-MCP"
+    ]
+  },
+  {
+    "description": "搜索和使用科研模板与图标",
+    "href": "https://help.biorender.com/hc/en-gb/articles/30870978672157-How-to-use-the-BioRender-MCP-connector",
+    "name": "BioRender",
+    "url": "https://mcp.services.biorender.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "缩短链接、生成二维码并跟踪效果",
+    "href": "https://dev.bitly.com/bitly-mcp/",
+    "name": "Bitly",
+    "url": "https://api-ssl.bitly.com/v4/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取实时全球金融新闻",
+    "href": "https://console.blueskyapi.com/docs/EDGE/news/MT_NEWSWIRES_Global#mcp",
+    "name": "MT Newswires",
+    "url": "https://vast-mcp.blueskyapi.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查找酒店、民宿等住宿",
+    "href": "https://developers.booking.com/mcp/booking-connector/about",
+    "name": "Booking.com",
+    "url": "https://demandapi-mcp.booking.com/v1/mcp/8132308",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、编辑和分析 Box 内容",
+    "href": "https://developer.box.com/guides/box-mcp",
+    "name": "Box",
+    "url": "https://mcp.box.com",
+    "urlHelp": []
+  },
+  {
+    "description": "自动化处理财务工作",
+    "href": "https://www.brex.com/support/using-brex-in-ai-apps",
+    "name": "Brex",
+    "url": "https://api.brex.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过自主 AI 分析助手获取见解",
+    "href": "http://docs.runorion.com/",
+    "name": "Orion by Gravity",
+    "url": "https://g.runorion.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "管理活动类型、可预约时间和预订",
+    "href": "https://help.calendly.com/hc/en-us/articles/36734570264855-Connect-Calendly-to-your-AI-tools-with-Calendly-MCP",
+    "name": "Calendly",
+    "url": "https://mcp.calendly.com",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、创建、自动填充和导出 Canva 设计",
+    "href": "https://www.canva.dev/docs/connect/canva-mcp-server-setup/",
+    "name": "Canva",
+    "url": "https://mcp.canva.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "面向私募资本的互联 ERP",
+    "href": "https://docs.carta.com/api-platform/docs/claude-plugins-setup",
+    "name": "Carta",
+    "url": "https://mcp.app.carta.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取私营企业的预测性情报",
+    "href": "https://mcp.cbinsights.com",
+    "name": "CB Insights",
+    "url": "https://mcp.cbinsights.com",
+    "urlHelp": []
+  },
+  {
+    "description": "面向 350 个数据源的托管 MCP 平台",
+    "href": "https://cloud.cdata.com/docs/Claude-Client.html",
+    "name": "CData Connect AI",
+    "url": "https://mcp.cloud.cdata.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "直接在 Claude 中访问企业 SharePoint、OneDrive、Outlook 和 Teams",
+    "href": "https://support.claude.com/en/articles/12542951-enabling-and-using-the-microsoft-365-connector",
+    "name": "Microsoft 365",
+    "url": "https://microsoft365.mcp.claude.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索 PubMed 生物医学文献",
+    "href": "https://support.claude.com/en/",
+    "name": "PubMed",
+    "url": "https://pubmed.mcp.claude.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "寻找潜在客户、研究客户并定制联系内容",
+    "href": "https://www.notion.so/clayrun/Clay-Claude-MCP-Server-Documentation-2ef7e66eb01480c9820de48041591aeb?showMoveTo=true&saveParent=true",
+    "name": "Clay",
+    "url": "https://api.clay.com/v3/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "添加身份验证、组织管理和计费功能",
+    "href": "https://clerk.com/docs/guides/ai/mcp/clerk-mcp-server",
+    "name": "Clerk",
+    "url": "https://mcp.clerk.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "面向团队和智能体的项目管理与协作",
+    "href": "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+    "name": "ClickUp",
+    "url": "https://mcp.clickup.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将受治理的知识用于 AI",
+    "href": "https://docs.imanage.com/cloud/mcpconnector-user-help/en-US/iManage_MCP_Connector_Help.html",
+    "name": "iManage Work",
+    "url": "https://cloudimanage.com/mcp/work",
+    "urlHelp": []
+  },
+  {
+    "description": "管理、转换和分发图像与视频",
+    "href": "https://cloudinary.com/documentation/cloudinary_llm_mcp#available_mcp_servers",
+    "name": "Cloudinary",
+    "url": "https://asset-management.mcp.cloudinary.com/sse",
+    "urlHelp": []
+  },
+  {
+    "description": "访问实时和历史加密资产数据及指数",
+    "href": "https://mcp.coindesk.com/",
+    "name": "CoinDesk",
+    "url": "https://mcp.coindesk.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "探索科学研究",
+    "href": "https://docs.consensus.app/docs/mcp",
+    "name": "Consensus",
+    "url": "https://mcp.consensus.app/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索 Consilio 案件、文档等资料",
+    "href": "https://mcp-docs.ai.consilio.com",
+    "name": "Aurora",
+    "url": "https://mcp.ai.consilio.com",
+    "urlHelp": []
+  },
+  {
+    "description": "面向数字业务的用户体验分析平台",
+    "href": "https://support.contentsquare.com/hc/en-us/articles/41563169756945-Model-Context-Protocol-MCP",
+    "name": "Contentsquare",
+    "url": "https://api.contentsquare.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "为大语言模型和 AI 代码编辑器提供最新文档",
+    "href": "https://context7.com/docs/overview",
+    "name": "Context7",
+    "url": "https://mcp.context7.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "检索数百万条法院记录以开展法律研究",
+    "href": "https://github.com/freelawproject/courtlistener-api-client/blob/main/MCP_README.md",
+    "name": "CourtListener",
+    "url": "https://mcp.courtlistener.com/",
+    "urlHelp": []
+  },
+  {
+    "description": "为自行出庭的诉讼当事人提供民事法律指引",
+    "href": "https://courtroom5.com/claude",
+    "name": "Courtroom5",
+    "url": "https://mcp.courtroom5.com/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "了解影响信用评分的因素",
+    "href": "https://support.creditkarma.com/s/article/Intuit-Credit-Karma-on-Claude-and-ChatGPT",
+    "name": "Intuit Credit Karma",
+    "url": "https://anthropic.mcp.creditkarma.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中分析合作伙伴数据与生态信息",
+    "href": "https://help.crossbeam.com/en/articles/12601327-crossbeam-mcp-server-beta",
+    "name": "Crossbeam",
+    "url": "https://mcp.crossbeam.com",
+    "urlHelp": []
+  },
+  {
+    "description": "获取加密资产实时价格、订单、图表等信息",
+    "href": "https://mcp.crypto.com/docs",
+    "name": "Crypto.com",
+    "url": "https://mcp.crypto.com/market-data/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问附有来源链接的财务基本面数据与关键指标",
+    "href": "https://docs.daloopa.com/docs/daloopa-mcp#/",
+    "name": "Daloopa",
+    "url": "https://mcp.daloopa.com/server/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用集成 Unity Catalog 和 Mosaic AI 的托管 MCP 服务器",
+    "href": "https://docs.databricks.com/aws/en/generative-ai/mcp/connect-external-services",
+    "name": "Databricks",
+    "urlHelp": [
+      "https://docs.databricks.com/aws/en/generative-ai/mcp/connect-external-services"
+    ]
+  },
+  {
+    "description": "利用 Datadog 遥测数据排查和解决问题",
+    "href": "https://docs.datadoghq.com/bits_ai/mcp_server/",
+    "name": "Datadog",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 Claude 管理并购数据室",
+    "href": "https://app.global.datasite.com/dev-portal/guides/mcp-server",
+    "name": "Datasite",
+    "url": "https://mcp.global.datasite.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "面向法律团队的结构化合同审查工具",
+    "href": "https://help.definely.com/en/articles/634922-definely-connector-for-claude-user-guide",
+    "name": "Definely",
+    "url": "https://mcp.app.definely.com",
+    "urlHelp": []
+  },
+  {
+    "description": "通过提示导入、编辑或创建视频",
+    "href": "https://help.descript.com/hc/en-us/articles/45008080343053-Connect-Descript-to-Claude",
+    "name": "Descript",
+    "url": "https://api.descript.com/v2/mcp/claude",
+    "urlHelp": []
+  },
+  {
+    "description": "在工作中使用整理后的结构化美国一手法律资料",
+    "href": "https://app.descrybe.com/connect/docs",
+    "name": "Descrybe Legal Engine",
+    "url": "https://mcp.descrybe.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Digits 跟踪和分析财务状况",
+    "href": "https://help.digits.com/business-connections/digits-mcp-claude",
+    "name": "Digits",
+    "url": "https://api.digits.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "借助 D&B Commercial Graph 执行风险管理工作流",
+    "href": "https://view.highspot.com/viewer/2b3c0624606b4d64eb092106b47ad14c",
+    "name": "D&B Risk Analytics",
+    "url": "https://agents.riskanalytics.dnb.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 DocuSeal 签署、发送和管理文档",
+    "href": "https://www.docuseal.com/guides/integrate-with-ai-agents-using-mcp",
+    "name": "DocuSeal",
+    "url": "https://docuseal.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将零散反馈转化为有客户证据支持的决策",
+    "href": "https://developers.dovetail.com/docs/mcp",
+    "name": "Dovetail",
+    "url": "https://dovetail.com/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析湖仓数据并获取见解",
+    "href": "https://docs.dremio.com/cloud/sonar/mcp-server/",
+    "name": "Dremio Cloud",
+    "urlHelp": [
+      "https://docs.dremio.com/cloud/sonar/mcp-server/"
+    ]
+  },
+  {
+    "description": "从整合后的客户反馈中获取答案",
+    "href": "https://helpcenter.enterpret.com/en/articles/12665166-wisdom-mcp-server",
+    "name": "Enterpret",
+    "url": "https://wisdom-api.enterpret.com/server/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过对话管理整个合作伙伴计划",
+    "href": "https://mcp.eulerapp.com/public/docs",
+    "name": "Euler",
+    "url": "https://mcp.eulerapp.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中搜索和探索 Everlaw 数据库",
+    "href": "https://support.everlaw.com/hc/en-us/articles/50274473477915",
+    "name": "Everlaw",
+    "url": "https://api.everlaw.com/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "规划旅行、航班和酒店",
+    "href": "https://www.expedia.com/playground/mcp/doc/",
+    "name": "Expedia",
+    "url": "https://www.expedia.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "发现全球现场娱乐活动",
+    "href": "https://developer.feverup.com/",
+    "name": "Fever Event Discovery",
+    "url": "https://data-search.apigw.feverup.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取全面的金融市场数据",
+    "href": "https://financialmodelingprep.com/developer/docs/mcp-server?utm_source=claude",
+    "name": "FMP",
+    "url": "https://financialmodelingprep.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将真实买家意向信号用于 AI 工作流",
+    "href": "https://documentation.g2.com/docs/g2-mcp-server",
+    "name": "G2",
+    "url": "https://mcp.g2.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "观测数据和 AI 系统",
+    "href": "https://docs.getmontecarlo.com/docs/mcp-server",
+    "name": "Monte Carlo",
+    "url": "https://mcp.getmontecarlo.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "为 Claude 和其他 AI 工具提供企业上下文",
+    "href": "https://docs.glean.com/administration/platform/mcp/about",
+    "name": "Glean",
+    "urlHelp": [
+      "https://docs.glean.com/administration/platform/mcp/about"
+    ]
+  },
+  {
+    "description": "提供即时配送服务",
+    "href": "https://glovoapp.com/docs/en/legal/mcp/",
+    "name": "Glovo",
+    "url": "https://api.glovoapp.com/discovery-mcp/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "构建 GoCardless 支付 API 集成",
+    "href": "https://developer.gocardless.com/developer-tools/mcp/",
+    "name": "GoCardless",
+    "url": "https://mcp.gocardless.com",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索域名并检查可注册状态",
+    "href": "https://developer.godaddy.com/mcp",
+    "name": "GoDaddy",
+    "url": "https://api.godaddy.com/v1/domains/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将 AI 分析结果转成文档",
+    "href": "https://www.notion.so/goodnotes-team/Goodnotes-MCP-Server-Documentation-320b740273d28187a23ad52780a37620",
+    "name": "Goodnotes",
+    "url": "https://claude-mcp-api.ml.goodnotes.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 BigQuery 为智能体提供深入分析",
+    "href": "https://cloud.google.com/bigquery/docs/use-bigquery-mcp",
+    "name": "Google Cloud BigQuery",
+    "url": "https://bigquery.googleapis.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "适用于 Google Compute Engine 的 MCP 服务器",
+    "href": "https://cloud.google.com/docs",
+    "name": "Google Compute Engine",
+    "url": "https://compute.googleapis.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "管理日程并协调会议",
+    "href": "https://developers.google.com/workspace/calendar",
+    "name": "Google Calendar",
+    "url": "https://calendarmcp.googleapis.com/mcp/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、读取和上传文件",
+    "href": "https://developers.google.com/workspace/drive",
+    "name": "Google Drive",
+    "url": "https://drivemcp.googleapis.com/mcp/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "起草邮件回复、总结邮件会话并搜索收件箱",
+    "href": "https://developers.google.com/workspace/gmail",
+    "name": "Gmail",
+    "url": "https://gmailmcp.googleapis.com/mcp/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索政府采购和支出数据",
+    "href": "https://docs.govtribe.com/user-guide/integrations/govtribe-mcp",
+    "name": "GovTribe",
+    "url": "https://govtribe.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "利用会议内容开展工作",
+    "href": "https://developers.grain.com/mcp",
+    "name": "Grain",
+    "url": "https://api.grain.com/_/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "发现各类资助机会",
+    "href": "https://grantedai.com/mcp",
+    "name": "Granted",
+    "url": "https://grantedai.com/api/mcp/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "实时访问专家知识",
+    "href": "https://clapi-developer.guidepoint.io/mcp/docs",
+    "name": "Guidepoint",
+    "url": "https://clapi.guidepoint.io/mcp-server/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查询和分析 Gusto 数据",
+    "href": "https://docs.gusto.com/app-integrations/docs/mcp",
+    "name": "Gusto",
+    "url": "https://mcp.api.gusto.com/anthropic",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 AI 分析 B2B 数据与商业情报",
+    "href": "https://phoenix.hginsights.com/docs/intro",
+    "name": "Phoenix by HG Insights",
+    "url": "https://phoenix.hginsights.com/api/ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 CRM 数据对话获取个性化见解",
+    "href": "https://knowledge.hubspot.com/integrations/set-up-and-use-the-hubspot-connector-for-claude",
+    "name": "HubSpot",
+    "url": "https://mcp.hubspot.com/anthropic",
+    "urlHelp": []
+  },
+  {
+    "description": "获取约五万个行业的财务、风险数据和分析",
+    "href": "https://help.ibisworld.com/en/articles/14627556-ibisworld-mcp-server-documentation",
+    "name": "IBISWorld",
+    "url": "https://mcp.ibisworld.com",
+    "urlHelp": []
+  },
+  {
+    "description": "分析和管理全球市场中的交易与投资",
+    "href": "https://www.interactivebrokers.com/lib/cstools/faq/#/content/1442566213",
+    "name": "Interactive Brokers (IBKR)",
+    "url": "https://api.ibkr.com/v1/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析美国固定收益交易及参考数据",
+    "href": "https://www.ice.com/ieoauoau",
+    "name": "ICE Data Services",
+    "url": "https://fids-mcp.ice.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接、控制和自动化处理一千多个应用",
+    "href": "https://ift.tt/ai_assistants",
+    "name": "IFTTT",
+    "url": "https://ifttt.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用临床试验软件和研究中心排名工具",
+    "href": "https://learn.medidata.com/en-US/bundle/mcp-server-documentation/page/medidata_mcp_server_documentation.html",
+    "name": "Medidata",
+    "url": "https://mcp.imedidata.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Indeed 上搜索工作",
+    "href": "https://docs.indeed.com/mcp",
+    "name": "Indeed",
+    "url": "https://mcp.indeed.com/claude/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "提供生鲜杂货等商品配送，最快约 30 分钟送达",
+    "href": "https://docs.instacart.com/mcp_servers/",
+    "name": "Instacart",
+    "url": "https://fig-mcp.instacart.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问 Intercom 数据以了解客户",
+    "href": "https://developers.intercom.com/docs/guides/mcp",
+    "name": "Intercom",
+    "url": "https://mcp.intercom.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "创建营销活动",
+    "href": "https://mailchimp.com/help/use-mailchimp-connector-claude",
+    "name": "Intuit Mailchimp",
+    "url": "https://ai-inc.mailchimp.com/claude/mcp/v2",
+    "urlHelp": []
+  },
+  {
+    "description": "简化企业财务管理",
+    "href": "https://quickbooks.intuit.com/learn-support/en-us/help-article/accounting-bookkeeping/use-quickbooks-connector-claude/L3YBlo6Ht_US_en_US?uid=mmzgz9ag",
+    "name": "Intuit QuickBooks",
+    "url": "https://ai-inc.quickbooks.intuit.com/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "估算退税金额并联系税务专家",
+    "href": "https://ttlc.intuit.com/turbotax-support/en-us/help-article/tax-return/access-turbotax-tools-claude",
+    "name": "Intuit TurboTax",
+    "url": "https://ai-inc.turbotax.intuit.com/358A1C1B-F73B-46A7-B130-4B14916E6843/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用自然语言搜索并快速获取合同答案",
+    "href": "https://support.ironcladapp.com/hc/en-us/articles/39887091143319-Ironclad-MCP-Server",
+    "name": "Ironclad Contracts",
+    "urlHelp": []
+  },
+  {
+    "description": "通过统一连接安全访问各类工具",
+    "href": "https://docs.jentic.com/guides/mcp/remote-mcp/",
+    "name": "Jentic",
+    "url": "https://api.jentic.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接和使用工具箱中的 PlayMCP 服务器",
+    "href": "https://www.notion.so/2189b97b4888803dbbdcef264e7eff58",
+    "name": "PlayMCP",
+    "url": "https://playmcp.kakao.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查询各类 S&P Global 数据集",
+    "href": "https://docs.kensho.com/llmreadyapi/mcp",
+    "name": "S&P Global",
+    "url": "https://kfinance.kensho.com/integrations/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和探索受监管软件的生命周期数据",
+    "href": "https://docs.ketryx.com/reference/ketryx-mcp-server",
+    "name": "Ketryx",
+    "url": "https://app.ketryx.com/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中搜索航班",
+    "href": "https://mcp-install-instructions.alpic.cloud/servers/kiwi-com-flight-search",
+    "name": "Kiwi.com",
+    "url": "https://mcp.kiwi.com",
+    "urlHelp": []
+  },
+  {
+    "description": "使用实时 Klaviyo 数据进行报告、规划和创作",
+    "href": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+    "name": "Klaviyo",
+    "url": "https://mcp.klaviyo.com/mcp?include-mcp-app=true",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、比较和预订全球航班、酒店及机酒套餐",
+    "href": "https://mcp.lastminute.com/docs",
+    "name": "lastminute.com",
+    "url": "https://mcp.lastminute.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索覆盖 160 多个司法辖区的 2300 多万份法律文档",
+    "href": "https://legaldatahunter.com/docs",
+    "name": "Legal Data Hunter",
+    "url": "https://legaldatahunter.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取经人工核验的高质量翻译",
+    "href": "https://support.lilt.com/kb/LILT-mcp",
+    "name": "LILT",
+    "url": "https://mcp.lilt.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析 AI 可见度和本地搜索表现",
+    "href": "https://github.com/local-falcon/mcp",
+    "name": "Local Falcon",
+    "url": "https://mcp.localfalcon.com",
+    "urlHelp": []
+  },
+  {
+    "description": "访问覆盖多种资产类别的数据和分析",
+    "href": "https://www.lseg.com/en/solutions/ai-finance-solutions/anthropic",
+    "name": "LSEG",
+    "url": "https://api.analytics.lseg.com/lfa/mcp/server-cl",
+    "urlHelp": []
+  },
+  {
+    "description": "管理文档、发送签名请求并将 Markdown 转为 PDF",
+    "href": "https://github.com/luminpdf/lumin-mcp-server",
+    "name": "Lumin",
+    "url": "https://mcp.luminpdf.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查找和补充 B2B 联系人与企业信息",
+    "href": "https://docs.lusha.com/mcp-docs",
+    "name": "Lusha",
+    "url": "https://mcp.lusha.com/mcp/claude",
+    "urlHelp": []
+  },
+  {
+    "description": "讨论和迭代 Magic Patterns 设计",
+    "href": "https://www.magicpatterns.com/docs/documentation/features/mcp-server/overview",
+    "name": "Magic Patterns",
+    "url": "https://mcp.magicpatterns.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将 Claude 用作邮件营销助手",
+    "href": "https://developers.mailerlite.com/mcp/#how-mcp-works",
+    "name": "MailerLite",
+    "url": "https://mcp.mailerlite.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "运行 Make 场景并管理 Make 账户",
+    "href": "https://developers.make.com/mcp-server/",
+    "name": "Make",
+    "url": "https://mcp.make.com",
+    "urlHelp": []
+  },
+  {
+    "description": "检查链接、电话号码和邮件是否涉及诈骗",
+    "href": "https://help.malwarebytes.com/hc/en-us/articles/47985341083675-Using-Malwarebytes-in-Claude",
+    "name": "Malwarebytes",
+    "url": "https://scamguard.malwarebytes.com/claude/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "浏览音乐榜单和个性化音乐推荐",
+    "href": "https://tech.kakaoent.com/ai/using-melon-mcp-server-en/",
+    "name": "Melon",
+    "url": "https://mcp.melon.com/mcp/",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、分析和了解 Mercury 财务数据",
+    "href": "https://docs.mercury.com/docs/connecting-mercury-mcp",
+    "name": "Mercury",
+    "url": "https://mcp.mercury.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查询和探索 Metabase 数据",
+    "href": "https://www.metabase.com/docs/latest/ai/mcp",
+    "name": "Metabase",
+    "urlHelp": [
+      "https://www.metabase.com/docs/latest/ai/mcp"
+    ]
+  },
+  {
+    "description": "搜索 Microsoft 官方文档以辅助开发",
+    "href": "https://learn.microsoft.com/en-us/training/support/mcp",
+    "name": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、阅读和编辑文档",
+    "href": "https://www.mintlify.com/docs/ai/mintlify-mcp",
+    "name": "Mintlify",
+    "url": "https://mcp.mintlify.com",
+    "urlHelp": []
+  },
+  {
+    "description": "分析、查询和管理 Mixpanel 数据",
+    "href": "https://docs.mixpanel.com/docs/features/mcp",
+    "name": "Mixpanel",
+    "url": "https://mcp.mixpanel.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取风险见解、分析和决策情报",
+    "href": "https://www.moodys.com/web/en/us/genai/model-context-protocol.html",
+    "name": "Moody's",
+    "url": "https://api.moodys.com/genai-ready-data/m1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取最新投资和市场见解",
+    "href": "https://developer.morningstar.com/direct-web-services/documentation/mcp-server/morningstar-mcp-server",
+    "name": "Morningstar",
+    "url": "https://mcp.morningstar.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过数据获取答案",
+    "href": "https://motherduck.com/docs/sql-reference/mcp/",
+    "name": "MotherDuck",
+    "url": "https://api.motherduck.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析 Meta 广告素材和竞争对手广告库",
+    "href": "https://help.motionapp.com/en/articles/14315735-motion-mcp",
+    "name": "Motion Creative Analytics",
+    "url": "https://projects.motionapp.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "将数据转化为见解",
+    "href": "https://www.msci.com/downloads/web/msci-com/data-and-analytics/private-asset-solutions/ai-for-private-markets/msci-mcp-msci-connector-user-guide.pdf",
+    "name": "MSCI",
+    "url": "https://mcp.msci.com/mcp/v1.0/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接 NetSuite 数据并进行分析",
+    "href": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_7200233106.html",
+    "name": "NetSuite",
+    "urlHelp": [
+      "https://system.netsuite.com/mcp/mcpinfo.nl"
+    ]
+  },
+  {
+    "description": "使用面向生物学构建的 AI 智能体",
+    "href": "https://docs.owkin.com/core-features-and-usage",
+    "name": "Owkin",
+    "url": "https://mcp.k.owkin.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "管理事件、服务和值班安排",
+    "href": "https://developer.pagerduty.com/docs/mcp-tooling-remote-server",
+    "name": "PagerDuty",
+    "url": "https://mcp.pagerduty.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "创建、发送、签署和跟踪文档",
+    "href": "https://developers.pandadoc.com/docs/how-to-use-the-pandadoc-mcp-server",
+    "name": "PandaDoc",
+    "url": "https://mcp.pandadoc.com/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析业务数据",
+    "href": "https://kb.pigment.com/docs/mcp-server",
+    "name": "Pigment",
+    "urlHelp": [
+      "https://kb.pigment.com/docs/mcp-server"
+    ]
+  },
+  {
+    "description": "将 PitchBook 数据融入工作流程",
+    "href": "https://help.pitchbook.com/s/article/PitchBook-Premium-for-Claude-by-Anthropic",
+    "name": "PitchBook Premium",
+    "url": "https://premium.mcp.pitchbook.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "整合各类数据并连接 Claude",
+    "href": "https://intercom.help/polar-app/en/collections/17268490-polar-mcp",
+    "name": "Polar Analytics",
+    "url": "https://api.polaranalytics.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "向编程智能体提供 API 上下文",
+    "href": "https://github.com/postmanlabs/postman-mcp-server",
+    "name": "Postman",
+    "url": "https://mcp.postman.com/minimal",
+    "urlHelp": []
+  },
+  {
+    "description": "管理虚拟卡并跟踪消费模式",
+    "href": "https://developers.privacy.com/docs/mcp-server",
+    "name": "Privacy.com",
+    "url": "https://mcp.privacy.com",
+    "urlHelp": []
+  },
+  {
+    "description": "获取企业研究所需的金融数据与 AI 基础设施",
+    "href": "https://mcp.quartr.com/docs",
+    "name": "Quartr",
+    "url": "https://mcp.quartr.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析通话并发现错失的机会",
+    "href": "https://support.quo.com/core-concepts/integrations/mcp",
+    "name": "Quo",
+    "url": "https://mcp.quo.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索、访问和分析 Ramp 财务数据",
+    "href": "https://docs.ramp.com/developer-api/v1/guides/ramp-mcp-remote",
+    "name": "Ramp",
+    "url": "https://ramp-mcp-remote.ramp.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和分析五万多家企业的 Ramp 支出数据",
+    "href": "https://docs.ramp.com/developer-api/v1/ramp-data",
+    "name": "Ramp Data",
+    "url": "https://mcp.ramp.com/ramp-data/anthropic/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问实时金融数据",
+    "href": "https://docs.bigdata.com/mcp-reference",
+    "name": "Bigdata.com",
+    "url": "https://mcp.bigdata.com/",
+    "urlHelp": []
+  },
+  {
+    "description": "将 Claude 用作 Razorpay 控制台助手",
+    "href": "https://razorpay.com/docs/mcp-server/?preferred-country=IN",
+    "name": "Razorpay",
+    "url": "https://mcp.razorpay.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "即时查找和预订餐厅",
+    "href": "https://www.americanexpress.com/content/dam/amex/en-us/credit-cards/benefits/resy/resy_mcp_app_claude.pdf",
+    "name": "Resy",
+    "url": "https://apigw.americanexpress.com/dining/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 AI 智能体构建生产应用并管理 Retool",
+    "href": "https://docs.retool.com/education/labs/resources/mcp",
+    "name": "Retool",
+    "urlHelp": [
+      "https://docs.retool.com/education/labs/resources/mcp"
+    ]
+  },
+  {
+    "description": "使用自然语言查询实时总账和财务数据",
+    "href": "https://docs.api.rillet.com/docs/mcp",
+    "name": "Rillet",
+    "url": "https://api.rillet.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用大型定量模型开展科学发现",
+    "href": "https://docs.aisim.sandboxaq.com/",
+    "name": "SandboxAQ",
+    "urlHelp": [
+      "https://docs.aisim.sandboxaq.com/"
+    ]
+  },
+  {
+    "description": "获取 SEO、市场数据和品牌可见度见解",
+    "href": "https://developer.semrush.com/api/introduction/semrush-mcp/",
+    "name": "Semrush",
+    "url": "https://mcp.semrush.com/claude/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "构建、管理和分析 Shopify 商店",
+    "href": "https://help.shopify.com/en/manual/apps/connecting-ai-tools",
+    "name": "Shopify",
+    "url": "https://setup.shopify.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Sigma 查询、搜索和探索数据",
+    "href": "https://help.sigmacomputing.com/docs/use-sigma-mcp-server",
+    "name": "Sigma",
+    "urlHelp": [
+      "https://help.sigmacomputing.com/docs/use-sigma-mcp-server"
+    ]
+  },
+  {
+    "description": "直接通过 Claude 自动化处理电子签名工作流",
+    "href": "https://docs.signnow.com/docs/signnow/mcp-server",
+    "name": "SignNow",
+    "url": "https://mcp-server.signnow.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取实时网站、移动应用和市场数据",
+    "href": "https://docs.similarweb.com/api-v5/mcp/mcp-setup",
+    "name": "Similarweb",
+    "url": "https://mcp.similarweb.com",
+    "urlHelp": []
+  },
+  {
+    "description": "创建和迭代用于 SketchUp 的三维模型",
+    "href": "https://help.sketchup.com/en/sketchup-claude-connector",
+    "name": "Trimble SketchUp",
+    "url": "https://api.sketchup.com/mcp/v1/sketchup/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "发送消息、创建画布并获取 Slack 数据",
+    "href": "https://docs.slack.dev/ai/mcp-server",
+    "name": "Slack",
+    "url": "https://mcp.slack.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 Claude 分析和管理 Smartsheet 数据",
+    "href": "https://help.smartsheet.com/articles/2483663-use-smartsheet-connector-claude",
+    "name": "Smartsheet",
+    "urlHelp": [
+      "https://help.smartsheet.com/articles/2483656-install-smartsheet-connector-claude#toc-get-started"
+    ]
+  },
+  {
+    "description": "检索结构化和非结构化数据",
+    "href": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "name": "Snowflake",
+    "urlHelp": [
+      "https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-find"
+    ]
+  },
+  {
+    "description": "搜索、起草专利并制作专利对照图表",
+    "href": "https://api.solveintelligence.com/guide/mcp/intro/",
+    "name": "Solve Intelligence",
+    "url": "https://api.solveintelligence.com/mcp/",
+    "urlHelp": []
+  },
+  {
+    "description": "向 Claude 提供企业规模的完整代码库上下文",
+    "href": "https://sourcegraph.com/docs/api/mcp#sourcegraph-mcp-server",
+    "name": "Sourcegraph",
+    "urlHelp": [
+      "https://sourcegraph.com/docs/api/mcp#sourcegraph-mcp-server"
+    ]
+  },
+  {
+    "description": "搜索 Splice 音色目录并构建声音组合",
+    "href": "https://support.splice.com/en/articles/14442749-getting-started-with-the-splice-mcp-server-beta",
+    "name": "Splice",
+    "url": "https://mcp.splice.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取个性化音乐和播客推荐",
+    "href": "https://support.spotify.com/",
+    "name": "Spotify",
+    "url": "https://mcp-gateway-external-pilot.spotify.net/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取药物和临床试验情报",
+    "href": "https://adisinsight-mcp.springer.com",
+    "name": "AdisInsight",
+    "url": "https://adisinsight-mcp.springer.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过对话发现本地餐饮并下单",
+    "href": "https://goose-docs.ai/docs/mcp/cash-app-mcp/",
+    "name": "Order by Cash App",
+    "url": "https://connect.squareup.com/v2/mcp/cash-app",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和管理交易、商户及支付数据",
+    "href": "https://developer.squareup.com/docs/mcp",
+    "name": "Square",
+    "url": "https://mcp.squareup.com/sse",
+    "urlHelp": []
+  },
+  {
+    "description": "在 StubHub 门票交易平台查找门票",
+    "href": "https://support.stubhub.com/articles/61000310240-using-stubhub-in-chatgpt-and-claude",
+    "name": "StubHub",
+    "url": "https://open-ai-app.stubhub.net/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "适用于 Gmail 和 Outlook 的邮件应用",
+    "href": "https://help.superhuman.com/hc/en-us/articles/49810745762067-Superhuman-Mail-MCP-Server-Beta",
+    "name": "Superhuman Mail",
+    "url": "https://mcp.mail.superhuman.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "连接 Google Ads、Facebook Ads 等两百多个营销平台",
+    "href": "https://mcp.supermetrics.com/docs",
+    "name": "Supermetrics Marketing Analytics",
+    "url": "https://mcp.supermetrics.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "设计问卷、收集回答并分析结果",
+    "href": "https://www.surveymonkey.com/apps/BKcduxPnkCN4NFCRokUYCw_3D_3D/details/",
+    "name": "SurveyMonkey",
+    "url": "https://mcp.surveymonkey.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查找和预约附近的 Taskrabbit 服务",
+    "href": "https://docs.google.com/document/d/1tWm33lJx4JdwN-Joqk7vydxQHaRGLod68wdS4k_hY9w/edit?tab=t.edb6z98lya3r#heading=h.2j0sep9c1ren",
+    "name": "Taskrabbit Booking Assistance",
+    "url": "https://mcp.taskrabbit.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "让 AI 智能体访问网络",
+    "href": "https://docs.tavily.com/documentation/mcp",
+    "name": "Tavily",
+    "url": "https://mcp.tavily.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取由专家提供的深入见解",
+    "href": "https://www.thirdbridge.com/en-us/data-solutions/mcp",
+    "name": "Third Bridge",
+    "url": "https://ai.thirdbridge.com/mcp/sse",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中使用 Thomson Reuters CoCounsel Legal",
+    "href": "https://legal-mcp.thomsonreuters.com/docs/connector-guide",
+    "name": "CoCounsel Legal",
+    "url": "https://legal-mcp.thomsonreuters.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 中查找并聘请本地专业人员",
+    "href": "https://docs.google.com/document/d/1RmGske5ktjAi9d7Ayok_yOv3a6Z2RDBSxIlX7aC5OEM/edit?usp=sharing",
+    "name": "Thumbtack",
+    "url": "https://mcp.thumbtack.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Tines 中快速安全部署服务器",
+    "href": "https://www.tines.com/docs/actions/templates/mcp-server/",
+    "name": "Tines",
+    "urlHelp": [
+      "https://www.tines.com/docs/actions/templates/mcp-server/"
+    ]
+  },
+  {
+    "description": "与 Claude 一起草绘、绘画和制作图表",
+    "href": "https://tldraw.notion.site/tldraw-mcp-app",
+    "name": "tldraw",
+    "url": "https://tldraw-mcp-app.tldraw.workers.dev/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "根据 Tripadvisor 评价寻找合适的酒店",
+    "href": "https://www.tripadvisor.com",
+    "name": "Tripadvisor",
+    "url": "https://production.ai-mcp-extensibility-prd.tamg.cloud/ogMvjY4De1G7CiHanMOAgddl/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索航班、规划旅行并管理预订",
+    "href": "https://mcp.turkishtechlab.com/",
+    "name": "Turkish Airlines",
+    "url": "https://mcp-app.turkishtechlab.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "构建通信和客户互动功能",
+    "href": "https://www.twilio.com/docs/ai/mcp",
+    "name": "Twilio",
+    "url": "https://mcp.twilio.com/docs",
+    "urlHelp": []
+  },
+  {
+    "description": "获取各种 Uber 车型的价格和到达时间估算",
+    "href": "https://www.uber.com/legal/en/",
+    "name": "Uber",
+    "url": "https://mcp.uber.com/claude/rides-3p/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "探索餐厅和菜品",
+    "href": "https://www.ubereats.com",
+    "name": "Uber Eats",
+    "url": "https://mcp.ubereats.com/eats-claude/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和探索技能学习资源",
+    "href": "https://business-support.udemy.com/hc/en-us/articles/34213384429335-How-to-Integrate-the-Udemy-Business-MCP-Server-With-Your-AI-Tool#h_01K9CA42YGCV1AVXPY1RKABKP1",
+    "name": "Udemy Business",
+    "url": "https://api.udemy.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索和管理 Pylon 客户支持问题",
+    "href": "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server?lang=en",
+    "name": "Pylon",
+    "url": "https://mcp.usepylon.com/",
+    "urlHelp": []
+  },
+  {
+    "description": "通过提问获取 Verisk 承保见解",
+    "href": "https://www.verisk.com/resources/verisk-underwriting-intelligence/",
+    "name": "Verisk Underwriting Intelligence",
+    "url": "https://gatewaymcp.verisk.com/underwriting/intelligencemcp/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "使用自然语言进行 XactRestore 估价",
+    "href": "https://veriskpropertyestimatingsolutions.my.site.com/s/article/2622",
+    "name": "Verisk XactRestore",
+    "url": "https://xactrestore-xactremodelserver-usw2-prod.propsol.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "预订世界各地的旅行体验",
+    "href": "https://docs.viator.com/partner-api/mcp/",
+    "name": "Viator",
+    "url": "https://exp-app-mcp.prod.ep.viator.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析人员、生产力和业务影响",
+    "href": "https://docs.visier.com/developer/agents/mcp/mcp-server.htm",
+    "name": "Visier",
+    "urlHelp": [
+      "https://docs.visier.com/developer/agents/mcp/mcp-server-set-up.htm"
+    ]
+  },
+  {
+    "description": "管理 Webflow 内容系统、页面、资源和网站",
+    "href": "https://developers.webflow.com/mcp/v1.0.0/reference/overview",
+    "name": "Webflow",
+    "url": "https://mcp.webflow.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用精确的实时计算与知识",
+    "href": "https://www.wolfram.com/artificial-intelligence/mcp-service/",
+    "name": "Wolfram",
+    "url": "https://agenttools.wolfram.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 AI 安全管理 WordPress.com 网站",
+    "href": "https://developer.wordpress.com/docs/mcp/",
+    "name": "WordPress.com",
+    "url": "https://public-api.wordpress.com/wpcom/v2/mcp/v1",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Workable 中使用招聘和人力资源 AI 助手",
+    "href": "https://workable.readme.io/reference/workable-mcp-server",
+    "name": "Workable",
+    "url": "https://mcp.workable.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "自动化处理工作流并连接企业应用",
+    "href": "https://docs.workato.com/en/mcp.html",
+    "name": "Workato",
+    "urlHelp": [
+      "https://app.workato.com/ai_hub/mcp"
+    ]
+  },
+  {
+    "description": "快速发现合适的 Wyndham 酒店",
+    "href": "https://www.wyndhamhotels.com/mcp-doc",
+    "name": "Wyndham Hotels and Resorts",
+    "url": "https://mcp.wyndhamhotels.com/claude/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在对话中访问 Xero 财务数据",
+    "href": "https://central.xero.com/s/article/Connect-Xero-using-the-Xero-connector-in-Claude?userregion=true",
+    "name": "Xero",
+    "url": "https://mcp.xero.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取实时 Yardi 数据和分析见解",
+    "href": "https://help.virtuoso.ai/en/articles/13679727-yardi-virtuoso-mcp-technical-documentation-guide",
+    "name": "Yardi Virtuoso",
+    "url": "https://mcp.virtuoso.ai/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过对话自动化处理数千个应用之间的工作流",
+    "href": "https://docs.zapier.com/mcp/home",
+    "name": "Zapier",
+    "url": "https://mcp.zapier.com/api/v1/connect",
+    "urlHelp": []
+  },
+  {
+    "description": "简化求职搜索",
+    "href": "https://api.ziprecruiter.com/mcp/docs",
+    "name": "ZipRecruiter",
+    "url": "https://api.ziprecruiter.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Zoho Books MCP 处理财务工作",
+    "href": "https://help.zoho.com/portal/en/kb/mcp/getting-started/articles/zoho-mcp-help-documentation-29-9-2025",
+    "name": "Zoho Books",
+    "urlHelp": []
+  },
+  {
+    "description": "适用于 Zoho CRM 工作流的 MCP 服务器",
+    "href": "https://help.zoho.com/portal/en/kb/mcp/getting-started/articles/zoho-mcp-help-documentation-29-9-2025",
+    "name": "Zoho CRM",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Zoho Desk MCP 自动化处理客户支持",
+    "href": "https://help.zoho.com/portal/en/kb/mcp/getting-started/articles/zoho-mcp-help-documentation-29-9-2025",
+    "name": "Zoho Desk",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Zoho Projects MCP 自动化处理任务与项目",
+    "href": "https://help.zoho.com/portal/en/kb/mcp/getting-started/articles/zoho-mcp-help-documentation-29-9-2025",
+    "name": "Zoho Projects",
+    "urlHelp": []
+  },
+  {
+    "description": "利用市场拓展情报补充联系人和客户信息",
+    "href": "https://docs.zoominfo.com/docs/zi-api-mcp-overview/",
+    "name": "ZoomInfo",
+    "url": "https://mcp.zoominfo.com/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索美国政府合同数据",
+    "href": "https://tango.makegov.com/docs/mcp/",
+    "name": "Tango",
+    "url": "https://govcon.dev/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "录制屏幕并自动收集问题上下文",
+    "href": "https://jam.dev/docs/debug-a-jam/mcp",
+    "name": "Jam",
+    "url": "https://mcp.jam.dev/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "智能搜索、查询和调试错误",
+    "href": "https://docs.sentry.io/product/sentry-mcp/",
+    "name": "Sentry",
+    "url": "https://mcp.sentry.dev/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "管理 Stytch 项目",
+    "href": "https://stytch.com/docs/workspace-management/stytch-mcp",
+    "name": "Stytch",
+    "url": "https://mcp.stytch.dev/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "记录笔记并构建个人知识库",
+    "href": "https://documents.craft.me/jWeCVJrSfxFRuA",
+    "name": "Craft",
+    "url": "https://mcp.craft.do/my/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Claude 对话中使用营养数据",
+    "href": "https://alma.food/mcp",
+    "name": "Alma",
+    "url": "https://mcp.alma.food",
+    "urlHelp": []
+  },
+  {
+    "description": "通过自然语言查询印度官方统计数据",
+    "href": "https://www.datainnovation.mospi.gov.in/mospi-mcp",
+    "name": "MoSPI",
+    "url": "https://mcp.mospi.gov.in/",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Adobe 专业工具构思、创作和交付内容",
+    "href": "https://developer.adobe.com/adobe-for-creativity/",
+    "name": "Adobe for creativity",
+    "url": "https://adobe-creativity.adobe.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "理解和排查客户旅程与营销活动",
+    "href": "https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/ajo-mcp",
+    "name": "Adobe Journey Optimizer",
+    "url": "https://ajo-mcp.adobe.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Adobe 提供的营销活动和受众见解",
+    "href": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:5799e952-be87-4829-b0c4-6f82ca8e8b8b",
+    "name": "Adobe Marketing Agent",
+    "url": "https://aep-ai-ama.adobe.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "市场拓展助手",
+    "href": "https://www.commonroom.io/docs/using-common-room/common-room-for-claude-connector-and-plugin/",
+    "name": "Common Room",
+    "url": "https://mcp.commonroom.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 Claude 探索客户数据并获取见解",
+    "href": "https://docs.customer.io/ai/mcp-server/",
+    "name": "Customer.io",
+    "urlHelp": [
+      "https://docs.customer.io/ai/mcp-server/"
+    ]
+  },
+  {
+    "description": "生成、管理和更新 Eraser 图表与文件",
+    "href": "https://docs.eraser.io/docs/mcp",
+    "name": "Eraser",
+    "url": "https://app.eraser.io/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Harness 平台构建、交付和保护应用",
+    "href": "https://github.com/harness/mcp-server",
+    "name": "Harness.io",
+    "url": "https://mcp.harness.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查询和探索可观测性数据与服务等级目标",
+    "href": "https://docs.honeycomb.io/troubleshoot/product-lifecycle/beta/mcp/",
+    "name": "Honeycomb",
+    "url": "https://mcp.honeycomb.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "查看和管理 incident.io 中的事务",
+    "href": "https://docs.incident.io/ai/remote-mcp",
+    "name": "incident.io",
+    "url": "https://mcp.incident.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "访问和运行 n8n 工作流",
+    "href": "https://docs.n8n.io/advanced-ai/mcp/mcp_tools_reference/",
+    "name": "n8n",
+    "urlHelp": [
+      "https://docs.n8n.io/advanced-ai/mcp/mcp_tools_reference/"
+    ]
+  },
+  {
+    "description": "连接 Pendo 以分析产品和用户",
+    "href": "https://support.pendo.io/hc/en-us/articles/41102236924955",
+    "name": "Pendo",
+    "urlHelp": [
+      "https://support.pendo.io/hc/en-us/articles/41102236924955"
+    ]
+  },
+  {
+    "description": "在 Sanity 中创建、查询和管理结构化内容",
+    "href": "https://www.sanity.io/docs/ai/mcp-server",
+    "name": "Sanity",
+    "url": "https://mcp.sanity.io",
+    "urlHelp": []
+  },
+  {
+    "description": "安全检索联合数据源中的数据",
+    "href": "https://docs.starburst.io/starburst-galaxy/ai-workflows/mcp-server.html",
+    "name": "Starburst",
+    "urlHelp": [
+      "https://docs.starburst.io/starburst-galaxy/ai-workflows/mcp-server.html"
+    ]
+  },
+  {
+    "description": "获取 Meet、Zoom 和 Teams 的会议记录与笔记",
+    "href": "https://tldv.notion.site/tl-dv-MCP-Official-Documentation-330cce15f3ba80638f5ac0253e3b8fd4?source=copy_link",
+    "name": "tldv",
+    "url": "https://mcp.tldv.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "优化软件和 AI 合同支出",
+    "href": "https://help.tropicapp.io/hc/en-us/articles/45502083594267-Using-Model-Context-Protocol-MCP-with-Tropic",
+    "name": "Tropic",
+    "url": "https://app.tropicapp.io/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "管理客户支持工单并自动化处理",
+    "href": "https://docs.unthread.io/docs/unthread-ai/unthread-mcp",
+    "name": "Unthread",
+    "url": "https://app.unthread.io/api/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "分析客户对话、模式和见解",
+    "href": "https://help.zocks.io/en/articles/14075856-connect-to-the-zocks-mcp-server",
+    "name": "Zocks",
+    "url": "https://mcp.zocks.io/v1/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "面向初审法院诉讼律师的 Claude 工具",
+    "href": "https://support.trellis.law",
+    "name": "Trellis",
+    "url": "https://mcp.trellis.law/anthropic",
+    "urlHelp": []
+  },
+  {
+    "description": "在 Todoist 中搜索、完成和管理任务",
+    "href": "https://github.com/Doist/todoist-ai",
+    "name": "Todoist",
+    "url": "https://ai.todoist.net/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "整理数据、发现事实并采取行动",
+    "href": "https://help.relativity.com/topic.html?t=GLJ39",
+    "name": "Relativity",
+    "urlHelp": [
+      "https://help.relativity.com/topic.html?t=GLJ39"
+    ]
+  },
+  {
+    "description": "为持证专业人员提供董事会答辩指引",
+    "href": "https://boardwise.online/mcp",
+    "name": "BoardWise",
+    "url": "https://uakozrqrztgrgwoywxkx.supabase.co/functions/v1/mcp-server",
+    "urlHelp": []
+  },
+  {
+    "description": "使用 Candid 数据研究非营利组织和资助方",
+    "href": "https://support.claude.com/en/articles/12923235-using-the-candid-connector-in-claude",
+    "name": "Candid",
+    "url": "https://mcp.candid.org/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "获取中小学课程标准、技能和学习进阶信息",
+    "href": "https://docs.learningcommons.org/knowledge-graph/integrations/claude",
+    "name": "Learning Commons Knowledge Graph",
+    "url": "https://kg.mcp.learningcommons.org/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "用于药物靶点发现和优先级排序的平台",
+    "href": "https://github.com/opentargets/open-targets-platform-mcp",
+    "name": "Open Targets",
+    "url": "https://mcp.platform.opentargets.org/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "搜索 Synapse 科研数据及其元数据",
+    "href": "https://github.com/susheel/synapse-mcp?tab=readme-ov-file#synapse-mcp-server",
+    "name": "Synapse.org",
+    "url": "https://mcp.synapse.org/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "直接在 Claude 中使用 Chronograph 数据",
+    "href": "https://lp-help.chronograph.pe/article/735-chronograph-mcp",
+    "name": "Chronograph",
+    "url": "https://ai.chronograph.pe/mcp",
+    "urlHelp": []
+  },
+  {
+    "description": "通过 Hex 智能体回答问题",
+    "href": "https://learn.hex.tech/docs/administration/mcp-server",
+    "name": "Hex",
+    "urlHelp": [
+      "https://learn.hex.tech/docs/administration/mcp-server#connect-to-claude"
+    ]
+  },
+  {
+    "description": "搜索、回顾和处理 Zoom 会议内容",
+    "href": "https://developers.zoom.us/docs/mcp/zoom/",
+    "name": "Zoom for Claude",
+    "url": "https://mcp.zoom.us/mcp/zoom/streamable",
+    "urlHelp": []
+  }
+]

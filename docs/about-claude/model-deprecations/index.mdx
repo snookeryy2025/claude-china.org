@@ -14,8 +14,8 @@ Anthropic 使用以下术语来描述模型生命周期：
 
 * **活跃（Active）：** 该模型受到完全支持，并推荐使用。
 * **Legacy（旧版）：** 该模型将不再接收更新，未来可能会被弃用。
-* **已弃用（Deprecated）：** 该模型仍可正常使用，但不再推荐。Anthropic 会提供推荐的替代方案并指定退役日期。
-* **Retired（已退役）：** 该模型已无法使用。对已退役模型的请求将会失败。
+* **已弃用（已弃用）：** 该模型仍可正常使用，但不再推荐。Anthropic 会提供推荐的替代方案并指定退役日期。
+* **已退役（已退役）：** 该模型已无法使用。对已退役模型的请求将会失败。
 
 <Warning>
   已弃用的模型可能不如活跃模型可靠。请将工作负载迁移到活跃模型，以保持最高水平的支持和可靠性。
@@ -66,33 +66,33 @@ Anthropic 希望在未来某个时候能够再次公开提供过去的模型。�
 
 下表列出了当前模型和最近退役的模型及其状态：
 
-| API model name             | Current state | Deprecated         | Tentative retirement date          |
+| API model name             | Current state | 已弃用         | Tentative retirement date          |
 | :------------------------- | :------------ | :----------------- | :--------------------------------- |
-| claude-fable-5-2           | Active        | N/A                | Not sooner than November 9, 2027   |
-| claude-mythos-5-2          | Active        | N/A                | Not sooner than November 9, 2027   |
-| claude-fable-5-1           | Active        | N/A                | Not sooner than September 1, 2027  |
-| claude-mythos-5-1          | Active        | N/A                | Not sooner than September 1, 2027  |
-| claude-fable-5             | Active        | N/A                | Not sooner than June 9, 2027       |
-| claude-mythos-5            | Active        | N/A                | Not sooner than June 9, 2027       |
-| claude-mythos-preview      | Deprecated    | June 9, 2026       | To be announced                    |
-| claude-opus-5-5            | Active        | N/A                | Not sooner than September 22, 2027 |
-| claude-opus-5              | Active        | N/A                | Not sooner than July 24, 2027      |
-| claude-opus-4-8            | Active        | N/A                | Not sooner than May 28, 2027       |
-| claude-opus-4-7            | Active        | N/A                | Not sooner than April 16, 2027     |
-| claude-opus-4-6            | Active        | N/A                | Not sooner than February 5, 2027   |
-| claude-opus-4-5-20251101   | Active        | N/A                | Not sooner than November 24, 2026  |
-| claude-opus-4-1-20250805   | Retired       | June 5, 2026       | August 5, 2026                     |
-| claude-opus-4-20250514     | Retired       | April 14, 2026     | June 15, 2026                      |
-| claude-sonnet-5-5          | Active        | N/A                | Not sooner than September 28, 2027 |
-| claude-sonnet-5            | Active        | N/A                | Not sooner than June 30, 2027      |
-| claude-sonnet-4-6          | Active        | N/A                | Not sooner than February 17, 2027  |
-| claude-sonnet-4-5-20250929 | Deprecated    | September 30, 2026 | November 30, 2026                  |
-| claude-sonnet-4-20250514   | Retired       | April 14, 2026     | June 15, 2026                      |
-| claude-3-7-sonnet-20250219 | Retired       | October 28, 2025   | February 19, 2026                  |
-| claude-haiku-5-5           | Active        | N/A                | Not sooner than October 7, 2027    |
-| claude-haiku-4-5-20251001  | Active        | N/A                | Not sooner than October 15, 2026   |
-| claude-3-5-haiku-20241022  | Retired       | December 19, 2025  | February 19, 2026                  |
-| claude-3-haiku-20240307    | Retired       | February 19, 2026  | April 20, 2026                     |
+| claude-fable-5-2           | Active        | N/A                | 不早于 2027 年 11 月 9 日   |
+| claude-mythos-5-2          | Active        | N/A                | 不早于 2027 年 11 月 9 日   |
+| claude-fable-5-1           | Active        | N/A                | 不早于 2027 年 9 月 1 日  |
+| claude-mythos-5-1          | Active        | N/A                | 不早于 2027 年 9 月 1 日  |
+| claude-fable-5             | Active        | N/A                | 不早于 2027 年 6 月 9 日       |
+| claude-mythos-5            | Active        | N/A                | 不早于 2027 年 6 月 9 日       |
+| claude-mythos-preview      | 已弃用    | 2026 年 6 月 9 日       | To be announced                    |
+| claude-opus-5-5            | Active        | N/A                | 不早于 2027 年 9 月 22 日 |
+| claude-opus-5              | Active        | N/A                | 不早于 2027 年 7 月 24 日      |
+| claude-opus-4-8            | Active        | N/A                | 不早于 2027 年 5 月 28 日       |
+| claude-opus-4-7            | Active        | N/A                | 不早于 2027 年 4 月 16 日     |
+| claude-opus-4-6            | Active        | N/A                | 不早于 2027 年 2 月 5 日   |
+| claude-opus-4-5-20251101   | Active        | N/A                | 不早于 2026 年 11 月 24 日  |
+| claude-opus-4-1-20250805   | 已退役       | 2026 年 6 月 5 日       | 2026 年 8 月 5 日                     |
+| claude-opus-4-20250514     | 已退役       | 2026 年 4 月 14 日     | 2026 年 6 月 15 日                      |
+| claude-sonnet-5-5          | Active        | N/A                | 不早于 2027 年 9 月 28 日 |
+| claude-sonnet-5            | Active        | N/A                | 不早于 2027 年 6 月 30 日      |
+| claude-sonnet-4-6          | Active        | N/A                | 不早于 2027 年 2 月 17 日  |
+| claude-sonnet-4-5-20250929 | 已弃用    | 2026 年 9 月 30 日 | 2026 年 11 月 30 日                  |
+| claude-sonnet-4-20250514   | 已退役       | 2026 年 4 月 14 日     | 2026 年 6 月 15 日                      |
+| claude-3-7-sonnet-20250219 | 已退役       | 2025 年 10 月 28 日   | 2026 年 2 月 19 日                  |
+| claude-haiku-5-5           | Active        | N/A                | 不早于 2027 年 10 月 7 日    |
+| claude-haiku-4-5-20251001  | Active        | N/A                | 不早于 2026 年 10 月 15 日   |
+| claude-3-5-haiku-20241022  | 已退役       | 2025 年 12 月 19 日  | 2026 年 2 月 19 日                  |
+| claude-3-haiku-20240307    | 已退役       | 2026 年 2 月 19 日  | 2026 年 4 月 20 日                     |
 
 ## 弃用历史
 

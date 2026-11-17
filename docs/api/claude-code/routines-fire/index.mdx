@@ -14,16 +14,16 @@ description: 通过发送经过身份验证的 POST 请求，按需启动 Claude
 
 调用此端点需要一个订阅 Pro、Max、Ultra、Team 或 Enterprise 计划并已启用[网页版 Claude Code](https://code.claude.com/docs/zh-CN/claude-code-on-the-web) 的 claude.ai 账户。请使用在 Claude Code 网页界面中创建的每例程专属 bearer 令牌进行身份验证，而不是使用 Claude API 密钥。
 
-## 与 Claude Platform 的区别
+## 与 Claude 平台 的区别
 
-例程触发端点属于 Claude Code 产品层面，它与 Claude Platform 的 API 和 SDK 在以下几个方面有所不同：
+例程触发端点属于 Claude Code 产品层面，它与 Claude 平台 的 API 和 SDK 在以下几个方面有所不同：
 
-| 方面     | 此端点                                                                                                                   | Claude Platform API                                                                 |
+| 方面     | 此端点                                                                                                                   | Claude 平台 API                                                                 |
 | ------ | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | 身份验证   | `Authorization: Bearer`，使用在 [claude.ai/code/routines](https://claude.ai/code/routines) 创建的每例程专属令牌（`sk-ant-oat01-...`） | 来自 Claude Console 的 Claude API 密钥，作为 `Authorization: Bearer` 发送                     |
 | 令牌作用域  | 仅限一个例程；无读取权限                                                                                                          | 工作区级别                                                                               |
 | SDK 支持 | 无                                                                                                                     | 所有[客户端 SDK](/docs/cli-sdks-libraries/overview) 均支持 |
-| 计费     | claude.ai 上的 Claude Code 订阅用量                                                                                         | Claude Platform 用量                                                                  |
+| 计费     | claude.ai 上的 Claude Code 订阅用量                                                                                         | Claude 平台 用量                                                                  |
 | 路径命名空间 | `/v1/claude_code/...`                                                                                                 | `/v1/...`                                                                           |
 | 稳定性    | 实验性                                                                                                                   | 稳定版或标准 beta 版                                                                       |
 
@@ -131,7 +131,7 @@ curl -X POST https://api.anthropic.com/v1/claude_code/routines/$ROUTINE_ID/fire 
 | 404      | `not_found_error`       | 该例程不存在。                                                                                                                                            |
 | 429      | `rate_limit_error`      | 已达到例程或账户的每小时触发次数上限。响应中包含 `Retry-After` 标头，指示时间窗口何时重置。                                                                                              |
 | 500      | `api_error`             | 意外的服务器错误。请使用指数退避进行重试；如果错误持续存在，请携带请求 ID 联系支持团队。                                                                                                     |
-| 503      | `overloaded_error`      | 服务暂时过载。请稍后重试。Claude Platform 对此错误类型返回 529；此端点返回 503。                                                                                               |
+| 503      | `overloaded_error`      | 服务暂时过载。请稍后重试。Claude 平台 对此错误类型返回 529；此端点返回 503。                                                                                               |
 
 ## 身份验证
 

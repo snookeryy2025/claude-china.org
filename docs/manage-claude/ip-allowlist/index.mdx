@@ -21,7 +21,7 @@ featureMetadata:
 * 从列表之外的地址向[受覆盖端点](/docs/manage-claude/ip-allowlist#where-the-allowlist-applies)发出的 **API 请求**会被拒绝。例如，Messages API 会返回 403 `permission_error`，消息为 `Your IP address isn't in this organization's allowed range.`
 * 从不被允许的地址连接的**人员**会看到一个标题为 **Your current network can’t access this organization** 的页面。组织管理员也会被阻止，但您可以选择[为管理员保留一条返回途径](/docs/manage-claude/ip-allowlist#avoid-locking-yourself-out)以避免被锁在外面，在这种情况下，他们只能访问允许列表设置。
 
-## Claude Platform 组织
+## Claude 平台 组织
 
 ### 允许列表的适用范围
 
@@ -60,7 +60,7 @@ Claude Enterprise 组织有其自己的 IP 允许列表，仅允许从特定 IP 
 
 ## 限制
 
-* **Claude Platform：**&#x5141;许列表覆盖的是对 [Claude Managed Agents](/docs/managed-agents/overview) 端点的请求，而不是智能体本身。它不适用于 Claude Managed Agents 运行时中的任何网络活动。允许列表不适用于 [Amazon Bedrock 中的 Claude](/docs/build-with-claude/claude-in-amazon-bedrock)、[Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws)、[Claude Models on Google Cloud](/docs/build-with-claude/claude-models-on-google-cloud/overview) 或 [Microsoft Foundry 中的 Claude](/docs/build-with-claude/claude-in-microsoft-foundry)。
+* **Claude 平台：**&#x5141;许列表覆盖的是对 [Claude Managed Agents](/docs/managed-agents/overview) 端点的请求，而不是智能体本身。它不适用于 Claude Managed Agents 运行时中的任何网络活动。允许列表不适用于 [Amazon Bedrock 中的 Claude](/docs/build-with-claude/claude-in-amazon-bedrock)、[Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws)、[Claude Models on Google Cloud](/docs/build-with-claude/claude-models-on-google-cloud/overview) 或 [Microsoft Foundry 中的 Claude](/docs/build-with-claude/claude-in-microsoft-foundry)。
 * **Claude Enterprise：**&#x43;laude Design、Claude in Slack 和 Claude Academy 不在覆盖范围内。如果用户被阻止时 Claude 正在聊天中处理任务，该任务最多可以继续运行 24 小时。用户无法从列表之外打开或控制该聊天。
 
 ## 开启允许列表
@@ -69,7 +69,7 @@ Claude Enterprise 组织有其自己的 IP 允许列表，仅允许从特定 IP 
   <Step title="打开开关">
     前往您组织的设置页面：
 
-    * **Claude Platform：**&#x43;laude Console 中的[安全](https://platform.claude.com/settings/identity)页面
+    * **Claude 平台：**&#x43;laude Console 中的[安全](https://platform.claude.com/settings/identity)页面
     * **Claude Enterprise：**[claude.ai > 组织设置 > 组织与访问权限](https://claude.ai/admin-settings/organization#ip-allowlist)
 
     打开 **IP allowlist** 开关。在您保存之前，不会有任何更改。

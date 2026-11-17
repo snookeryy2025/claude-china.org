@@ -6,7 +6,7 @@ description: Claude API 文档
 
 <HomePage>
   <HomeHero
-    eyebrow="Claude Platform"
+    eyebrow="Claude 平台"
     title="开始
 使用 Claude 构建"
     subtitle="将 Claude 集成到您的应用程序中所需的一切。从第一次 API 调用到生产环境。"
@@ -408,10 +408,12 @@ description: Claude API 文档
   <HomeSection>
     <HomeSectionHeader label="模型" title="Claude 模型家族" description="为您的用例选择合适的模型。" />
 
-    * [Claude Fable 5.2](/docs/models/fable-5-2/overview) (`claude-fable-5-2`) — New — *For demanding reasoning and long-horizon agentic work* — Most capable · Research · Multi-day tasks
-    * [Claude Opus 5.5](/docs/models/opus-5-5/overview) (`claude-opus-5-5`) — New — *For long-running agentic coding and knowledge work* — Complex projects · Agents · Coding
-    * [Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview) (`claude-sonnet-5-5`) — New — *The best combination of speed and intelligence* — Everyday tasks · Writing · Cost-efficient
-    * [Claude Haiku 5.5](/docs/models/haiku-5-5/overview) (`claude-haiku-5-5`) — New — *For high-volume, latency-sensitive tasks such as classification, extraction, and routing* — Fastest · Lowest cost · High volume
+    <ModelCards>
+      <ModelCard name="Fable 5.2" family="fable" href="/docs/models/fable-5-2/overview" tags={["最强能力", "研究", "多日任务"]} description="适合高要求的推理与长周期智能体工作" />
+      <ModelCard name="Opus 5.5" family="opus" href="/docs/models/opus-5-5/overview" tags={["复杂项目", "智能体", "编程"]} description="适合长时间运行的智能体编程与知识工作" />
+      <ModelCard name="Sonnet 5.5" family="sonnet" href="/docs/models/sonnet-5-5/overview" tags={["日常任务", "写作", "高性价比"]} description="兼顾速度与智能的最佳选择" />
+      <ModelCard name="Haiku 5.5" family="haiku" href="/docs/models/haiku-5-5/overview" tags={["最快速度", "最低成本", "高吞吐量"]} description="适合分类、提取和路由等高吞吐量、低延迟任务" />
+    </ModelCards>
   </HomeSection>
 
   <HomeSection last>

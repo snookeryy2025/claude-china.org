@@ -21,10 +21,12 @@ Anthropic 提供两种使用 Claude 进行构建的方式，每种方式适用�
 
 如果您不确定该使用哪个模型，对于大多数工作负载，建议从 [Claude Opus 5.5](/docs/models/opus-5-5/overview) 开始。对于要求较高的推理任务和长周期的 “agentic”（智能体）工作，或者当您在较高 effort 级别下对 Claude Opus 5.5 进行的 “evals”（评估）仍未达到要求时，请使用 [Claude Fable 5.2](/docs/models/fable-5-2/overview)。所有当前模型均支持文本和图像输入、文本输出、多语言能力、"vision"（视觉）以及 “tool use”（工具使用）。
 
-* [Claude Fable 5.2](/docs/models/fable-5-2/overview) (`claude-fable-5-2`) — New — *For demanding reasoning and long-horizon agentic work* — Most capable · Research · Multi-day tasks
-* [Claude Opus 5.5](/docs/models/opus-5-5/overview) (`claude-opus-5-5`) — New — *For long-running agentic coding and knowledge work* — Complex projects · Agents · Coding
-* [Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview) (`claude-sonnet-5-5`) — New — *The best combination of speed and intelligence* — Everyday tasks · Writing · Cost-efficient
-* [Claude Haiku 5.5](/docs/models/haiku-5-5/overview) (`claude-haiku-5-5`) — New — *For high-volume, latency-sensitive tasks such as classification, extraction, and routing* — Fastest · Lowest cost · High volume
+<ModelCards>
+  <ModelCard name="Fable 5.2" family="fable" href="/docs/models/fable-5-2/overview" tags={["最强能力", "研究", "多日任务"]} description="适合高要求的推理与长周期智能体工作" />
+  <ModelCard name="Opus 5.5" family="opus" href="/docs/models/opus-5-5/overview" tags={["复杂项目", "智能体", "编程"]} description="适合长时间运行的智能体编程与知识工作" />
+  <ModelCard name="Sonnet 5.5" family="sonnet" href="/docs/models/sonnet-5-5/overview" tags={["日常任务", "写作", "高性价比"]} description="兼顾速度与智能的最佳选择" />
+  <ModelCard name="Haiku 5.5" family="haiku" href="/docs/models/haiku-5-5/overview" tags={["最快速度", "最低成本", "高吞吐量"]} description="适合分类、提取和路由等高吞吐量、低延迟任务" />
+</ModelCards>
 
 [比较模型](/docs/models/overview)
 

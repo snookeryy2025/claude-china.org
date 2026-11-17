@@ -18,9 +18,9 @@ Anthropic 不保留您密钥的任何副本，因此没有该密钥，Claude [�
 
 ## 一个密钥保护什么
 
-在 Claude Platform 和 Claude Platform on AWS 上，一个密钥保护一个工作区，并且一个密钥可以服务于多个工作区。在 Claude Enterprise 上，一个密钥保护整个组织，而一个组织只能拥有一个密钥。[您的密钥保护哪些数据](/docs/manage-claude/cmek#what-cmek-protects)取决于您的产品。
+在 Claude 平台 和 Claude Platform on AWS 上，一个密钥保护一个工作区，并且一个密钥可以服务于多个工作区。在 Claude Enterprise 上，一个密钥保护整个组织，而一个组织只能拥有一个密钥。[您的密钥保护哪些数据](/docs/manage-claude/cmek#what-cmek-protects)取决于您的产品。
 
-在 Claude Platform 和 Claude Enterprise 上，您的密钥带有您的 Anthropic 组织 ID，该 ID 将密钥与您的组织绑定。根据您的 KMS，该 ID 位于密钥策略条件、标签或标记中。不带该 ID 的密钥无法通过验证。在多个组织之间共享的密钥带有每个组织的 ID。
+在 Claude 平台 和 Claude Enterprise 上，您的密钥带有您的 Anthropic 组织 ID，该 ID 将密钥与您的组织绑定。根据您的 KMS，该 ID 位于密钥策略条件、标签或标记中。不带该 ID 的密钥无法通过验证。在多个组织之间共享的密钥带有每个组织的 ID。
 
 AWS KMS 密钥策略可以通过分区 ID [指定工作区](/docs/manage-claude/cmek-aws-kms-workspaces)。分区 ID 是 Anthropic 为每个工作区分配的用于加密的 UUID，而不是以 `wrkspc_` 开头的工作区 ID。
 
@@ -28,13 +28,13 @@ AWS KMS 密钥策略可以通过分区 ID [指定工作区](/docs/manage-claude/
 
 您的密钥位于 AWS KMS、Google Cloud KMS 或 Azure Key Vault 中。您的提供商可能会为此收费。
 
-在 Claude Platform 和 Claude Enterprise 上，Anthropic 在美国区域处理所有加密操作。您的密钥可以位于美国境外，但会带来一定的延迟代价。[每个设置页面](/docs/manage-claude/cmek#set-it-up)都列出了延迟最低的区域。
+在 Claude 平台 和 Claude Enterprise 上，Anthropic 在美国区域处理所有加密操作。您的密钥可以位于美国境外，但会带来一定的延迟代价。[每个设置页面](/docs/manage-claude/cmek#set-it-up)都列出了延迟最低的区域。
 
 ## 您的密钥何时生效
 
 您的密钥仅保护在其生效后写入的数据。现有数据（之前的聊天、文件和会话）仍使用 Anthropic 的密钥加密，且不会被重新加密。
 
-在 Claude Platform 和 Claude Platform on AWS 上，如果密钥在工作区的首个请求之前附加到该工作区，则会随该请求生效。在正在使用的工作区中，您的密钥最多可能需要一天才能生效，在此期间写入的数据仍使用 Anthropic 的密钥加密。这就是 Anthropic 建议使用新工作区的原因。
+在 Claude 平台 和 Claude Platform on AWS 上，如果密钥在工作区的首个请求之前附加到该工作区，则会随该请求生效。在正在使用的工作区中，您的密钥最多可能需要一天才能生效，在此期间写入的数据仍使用 Anthropic 的密钥加密。这就是 Anthropic 建议使用新工作区的原因。
 
 ## 您可以看到什么
 

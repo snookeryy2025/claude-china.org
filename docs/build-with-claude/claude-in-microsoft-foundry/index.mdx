@@ -143,14 +143,14 @@ Foundry 使用两级层次结构：**资源**包含您的安全和计费配置�
 5. 配置部署：
 
    * **Deployment name：** 默认为模型 ID，但您可以自定义（例如 `my-claude-deployment`）。部署名称在创建后无法更改。
-   * **Model version：** 此设置决定[托管选项](/docs/build-with-claude/claude-in-microsoft-foundry#hosting-options)。展开 **Model version settings**，打开 **Model version** 下拉菜单，然后选择标有您所需托管选项的版本。
+   * **模型 version：** 此设置决定[托管选项](/docs/build-with-claude/claude-in-microsoft-foundry#hosting-options)。展开 **模型 version settings**，打开 **模型 version** 下拉菜单，然后选择标有您所需托管选项的版本。
    * **Region scope：** 选择 **Global**；如果部署托管在 Azure 上，也可以选择 **Data Zone**。**Data Zone** 会创建 US Data Zone Standard 部署，将推理保留在美国境内。有关定价，请参阅[推理地理位置](/docs/about-claude/pricing#foundry-inference-geography)。
 
 6. 选择 **Deploy** 并等待预配完成。
 
 7. 部署完成后，选择右上方导航中的 **Build**，然后选择左侧窗格中的 **Models**，并打开您的部署。**Details** 选项卡会显示 **Target URI**（您的端点 URL）和 **Key**（您的 API 密钥）。
 
-如果 **New Foundry** 开关处于关闭状态，则您使用的是经典门户布局。在该布局中，打开左侧窗格中的 **Model catalog** 以查找和部署模型，并打开 **Models + endpoints**（位于 **My assets** 下）以查看您的部署及其端点详细信息。
+如果 **New Foundry** 开关处于关闭状态，则您使用的是经典门户布局。在该布局中，打开左侧窗格中的 **模型 catalog** 以查找和部署模型，并打开 **Models + endpoints**（位于 **My assets** 下）以查看您的部署及其端点详细信息。
 
 <Note>
   您选择的部署名称将成为您在 API 请求的 `model` 参数中传递的值。您可以使用不同名称创建同一模型的多个部署，以管理不同的配置或 rate limit（速率限制）。
@@ -654,14 +654,14 @@ Microsoft Foundry 中的 Claude 支持大多数 Claude 功能。[功能概述](/
 
 以下 Claude 模型可通过 Foundry 使用：
 
-| Model                                                                                                    | Default deployment name | Hosted on Azure | Hosted on Anthropic |
+| 模型                                                                                                    | Default deployment name | Hosted on Azure | Hosted on Anthropic |
 | :------------------------------------------------------------------------------------------------------- | :---------------------- | :-------------: | :-----------------: |
 | Claude Fable 5.2                                                                                         | `claude-fable-5-2`      |                 |          ✓          |
-| Claude Mythos 5.2 ([limited availability](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-2`     |                 |          ✓          |
+| Claude Mythos 5.2 ([受限开放](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-2`     |                 |          ✓          |
 | Claude Fable 5.1                                                                                         | `claude-fable-5-1`      |                 |          ✓          |
-| Claude Mythos 5.1 ([limited availability](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-1`     |                 |          ✓          |
+| Claude Mythos 5.1 ([受限开放](https://support.claude.com/en/articles/14604842))              | `claude-mythos-5-1`     |                 |          ✓          |
 | Claude Fable 5                                                                                           | `claude-fable-5`        |                 |          ✓          |
-| Claude Mythos 5 ([limited availability](https://support.claude.com/en/articles/14604842))                | `claude-mythos-5`       |                 |          ✓          |
+| Claude Mythos 5 ([受限开放](https://support.claude.com/en/articles/14604842))                | `claude-mythos-5`       |                 |          ✓          |
 | Claude Opus 5.5                                                                                          | `claude-opus-5-5`       |        ✓        |          ✓          |
 | Claude Opus 5                                                                                            | `claude-opus-5`         |        ✓        |          ✓          |
 | Claude Opus 4.8                                                                                          | `claude-opus-4-8`       |        ✓        |          ✓          |

@@ -1,0 +1,1155 @@
+{
+  "messages": [
+    {
+      "label": "入门",
+      "links": [
+        {
+          "label": "Claude 简介",
+          "slug": "intro"
+        },
+        {
+          "label": "获取 API 密钥",
+          "slug": "get-api-key"
+        },
+        {
+          "label": "快速入门",
+          "slug": "get-started"
+        },
+        {
+          "label": "身份验证",
+          "slug": "manage-claude/authentication"
+        }
+      ]
+    },
+    {
+      "label": "使用 Claude 构建",
+      "links": [
+        {
+          "label": "功能概览",
+          "slug": "build-with-claude/overview"
+        },
+        {
+          "label": "使用 Messages API",
+          "slug": "build-with-claude/working-with-messages"
+        },
+        {
+          "label": "停止原因与回退",
+          "slug": "build-with-claude/handling-stop-reasons"
+        },
+        {
+          "label": "拒绝与回退",
+          "slug": "build-with-claude/refusals-and-fallback"
+        },
+        {
+          "label": "回退额度",
+          "slug": "build-with-claude/fallback-credit"
+        },
+        {
+          "label": "文本水印",
+          "slug": "build-with-claude/text-watermark"
+        }
+      ]
+    },
+    {
+      "label": "模型能力",
+      "links": [
+        {
+          "label": "任务预算（beta）",
+          "slug": "build-with-claude/task-budgets"
+        },
+        {
+          "label": "快速模式",
+          "slug": "build-with-claude/fast-mode"
+        },
+        {
+          "label": "结构化输出",
+          "slug": "build-with-claude/structured-outputs"
+        },
+        {
+          "label": "引用",
+          "slug": "build-with-claude/citations"
+        },
+        {
+          "label": "流式传输消息",
+          "slug": "build-with-claude/streaming"
+        },
+        {
+          "label": "批处理",
+          "slug": "build-with-claude/batch-processing"
+        },
+        {
+          "label": "搜索结果",
+          "slug": "build-with-claude/search-results"
+        },
+        {
+          "label": "流式传输拒绝",
+          "slug": "test-and-evaluate/strengthen-guardrails/handle-streaming-refusals"
+        },
+        {
+          "label": "多语言支持",
+          "slug": "build-with-claude/multilingual-support"
+        },
+        {
+          "label": "嵌入",
+          "slug": "build-with-claude/embeddings"
+        },
+        {
+          "label": "Effort",
+          "slug": "build-with-claude/effort"
+        },
+        {
+          "label": "思考",
+          "slug": "build-with-claude/thinking"
+        }
+      ]
+    },
+    {
+      "label": "工具",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "agents-and-tools/tool-use/overview"
+        },
+        {
+          "label": "工具使用的工作原理",
+          "slug": "agents-and-tools/tool-use/how-tool-use-works"
+        },
+        {
+          "label": "教程：构建使用工具的智能体",
+          "slug": "agents-and-tools/tool-use/build-a-tool-using-agent"
+        },
+        {
+          "label": "定义工具",
+          "slug": "agents-and-tools/tool-use/define-tools"
+        },
+        {
+          "label": "处理工具调用",
+          "slug": "agents-and-tools/tool-use/handle-tool-calls"
+        },
+        {
+          "label": "并行工具使用",
+          "slug": "agents-and-tools/tool-use/parallel-tool-use"
+        },
+        {
+          "label": "工具运行器（SDK）",
+          "slug": "agents-and-tools/tool-use/tool-runner"
+        },
+        {
+          "label": "严格工具使用",
+          "slug": "agents-and-tools/tool-use/strict-tool-use"
+        },
+        {
+          "label": "服务器工具",
+          "slug": "agents-and-tools/tool-use/server-tools"
+        },
+        {
+          "label": "网页搜索工具",
+          "slug": "agents-and-tools/tool-use/web-search-tool"
+        },
+        {
+          "label": "网页获取工具",
+          "slug": "agents-and-tools/tool-use/web-fetch-tool"
+        },
+        {
+          "label": "代码执行工具",
+          "slug": "agents-and-tools/tool-use/code-execution-tool"
+        },
+        {
+          "label": "顾问工具",
+          "slug": "agents-and-tools/tool-use/advisor-tool"
+        },
+        {
+          "label": "工具搜索工具",
+          "slug": "agents-and-tools/tool-use/tool-search-tool"
+        },
+        {
+          "label": "记忆工具",
+          "slug": "agents-and-tools/tool-use/memory-tool"
+        },
+        {
+          "label": "Bash 工具",
+          "slug": "agents-and-tools/tool-use/bash-tool"
+        },
+        {
+          "label": "文本编辑器工具",
+          "slug": "agents-and-tools/tool-use/text-editor-tool"
+        },
+        {
+          "label": "浏览器与计算机使用（SDK）",
+          "slug": "agents-and-tools/tool-use/browser-use-sdk"
+        },
+        {
+          "label": "计算机使用工具",
+          "slug": "agents-and-tools/tool-use/computer-use-tool"
+        },
+        {
+          "label": "浏览器使用工具",
+          "slug": "agents-and-tools/tool-use/browser-use-tool"
+        },
+        {
+          "label": "故障排除",
+          "slug": "agents-and-tools/tool-use/troubleshooting-tool-use"
+        }
+      ]
+    },
+    {
+      "label": "工具基础设施",
+      "links": [
+        {
+          "label": "工具参考",
+          "slug": "agents-and-tools/tool-use/tool-reference"
+        },
+        {
+          "label": "管理工具上下文",
+          "slug": "agents-and-tools/tool-use/manage-tool-context"
+        },
+        {
+          "label": "工具组合",
+          "slug": "agents-and-tools/tool-use/tool-combinations"
+        },
+        {
+          "label": "结合提示缓存的工具使用",
+          "slug": "agents-and-tools/tool-use/tool-use-with-prompt-caching"
+        },
+        {
+          "label": "程序化工具调用",
+          "slug": "agents-and-tools/tool-use/programmatic-tool-calling"
+        },
+        {
+          "label": "细粒度工具流式传输",
+          "slug": "agents-and-tools/tool-use/fine-grained-tool-streaming"
+        }
+      ]
+    },
+    {
+      "label": "上下文管理",
+      "links": [
+        {
+          "label": "上下文窗口",
+          "slug": "build-with-claude/context-windows"
+        },
+        {
+          "label": "上下文编辑",
+          "slug": "build-with-claude/context-editing"
+        },
+        {
+          "label": "提示缓存",
+          "slug": "build-with-claude/prompt-caching"
+        },
+        {
+          "label": "消息线程",
+          "slug": "build-with-claude/message-threads"
+        },
+        {
+          "label": "对话中途消息",
+          "slug": "build-with-claude/mid-conversation-system-messages"
+        },
+        {
+          "label": "构建编排模式",
+          "slug": "build-with-claude/mid-conversation-effort-example"
+        },
+        {
+          "label": "缓存诊断",
+          "slug": "build-with-claude/cache-diagnostics"
+        },
+        {
+          "label": "令牌计数",
+          "slug": "build-with-claude/token-counting"
+        },
+        {
+          "label": "压缩",
+          "slug": "build-with-claude/compaction"
+        }
+      ]
+    },
+    {
+      "label": "处理文件",
+      "links": [
+        {
+          "label": "Files API",
+          "slug": "build-with-claude/files"
+        },
+        {
+          "label": "PDF 支持",
+          "slug": "build-with-claude/pdf-support"
+        },
+        {
+          "label": "图像与视觉",
+          "slug": "build-with-claude/vision"
+        }
+      ]
+    },
+    {
+      "label": "Skills",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "agents-and-tools/agent-skills/overview"
+        },
+        {
+          "label": "快速入门",
+          "slug": "agents-and-tools/agent-skills/quickstart"
+        },
+        {
+          "label": "最佳实践",
+          "slug": "agents-and-tools/agent-skills/best-practices"
+        },
+        {
+          "label": "企业版 Skills",
+          "slug": "agents-and-tools/agent-skills/enterprise"
+        },
+        {
+          "label": "API 中的 Skills",
+          "slug": "build-with-claude/skills-guide"
+        }
+      ]
+    },
+    {
+      "label": "MCP",
+      "links": [
+        {
+          "label": "远程 MCP 服务器",
+          "slug": "agents-and-tools/remote-mcp-servers"
+        },
+        {
+          "label": "MCP 连接器",
+          "slug": "agents-and-tools/mcp-connector"
+        },
+        {
+          "label": "MCP 隧道",
+          "slug": "agents-and-tools/mcp-tunnels/overview"
+        }
+      ]
+    },
+    {
+      "label": "OpenTelemetry",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "manage-claude/opentelemetry"
+        },
+        {
+          "label": "获取 Anthropic SDK span",
+          "slug": "manage-claude/opentelemetry/sdk"
+        },
+        {
+          "label": "获取 Claude API span",
+          "slug": "manage-claude/opentelemetry/api"
+        }
+      ]
+    },
+    {
+      "label": "云平台上的 Claude",
+      "links": [
+        {
+          "label": "Amazon Bedrock (mantle)",
+          "slug": "build-with-claude/claude-in-amazon-bedrock"
+        },
+        {
+          "label": "Amazon Bedrock (runtime)",
+          "slug": "build-with-claude/claude-on-amazon-bedrock-legacy"
+        },
+        {
+          "label": "Claude Platform on AWS",
+          "slug": "build-with-claude/claude-platform-on-aws"
+        },
+        {
+          "label": "Microsoft Foundry",
+          "slug": "build-with-claude/claude-in-microsoft-foundry"
+        },
+        {
+          "label": "Google Cloud",
+          "slug": "build-with-claude/claude-models-on-google-cloud/overview"
+        }
+      ]
+    }
+  ],
+  "managed": [
+    {
+      "label": "入门",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "managed-agents/overview"
+        },
+        {
+          "label": "快速入门",
+          "slug": "managed-agents/quickstart"
+        },
+        {
+          "label": "在 Console 中构建",
+          "slug": "managed-agents/onboarding"
+        },
+        {
+          "label": "迁移",
+          "slug": "managed-agents/migration"
+        }
+      ]
+    },
+    {
+      "label": "定义智能体",
+      "links": [
+        {
+          "label": "智能体设置",
+          "slug": "managed-agents/agent-setup"
+        },
+        {
+          "label": "工具",
+          "slug": "managed-agents/tools"
+        },
+        {
+          "label": "网页工具限制",
+          "slug": "managed-agents/tools-web-restrictions"
+        },
+        {
+          "label": "MCP 连接器",
+          "slug": "managed-agents/mcp-connector"
+        },
+        {
+          "label": "权限策略",
+          "slug": "managed-agents/permission-policies"
+        },
+        {
+          "label": "智能体技能",
+          "slug": "managed-agents/skills"
+        }
+      ]
+    },
+    {
+      "label": "配置智能体环境",
+      "links": [
+        {
+          "label": "选择环境",
+          "slug": "managed-agents/choosing-an-environment"
+        },
+        {
+          "label": "云环境设置",
+          "slug": "managed-agents/environments"
+        },
+        {
+          "label": "云沙箱参考",
+          "slug": "managed-agents/cloud-sandboxes-reference"
+        },
+        {
+          "label": "自托管沙箱",
+          "slug": "managed-agents/self-hosted-sandboxes"
+        }
+      ]
+    },
+    {
+      "label": "将工作委派给智能体",
+      "links": [
+        {
+          "label": "启动会话",
+          "slug": "managed-agents/sessions"
+        },
+        {
+          "label": "会话操作",
+          "slug": "managed-agents/session-operations"
+        },
+        {
+          "label": "会话事件流",
+          "slug": "managed-agents/events-and-streaming"
+        },
+        {
+          "label": "事件增量",
+          "slug": "managed-agents/event-deltas"
+        },
+        {
+          "label": "检查与跟踪用量",
+          "slug": "managed-agents/session-observability"
+        },
+        {
+          "label": "会话预算",
+          "slug": "managed-agents/budgets"
+        },
+        {
+          "label": "订阅 webhook",
+          "slug": "managed-agents/webhooks"
+        },
+        {
+          "label": "定义结果",
+          "slug": "managed-agents/define-outcomes"
+        },
+        {
+          "label": "使用 vault 进行身份验证",
+          "slug": "managed-agents/vaults"
+        }
+      ]
+    },
+    {
+      "label": "管理智能体上下文",
+      "links": [
+        {
+          "label": "访问 GitHub",
+          "slug": "managed-agents/github"
+        },
+        {
+          "label": "附加与下载文件",
+          "slug": "managed-agents/files"
+        }
+      ]
+    },
+    {
+      "label": "高级编排",
+      "links": [
+        {
+          "label": "多智能体编排",
+          "slug": "managed-agents/multiagent-orchestration"
+        },
+        {
+          "label": "会话线程",
+          "slug": "managed-agents/session-threads"
+        },
+        {
+          "label": "工作流运行",
+          "slug": "managed-agents/workflow-runs"
+        },
+        {
+          "label": "定时部署",
+          "slug": "managed-agents/scheduled-deployments"
+        }
+      ]
+    },
+    {
+      "label": "自托管 Managed Agents",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "managed-agents/self-hosted"
+        },
+        {
+          "label": "快速入门",
+          "slug": "managed-agents/self-hosted/quickstart"
+        },
+        {
+          "label": "调用 API",
+          "slug": "managed-agents/self-hosted/call-the-api"
+        },
+        {
+          "label": "Console",
+          "slug": "managed-agents/self-hosted/console"
+        },
+        {
+          "label": "在 Kubernetes 上部署",
+          "slug": "managed-agents/self-hosted/kubernetes"
+        },
+        {
+          "label": "与托管服务的差异",
+          "slug": "managed-agents/self-hosted/differences"
+        },
+        {
+          "label": "升级",
+          "slug": "managed-agents/self-hosted/upgrade"
+        },
+        {
+          "label": "数据与访问",
+          "slug": "managed-agents/self-hosted-data-and-access"
+        }
+      ]
+    },
+    {
+      "label": "安全",
+      "links": [
+        {
+          "label": "保护您的部署",
+          "slug": "managed-agents/secure-deployment"
+        },
+        {
+          "label": "审查与监控会话",
+          "slug": "managed-agents/secure-deployment-monitoring"
+        },
+        {
+          "label": "风险与边界",
+          "slug": "managed-agents/secure-deployment-risks"
+        }
+      ]
+    },
+    {
+      "label": "参考",
+      "links": [
+        {
+          "label": "Managed Agents 参考",
+          "slug": "managed-agents/reference"
+        }
+      ]
+    },
+    {
+      "label": "处理文件",
+      "links": [
+        {
+          "label": "Files API",
+          "slug": "build-with-claude/files"
+        },
+        {
+          "label": "PDF 支持",
+          "slug": "build-with-claude/pdf-support"
+        },
+        {
+          "label": "图像与视觉",
+          "slug": "build-with-claude/vision"
+        }
+      ]
+    },
+    {
+      "label": "Skills",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "agents-and-tools/agent-skills/overview"
+        },
+        {
+          "label": "最佳实践",
+          "slug": "agents-and-tools/agent-skills/best-practices"
+        },
+        {
+          "label": "企业版 Skills",
+          "slug": "agents-and-tools/agent-skills/enterprise"
+        }
+      ]
+    },
+    {
+      "label": "MCP",
+      "links": [
+        {
+          "label": "远程 MCP 服务器",
+          "slug": "agents-and-tools/remote-mcp-servers"
+        },
+        {
+          "label": "MCP 隧道",
+          "slug": "agents-and-tools/mcp-tunnels/overview"
+        }
+      ]
+    },
+    {
+      "label": "OpenTelemetry",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "manage-claude/opentelemetry"
+        },
+        {
+          "label": "获取 Anthropic SDK span",
+          "slug": "manage-claude/opentelemetry/sdk"
+        },
+        {
+          "label": "获取 Claude API span",
+          "slug": "manage-claude/opentelemetry/api"
+        }
+      ]
+    },
+    {
+      "label": "云平台上的 Claude",
+      "links": [
+        {
+          "label": "Claude Platform on AWS",
+          "slug": "build-with-claude/claude-platform-on-aws"
+        },
+        {
+          "label": "Claude Models on Google Cloud (Anthropic managed)",
+          "slug": "build-with-claude/claude-models-on-google-cloud/anthropic-managed"
+        }
+      ]
+    }
+  ],
+  "manage": [
+    {
+      "label": "组织",
+      "links": [
+        {
+          "label": "Admin API",
+          "slug": "manage-claude/admin-api"
+        },
+        {
+          "label": "用户管理",
+          "slug": "manage-claude/user-management"
+        },
+        {
+          "label": "插件 API",
+          "slug": "manage-claude/plugins-api"
+        },
+        {
+          "label": "Claude Tag API",
+          "slug": "manage-claude/claude-tag-api"
+        },
+        {
+          "label": "工作区",
+          "slug": "manage-claude/workspaces"
+        },
+        {
+          "label": "组织 webhook（beta）",
+          "slug": "manage-claude/organization-webhooks"
+        },
+        {
+          "label": "用户配置文件",
+          "slug": "manage-claude/user-profiles"
+        },
+        {
+          "label": "Verification Portal 链接",
+          "slug": "manage-claude/user-profiles-verification-portal"
+        }
+      ]
+    },
+    {
+      "label": "身份验证",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "manage-claude/authentication"
+        },
+        {
+          "label": "创建 Admin API 密钥",
+          "slug": "manage-claude/admin-api-keys"
+        },
+        {
+          "label": "App Attest",
+          "slug": "manage-claude/app-attest"
+        },
+        {
+          "label": "IP 允许列表（beta）",
+          "slug": "manage-claude/ip-allowlist"
+        },
+        {
+          "label": "工作负载身份联合",
+          "slug": "manage-claude/workload-identity-federation"
+        },
+        {
+          "label": "使用 Admin API 管理 WIF",
+          "slug": "manage-claude/wif-admin-api"
+        },
+        {
+          "label": "WIF 参考",
+          "slug": "manage-claude/wif-reference"
+        }
+      ]
+    },
+    {
+      "label": "监控",
+      "links": [
+        {
+          "label": "用量和成本分析 API",
+          "slug": "manage-claude/usage-cost-analytics-api"
+        },
+        {
+          "label": "用量与成本 API（旧版）",
+          "slug": "manage-claude/usage-cost-api"
+        },
+        {
+          "label": "速率限制 API",
+          "slug": "manage-claude/rate-limits-api"
+        },
+        {
+          "label": "分析 API",
+          "slug": "manage-claude/analytics-api"
+        },
+        {
+          "label": "Claude Code 分析 API",
+          "slug": "manage-claude/claude-code-analytics-api"
+        },
+        {
+          "label": "支出限额 API",
+          "slug": "manage-claude/spend-limits-api"
+        },
+        {
+          "label": "OpenTelemetry",
+          "slug": "manage-claude/opentelemetry"
+        }
+      ]
+    },
+    {
+      "label": "数据与合规",
+      "links": [
+        {
+          "label": "数据驻留",
+          "slug": "manage-claude/data-residency"
+        },
+        {
+          "label": "API 与数据保留",
+          "slug": "manage-claude/api-and-data-retention"
+        },
+        {
+          "label": "访问透明度",
+          "slug": "manage-claude/access-transparency"
+        },
+        {
+          "label": "加密密钥（CMEK）",
+          "slug": "manage-claude/cmek"
+        },
+        {
+          "label": "推理钩子",
+          "slug": "manage-claude/inference-hooks"
+        }
+      ]
+    },
+    {
+      "label": "合规 API",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "manage-claude/compliance-api"
+        },
+        {
+          "label": "设置合规 API",
+          "slug": "manage-claude/compliance-api-access"
+        },
+        {
+          "label": "活动动态",
+          "slug": "manage-claude/compliance-activity-feed"
+        },
+        {
+          "label": "聊天、文件和项目",
+          "slug": "manage-claude/compliance-content-data"
+        },
+        {
+          "label": "会话记录",
+          "slug": "manage-claude/compliance-sessions"
+        },
+        {
+          "label": "组织、用户、角色、群组和设置",
+          "slug": "manage-claude/compliance-org-data"
+        },
+        {
+          "label": "设计您的集成",
+          "slug": "manage-claude/compliance-integration-patterns"
+        },
+        {
+          "label": "Security posture",
+          "slug": "manage-claude/compliance-security-posture/overview"
+        },
+        {
+          "label": "错误",
+          "slug": "manage-claude/compliance-errors"
+        },
+        {
+          "label": "常见问题",
+          "slug": "manage-claude/compliance-faq"
+        }
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "label": "用例",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "about-claude/use-case-guides/overview"
+        },
+        {
+          "label": "工单路由",
+          "slug": "about-claude/use-case-guides/ticket-routing"
+        },
+        {
+          "label": "客户支持智能体",
+          "slug": "about-claude/use-case-guides/customer-support-chat"
+        },
+        {
+          "label": "内容审核",
+          "slug": "about-claude/use-case-guides/content-moderation"
+        },
+        {
+          "label": "法律摘要",
+          "slug": "about-claude/use-case-guides/legal-summarization"
+        },
+        {
+          "label": "电商智能体",
+          "slug": "about-claude/use-case-guides/commerce-agents"
+        }
+      ]
+    },
+    {
+      "label": "提示工程",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "build-with-claude/prompt-engineering/overview"
+        },
+        {
+          "label": "提示最佳实践",
+          "slug": "build-with-claude/prompt-engineering/claude-prompting-best-practices"
+        },
+        {
+          "label": "为 Claude Fable 5.2 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-fable-5-2"
+        },
+        {
+          "label": "为 Claude Fable 5.1 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-fable-5-1"
+        },
+        {
+          "label": "为 Claude Fable 5 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-fable-5"
+        },
+        {
+          "label": "为 Claude Opus 5.5 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-opus-5-5"
+        },
+        {
+          "label": "为 Claude Opus 5 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-opus-5"
+        },
+        {
+          "label": "为 Claude Opus 4.8 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-opus-4-8"
+        },
+        {
+          "label": "为 Claude Sonnet 5.5 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5"
+        },
+        {
+          "label": "为 Claude Sonnet 5 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-sonnet-5"
+        },
+        {
+          "label": "为 Claude Haiku 5.5 编写提示",
+          "slug": "build-with-claude/prompt-engineering/prompting-claude-haiku-5-5"
+        }
+      ]
+    },
+    {
+      "label": "测试与评估",
+      "links": [
+        {
+          "label": "定义成功标准并构建评估",
+          "slug": "test-and-evaluate/develop-tests"
+        },
+        {
+          "label": "降低延迟",
+          "slug": "test-and-evaluate/strengthen-guardrails/reduce-latency"
+        }
+      ]
+    },
+    {
+      "label": "加强防护措施",
+      "links": [
+        {
+          "label": "减少幻觉",
+          "slug": "test-and-evaluate/strengthen-guardrails/reduce-hallucinations"
+        },
+        {
+          "label": "提高输出一致性",
+          "slug": "test-and-evaluate/strengthen-guardrails/increase-consistency"
+        },
+        {
+          "label": "缓解越狱",
+          "slug": "test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks"
+        },
+        {
+          "label": "减少提示泄露",
+          "slug": "test-and-evaluate/strengthen-guardrails/reduce-prompt-leak"
+        }
+      ]
+    },
+    {
+      "label": "参考",
+      "links": [
+        {
+          "label": "术语表",
+          "slug": "about-claude/glossary"
+        },
+        {
+          "label": "其他资源",
+          "slug": "about-claude/additional-resources"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "label": "模型",
+      "links": [
+        {
+          "label": "模型概览",
+          "slug": "models/overview"
+        },
+        {
+          "label": "Claude Fable 5.2",
+          "slug": "models/fable-5-2/overview"
+        },
+        {
+          "label": "Claude Opus 5.5",
+          "slug": "models/opus-5-5/overview"
+        },
+        {
+          "label": "Claude Sonnet 5.5",
+          "slug": "models/sonnet-5-5/overview"
+        },
+        {
+          "label": "Claude Haiku 5.5",
+          "slug": "models/haiku-5-5/overview"
+        }
+      ]
+    },
+    {
+      "label": "指南",
+      "links": [
+        {
+          "label": "选择模型",
+          "slug": "about-claude/models/choosing-a-model"
+        },
+        {
+          "label": "优化成本与智能",
+          "slug": "about-claude/models/optimizing-for-cost-and-intelligence"
+        },
+        {
+          "label": "在模型版本间升级",
+          "slug": "about-claude/models/migration-guide"
+        }
+      ]
+    },
+    {
+      "label": "生命周期与参考",
+      "links": [
+        {
+          "label": "模型 ID 与版本控制",
+          "slug": "about-claude/models/model-ids-and-versions"
+        },
+        {
+          "label": "模型弃用",
+          "slug": "about-claude/model-deprecations"
+        },
+        {
+          "label": "模型卡",
+          "slug": "resources/overview"
+        },
+        {
+          "label": "定价",
+          "slug": "about-claude/pricing"
+        },
+        {
+          "label": "订阅用户的 API 额度",
+          "slug": "about-claude/api-credits-for-subscribers"
+        },
+        {
+          "label": "系统提示",
+          "slug": "release-notes/system-prompts/overview"
+        }
+      ]
+    }
+  ],
+  "sdks": [
+    {
+      "label": "SDK、CLI 和库",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "cli-sdks-libraries/overview"
+        }
+      ]
+    },
+    {
+      "label": "ant CLI",
+      "links": [
+        {
+          "label": "快速入门",
+          "slug": "cli-sdks-libraries/cli/quickstart"
+        },
+        {
+          "label": "身份验证选项",
+          "slug": "cli-sdks-libraries/cli/authentication"
+        },
+        {
+          "label": "使用 CLI",
+          "slug": "cli-sdks-libraries/cli/using"
+        },
+        {
+          "label": "脚本与自动化",
+          "slug": "cli-sdks-libraries/cli/scripting"
+        },
+        {
+          "label": "以代码形式管理资源",
+          "slug": "cli-sdks-libraries/cli/apply"
+        },
+        {
+          "label": "连接到 Managed Agents 会话",
+          "slug": "cli-sdks-libraries/cli/sessions-connect"
+        }
+      ]
+    },
+    {
+      "label": "客户端 SDK",
+      "links": [
+        {
+          "label": "中间件",
+          "slug": "cli-sdks-libraries/middleware"
+        },
+        {
+          "label": "Python",
+          "slug": "cli-sdks-libraries/sdks/python"
+        },
+        {
+          "label": "TypeScript",
+          "slug": "cli-sdks-libraries/sdks/typescript"
+        },
+        {
+          "label": "C#",
+          "slug": "cli-sdks-libraries/sdks/csharp"
+        },
+        {
+          "label": "Go",
+          "slug": "cli-sdks-libraries/sdks/go"
+        },
+        {
+          "label": "Java",
+          "slug": "cli-sdks-libraries/sdks/java"
+        },
+        {
+          "label": "PHP",
+          "slug": "cli-sdks-libraries/sdks/php"
+        },
+        {
+          "label": "Ruby",
+          "slug": "cli-sdks-libraries/sdks/ruby"
+        }
+      ]
+    },
+    {
+      "label": "库与集成",
+      "links": [
+        {
+          "label": "Apple Foundation Models",
+          "slug": "cli-sdks-libraries/libraries/apple-foundation-models"
+        },
+        {
+          "label": "OpenAI SDK 兼容性",
+          "slug": "cli-sdks-libraries/libraries/openai-sdk"
+        }
+      ]
+    }
+  ],
+  "api-skill": [
+    {
+      "label": "Claude API 技能",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "agents-and-tools/agent-skills/claude-api-skill"
+        }
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "label": "发布说明",
+      "links": [
+        {
+          "label": "概览",
+          "slug": "release-notes/overview"
+        }
+      ]
+    },
+    {
+      "label": "迁移指南",
+      "links": [
+        {
+          "label": "迁移到 Managed Agents",
+          "slug": "managed-agents/migration"
+        },
+        {
+          "label": "迁移到 API 版本 2026-10-21",
+          "slug": "api/migration-2026-10-21"
+        }
+      ]
+    }
+  ]
+}

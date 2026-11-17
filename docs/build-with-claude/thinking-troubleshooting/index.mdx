@@ -14,7 +14,7 @@ description: 诊断并修复思考功能故障：配置导致的 400 错误、�
 
 大多数思考配置错误都源于请求中的 `thinking.type` 值与模型支持的内容不匹配。在大多数模型上，思考以 `thinking: {type: "adaptive"}` 的形式运行，并且许多模型默认开启思考。一些较早的模型则使用 “extended thinking”（[扩展思考](/docs/build-with-claude/extended-thinking)），这是一种旧版手动模式，配置为 `thinking: {type: "enabled", budget_tokens: N}`。
 
-“Extended thinking”（扩展思考）（`thinking.type: "enabled"` 搭配 `budget_tokens`）在 Claude 4.6 模型上已被弃用（使用它的请求仍会成功）。Claude 4.7 及更高版本的模型不支持它，并会拒绝使用它的请求，返回 400 错误。在支持思考的 Claude 4.5 及更早版本的模型上，扩展思考是唯一可用的思考模式。Claude Mythos Preview 同时支持两种模式。在两种模式均可用的情况下，请改用[自适应思考](/docs/build-with-claude/thinking)。
+扩展思考（`thinking.type: "enabled"` 搭配 `budget_tokens`）在 Claude 4.6 模型上已被弃用（使用它的请求仍会成功）。Claude 4.7 及更高版本的模型不支持它，并会拒绝使用它的请求，返回 400 错误。在支持思考的 Claude 4.5 及更早版本的模型上，扩展思考是唯一可用的思考模式。Claude Mythos Preview 同时支持两种模式。在两种模式均可用的情况下，请改用[自适应思考](/docs/build-with-claude/thinking)。
 
 下表列出了每个模型支持的内容、默认值，以及它会以 400 错误拒绝的 `thinking.type` 值；未列为被拒绝的值均可接受。只有 Claude Sonnet 5.5 接受 `"between_tools"`，并且它用该值代替 `"disabled"`。
 

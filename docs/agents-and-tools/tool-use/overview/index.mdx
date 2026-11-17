@@ -631,7 +631,7 @@ The current weather in San Francisco is 15 degrees Celsius with partly cloudy sk
 
 有关包括智能体循环在内的完整概念模型以及何时选择每种方法，请参阅[工具使用的工作原理](/docs/agents-and-tools/tool-use/how-tool-use-works)。
 
-要连接到 “Model Context Protocol”，即 MCP 服务器，请参阅 [MCP 连接器](/docs/agents-and-tools/mcp-connector)。要构建您自己的 MCP 客户端，请参阅 Model Context Protocol 指南中的[构建 MCP 客户端](https://modelcontextprotocol.io/docs/develop/build-client)。
+要连接到 “模型 上下文 Protocol”，即 MCP 服务器，请参阅 [MCP 连接器](/docs/agents-and-tools/mcp-connector)。要构建您自己的 MCP 客户端，请参阅 模型 上下文 Protocol 指南中的[构建 MCP 客户端](https://modelcontextprotocol.io/docs/develop/build-client)。
 
 ## Claude 何时使用工具
 
@@ -762,7 +762,7 @@ Anthropic 发布架构并基于它训练 Claude。您的应用程序仍需运行
 
 当您使用 `tools` 时，API 还会自动为模型包含一个启用工具使用的特殊系统提示。下表列出了每个模型所需的工具使用令牌数量（不包括前面列出的额外令牌）。该表假设您至少提供了 1 个工具。如果您未提供 `tools`，则工具选择为 `none` 时使用 0 个额外的系统提示令牌。
 
-| Model                                                                                                                                                                     | Tool use system prompt tokens: auto, none | Tool use system prompt tokens: any, tool |
+| 模型                                                                                                                                                                     | 工具使用系统提示令牌数：auto、none | 工具使用系统提示令牌数：any、tool |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------- | :--------------------------------------- |
 | Claude Opus 5.5                                                                                                                                                           | 286 tokens                                |                                          |
 | Claude Opus 5                                                                                                                                                             | 286 tokens                                | 406 tokens                               |
@@ -780,9 +780,9 @@ Anthropic 发布架构并基于它训练 Claude。您的应用程序仍需运行
 | Claude Haiku 5.5                                                                                                                                                          | 286 tokens                                | 406 tokens                               |
 | Claude Haiku 4.5                                                                                                                                                          | 496 tokens                                | 588 tokens                               |
 
-* **auto, none:** The count when tool\_choice is auto or none.
-* **any, tool:** The count when tool\_choice is any or tool.
-* **Retired:** May still be available on other cloud platforms. See [Model deprecations](/docs/about-claude/model-deprecations) for more.
+* **auto, none:** tool\_choice 为 auto 或 none 时的令牌数。
+* **any, tool:** tool\_choice 为 any 或 tool 时的令牌数。
+* **已退役:** 可能仍可在其他云平台使用。详情请参阅 [模型 deprecations](/docs/about-claude/model-deprecations)。
 
 这些令牌数会加到您正常的输入和输出令牌中，以计算请求的总费用。
 

@@ -4,38 +4,38 @@ url: /docs/models/sonnet-4-6/overview
 description: Claude Sonnet 4.6 参考：生命周期状态、各平台上的模型 ID、上下文窗口、输出限制、定价以及迁移资源。Claude Sonnet 4.6 是旧版模型；Claude Sonnet 5.5 是当前的 Sonnet 模型。
 ---
 
-**Legacy.** Released February 17, 2026.
+**早期版本。** 发布日期 2026 年 2 月 17 日.
 
-Although Claude Sonnet 4.6 is still available, you should consider migrating to Claude Sonnet 5.5. [See Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview) · [Migrate to Claude Sonnet 5.5](/docs/models/sonnet-5-5/migration-guide#migrating-from-claude-sonnet-4-6)
+虽然 Claude Sonnet 4.6 仍然可用，但建议考虑迁移到 Claude Sonnet 5.5。 [查看 Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview) · [迁移到 Claude Sonnet 5.5](/docs/models/sonnet-5-5/migration-guide#migrating-from-claude-sonnet-4-6)
 
-Model ID: `claude-sonnet-4-6`
+模型 ID: `claude-sonnet-4-6`
 
-Context window: 1M tokens · Max output: 128K tokens · Input pricing: $3 / MTok · Output pricing: $15 / MTok
+上下文窗口: 1M tokens · 最大输出: 128K tokens · 输入价格: $3 / MTok · 输出价格: $15 / MTok
 
-[Announcement](https://www.anthropic.com/news/claude-sonnet-4-6)
+[发布公告](https://www.anthropic.com/news/claude-sonnet-4-6)
 
 ## 与当前模型阵容的比较
 
-| Model                                                                                  | Context | Max output | Price / MTok       | Thinking                       | Default effort | Knowledge cutoff |
+| 模型                                                                                  | 上下文 | 最大输出 | 每百万令牌价格       | 思考                       | 默认 effort | 知识截止日期 |
 | :------------------------------------------------------------------------------------- | :------ | :--------- | :----------------- | :----------------------------- | :------------- | :--------------- |
-| [Claude Fable 5.2](/docs/models/fable-5-2/overview)   | 1M      | 128K       | $8 / $40           | Adaptive (always on)           | `high`         | Jun 2026         |
-| [Claude Opus 5.5](/docs/models/opus-5-5/overview)     | 1M      | 128K       | $4 / $20           | Adaptive (always on)           | `medium`       | Jun 2026         |
-| [Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview) | 1M      | 128K       | $2 / $10           | Adaptive                       | `high`         | Jun 2026         |
-| **Claude Sonnet 4.6** (this model)                                                     | 1M      | 128K       | $3 / $15           | Adaptive (extended deprecated) | `high`         | Aug 2025         |
-| [Claude Haiku 5.5](/docs/models/haiku-5-5/overview)   | 1M      | 128K       | From $0.10 / $0.50 | Adaptive                       | `medium`       | Jun 2026         |
+| [Claude Fable 5.2](/docs/models/fable-5-2/overview)   | 1M      | 128K       | $8 / $40           | 自适应（始终开启）           | `high`         | 2026 年 6 月         |
+| [Claude Opus 5.5](/docs/models/opus-5-5/overview)     | 1M      | 128K       | $4 / $20           | 自适应（始终开启）           | `medium`       | 2026 年 6 月         |
+| [Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview) | 1M      | 128K       | $2 / $10           | 自适应                       | `high`         | 2026 年 6 月         |
+| **Claude Sonnet 4.6** (本模型)                                                     | 1M      | 128K       | $3 / $15           | 自适应 (extended deprecated) | `high`         | 2025 年 8 月         |
+| [Claude Haiku 5.5](/docs/models/haiku-5-5/overview)   | 1M      | 128K       | 起价 $0.10 / $0.50 | 自适应                       | `medium`       | 2026 年 6 月         |
 
-* **Context:** 1M tokens is roughly 555k words or 2.5M Unicode characters on the current tokenizer (introduced with Claude Opus 4.7); models before it fit about 750k words in 1M tokens. 200k tokens is roughly 150k words.
-* **Max output:** Synchronous Messages API limit. On the Message Batches API, Claude Opus 5.5, Claude Opus 5, Claude Sonnet 5.5, Claude Sonnet 5, Claude Haiku 5.5, Claude Opus 4.8, Claude Opus 4.7, Claude Opus 4.6, and Claude Sonnet 4.6 support up to 300k output tokens with the output-300k-2026-03-24 beta header.
-* **Price / MTok:** Input / output, base price per million tokens. Batch API requests are 50% off; prompt caching reads cost 10% of the base input price (2.5% on Claude Fable 5.2, Claude Mythos 5.2, Claude Fable 5.1, and Claude Mythos 5.1, 5% on Claude Opus 5.5 and Claude Sonnet 5.5). See Pricing for the full list.
-* **Thinking:** Adaptive thinking lets the model decide how much to think, steered by effort. Extended thinking is the manual budget\_tokens mode on earlier models.
-* **Default effort:** The effort parameter’s default on the Claude API. Models without a value don’t support the parameter.
-* **Knowledge cutoff:** Reliable knowledge cutoff: the date through which the model’s knowledge is most extensive and reliable.
+* **上下文:** 在当前分词器（随 Claude Opus 4.7 引入）中，100 万令牌约相当于 55.5 万个单词或 250 万个 Unicode 字符；此前模型的 100 万令牌约可容纳 75 万个单词。20 万令牌约相当于 15 万个单词。
+* **最大输出:** 同步 Messages API 的输出上限。在 Message Batches API 中，Claude Opus 5.5、Claude Opus 5、Claude Sonnet 5.5、Claude Sonnet 5、Claude Haiku 5.5、Claude Opus 4.8、Claude Opus 4.7、Claude Opus 4.6 和 Claude Sonnet 4.6 可通过 output-300k-2026-03-24 测试版请求头支持最多 30 万输出令牌。
+* **每百万令牌价格:** 输入／输出的每百万令牌基础价格。Batch API 请求享受五折优惠；提示缓存读取费用为基础输入价格的 10%（Claude Fable 5.2、Claude Mythos 5.2、Claude Fable 5.1 和 Claude Mythos 5.1 为 2.5%，Claude Opus 5.5 和 Claude Sonnet 5.5 为 5%）。完整列表请参阅定价页。
+* **思考:** 自适应思考由模型决定思考量，并通过 effort 调节。扩展思考是早期模型上手动设置 budget\_tokens 的模式。
+* **默认 effort:** Claude API 中 effort 参数的默认值。未列出默认值的模型不支持此参数。
+* **知识截止日期:** 可靠知识截止日期，即模型知识覆盖最广泛、最可靠的截止日期。
 
 ## 规格
 
-### Model IDs
+### 模型 ID
 
-| Platform                                                                                                                                                      | Model ID                             |
+| 平台                                                                                                                                                      | 模型 ID                             |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :----------------------------------- |
 | Claude API                                                                                                                                                    | `claude-sonnet-4-6`                  |
 | [Amazon Bedrock (bedrock-runtime)](/docs/build-with-claude/claude-on-amazon-bedrock-legacy)                                  | `global.anthropic.claude-sonnet-4-6` |
@@ -44,40 +44,40 @@ Context window: 1M tokens · Max output: 128K tokens · Input pricing: $3 / MTok
 | [Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws)                                                     | `claude-sonnet-4-6`                  |
 | [Claude Models on Google Cloud (Anthropic managed)](/docs/build-with-claude/claude-models-on-google-cloud/anthropic-managed) | `claude-sonnet-4-6`                  |
 
-### Pricing
+### 定价
 
-| Feature                                                                                   | Value                            |
+| 功能                                                                                   | 值                            |
 | :---------------------------------------------------------------------------------------- | :------------------------------- |
-| Input                                                                                     | $3 / MTok                        |
-| Output                                                                                    | $15 / MTok                       |
-| [5m cache write](/docs/build-with-claude/prompt-caching) | $3.75 / MTok                     |
-| [1h cache write](/docs/build-with-claude/prompt-caching) | $6 / MTok                        |
-| [Cache read](/docs/build-with-claude/prompt-caching)     | $0.30 / MTok                     |
-| [Batch API](/docs/build-with-claude/batch-processing)    | 50% discount on input and output |
+| 输入                                                                                     | $3 / MTok                        |
+| 输出                                                                                    | $15 / MTok                       |
+| [5 分钟缓存写入](/docs/build-with-claude/prompt-caching) | $3.75 / MTok                     |
+| [1 小时缓存写入](/docs/build-with-claude/prompt-caching) | $6 / MTok                        |
+| [缓存读取](/docs/build-with-claude/prompt-caching)     | $0.30 / MTok                     |
+| [Batch API](/docs/build-with-claude/batch-processing)    | 输入和输出均享受五折优惠 |
 
-[Full price list](/docs/about-claude/pricing)
+[完整价格表](/docs/about-claude/pricing)
 
-### Capabilities
+### 能力
 
-| Feature                                                                                                                        | Value                          |
+| 功能                                                                                                                        | 值                          |
 | :----------------------------------------------------------------------------------------------------------------------------- | :----------------------------- |
-| [Context window](/docs/build-with-claude/context-windows)                                     | 1M tokens                      |
-| Max output                                                                                                                     | 128K tokens                    |
-| [Max output (Batch API, beta)](/docs/build-with-claude/batch-processing#extended-output-beta) | 300K tokens                    |
-| [Thinking](/docs/build-with-claude/thinking)                                                  | Adaptive (extended deprecated) |
-| [Default effort](/docs/build-with-claude/effort)                                              | `high`                         |
-| Input → output                                                                                                                 | Text and images → text         |
-| Reliable knowledge cutoff                                                                                                      | Aug 2025                       |
-| Training data cutoff                                                                                                           | Jan 2026                       |
+| [上下文窗口](/docs/build-with-claude/context-windows)                                     | 1M tokens                      |
+| 最大输出                                                                                                                     | 128K tokens                    |
+| [最大输出（Batch API，测试版）](/docs/build-with-claude/batch-processing#extended-output-beta) | 300K tokens                    |
+| [思考](/docs/build-with-claude/thinking)                                                  | 自适应 (extended deprecated) |
+| [默认 effort](/docs/build-with-claude/effort)                                              | `high`                         |
+| 输入 → 输出                                                                                                                 | 文本和图像 → 文本         |
+| 可靠知识截止日期                                                                                                      | 2025 年 8 月                       |
+| 训练数据截止日期                                                                                                           | 2026 年 1 月                       |
 
-### Availability
+### 可用性
 
-| Feature                                                                          | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 功能                                                                          | 值                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | :------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Status](/docs/about-claude/model-deprecations) | Active (legacy)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Released                                                                         | February 17, 2026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Retirement                                                                       | Not sooner than February 17, 2027                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Platforms                                                                        | Claude API, [Amazon Bedrock (bedrock-runtime)](/docs/build-with-claude/claude-on-amazon-bedrock-legacy), [Claude Models on Google Cloud (Google managed)](/docs/build-with-claude/claude-models-on-google-cloud/google-managed), [Microsoft Foundry](/docs/build-with-claude/claude-in-microsoft-foundry), [Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws), [Claude Models on Google Cloud (Anthropic managed)](/docs/build-with-claude/claude-models-on-google-cloud/anthropic-managed) |
+| [状态](/docs/about-claude/model-deprecations) | Active (legacy)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 发布日期                                                                         | 2026 年 2 月 17 日                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 退役日期                                                                       | 不早于 2027 年 2 月 17 日                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 平台                                                                        | Claude API, [Amazon Bedrock (bedrock-runtime)](/docs/build-with-claude/claude-on-amazon-bedrock-legacy), [Claude Models on Google Cloud (Google managed)](/docs/build-with-claude/claude-models-on-google-cloud/google-managed), [Microsoft Foundry](/docs/build-with-claude/claude-in-microsoft-foundry), [Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws), [Claude Models on Google Cloud (Anthropic managed)](/docs/build-with-claude/claude-models-on-google-cloud/anthropic-managed) |
 
 ## 资源
 

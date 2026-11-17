@@ -43,7 +43,7 @@ featureMetadata:
   对于大多数用例，[服务端压缩](/docs/build-with-claude/compaction)是管理长时间运行对话中上下文的主要策略。本页介绍的策略适用于您需要对清除哪些内容进行更细粒度控制的特定场景。
 </Note>
 
-“Context editing”（上下文编辑）允许您在对话历史增长时有选择地清除其中的特定内容。除了优化成本和保持在限制范围内之外，这还关乎主动筛选 Claude 接收的内容：上下文是一种收益递减的有限资源，无关内容会降低模型的专注度。上下文编辑让您能够在运行时对这种筛选进行细粒度控制。有关上下文管理背后的更广泛原则，请参阅[有效的上下文工程](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)。本页涵盖：
+“上下文 editing”（上下文编辑）允许您在对话历史增长时有选择地清除其中的特定内容。除了优化成本和保持在限制范围内之外，这还关乎主动筛选 Claude 接收的内容：上下文是一种收益递减的有限资源，无关内容会降低模型的专注度。上下文编辑让您能够在运行时对这种筛选进行细粒度控制。有关上下文管理背后的更广泛原则，请参阅[有效的上下文工程](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)。本页涵盖：
 
 * **工具结果清除：** 最适合大量使用工具、旧工具结果不再需要的智能体工作流
 * **思考块清除：** 用于管理早期轮次中的思考块，并可选择保留最近的思考以保持上下文连续性
@@ -2984,7 +2984,7 @@ SDK 将总用量计算为 63,000 + 0 + 270,000 + 1,400 = 334,400 个令牌。然
 
 | 状态   | 云平台                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Beta | Claude API, [Amazon Bedrock](/docs/build-with-claude/claude-in-amazon-bedrock), [Amazon Bedrock (bedrock-runtime)](/docs/build-with-claude/claude-on-amazon-bedrock-legacy), [Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws), [Claude Models on Google Cloud (Google managed)](/docs/build-with-claude/claude-models-on-google-cloud/google-managed), [Microsoft Foundry](/docs/build-with-claude/claude-in-microsoft-foundry) |
+| 测试版 | Claude API, [Amazon Bedrock](/docs/build-with-claude/claude-in-amazon-bedrock), [Amazon Bedrock (bedrock-runtime)](/docs/build-with-claude/claude-on-amazon-bedrock-legacy), [Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws), [Claude Models on Google Cloud (Google managed)](/docs/build-with-claude/claude-models-on-google-cloud/google-managed), [Microsoft Foundry](/docs/build-with-claude/claude-in-microsoft-foundry) |
 
 ### 所需的 beta 请求头
 

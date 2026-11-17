@@ -6,7 +6,7 @@ description: 从您自己的系统管理 Claude Enterprise 组织在 Slack 中�
 
 [Claude Tag](https://claude.com/docs/claude-tag/overview) 是在 Slack 中作为团队成员工作的 Claude：有人在频道中提及 Claude，Claude 就会在该线程中回答。借助 Claude Tag API，您可以从自己的系统读取和更改 Claude Tag 设置，而这些设置原本需要组织所有者在 [claude.ai > 组织设置 > Claude 标签](https://claude.ai/admin-settings/claude-tag)中手动设置。您可以用它从审批工作流中逐个频道开启 Claude，将配置保存在版本控制中，或审计每个频道中生效的设置。
 
-Claude Tag 是一款 claude.ai 产品。此 API 为 Claude Enterprise 组织管理该产品，与 Claude Platform 工作区、API 用量或 Claude Console 无关。
+Claude Tag 是一款 claude.ai 产品。此 API 为 Claude Enterprise 组织管理该产品，与 Claude 平台 工作区、API 用量或 Claude Console 无关。
 
 <Check>
   **需要具有作用域的 Admin API 密钥**
@@ -15,7 +15,7 @@ Claude Tag 是一款 claude.ai 产品。此 API 为 Claude Enterprise 组织管�
 </Check>
 
 <Note>
-  Claude Tag API 目前处于 **beta** 阶段，仅适用于 Claude Enterprise 组织。它不适用于 Claude Platform（Claude Console）组织。
+  Claude Tag API 目前处于 **beta** 阶段，仅适用于 Claude Enterprise 组织。它不适用于 Claude 平台（Claude Console）组织。
 
   每个请求都必须包含 [beta 标头](/docs/api/beta-headers) `anthropic-beta: experimental-claude-tag-2026-10-21`（SDK 和 `ant` CLI 会为您发送）。缺少该标头的请求会返回 `404`，就像该端点不存在一样。
 </Note>
@@ -186,7 +186,7 @@ API 密钥属于组织，在创建者离开后仍然有效。请勿共享这些�
 
 一个密钥可以同时具有两个作用域。先查找频道再更改频道的集成需要两者兼有。没有其他作用域可授予对这些端点的访问权限，在 Claude Console 中创建的密钥在此处无效。
 
-密钥必须属于整个组织。组织始终是密钥所属的组织，任何请求都不指定组织。`anthropic-workspace-id` 标头会被忽略，因为这里没有任何内容属于 Claude Platform 工作区。
+密钥必须属于整个组织。组织始终是密钥所属的组织，任何请求都不指定组织。`anthropic-workspace-id` 标头会被忽略，因为这里没有任何内容属于 Claude 平台 工作区。
 
 ## 关键概念
 
@@ -194,7 +194,7 @@ API 密钥属于组织，在创建者离开后仍然有效。请勿共享这些�
 
 | 此 API            | claude.ai 和 Slack                                                                                                                           |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Slack 工作区        | 一个 Slack 工作区。Slack 自身的 API 称其为 team，因此本页中 Slack 自身的工作区 ID 就是那里的 team ID。它与 Claude Platform 工作区无关，后者的 ID 以 `wrkspc_` 开头。                     |
+| Slack 工作区        | 一个 Slack 工作区。Slack 自身的 API 称其为 team，因此本页中 Slack 自身的工作区 ID 就是那里的 team ID。它与 Claude 平台 工作区无关，后者的 ID 以 `wrkspc_` 开头。                     |
 | Slack 默认值        | **默认 Slack 访问权限**：适用于每个工作区和频道的设置。组织所有者在 claude.ai 中更改它们；此 API 显示频道或工作区在何处继承这些设置。                                                            |
 | 设置层级             | 一个[作用域](https://claude.com/docs/claude-tag/admins/customize)：频道、工作区或 Slack 默认值                                                              |
 | Bundle           | 一个访问包（[Claude Tag 术语表](https://claude.com/docs/claude-tag/concepts/glossary#access-bundle)）                                                 |

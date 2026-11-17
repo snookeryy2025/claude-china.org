@@ -274,7 +274,7 @@ effort 参数影响响应中的**所有令牌**，包括：
 
 ## 推荐的 effort 级别
 
-**[Claude Fable 5.2](/docs/models/fable-5-2/overview) & [Claude Mythos 5.2](/docs/models/mythos-5-2/overview)** — *For demanding reasoning and long-horizon agentic work*
+**[Claude Fable 5.2](/docs/models/fable-5-2/overview) & [Claude Mythos 5.2](/docs/models/mythos-5-2/overview)** — *适用于高要求推理和长周期智能体任务*
 
 Claude Fable 5.2 支持全部五个 effort 级别。API 默认值为 `high`。自适应思考始终开启，因此 effort 是您控制思考深度、延迟和成本的主要手段。
 
@@ -288,7 +288,7 @@ Claude Fable 5.2 支持全部五个 effort 级别。API 默认值为 `high`。�
 
 See also: [为 Claude Fable 5.2 编写提示](/docs/build-with-claude/prompt-engineering/prompting-claude-fable-5-2#calibrate-effort)
 
-**[Claude Opus 5.5](/docs/models/opus-5-5/overview)** — *For long-running agentic coding and knowledge work*
+**[Claude Opus 5.5](/docs/models/opus-5-5/overview)** — *适用于长时间运行的智能体编程与知识工作*
 
 Claude Opus 5.5 支持全部五个 effort 级别，默认值为 `medium`。Claude Opus 5 及更早的 Opus 模型默认为 `high`，因此省略 `effort` 的请求在 Claude Opus 5.5 上运行的级别会低一级。
 
@@ -300,7 +300,7 @@ Claude Opus 5.5 还支持通过每条消息的 `output_config` [在对话中途�
 
 See also: [为 Claude Opus 5.5 编写提示](/docs/build-with-claude/prompt-engineering/prompting-claude-opus-5-5)
 
-**[Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview)** — *The best combination of speed and intelligence*
+**[Claude Sonnet 5.5](/docs/models/sonnet-5-5/overview)** — *兼顾速度与智能水平*
 
 Claude Sonnet 5.5 支持全部五个 effort 级别，在 Claude API 上默认值为 `high`。其级别的校准方式不同，因此某一级别产生的思考量与 Claude Sonnet 5 上并不相同。请在评估上重新进行 effort 扫描，而不是沿用您在 Claude Sonnet 5 上使用的设置。
 
@@ -314,7 +314,7 @@ Claude Sonnet 5.5 支持全部五个 effort 级别，在 Claude API 上默认值
 
 See also: [为 Claude Sonnet 5.5 编写提示](/docs/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5#calibrate-effort)
 
-**[Claude Haiku 5.5](/docs/models/haiku-5-5/overview)** — *For high-volume, latency-sensitive tasks such as classification, extraction, and routing*
+**[Claude Haiku 5.5](/docs/models/haiku-5-5/overview)** — *适用于分类、提取、路由等高吞吐量、低延迟任务*
 
 Claude Haiku 5.5 支持全部五个 effort 级别，默认值为 `medium`。Effort 是控制模型思考量的主要手段，进而影响质量、延迟和成本。对于大多数工作（包括智能体编码），**从 `medium` 开始**。对于聊天、简短的工具任务以及简单的高吞吐量请求，使用最便宜、最快的级别 `low`。在较长的智能体提示中，模型在 `low` 下更可能跳过搜索、提前停止或跳过检查。对于知识工作、较长的智能体任务和严格的指令遵循，使用 `high`。只有在您的评估显示质量有所提升时，才使用 `xhigh` 或 `max`，并在性能、成本和速度方面将其与 Claude Sonnet 5.5 进行比较。思考默认开启并计入 `max_tokens`，因此请为其预留空间。
 

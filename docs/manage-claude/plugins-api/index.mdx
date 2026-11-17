@@ -22,7 +22,7 @@ description: 清点和管理您的 Claude Enterprise 组织中的插件：上传
 </Check>
 
 <Note>
-  插件 API 目前处于 **beta** 阶段，仅适用于 Claude Enterprise 组织。它不适用于 Claude Platform（Claude Console）组织，也不适用于已启用 HIPAA 就绪的组织。
+  插件 API 目前处于 **beta** 阶段，仅适用于 Claude Enterprise 组织。它不适用于 Claude 平台（Claude Console）组织，也不适用于已启用 HIPAA 就绪的组织。
 
   每个请求都必须包含 [beta 标头](/docs/api/beta-headers) `anthropic-beta: ce-plugins-2026-09-01`（SDK 和 `ant` CLI 会为您发送它）。缺少该标头的请求会返回 `404`，就像该端点不存在一样。
 </Note>
@@ -237,7 +237,7 @@ API 密钥属于组织，在创建者离开后仍然有效。请勿共享这些�
 | Command（命令）         | 成员通过输入 `/` 加命令名称来运行的已保存提示。                         |
 | Agent（代理）           | 拥有自己指令的辅助助手，Claude 可以将部分任务交给它处理。                   |
 | 钩子                  | 在会话中发生某个事件时（例如在 Claude 使用工具之前）自动运行的命令。             |
-| MCP server（MCP 服务器） | 从 Claude 到另一个系统中的工具和数据的连接（Model Context Protocol）。 |
+| MCP server（MCP 服务器） | 从 Claude 到另一个系统中的工具和数据的连接（模型 上下文 Protocol）。 |
 | CLI                 | 插件允许 Claude 运行的命令行程序。                              |
 
 每个插件在 `.claude-plugin/plugin.json` 处都有一个清单。清单中的 `name` 会成为插件的 `name`：一个在其市场内唯一的小写标识符。

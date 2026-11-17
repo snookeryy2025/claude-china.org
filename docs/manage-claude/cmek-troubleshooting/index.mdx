@@ -6,7 +6,7 @@ description: 查找 CMEK 错误消息、验证失败或意外日志条目的原�
 
 Claude Console 中的**验证**、claude.ai 上的**添加**以及 Admin API 的 validate 调用都会运行相同的检查。当检查失败时（在 Claude Console 中显示**连接失败**），请参阅 [AWS KMS](/docs/manage-claude/cmek-troubleshooting#aws-kms)、[Google Cloud KMS](/docs/manage-claude/cmek-troubleshooting#google-cloud-kms) 或 [Azure Key Vault](/docs/manage-claude/cmek-troubleshooting#azure-key-vault) 的原因。
 
-如果某项功能停止工作，它可能是客户管理的加密密钥（CMEK）会关闭的功能之一。请查看 [Claude Platform 列表](/docs/manage-claude/cmek-coverage-claude-platform#turned-off-or-changed)或 [Claude Enterprise 列表](/docs/manage-claude/cmek-coverage-claude-enterprise#turned-off-or-changed)。
+如果某项功能停止工作，它可能是客户管理的加密密钥（CMEK）会关闭的功能之一。请查看 [Claude 平台 列表](/docs/manage-claude/cmek-coverage-claude-platform#turned-off-or-changed)或 [Claude Enterprise 列表](/docs/manage-claude/cmek-coverage-claude-enterprise#turned-off-or-changed)。
 
 如果这里的内容都不适用，请联系您的 Anthropic 客户团队。
 
@@ -155,7 +155,7 @@ The encryption key couldn’t be added.
 
 ## CloudTrail 中的预期错误
 
-在 Claude Platform 和 Claude Enterprise 上，每当您验证密钥、将其附加到工作区或在 claude.ai 上查看它时，Anthropic 都会检查该密钥。每次检查都会在 CloudTrail 中添加四个预期的访问被拒绝错误。
+在 Claude 平台 和 Claude Enterprise 上，每当您验证密钥、将其附加到工作区或在 claude.ai 上查看它时，Anthropic 都会检查该密钥。每次检查都会在 CloudTrail 中添加四个预期的访问被拒绝错误。
 
 要将它们过滤掉，请同时匹配以下三个值：
 

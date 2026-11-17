@@ -22,7 +22,7 @@ Claude Fable 5.2 可在 Claude API、[Amazon Bedrock（`bedrock-runtime`）](/do
 
 `claude-fable-5-2` 和 `claude-mythos-5-2` 共有的基线设置：
 
-* **思考：**[Adaptive thinking](/docs/build-with-claude/thinking)（自适应思考）始终开启，与 Claude Fable 5.1 相同。模型会决定何时思考以及思考多少，而 [effort](/docs/build-with-claude/effort) 参数控制思考的深度。`thinking: {type: "disabled"}` 和手动扩展思考（`thinking: {type: "enabled", budget_tokens: N}`）都会返回 400 错误。
+* **思考：**[自适应思考](/docs/build-with-claude/thinking)（自适应思考）始终开启，与 Claude Fable 5.1 相同。模型会决定何时思考以及思考多少，而 [effort](/docs/build-with-claude/effort) 参数控制思考的深度。`thinking: {type: "disabled"}` 和手动扩展思考（`thinking: {type: "enabled", budget_tokens: N}`）都会返回 400 错误。
 * **Effort：**&#x652F;持全部五个 [effort](/docs/build-with-claude/effort) 级别，默认值为 `high`，与 Claude Fable 5.1 相同。请参阅 [Claude Fable 5.2 的推荐 effort 级别](/docs/build-with-claude/effort#recommended-effort-levels-for-claude-fable-5-2)。
 * **Prefill（预填充）：**&#x9884;填充 assistant 消息会返回 400 错误，与 Claude Fable 5.1 相同。请改用系统提示中的指令。
 * **采样参数：**&#x7701;略 `temperature`、`top_p` 和 `top_k`，与 Claude Fable 5.1 相同。有关会返回 400 错误的取值，请参阅[采样参数](/docs/build-with-claude/thinking#sampling-parameters)。

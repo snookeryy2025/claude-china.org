@@ -4,7 +4,7 @@ url: /docs/about-claude/models/optimizing-for-cost-and-intelligence
 description: 在 Claude Platform 上平衡成本与智能，附有提示缓存、effort、模型选择、输出上限和多模型策略的实测结果。
 ---
 
-能力最强的模型在大规模使用时可能过于昂贵，而成本最低的模型可能在质量上有所欠缺。Claude Platform 让您可以直接控制这种权衡。您可以为每个请求选择模型、"effort"（努力程度）级别和架构，从而将工作负载放置在"cost-to-intelligence frontier"（成本-智能前沿）上几乎任何位置。
+能力最强的模型在大规模使用时可能过于昂贵，而成本最低的模型可能在质量上有所欠缺。Claude 平台 让您可以直接控制这种权衡。您可以为每个请求选择模型、"effort"（努力程度）级别和架构，从而将工作负载放置在"cost-to-intelligence frontier"（成本-智能前沿）上几乎任何位置。
 
 成本与智能通常被描绘为一条前沿曲线，其中一方以另一方为代价。本页的第一组杠杆通过在不影响质量的情况下削减成本，将工作负载推向这条前沿；只有第二组杠杆是沿着前沿移动：
 
@@ -885,7 +885,7 @@ Anthropic 在 tau2-bench retail<sup>[24](/docs/about-claude/models/optimizing-fo
 
 1. **WideSearch：** Wong et al., “WideSearch: Benchmarking Agentic Broad Info-Seeking,” arXiv:2508.07999, 2025。广泛的网络研究任务，按多行表格的完整性和准确性评分；200 个问题，每种配置运行 3 次，运行于 2026 年 8 月 1 日至 2 日。在此基准测试、DeepWideSearch（参考文献 6）、BrowseComp（参考文献 4）和 GDPval（参考文献 2）上使用 Claude Fable 5 时，`low` 努力程度损失 1 到 3 分，换来每任务成本降低三分之一到一半；`medium` 以默认设置约 70% 到 87% 的成本达到了与默认设置相同的准确率；而在这四项中的任何一项上，默认设置相比 `medium` 都没有带来可测量的提升。成本集中度图表来自一次单独的 20 个问题的运行，每个问题运行 3 次，运行于 2026 年 8 月 3 日至 4 日，成本依据逐请求计费记录计算。它涵盖 60 次运行中的 59 次。第 60 次运行在 $432.31 USD 总额中计费 $10.91 USD，其结果未记录成本，因此未包含在内。
 
-2. **GDPval：** OpenAI, “GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks,” 2025。知识工作交付物根据任务评分标准评分；对已发布黄金集的 210 个任务运行，每个任务尝试一次，于 2026 年 8 月 2 日运行。由 Claude 模型评分，因此绝对分数可能与已发布的结果不同。
+2. **GDPval：** OpenAI, “GDPval: Evaluating AI 模型 Performance on Real-World Economically Valuable Tasks,” 2025。知识工作交付物根据任务评分标准评分；对已发布黄金集的 210 个任务运行，每个任务尝试一次，于 2026 年 8 月 2 日运行。由 Claude 模型评分，因此绝对分数可能与已发布的结果不同。
 
 3. **SWE-bench Pro：** Scale AI, “SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?”, 2025。
 
@@ -1149,7 +1149,7 @@ Anthropic 在 tau2-bench retail<sup>[24](/docs/about-claude/models/optimizing-fo
     在可运行的 notebook 中将这些手段逐一应用于一个可工作的智能体，并在每一步后查看每任务成本。
   </Card>
 
-  <Card title="网络研讨会：在 Claude Platform 上构建" icon="play" href="https://www.anthropic.com/webinars/building-on-the-claude-platform-claude-fable-5-and-model-orchestration-patterns">
+  <Card title="网络研讨会：在 Claude 平台 上构建" icon="play" href="https://www.anthropic.com/webinars/building-on-the-claude-platform-claude-fable-5-and-model-orchestration-patterns">
     观看顾问和编排器模式的演示讲解。
   </Card>
 </CardGroup>

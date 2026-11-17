@@ -1407,7 +1407,7 @@ Tab Context:
 * 没有 `text` 内容块的结果（例如仅包含图像的 `screenshot` 结果）。对于该结果，不会渲染或记住任何内容；标签页上下文会出现在下一个同时携带文本和 `browser_state` 内容块的结果上，因此如果您希望标签页变化在同一个结果中传达给 Claude，请在图像旁附上一个简短的文本块。例外情况是内容块报告了[下载事件](/docs/agents-and-tools/tool-use/browser-use-tool#report-downloads)的结果。API 会将下载行作为一个文本块添加，页脚会像在任何带文本的结果上一样跟在它们之后。
 * 调用未携带 `tab_id`，且结果的 `tabs` 列表为空，因为此时没有可指明的标签页。
 
-例如，当 Claude 在本会话早些时候点击"Pricing"链接（`ref_5`）时，页面在一个 Claude 并未请求的新标签页中打开了它，如果没有报告，Claude 将不得不调用 `list_tabs` 才能发现它。请返回点击的确认信息，外加一个在 `state_changes` 中指明所打开标签页的内容块，并标记您的执行器保留为活动状态的那个标签页：
+例如，当 Claude 在本会话早些时候点击"定价"链接（`ref_5`）时，页面在一个 Claude 并未请求的新标签页中打开了它，如果没有报告，Claude 将不得不调用 `list_tabs` 才能发现它。请返回点击的确认信息，外加一个在 `state_changes` 中指明所打开标签页的内容块，并标记您的执行器保留为活动状态的那个标签页：
 
 ```json
 {
@@ -1438,7 +1438,7 @@ Tab Context:
 }
 ```
 
-Claude 接收到 `Clicked element ref_5.`，后跟前面展示的 Tab Context 页脚。在失败的调用期间打开的标签页不会获得 `tab_opened` 条目，因为错误结果不携带 `browser_state`；它会改为出现在下一个成功结果的 `tabs` 清单中。在批处理中，请将内容块附加到发生变化的那次调用的结果上，并且为每个成功的标签页管理结果提供各自的内容块，即使同一轮中较早的结果已经报告了相同的状态。
+Claude 接收到 `Clicked element ref_5.`，后跟前面展示的 Tab 上下文 页脚。在失败的调用期间打开的标签页不会获得 `tab_opened` 条目，因为错误结果不携带 `browser_state`；它会改为出现在下一个成功结果的 `tabs` 清单中。在批处理中，请将内容块附加到发生变化的那次调用的结果上，并且为每个成功的标签页管理结果提供各自的内容块，即使同一轮中较早的结果已经报告了相同的状态。
 
 ### 报告下载
 
@@ -1450,9 +1450,9 @@ Claude 接收到 `Clicked element ref_5.`，后跟前面展示的 Tab Context �
 | `download_completed` | `download_id`、`url`、`path?`、`size_bytes?` | 在下载完成时正在运行的后续调用的结果上发送。仅当同一环境中的其他工具（例如 [bash 工具](/docs/agents-and-tools/tool-use/bash-tool)或 `file_upload`）可以在该路径读取文件时才包含 `path`；否则 `download_id` 是该下载的唯一标识符。 |
 | `download_failed`    | `download_id`、`url`、`error?`              | 当下载失败或被取消时，如果浏览器提供了原因，则在 `error` 中给出。                                                                                                                                                         |
 
-API 会按条目出现的顺序，将每个条目渲染为一行供 Claude 阅读的文本。这些行位于结果文本之后（以一个空行隔开），并位于任何 Tab Context 页脚之前。所有类型的成员结果都会带上这些行，包括 `zoom` 和标签页管理结果。对于没有 `text` 块的结果，这些行会作为一个单独的文本块添加。每一行都会给出 `download_id` 和 `url`；如果您发送了相应字段，还会给出 `path` 和 `size_bytes`（针对 `download_completed`）或 `error`（针对 `download_failed`）。您无需在自己的文本中描述下载。API 会用双引号包裹 `url`、`path` 和 `error`，并转义其中的双引号和反斜杠，因此不要预先转义这些值。
+API 会按条目出现的顺序，将每个条目渲染为一行供 Claude 阅读的文本。这些行位于结果文本之后（以一个空行隔开），并位于任何 Tab 上下文 页脚之前。所有类型的成员结果都会带上这些行，包括 `zoom` 和标签页管理结果。对于没有 `text` 块的结果，这些行会作为一个单独的文本块添加。每一行都会给出 `download_id` 和 `url`；如果您发送了相应字段，还会给出 `path` 和 `size_bytes`（针对 `download_completed`）或 `error`（针对 `download_failed`）。您无需在自己的文本中描述下载。API 会用双引号包裹 `url`、`path` 和 `error`，并转义其中的双引号和反斜杠，因此不要预先转义这些值。
 
-例如，在 Pricing 标签页中点击 “Download price list (CSV)”（`ref_8`）会触发一次下载，因此该点击的结果带有一个 `download_started` 条目，其 `download_id` 为 `"dl-1"`，并附有文件的 URL。下载在后续一次 `screenshot` 调用运行期间完成，因此该结果的 `content` 包含图像、一个文本块（例如 `Screenshot captured.`），以及下面这个 `browser_state` 块，它使用同一个 `download_id` 报告下载完成：
+例如，在 定价 标签页中点击 “Download price list (CSV)”（`ref_8`）会触发一次下载，因此该点击的结果带有一个 `download_started` 条目，其 `download_id` 为 `"dl-1"`，并附有文件的 URL。下载在后续一次 `screenshot` 调用运行期间完成，因此该结果的 `content` 包含图像、一个文本块（例如 `Screenshot captured.`），以及下面这个 `browser_state` 块，它使用同一个 `download_id` 报告下载完成：
 
 ```json
 {

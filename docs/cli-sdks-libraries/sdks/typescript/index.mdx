@@ -219,7 +219,7 @@ const screenshotTool = betaZodTool({
 
 ## MCP 辅助工具
 
-此 SDK 提供了用于与 [“Model Context Protocol”，即 MCP](https://modelcontextprotocol.io/) 服务器集成的辅助工具。这些辅助工具将 MCP 类型转换为 Claude API 类型，从而在使用 MCP 工具、提示和资源时减少样板代码。
+此 SDK 提供了用于与 [“模型 上下文 Protocol”，即 MCP](https://modelcontextprotocol.io/) 服务器集成的辅助工具。这些辅助工具将 MCP 类型转换为 Claude API 类型，从而在使用 MCP 工具、提示和资源时减少样板代码。
 
 <Tip>
   Claude API 还支持 [`mcp_servers` 参数](/docs/agents-and-tools/mcp-connector)，让 Claude 可以直接连接到远程 MCP 服务器。当您拥有可通过 URL 访问的远程服务器且只需要工具支持时，请使用 `mcp_servers`。当您需要本地 MCP 服务器、提示、资源或对 MCP 连接进行更多控制时，请使用 MCP 辅助工具。

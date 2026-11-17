@@ -79,7 +79,7 @@ Voyage AI 还提供 “rerankers”（重排序器），它接收一个查询和
 要访问 Voyage AI 模型，请在 MongoDB Atlas 中创建模型 API 密钥：
 
 1. 注册 MongoDB Atlas 账户，或登录。
-2. 在您的 Atlas 项目中，在导航栏中选择 **AI Model APIs**，点击 **Create model API key**，为密钥命名，然后点击 **Create**。
+2. 在您的 Atlas 项目中，在导航栏中选择 **AI 模型 APIs**，点击 **Create model API key**，为密钥命名，然后点击 **Create**。
 3. 为方便起见，将 API 密钥设置为环境变量：
 
 ```bash
@@ -294,7 +294,7 @@ Apple's conference call to discuss fourth fiscal quarter results and business up
     > * 示例
     >
     >   * 当 `input_type="query"` 时，诸如 “When is Apple’s conference call scheduled?” 的查询将变为 “**Represent the query for retrieving supporting documents:** When is Apple’s conference call scheduled?”
-    >   * 当 `input_type="document"` 时，诸如 “Apple’s conference call to discuss fourth fiscal quarter results and business updates is scheduled for Thursday, November 2, 2023 at 2:00 p.m. PT / 5:00 p.m. ET.” 的文档将变为 “**Represent the document for retrieval:** Apple’s conference call to discuss fourth fiscal quarter results and business updates is scheduled for Thursday, November 2, 2023 at 2:00 p.m. PT / 5:00 p.m. ET.”
+    >   * 当 `input_type="document"` 时，诸如 “Apple’s conference call to discuss fourth fiscal quarter results and business updates is scheduled for Thursday, 2023 年 11 月 2 日 at 2:00 p.m. PT / 5:00 p.m. ET.” 的文档将变为 “**Represent the document for retrieval:** Apple’s conference call to discuss fourth fiscal quarter results and business updates is scheduled for Thursday, 2023 年 11 月 2 日 at 2:00 p.m. PT / 5:00 p.m. ET.”
   </Accordion>
 
   <Accordion title="有哪些可用的量化选项？">

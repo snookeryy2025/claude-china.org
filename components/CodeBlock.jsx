@@ -9,7 +9,7 @@ function textContent(node) {
   return '';
 }
 
-export function CodeBlock({ children }) {
+export function CodeBlock({ children, title }) {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try {
@@ -17,5 +17,6 @@ export function CodeBlock({ children }) {
       setCopied(true); window.setTimeout(() => setCopied(false), 1800);
     } catch { setCopied(false); }
   };
-  return <div className="code-frame"><div className="code-toolbar"><span>示例代码</span><button type="button" onClick={copy}>{copied ? '已复制' : '复制代码'}</button></div><pre>{children}</pre></div>;
+  const language = title || children?.props?.className?.match(/\blanguage-([^\s]+)/)?.[1] || '示例代码';
+  return <div className="code-frame"><div className="code-toolbar"><span>{language}</span><button type="button" onClick={copy}>{copied ? '已复制' : '复制代码'}</button></div><pre>{children}</pre></div>;
 }

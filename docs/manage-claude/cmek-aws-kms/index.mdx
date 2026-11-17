@@ -18,8 +18,8 @@ description: 创建 AWS KMS 密钥，授予 Anthropic 对该密钥的访问权�
 
 * 客户管理的加密密钥（CMEK）已[为您的组织开启](/docs/manage-claude/cmek#availability)。
 * 您已获得您的 Anthropic 组织 ID，即不带 `org_` 前缀的 UUID。您可以从 Claude Console 中的[组织](https://platform.claude.com/settings/organization)复制它，也可以从 claude.ai 上的**组织设置 > 组织与访问权限**复制它。创建密钥的人需要此 ID。
-* 您是 Claude Platform 上的组织管理员，或 Claude Enterprise 上的所有者或主要所有者。
-* 在 Claude Platform 上，您拥有一个[保留数据](/docs/manage-claude/cmek-data-retention#data-retention)的工作区，最好是新的工作区，因为[现有数据仍受 Anthropic 的密钥保护](/docs/manage-claude/cmek-how-it-works#when-your-key-takes-effect)。
+* 您是 Claude 平台 上的组织管理员，或 Claude Enterprise 上的所有者或主要所有者。
+* 在 Claude 平台 上，您拥有一个[保留数据](/docs/manage-claude/cmek-data-retention#data-retention)的工作区，最好是新的工作区，因为[现有数据仍受 Anthropic 的密钥保护](/docs/manage-claude/cmek-how-it-works#when-your-key-takes-effect)。
 * 在 Claude Enterprise 上，您了解[哪些功能会关闭或发生变化](/docs/manage-claude/cmek-coverage-claude-enterprise#turned-off-or-changed)。
 
 在 AWS 中：
@@ -160,10 +160,10 @@ description: 创建 AWS KMS 密钥，授予 Anthropic 对该密钥的访问权�
 
 ## 在 Claude 中：添加并附加密钥
 
-要在 Claude Platform 上通过脚本完成这部分操作，请改为[使用 Admin API](/docs/manage-claude/cmek-admin-api)。
+要在 Claude 平台 上通过脚本完成这部分操作，请改为[使用 Admin API](/docs/manage-claude/cmek-admin-api)。
 
 <Tabs>
-  <Tab title="Claude Platform">
+  <Tab title="Claude 平台">
     <Steps>
       <Step title="打开加密密钥设置">
         在 Claude Console 中，打开数据保留页面上的[加密密钥](https://platform.claude.com/settings/privacy#encryption-keys)。如果该部分不存在，请从顶部的下拉菜单中选择**组织**。

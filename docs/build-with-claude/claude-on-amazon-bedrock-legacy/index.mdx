@@ -152,7 +152,7 @@ Anthropic 的[客户端 SDK](/docs/cli-sdks-libraries/overview) 支持 Bedrock�
   Claude Fable 5.1、Claude Fable 5、Claude Opus 5.5、Claude Opus 5、Claude Sonnet 5.5、Claude Sonnet 5、Claude Haiku 5.5、Claude Opus 4.8 和 Claude Opus 4.7 可以通过 `bedrock-runtime` 上的 `InvokeModel` 访问。 这些请求由与 [Amazon Bedrock 中的 Claude](/docs/build-with-claude/claude-in-amazon-bedrock) 端点相同的基础设施提供服务。如需原生 Messages API 请求格式和完整的功能 对等，请使用该页面。这些模型未列入本页的模型 表。该表确实列出了 Claude Fable 5.2 和 Claude Mythos 5.2，因为 `bedrock-runtime` 是唯一提供这两个模型的 Amazon Bedrock 端点。
 </Note>
 
-生命周期术语（Deprecated（已弃用）、Retired（已停用））的定义请参阅[模型弃用](/docs/about-claude/model-deprecations)。合作伙伴运营平台上的生命周期日期由合作伙伴设定，可能与 Claude API 的时间表不同。有关 Amazon Bedrock 上任何模型的当前停用日期，请参阅 [Amazon Bedrock 的模型生命周期页面](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html)。
+生命周期术语（已弃用（已弃用）、已退役（已停用））的定义请参阅[模型弃用](/docs/about-claude/model-deprecations)。合作伙伴运营平台上的生命周期日期由合作伙伴设定，可能与 Claude API 的时间表不同。有关 Amazon Bedrock 上任何模型的当前停用日期，请参阅 [Amazon Bedrock 的模型生命周期页面](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html)。
 
 AWS 通过[跨区域推理](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html)而非按需吞吐量提供较新的 Claude 模型。对于这些模型，传入基础模型 ID 的请求会失败，并返回如下 HTTP 400 错误：
 
@@ -162,10 +162,10 @@ Invocation of model ID anthropic.claude-sonnet-4-5-20250929-v1:0 with on-demand 
 
 要调用这些模型，请传入推理配置文件（inference profile）而非基础模型 ID。推理配置文件 ID 是在基础模型 ID 前加上下表中标记为"是"的列所对应的前缀，例如 us.anthropic.claude-sonnet-4-5-20250929-v1:0。您也可以传入完整的推理配置文件 ARN，格式为 `arn:aws:bedrock:{region}:{account-id}:inference-profile/{inference-profile-id}`。有关 AWS 官方提供的可用推理配置文件列表，请参阅[推理配置文件支持的区域和模型](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html)。要了解前缀如何影响路由和定价，请参阅[全局端点与区域端点](/docs/build-with-claude/claude-on-amazon-bedrock-legacy#global-vs-regional-endpoints)部分。
 
-| Model                                                                                                    | Base Bedrock model ID                       | `global` | `us` | `eu` | `jp` | `apac` |
+| 模型                                                                                                    | Base Bedrock model ID                       | `global` | `us` | `eu` | `jp` | `apac` |
 | :------------------------------------------------------------------------------------------------------- | :------------------------------------------ | :------- | :--- | :--- | :--- | :----- |
 | Claude Fable 5.2                                                                                         | `anthropic.claude-fable-5-2`                | Yes      | Yes  | No   | No   | No     |
-| Claude Mythos 5.2 ([limited availability](https://support.claude.com/en/articles/14604842))              | `anthropic.claude-mythos-5-2`               | Yes      | Yes  | No   | No   | No     |
+| Claude Mythos 5.2 ([受限开放](https://support.claude.com/en/articles/14604842))              | `anthropic.claude-mythos-5-2`               | Yes      | Yes  | No   | No   | No     |
 | Claude Opus 4.6                                                                                          | `anthropic.claude-opus-4-6-v1`              | Yes      | Yes  | Yes  | Yes  | Yes    |
 | Claude Opus 4.5                                                                                          | `anthropic.claude-opus-4-5-20251101-v1:0`   | Yes      | Yes  | Yes  | No   | No     |
 | Claude Opus 4.1 ([deprecated](/docs/about-claude/model-deprecations))   | `anthropic.claude-opus-4-1-20250805-v1:0`   | No       | Yes  | No   | No   | No     |

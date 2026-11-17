@@ -4,13 +4,17 @@ url: /docs/release-notes/overview
 description: Claude Platform 的更新，包括 Claude API、客户端 SDK 和 Claude Console。
 ---
 
-Claude Platform 发布说明列出了 Claude API、客户端 SDK 和 Claude Console 的变更，按时间从新到旧排列。
+Claude 平台 发布说明列出了 Claude API、客户端 SDK 和 Claude Console 的变更，按时间从新到旧排列。
 
 <Tip>
   有关 Claude Apps 的发布说明，请参阅 [Claude 帮助中心中的 Claude Apps 发布说明](https://support.claude.com/en/articles/12138966-release-notes)。
 
   有关 Claude Code 的更新，请参阅 `claude-code` 仓库中的[完整 CHANGELOG.md](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)。
 </Tip>
+
+### 2026 年 11 月 16 日
+
+* 在受支持的平台上，Claude Opus 4.6、Claude Opus 4.5、Claude Sonnet 4.5 和 Claude Haiku 4.5 生成的文本带有 Anthropic 的文本水印。[Claude 如何标记 AI 生成的内容](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content)列出了这些平台。如果向这些模型之一发出的请求将 `temperature`、`top_p` 或 `top_k` 设置为非默认值，则生成的文本可能不带有水印。请参阅[文本水印](/docs/build-with-claude/text-watermark)。
 
 ### 2026 年 11 月 12 日
 
@@ -58,7 +62,7 @@ Claude Platform 发布说明列出了 Claude API、客户端 SDK 和 Claude Cons
 
 ### 2026 年 10 月 23 日
 
-* [Claude Tag API](/docs/manage-claude/claude-tag-api) 现已面向 Claude Enterprise 组织推出 beta 版，需使用 `experimental-claude-tag-2026-10-21` beta 标头。其 `/v1/organizations/claude_tag/` 端点可读取和更改 Slack 频道以及 Slack 工作区中的 [Claude Tag](https://claude.com/docs/claude-tag/overview) 设置，显示某个频道中适用哪些设置以及每项设置的来源，并可附加访问包。请使用由您的主要所有者在 claude.ai 中创建、具有 `read:claude_tag` 或 `write:claude_tag` 范围的 Admin API 密钥来调用它。Claude Platform（Claude Console）组织无法使用此 API。
+* [Claude Tag API](/docs/manage-claude/claude-tag-api) 现已面向 Claude Enterprise 组织推出 beta 版，需使用 `experimental-claude-tag-2026-10-21` beta 标头。其 `/v1/organizations/claude_tag/` 端点可读取和更改 Slack 频道以及 Slack 工作区中的 [Claude Tag](https://claude.com/docs/claude-tag/overview) 设置，显示某个频道中适用哪些设置以及每项设置的来源，并可附加访问包。请使用由您的主要所有者在 claude.ai 中创建、具有 `read:claude_tag` 或 `write:claude_tag` 范围的 Admin API 密钥来调用它。Claude 平台（Claude Console）组织无法使用此 API。
 
 ### 2026 年 10 月 22 日
 
@@ -85,7 +89,7 @@ Claude Platform 发布说明列出了 Claude API、客户端 SDK 和 Claude Cons
 
 * 我们在 [Models API](/docs/api/models/list) 中添加了 `capabilities.thinking.types.between_tools`。`GET /v1/models` 和 `GET /v1/models/{model_id}` 现在会报告每个模型是否接受用于关闭前置思考的 `thinking: {type: "between_tools"}`。请参阅[使用 Models API](/docs/models/overview#using-the-models-api)。
 * [Compliance API](/docs/manage-claude/compliance-api) 现在会返回每位组织成员在 claude.ai 中保存为 **Claude 指令**以及在 Cowork 中保存为**全局指令**的文本，面向 Claude Enterprise 组织以 beta 形式提供。使用您现有的 Compliance Access Key 和 `read:compliance_user_data` 范围调用 `GET /v1/compliance/organizations/{org_uuid}/user_preferences`。请参阅[列出用户偏好](/docs/manage-claude/compliance-org-data#list-user-preferences)。
-* Claude Opus 5.5 的 [Fast mode](/docs/build-with-claude/fast-mode)（快速模式）已结束研究预览，您不再需要申请访问权限。对 Claude Opus 5.5 的请求不再需要 `fast-mode-2026-02-01` beta 标头，仍发送该标头的请求也可继续正常工作。Claude Opus 5.5 现在在 Start、Build 和 Scale 使用层级中都有默认的快速模式速率限制。Claude Opus 5 和 Claude Opus 4.8 的快速模式仍处于研究预览阶段。向这些模型发送快速模式请求时，请继续发送该 beta 标头。
+* Claude Opus 5.5 的 [快 mode](/docs/build-with-claude/fast-mode)（快速模式）已结束研究预览，您不再需要申请访问权限。对 Claude Opus 5.5 的请求不再需要 `fast-mode-2026-02-01` beta 标头，仍发送该标头的请求也可继续正常工作。Claude Opus 5.5 现在在 Start、Build 和 Scale 使用层级中都有默认的快速模式速率限制。Claude Opus 5 和 Claude Opus 4.8 的快速模式仍处于研究预览阶段。向这些模型发送快速模式请求时，请继续发送该 beta 标头。
 * Claude Opus 5.5 的[快速模式](/docs/build-with-claude/fast-mode)现已在 [Microsoft Foundry 中的 Claude](/docs/build-with-claude/claude-in-microsoft-foundry) 上可用，适用于托管在 Azure 上的部署。
 
 ### 2026 年 10 月 14 日
@@ -151,7 +155,7 @@ Claude Platform 发布说明列出了 Claude API、客户端 SDK 和 Claude Cons
 
 * 我们已推出 **Claude Opus 5.5**（`claude-opus-5-5`），这是一款面向长时间运行的智能体编码和知识工作的模型。它默认具有 [1M 令牌上下文窗口](/docs/build-with-claude/context-windows)、128k 最大输出令牌，以及始终开启的[自适应思考](/docs/build-with-claude/thinking)，价格为每 MTok $4 / $20 美元（Claude Opus 5 为 $5 / $25 美元）。Claude Opus 5.5 可在 Claude API、[Amazon Bedrock 中的 Claude](/docs/build-with-claude/claude-in-amazon-bedrock)、[Claude Platform on AWS](/docs/build-with-claude/claude-platform-on-aws)、[Claude Models on Google Cloud (Google managed)](/docs/build-with-claude/claude-models-on-google-cloud/google-managed) 和 [Microsoft Foundry 中的 Claude](/docs/build-with-claude/claude-in-microsoft-foundry) 上使用。有关功能、API 变更和迁移指导，请参阅 [Claude Opus 5.5 的新功能](/docs/models/opus-5-5/whats-new-opus-5-5)。
 * 在 Claude Opus 5.5 上，思考无法禁用：`thinking: {"type": "disabled"}` 和 `thinking: {"type": "enabled", ...}` 会返回 400 错误。请省略 `thinking` 字段，并通过 [effort 参数](/docs/build-with-claude/effort)控制思考深度。与 Claude Fable 5.1 一样，`tool_choice` 类型 `any` 和 `tool` 也会返回 400 错误；请将 `auto` 与[严格工具使用](/docs/agents-and-tools/tool-use/strict-tool-use)结合使用。在 Claude API 和 Google Cloud 上，此模型的[计算机使用](/docs/agents-and-tools/tool-use/computer-use-tool)需要 `computer_toolset_20260801` 工具集，早期的 `computer_20251124` 工具会返回 400 错误；在 Amazon Bedrock 上，`computer_20251124` 仍可继续使用。请参阅 [Claude Opus 5.5 迁移指南](/docs/models/opus-5-5/migration-guide#migrating-from-claude-opus-5)。
-* [“Fast mode”（快速模式）](/docs/build-with-claude/fast-mode)（研究预览版）已在 Claude API 上可用于 Claude Opus 5.5。
+* [“快 mode”（快速模式）](/docs/build-with-claude/fast-mode)（研究预览版）已在 Claude API 上可用于 Claude Opus 5.5。
 * 现在可以在[对话中途的系统消息](/docs/build-with-claude/mid-conversation-system-messages#define-tools-in-a-message-beta)中定义工具，该功能在 Claude API 上处于 beta 阶段，需使用 `inline-tools-2026-09-15` beta 标头。`tool_addition` 块可以携带工具的完整定义（`tool: {"type": "tool_definition", "definition": {...}}`），因此您可以添加工具、更改其 schema，或将服务器工具迁移到较新版本，而无需编辑 `tools`，也不会使"prompt cache"（提示缓存）失效。同一标头也涵盖按引用添加和移除工具。如果同时使用 MCP 连接器的 `mcp-client-2026-09-15` beta 标头，定义可以是 MCP 工具集，并且响应会在 `mcp_tool_listing` 块中记录每个服务器获取到的工具列表，当您将该块发回时，它会固定该列表。
 
 ### 2026 年 9 月 18 日
