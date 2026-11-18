@@ -13,7 +13,7 @@ export default async function sitemap() {
     },
     ...pages.map(({ href }) => ({
       url: new URL(href, siteUrl).toString(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: href === '/docs/home' ? 0.9 : 0.7,
     })),
   ];
